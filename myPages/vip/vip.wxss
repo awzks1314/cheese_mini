@@ -1,0 +1,56 @@
+page {
+  padding: 20rpx;
+}
+.vip_card {
+  background-image: url('https://z3.ax1x.com/2021/05/14/grhfMV.png');
+	background-size: cover;
+  background-position: center;
+  height: 300rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.my_header_avatar{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  background-color: #e7ebed;
+}
+.vip_level{
+  padding: 4rpx 8rpx;
+  border-radius: 6rpx;
+}
+
+.vip_type_card{
+  width: 33%;
+  height: 240rpx;
+  background-color: #fff;
+  margin-right: 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20rpx;
+  border-bottom-left-radius: 50rpx;
+  
+}
+.vip_type_card:nth-child(3n) {
+  margin-right: 0;
+}
+.vip_type_card_active{
+  border: 3rpx solid #0081ef;
+}
+
+.vip_buy_button{
+  height: 80rpx;
+  border-radius: 50rpx;
+}
+.vip_tequan_item{
+  width: 20%;
+  height: 120rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}

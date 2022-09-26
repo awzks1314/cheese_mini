@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "free-input":"/components/free-input/free-input"
+  },
+  "navigationBarTitleText": "社区资讯",
+  "navigationStyle": "custom"
+}

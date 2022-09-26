@@ -1,0 +1,117 @@
+<view class="my_header bg-white flex flex-direction align-center">
+  <image src="http://q1.qlogo.cn/g?b=qq&nk=664423077&s=640" class="my_header_avatar"></image>
+  <view class="my_header_nikeName padding-tb">Hannah Gonzalez</view>
+  <view class="text-sm">
+    <text class="dot_number bg-gradual-blue" bindtap="sign">签到</text>
+  </view>
+
+  <view class="my_header_icon flex align-center" bindtap="toUrl" data-url="/myPages/myInfoNew/myInfoNew">
+    <text>个人主页</text>
+  </view>
+  <view class="my_header_box padding-lr flex align-center shadow-main radius">
+    <view class="flex align-center justify-center flex-sub">
+      <image src="/static/img/home/chess.png" class="my_header_box_image1"></image>
+      <view class="padding-left">
+        <view class="text-center text-vold">0</view>
+        <view>芝士值</view>
+      </view>
+    </view>
+
+    <view class="flex align-center justify-center flex-sub" bindtap="toUrl" data-url="/myPages/collect/collect">
+      <image src="/static/img/icon/shoucang.png" class="my_header_box_image"></image>
+      <view class="padding-left">
+        <view class="text-center text-vold">10</view>
+        <view>收藏中心</view>
+      </view>
+    </view>
+  </view>
+  <view class="my_header_footer"></view>
+</view>
+
+<free-gap height="60"></free-gap>
+<!-- <view class="padding-lr" >
+  <view class="radius flex align-center justify-between padding">
+    <view class="">
+      <text class="text-bold up_text text-white">开始你的第一篇资料上传</text>
+      <view class="text-sm whiteBorder">上传首篇内容，开通创作中心</view>
+    </view>
+
+    <view class="my_header_vip_btn bg-gradual-blue text-lg" bindtap="toUrl" data-url="/myPages/upload/upload">去上传</view>
+  </view>
+</view> -->
+<view class="padding-lr flex flex-direction">
+  <view class="bg-white radius flex flex-wrap padding-bottom">
+    <button wx:for="{{list}}" wx:key="index" class="free-button bg-white toolWidth  flex  flex-direction align-center padding-top" bindtap="toUrl" data-url="{{item.url}}">
+      <!-- <free-icon name="{{item.icon}}" color="#000" size="56"></free-icon> -->
+      <image src="/static/img/icon/{{item.icon}}.png" class="image_icon"></image>
+      <view class="padding-top-xs">{{item.name}}</view>
+    </button>
+
+    <button class="free-button bg-white toolWidth  flex  flex-direction align-center padding-top" open-type="contact">
+      <image src="/static/img/icon/pinglun.png" class="image_icon"></image>
+      <view class="padding-top-xs">在线客服</view>
+    </button>
+
+    <button class="free-button bg-white toolWidth  flex  flex-direction align-center padding-top" open-type="share">
+      <image src="/static/img/icon/fenxiang.png" class="image_icon"></image>
+      <view class="padding-top-xs">分享好友</view>
+    </button>
+  </view>
+  <!-- <button wx:for="{{list}}" wx:key="index" class="free-button bg-white toolWidth" bindtap="toUrl" data-url="{{item.url}}">
+    <view class="toolWidth_icon bg-green ">
+      <free-icon name="{{item.icon}}" color="#fff" size="40"></free-icon>
+    </view>
+    <view class="toolWidth_rightBox padding-left text-white w100 ">
+      <view>{{item.name}}</view>
+      <view class="text-sm whiteBorder padding-top-xs">{{item.sub}}</view>
+    </view>
+  </button>
+
+  <button  class="free-button bg-white toolWidth"  open-type="contact">
+    <view class="toolWidth_icon bg-green ">
+      <free-icon name="community" color="#fff" size="40"></free-icon>
+    </view>
+    <view class="toolWidth_rightBox padding-left text-white w100 ">
+      <view>在线客服</view>
+      <view class="text-sm whiteBorder padding-top-xs">真人客服7*24小时在线服务</view>
+    </view>
+  </button>
+
+  <button  class="free-button bg-white toolWidth"  open-type="contact">
+    <view class="toolWidth_icon bg-green ">
+      <free-icon name="share" color="#fff" size="40"></free-icon>
+    </view>
+    <view class="toolWidth_rightBox padding-left text-white w100 ">
+      <view>分享好友</view>
+      <view class="text-sm whiteBorder padding-top-xs">邀请好友注册领芝士</view>
+    </view>
+  </button> -->
+
+  <view class="bg-white margin-top radius flex align-center justify-between padding">
+    <view class="">
+      <text class="text-bold up_text">开始你的第一篇资料上传</text>
+      <view class="text-sm text-gray">上传首篇内容，开通创作中心</view>
+    </view>
+
+    <view class="my_header_vip_btn bg-gradual-blue text-lg" bindtap="toUrl" data-url="/myPages/upload/upload">去上传</view>
+  </view>
+</view>
+
+<free-modal show="{{modal}}" custom="{{true}}"  width="500rpx">
+  <view class="sign_content flex flex-direction align-center">
+      <view class="text-bold text-lg">签到成功</view>
+      
+      <view class="padding ">
+        <view class=" flex align-center justify-center margin-bottom">
+          <view class="bg-blue padding-xs round">
+            <free-icon name="calendar" size="50" color="#fff"></free-icon>
+          </view>
+        </view>
+        恭喜你成功签到，芝士值+3
+      </view>
+      <!-- <view class="sign_button">
+        好的
+      </view> -->
+    </view>
+</free-modal>
+

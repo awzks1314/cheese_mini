@@ -1,0 +1,115 @@
+{
+  "pages": [
+    "pages/my/my",
+    "pages/material/material",
+    "pages/community/community",
+    "pages/home/home",
+    "pages/login/login",
+    "pages/message/message",
+    "pages/search/search"
+  ],
+  "subPackages": [
+    {
+      "root": "myPages",
+      "pages": [
+        "sign/sign",
+        "myInfo/myInfo",
+        "collect/collect",
+        "task/task",
+        "notice/notice",
+        "info/info",
+        "history/history",
+        "follow/follow",
+        "vip/vip",
+        "noticeDetail/noticeDetail",
+        "upload/upload",
+        "noticeDetailPages/noticeDetailPages",
+        "myInfoNew/myInfoNew"
+      ]
+    },
+    {
+      "root": "homePages",
+      "pages": [
+        "teacher/teacher"
+      ]
+    },
+    {
+      "root": "messagePages",
+      "pages": [
+        "messageDetail/messageDetail"
+      ]
+    },
+    {
+      "root": "materialPages",
+      "pages": [
+        "bookDetail/bookDetail"
+      ]
+    },
+    {
+      "root": "communityPages",
+      "pages": [
+        "post/post",
+        "communityDetail/communityDetail"
+      ]
+    }
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#aaaaaa",
+    "selectedColor": "#000",
+    "backgroundColor": "#FFFFFF",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "static/img/tabbarIcon/t2.png",
+        "selectedIconPath": "static/img/tabbarIcon/t1.png"
+      },
+      {
+        "pagePath": "pages/community/community",
+        "text": "社区",
+        "iconPath": "static/img/tabbarIcon/t4.png",
+        "selectedIconPath": "static/img/tabbarIcon/t3.png"
+      },
+      {
+        "pagePath": "pages/material/material",
+        "text": "发现",
+        "iconPath": "static/img/tabbarIcon/t6.png",
+        "selectedIconPath": "static/img/tabbarIcon/t5.png"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "text": "消息",
+        "iconPath": "static/img/tabbarIcon/t11.png",
+        "selectedIconPath": "static/img/tabbarIcon/t12.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "static/img/tabbarIcon/t8.png",
+        "selectedIconPath": "static/img/tabbarIcon/t7.png"
+      }
+    ]
+  },
+  "usingComponents": {
+    "free-tabs": "/components/free-tabs/free-tabs",
+    "free-tag": "/components/free-tag/free-tag",
+    "free-navBar": "/components/free-navBar/free-navBar",
+    "free-icon": "/components/free-icon/free-icon",
+    "free-title": "/components/free-title/free-title",
+    "free-gap": "/components/free-gap/free-gap",
+    "free-list": "/components/free-list/free-list",
+    "free-backTop": "/components/free-backTop/free-backTop",
+    "free-image": "/components/free-image/free-image",
+    "free-loadmore": "/components/free-loadmore/free-loadmore",
+    "free-empty": "/components/free-empty/free-empty",
+    "free-guidance": "/components/free-guidance/free-guidance",
+    "free-bottom-popup": "/components/free-bottom-popup/free-bottom-popup"
+  },
+  "sitemapLocation": "sitemap.json"
+}

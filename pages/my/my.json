@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "free-modal":"/components/free-modal/free-modal"
+  },
+  "navigationBarTitleText": "",
+  "navigationStyle": "custom"
+}

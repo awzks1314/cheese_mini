@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "free-list-grid":"/components/free-list-grid/free-list-grid",
+    "free-modal":"/components/free-modal/free-modal"
+  },
+  "navigationBarTitleText": ""
+}

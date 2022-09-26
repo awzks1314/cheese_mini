@@ -1,0 +1,81 @@
+<view class="task_card bg-blue flex flex-direction align-center justify-center">
+  <text class="text-white text-lg text-bold">0</text>
+  <view class="padding-top-xs">我的芝士值</view>
+</view>
+
+<view class="bg-white padding radius margin-top">
+  <view class="text-bold ">限时任务</view>
+
+  <view class="flex align-center justify-between margin-top">
+    <view class=" flex align-center">
+      <view class="task_list_img bg-blue ">
+        <free-icon name="likefill" color="#fff"></free-icon>
+      </view>
+
+      <view class="padding-left">
+        <text class="text-bold">新用户大礼包</text>
+        <view class="text-sm text-blue padding-top-xs">芝士值+3</view>
+      </view>
+    </view>
+
+    <view>
+      <view class="task_list_button bg-blue">立即领取</view>
+    </view>
+  </view>
+
+  <view class="flex align-center justify-between margin-top">
+    <view class="flex align-center">
+      <view class="task_list_img bg-green ">
+        <free-icon name="likefill" color="#fff"></free-icon>
+      </view>
+
+      <view class="padding-left">
+        <text class="text-bold">次日登录有奖</text>
+        <view class="text-sm text-blue padding-top-xs">芝士值+5</view>
+      </view>
+    </view>
+
+    <view>
+      <view class="task_list_button bg-gray">已领取</view>
+    </view>
+  </view>
+</view>
+
+
+<view class="bg-white padding radius margin-top">
+  <view class="text-bold">日常任务</view>
+
+  <view class="flex align-center justify-between margin-top">
+    <view class=" flex align-center">
+      <view class="task_list_img bg-blue ">
+        <free-icon name="likefill" color="#fff"></free-icon>
+      </view>
+
+      <view class="padding-left">
+        <text class="text-bold">关注公众号（1/2）</text>
+        <view class="text-sm text-blue padding-top-xs">芝士值+3</view>
+      </view>
+    </view>
+
+    <view>
+      <view class="task_list_button bg-gray">立即领取</view>
+    </view>
+  </view>
+
+  <view class="flex align-center justify-between margin-top">
+    <view class="flex align-center">
+      <view class="task_list_img bg-green ">
+        <free-icon name="likefill" color="#fff"></free-icon>
+      </view>
+
+      <view class="padding-left">
+        <text class="text-bold">每日签到</text>
+        <view class="text-sm text-blue padding-top-xs">芝士值+5</view>
+      </view>
+    </view>
+
+    <view>
+      <view class="task_list_button bg-green">去分享</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,67 @@
+@import '/static/style/main.wxss';
+.w100{
+  width:100%;
+}
+.h100{
+  height:100%;
+}
+.container {
+
+  width: 100%;
+  height: 100%;
+  padding-bottom: calc(env(safe-area-inset-bottom) / 2);
+}
+.relative{
+  position: relative;
+}
+
+/* 模板小程序专用 */
+.text-tea{
+  color:#ADB838;
+}
+.bg-tea{
+  background: #ADB838;
+  color: #fff;
+}
+.teaBg{
+  background-color: #E8EACF;
+}
+.tea-line{
+  color: #ADB838;
+    border: 1rp x solid #ADB838;
+}
+.bg-theme{
+  background-color: #fff;
+}
+
+.app_title{
+  position: relative;
+}
+.app_title::after {
+  content: ' ';
+  position: absolute;
+  bottom: -10rpx;
+  left: 0; 
+  width: 60rpx;
+  height: 5rpx;
+  border-radius: 10rpx;
+  background-color: #0081ff;
+}
+.scroll-style{
+  white-space: nowrap;width: 100%
+}
+
+.border-radius-left{
+  border-top-left-radius: 100rpx;
+  border-top-right-radius: 100rpx;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 100rpx;
+}
+
+.border-radius-right{
+  border-top-left-radius: 50rpx;
+  border-top-right-radius: 50rpx;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 50rpx;
+}
+

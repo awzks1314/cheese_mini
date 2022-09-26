@@ -1,0 +1,187 @@
+<view class="input_box padding-lr padding-bottom">
+  <view class="w100 flex align-center justify-between">
+    <view class="flex align-center" bindtap="toUrl" data-url="/myPages/myInfo/myInfo">
+      <image src="http://q1.qlogo.cn/g?b=qq&nk=664423077&s=640" class="my_header_avatar"></image>
+      <view class="flex flex-direction padding-left">
+        <text class="big_text">Hello，Rasel</text>
+        <text class="big_text_sub">let's start learning!</text>
+      </view>
+    </view>
+
+    <view class="upload_button bg-green " bindtap="toUrl" data-url="/myPages/upload/upload">资料上传</view>
+  </view>
+  <view class="w100 padding-xs radius margin-top bg-white flex align-center ">
+    <free-icon name="search" color="#000" class="padding-left-xs" size="32"></free-icon>
+    <input type="text" placeholder="请输入资料" class="input_style"/> 
+    <view class="image_box" bindtap="openShow">
+      <image src="/static/img/home/filter.png" class="input_image"></image>
+    </view>
+  </view>
+</view>
+
+<free-gap height="400"></free-gap>
+<swiper class="card-swiper {{true?'square-dot':'round-dot'}}" indicator-dots="true" circular="true" autoplay="true"  interval="5000" duration="500" bindchange="cardSwiper" indicator-color="#fff" indicator-active-color="#0081ef" 		previous-margin="35px" 	next-margin="20px">
+  <swiper-item wx:for="{{swiperList}}" wx:key='index' class="{{cardCur == index?'cur':''}}">
+    <view class="swiper-item">
+      <image src="{{item.url}}" mode="aspectFill" ></image>
+    </view>
+  </swiper-item>
+</swiper>
+
+<view class="padding-bottom">
+  <scroll-view scroll-x="true" class="scroll-style">
+    <view class="mater_two_tab {{currentTab == 0?'mater_two_tab_active':''}}" bindtap="changeTab" data-index="0">
+      全部
+    </view>
+    <view class="mater_two_tab {{currentTab == 1?'mater_two_tab_active':''}}" bindtap="changeTab" data-index="1">
+      书籍
+    </view>
+    <view class="mater_two_tab {{currentTab == 2?'mater_two_tab_active':''}}" bindtap="changeTab" data-index="2">
+      笔记
+    </view>
+    <view class="mater_two_tab {{currentTab == 3?'mater_two_tab_active':''}}" bindtap="changeTab" data-index="3">
+      论文
+    </view>
+  </scroll-view>
+
+  
+  <scroll-view class="scroll-style" scroll-x="true">
+    <view class="bg-blue radius  mater_item flex flex-direction" wx:for="{{3}}" wx:key="index" >
+      <!-- bindtap="detailPage" data-id="1" -->
+    <view class="mater_item_image"></view>
+    <view class="tab_one_style bg-white padding-sm">
+      <view class="mater_item_avatar_box">
+        <image src="http://q1.qlogo.cn/g?b=qq&nk=664423077&s=640" class="mater_item_avatar"></image>
+      </view>
+      <view class="margin-top">
+        <text class="text-bold">谈短篇小说的制作</text>
+      </view>
+      <view class="flex align-center justify-between">
+        <view class="tag_content  flex flex-wrap align-center">
+          <free-tag effect="light" size="sm" radius="10rpx" type="blue" class="tag_item margin-right-xs">生物</free-tag>
+          <free-tag effect="light" size="sm" radius="10rpx"  type="blue" class="tag_item margin-right-xs">化学</free-tag>
+        </view>
+        <free-icon name="more" color="#0081ef" catchtap="openBottomShare"></free-icon>
+      </view>
+    </view>
+  </view>
+  </scroll-view>
+
+    <view class="padding-lr">
+      <view class="margin-top bg-white radius padding-sm flex align-center" wx:for="{{5}}" wx:key="index" >
+      <!-- bindtap="detailPage" data-id="1" -->
+      <view class="boook_avatar bg-blue"></view>
+        <view class="flex-sub padding-left">
+          <view class=" flex-sub ">
+            <view class="text-bold text-cut-2">2022年新能源策略报告（光伏、储能、风电）：能源革命加速，龙头强者恒强</view>
+            <view class="flex align-center">
+              <free-tag effect="light" size="sm" radius="10rpx" type="blue" class="tag_item margin-right-xs">生物</free-tag>
+              <free-tag effect="light" size="sm" radius="10rpx"  type="blue" class="tag_item margin-right-xs">化学</free-tag>
+              <free-tag effect="light" size="sm" radius="10rpx" type="blue" class="tag_item margin-right-xs">英语</free-tag>
+            </view>
+          </view>
+          <view class="flex align-center justify-between margin-top">
+            <view class="text-sm text-gray  flex align-center">
+              <view class="flex align-center">
+                <free-icon name="my" size="26"></free-icon>
+                <text class="padding-left-xxs ">东吴国际</text>
+              </view>
+              <view class="flex align-center padding-left-sm">
+                <free-icon name="copy" size="26"></free-icon>
+                <text class="padding-left-xxs">98页</text>
+              </view>
+              <view class="flex align-center padding-left-sm">
+                <free-icon name="attention" size="26"></free-icon>
+                <text class="padding-left-xxs">165阅读</text>
+              </view>
+            </view>
+            <free-icon name="more" color="#0081ef" catchtap="openBottomShare"></free-icon>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <free-drawer 
+    show="{{show}}"
+    mode="right" 
+    closeable="{{false}}"
+    bind:open="open"
+    bind:close="close"
+    length="70%">
+    <view class="padding relative h100" >
+      <view>
+      <free-gap height="160"></free-gap>
+        <view class="text-bold">资料分类</view>
+        <view class="flex flex-wrap">
+          <text class="drawer_item">书籍</text>
+          <text class="drawer_item">论文</text>
+          <text class="drawer_item">笔记</text>
+        </view>
+
+        <view class="text-bold margin-top">资料分类</view>
+        <view class="flex flex-wrap">
+          <text class="drawer_item">书籍</text>
+          <text class="drawer_item">论文</text>
+          <text class="drawer_item">笔记</text>
+        </view>
+      </view>
+
+      <view class="drawer_button">
+        确定
+      </view>
+    </view>
+  </free-drawer >
+
+  <free-bottom-popup show="{{bottomShare}}" bgcolor="transport" bind:close="close">
+    <!-- bind:close="close" -->
+    <view class="share_content">
+      
+        <view class=" flex  align-center justify-center bg-white padding-tb share_padding">
+          <image src="http://q1.qlogo.cn/g?b=qq&nk=664423077&s=640" class="share_image"></image>
+
+          <view class="padding-left share_right_box flex flex-direction justify-around">
+            <view class="share_title text-center">2022年新能源策略报告（光伏、储能、风电）：能源革命加速，龙头强者恒强</view>
+            <view class="flex align-center ">
+              <!-- <free-icon name="my" size="26"></free-icon> -->
+              <text class="padding-left-xxs ">作者：东吴国际</text>
+            </view>
+            <view class="flex align-center ">
+              <!-- <free-icon name="attention" size="26"></free-icon> -->
+              <text class="padding-left-xxs">阅读：165次</text>
+            </view>
+            <view class="flex align-center ">
+              <!-- <free-icon name="copy" size="26"></free-icon> -->
+              <text class="padding-left-xxs">页数：98页</text>
+            </view>
+          </view>
+        </view>
+        <view class="solid-bottom padding-bottom-sm bg-white flex align-center justify-center">
+          <view class="share_read">阅读</view>
+        </view>
+        <view class="flex align-center justify-center  bg-white padding-tb">
+          <view class="share_item">
+            <view class="share_item_image bg-blue">
+              <free-icon name="likefill" color="#fff"></free-icon>
+            </view>
+            <text>收藏</text>
+          </view>
+          <view class="share_item">
+            <view class="share_item_image bg-green">
+              <free-icon name="xiazai" color="#fff"></free-icon>
+            </view>
+            <text>下载</text>
+          </view>
+          <view class="share_item">
+            <view class="share_item_image bg-yellow">
+              <free-icon name="share" color="#fff"></free-icon>
+            </view>
+            <text>分享</text>
+          </view>
+        </view>
+
+        <!-- <view class="padding text-center margin-top-xs bg-white" catchtap="close">
+          关闭
+        </view> -->
+    </view>
+  </free-bottom-popup>

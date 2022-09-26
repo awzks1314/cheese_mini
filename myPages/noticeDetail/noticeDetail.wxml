@@ -1,0 +1,106 @@
+<view class="padding-lr" wx:if="{{type=='seting'}}">
+  
+  <view class="padding-top ">
+    <view class="text-center text-gray text-sm">2019/09/11 20:00</view>
+    <view class="padding bg-white margin-top radius">
+      <view class="flex align-center justify-between">
+        <text class="text-bold">您的资料上传没有通过</text>
+        <text class="red_dot"></text>
+      </view>
+    </view>
+  </view>
+  
+  <view wx:for="{{3}}" wx:key="index" class="padding-top" bindtap="goUrl" data-url="/myPages/noticeDetailPages/noticeDetailPages">
+    <view class="text-center text-gray text-sm">2019/09/11 20:00</view>
+    <view class="padding bg-white margin-top radius">
+      <view class="flex align-center justify-between">
+        <text class="text-bold">您的资料上传没有通过</text>
+        <text class="red_dot"></text>
+      </view>
+      <view class="margin-top-xs text-gray text-cut-1">
+        这里显示填写的资料审核原因审核原因这里显示填写的资料审核原因审核原因这
+      </view>
+    </view>
+  </view>
+</view>
+
+
+<view wx:if="{{type == 'like'}}">
+  <view class="bg-white flex align-center padding-lr">
+    <image src="http://q1.qlogo.cn/g?b=qq&nk=664423077&s=640" class="my_header_avatar"></image>
+    <view class="padding-tb margin-left solid-bottom  flex-sub">
+      <view  class="flex align-center justify-between">
+        <view class="flex align-center">
+          <text>彭于晏</text>
+          <view class="red_dot margin-left-xs"></view>
+        </view>
+        <text>8小时前</text>
+      </view>
+
+      <view class="padding-top-xs flex align-center">
+        <free-icon name="likefill" color="#fbbd08" size="30" ></free-icon>
+        <view class="text-cut-1 padding-left-xs">赞了您的资料
+          <text class="text-blue">《dhklsahdlasjdjasl saas》</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="bg-white flex align-center padding-lr" wx:for="{{6}}" wx:key="index">
+    <image src="http://q1.qlogo.cn/g?b=qq&nk=664423077&s=640" class="my_header_avatar"></image>
+    <view class="padding-tb margin-left solid-bottom  flex-sub">
+      <view  class="flex align-center justify-between">
+        <view class="flex align-center">
+          <text>吴彦祖</text>
+          <!-- <view class="red_dot margin-left-xs"></view> -->
+        </view>
+        <text>昨天</text>
+      </view>
+
+      <view class="padding-top-xs flex align-center">
+        <free-icon name="likefill" color="#fbbd08" size="30" ></free-icon>
+        <view class="text-cut-1 padding-left-xs">赞了您的话题
+          <text class="text-blue">《dhklsah》</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view wx:if="{{type == 'commit'}}">
+  <view class="bg-white flex  padding-lr padding-top" wx:for="{{4}}" wx:key="index">
+    <image src="http://q1.qlogo.cn/g?b=qq&nk=664423077&s=640" class="my_header_avatar "></image>
+    <view class="solid-bottom padding-left flex-sub">
+      <view class="  flex-sub flex align-center justify-between">
+        <view  class="">
+          <view class="flex align-center">
+            <text class="text-bold">彭于晏</text>
+            <view class="red_dot margin-left-xs"></view>
+          </view>
+          <text class="text-gray">8小时前</text>
+        </view>
+        <free-tag   radius="10rpx" bindtap="openCommit">回复</free-tag>
+      </view>
+
+      <view class="padding-tb">
+        <view>sjdlajlj大苏打撒旦撒sjdlajlj大苏打撒旦撒大撒大撒大撒大撒打赏大撒大撒大苏打撒旦大撒大撒大撒大撒打赏大撒大撒大苏打撒旦。</view>
+
+        <view class="commit_box">
+          <text class="text-bold">回复我的评论：</text>
+          <text class="text-gray">大撒大撒大撒的撒大是打算房地产v仔细看v罗迪克大师傅地方</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<free-gap height="100"></free-gap>
+<view class="commit_fixed" wx:if="{{popupShow}}" bindtap="closeShow">
+  <view class="w100 flex align-center bg-white fixee">
+    <view class="inputStyle flex align-center padding-lr round">
+      <free-icon name="edit"></free-icon>
+      <input type="text" placeholder="说点什么呗" class="margin-left-xs"/>
+    </view>
+    <view class="text-blue padding-left">发送</view>
+  </view>
+</view>

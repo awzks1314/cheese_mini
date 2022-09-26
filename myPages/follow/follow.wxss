@@ -1,0 +1,32 @@
+.follow_list{
+  padding: 20rpx 30rpx;
+}
+.my_header_avatar{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  background-color: #e7ebed;
+}
+
+.follow_dot{
+  display: block;
+  width: 6rpx;
+  height: 6rpx;
+  border-radius: 50%;
+  background-color: #919293;
+  margin: 0 10rpx;
+}
+.follow_line{
+  width: 2rpx;
+  height: 20rpx;
+  margin: 0 8rpx;
+  background-color: #919293;
+}
+
+.follow_button{
+  width: 140rpx;
+  padding: 6rpx 10rpx;
+  border-radius: 30rpx;
+  /* height: 80rpx; */
+  text-align: center;
+}

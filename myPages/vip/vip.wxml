@@ -1,0 +1,78 @@
+<view class="vip_card bg-blue radius padding">
+  <view class="flex align-center">
+    <image src="http://q1.qlogo.cn/g?b=qq&nk=664423077&s=640" class="my_header_avatar"></image>
+
+    <view class="padding-left">
+      <text class="text-bold text-lg">搞文艺的猿</text>
+      <view class="flex align-center margin-top-xs">
+        <view class="vip_level bg-blue light text-sm">月度会员</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="text-bold">
+    你还不是芝士会员，立即开通领好礼
+  </view>
+</view>
+
+<view class="margin-top">
+  <view class="flex ">
+    <view class="vip_type_card vip_type_card_active padding">
+      <text class="text-lg ">月卡</text>
+      <text class="text-price text-xxl text-bold">198</text>
+      <view class="text-sm text-gray vip_type_card_text">
+        <text>0折</text>
+        <text class="text-price text-lineThrough">399</text>
+      </view>
+    </view>
+    <view class="vip_type_card  padding">
+      <text class="text-lg ">季卡</text>
+      <text class="text-price text-xxl text-bold">298</text>
+      <view class="text-sm text-gray vip_type_card_text">
+        <text>1折</text>
+        <text class="text-price text-lineThrough">699</text>
+      </view>
+    </view>
+    <view class="vip_type_card  padding">
+      <text class="text-lg ">年卡</text>
+      <text class="text-price text-xxl text-bold">398</text>
+      <view class="text-sm text-gray vip_type_card_text">
+        <text>2折</text>
+        <text class="text-price text-lineThrough">899</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="padding-tb text-center">
+    <text class="text-gray text-sm">开通会员即可享受专属会员特权，还在犹豫什么~</text>
+  </view>
+
+  <view class="vip_buy_button bg-blue flex align-center justify-center">
+    立即开通
+  </view>
+</view>
+
+<view class="bg-white  radius margin-top">
+  <view class="flex padding align-center ">
+    <text class="text-bold ">专属特权</text>
+    <text class="text-gray padding-left-xs text-sm">更多特权还在赶来~</text>
+  </view>
+  <view class="flex flex-wrap padding-bottom">
+    <view class="vip_tequan_item" wx:for="{{10}}" wx:key="index">
+      <free-icon name="comment" size="50"></free-icon>
+      <text>升级礼包</text>
+    </view>
+  </view>
+</view>
+
+<view class="bg-white padding radius margin-top">
+  <view class="flex  align-center margin-bottom">
+    <text class="text-bold ">开通会员说明</text>
+  </view>
+  <view class="text-gray">
+    <view class="padding-bottom-xs">1、每个支付ID只能与一个账号绑定续费支付关系。</view>
+    <view class="padding-bottom-xs">2、的撒的撒多所大萨的撒多所大萨达撒大萨达阿萨德萨达的撒多所大萨达撒大萨达阿萨德萨达达撒大萨达阿萨德萨达。</view>
+    <view>3、每个支付ID只能与一个账号绑定续费支付关系。</view>
+  </view>
+</view>
+<free-gap height="80"></free-gap>

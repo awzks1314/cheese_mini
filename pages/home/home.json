@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "free-input":"/components/free-input/free-input"
+  },
+  "navigationBarTitleText": "芝士忍者"
+}

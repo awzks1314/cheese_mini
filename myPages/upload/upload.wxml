@@ -1,0 +1,94 @@
+<view class="padding">
+  <view class="upload_li flex align-center justify-between solid-bottom">
+    <view class="title">How This Works</view>
+    <text class="text-blue" bindtap="openNote">open</text>
+  </view>
+  <view class="upload_li solid-bottom "> 
+    <view class="title">Select a category</view>
+    <view class="w100 flex align-cenetr flex-wrap">
+      <view class="upload_item {{categoryIndex==0?'upload_item_active':''}}" bindtap="changeType" data-index="0">IA</view>
+      <view class="upload_item {{categoryIndex==1?'upload_item_active':''}}" bindtap="changeType" data-index="1">EE</view>
+      <view class="upload_item {{categoryIndex==2?'upload_item_active':''}}" bindtap="changeType" data-index="2">TOK</view>
+      <view class="upload_item {{categoryIndex==3?'upload_item_active':''}}" bindtap="changeType" data-index="3">NOTES</view>
+    </view>
+  </view>
+  <view class="upload_li flex align-center justify-between solid-bottom">
+    <view class="title">学科</view>
+    <view class="flex align-center">
+      <text class="text-blue">Select</text>
+    </view>
+  </view>
+  <view class="upload_li solid-bottom" wx:if="{{categoryIndex == 0 || categoryIndex == 3}}">
+    <view class="title">level</view>
+    <view class="w100 flex align-cenetr">
+      <view class="upload_item upload_item_active">HL</view>
+      <view class="upload_item">SL</view>
+    </view>
+  </view>
+  <view class="upload_li flex align-center justify-between solid-bottom">
+    <view class="title">分数</view>
+    <picker bindchange="bindPickerChange" value="{{scoreIndex}}" range="{{arrayScore}}">
+        <view class="picker text-blue">
+          {{score || 'Select'}}
+        </view>
+      </picker>
+  </view>
+  <view class="upload_li flex align-center justify-between solid-bottom">
+    <view class="title">Session</view>
+    <picker bindchange="bindPickerChange" value="{{sessionIndex}}" range="{{arraySession}}">
+        <view class="picker text-blue">
+          {{session || 'Select'}}
+        </view>
+      </picker>
+  </view>
+  <view class="upload_li flex align-center justify-between solid-bottom">
+    <view class="title">题目</view>
+    <input placeholder="请输入题目" placeholder-class="text-blue" class="input_style"></input>
+  </view>
+  
+
+  <view class="padding-bottom solid-bottom">
+    <view class="flex  bgwhite align-center padding-top">
+      <view class="title text-bold">你的IA</view>
+    </view>
+    <view class="myPages_upload flex flex-direction align-center justify-center text-blue ">
+      <image src="/static/img/icon/upload.png" class="upload_image"></image>
+      <view class="text-lg padding-tb-xs text-bold">Upload a PDF</view>
+      <view class="padding-top-xs">Supported formats PDF.</view>
+      <view class="">The PDF format is less than 10 MB.</view>
+    </view>
+  </view>
+
+  <view class="padding-bottom solid-bottom">
+    <view class="flex  bgwhite align-center padding-top">
+      <view class="title text-bold">你的课程</view>
+    </view>
+    <view class="myPages_upload flex flex-direction align-center justify-center text-blue ">
+      <image src="/static/img/icon/upload.png" class="upload_image"></image>
+      <view class="text-lg padding-tb-xs text-bold">Upload a PDF</view>
+      <view class="padding-top-xs">Supported formats PDF.</view>
+      <view class="">The PDF format is less than 10 MB.</view>
+    </view>
+  </view>
+  
+  <view class="upload_li flex align-center justify-between">
+    <view class="title">你的微信</view>
+    <input placeholder="请输入你的微信" placeholder-class="text-blue" class="input_style"></input>
+  </view>
+</view>
+
+<free-gap height="120"></free-gap>
+<view class="info_button">
+  <view class="info_button_content ">提交审核</view>
+</view>
+
+<free-bottom-popup show="{{noteShow}}" bgcolor="transport"  bind:close="close">
+    <!-- bind:close="close" -->
+    <view class="share_content padding bg-white">
+      <view class="text-center padding text-bold">上传说明</view>
+      <view>1.的撒的撒多撒大萨达少打点萨多撒大萨达少打点萨达萨达大萨达多撒大萨达少打点萨达萨达大萨达多撒大萨达少打点萨达萨达大萨达达萨达大萨达</view>
+      <view class="padding-tb-xs">2.的撒的撒多撒大萨达少打点萨多撒大萨达少打点萨达萨达大萨达多撒大萨达少打点萨达萨达大萨达多撒大萨达少打点萨达萨达大萨达达萨达大萨达</view>
+      <view class="padding-tb-xs">2.的撒的撒多撒大萨达少打点萨多撒大萨达少打点萨达萨达大萨达多撒大萨达少打点萨达萨达大萨达多撒大萨达少打点萨达萨达大萨达达萨达大萨达</view>
+      <free-gap height="50"></free-gap>
+    </view>
+  </free-bottom-popup>

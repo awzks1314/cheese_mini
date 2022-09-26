@@ -1,0 +1,23 @@
+<free-input 
+  placeholder='请输入您要查询的内容'
+  close="true"
+  bgColor="transoprt"
+  class=" flex-sub"
+  bind:confirm="confirm"
+  extreaWord="搜索"
+></free-input>
+
+<view class="padding">
+  <view class="flex align-center justify-between">
+    <text>搜索历史</text>
+    <free-icon name="delete" size="28"></free-icon>
+  </view>
+
+  <view class="flex flex-wrap padding-top">
+    <view class="search_item ">
+    <text class="text-cut">dskdddksdk</text></view>
+    <view class="search_item">llk</view>
+    <view class="search_item">dskdsdssdk</view>
+    <view class="search_item">dskk</view>
+  </view>
+</view>

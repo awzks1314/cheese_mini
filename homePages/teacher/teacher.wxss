@@ -1,0 +1,31 @@
+.my_header_avatar{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+
+.teacher_icon_box{
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20rpx;
+}
+.info_button{
+  width: 100%;
+  position: fixed;
+  bottom:0;
+  padding: 20rpx;
+  height: 120rpx;
+}
+.info_button_content{
+  height: 100%;
+  background-color: #0081ef;
+  border-radius: 50rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}

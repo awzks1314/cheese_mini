@@ -1,0 +1,35 @@
+<view class="padding-lr">
+  <view class="text-sm text-blue padding-top text-center">2022-09-18 </view>
+  <view class="message_item flex padding-top">
+    <image src="http://q1.qlogo.cn/g?b=qq&nk=664423077&s=640" class="user_avatar "></image>
+    <view class="message_item_content margin-left-sm border-radius-left bg-white">
+      Hello，how can I help you?
+    </view>
+  </view> 
+  <view class="message_time_left">13:18</view>
+
+  <view class="text-sm text-blue padding-top text-center  ">2022-09-18</view>
+  <view class="message_item flex justify-end padding-top">
+    <view class="message_item_content margin-right-sm border-radius-right bg-blue">
+      <text>Hello, i'm interesting in your credit products.</text>
+    </view>
+    <image src="http://q1.qlogo.cn/g?b=qq&nk=1401452384&s=640" class="user_avatar "></image>
+  </view>
+  <view class="message_time_right">13:19</view>
+  <view class="message_item flex justify-end padding-top">
+    <view class="message_item_content margin-right-sm border-radius-right bg-blue">
+      Hello, i'm interesting in your credit products.Hello, i'm interesting in your credit products. products.Hello, i'm interesting
+    </view>
+    <image src="http://q1.qlogo.cn/g?b=qq&nk=1401452384&s=640" class="user_avatar "></image>
+  </view>
+  <view class="message_time_right">13:20</view>
+</view>
+<view class="message_sumit_box flex align-center bg-white">
+  <view class="inputStyle flex align-center padding-lr round">
+    <!-- <free-icon name="edit"></free-icon> -->
+    <input type="text" placeholder="Your message" class="margin-left-xs"/>
+  </view>
+  <view class="bg-blue round  padding-xs margin-left">
+    <free-icon name="comment" color="#fff"></free-icon>
+  </view>
+</view>

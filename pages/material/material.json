@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "free-input":"/components/free-input/free-input",
+    "free-drawer":"/components/free-drawer/free-drawer"
+  },
+  "navigationBarBackgroundColor": "#0081ef",
+  "navigationStyle": "custom",
+  "navigationBarTitleText": ""
+}

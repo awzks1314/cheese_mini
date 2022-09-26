@@ -1,0 +1,109 @@
+
+.my_header{
+  /* height: 580rpx; */
+  padding-top: 60rpx;
+  position: relative;
+  background: linear-gradient(180deg, #fff,#f4f5f7);
+}
+
+.my_header_box{
+  height: 300rpx;
+  z-index: 99;
+  background-color: #0081ef;
+  background-image: url('https://z3.ax1x.com/2021/05/14/grhfMV.png');
+	background-size: cover;
+	background-position: center;
+}
+.my_header_image_box{
+  background-color: #fff;
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: calc(50% - 100rpx);
+  top: -100rpx;
+}
+.my_header_avatar{
+  width: 170rpx;
+  height: 170rpx;
+  border-radius: 50%;
+  background-color: #e7ebed;
+}
+
+.my_header_nikeName{
+  font-size: 36rpx;
+  font-weight: 700;
+  padding-bottom: 10rpx;
+  padding-top: 80rpx;
+  color: #000;
+}
+.my_header_box_image{
+  width: 70rpx;
+  height: 70rpx;
+  margin-right: 10rpx;
+}
+.my_header_box_image1{
+  width: 62rpx;
+  height: 62rpx;
+  margin-right: 10rpx;
+}
+.my_header_box_tab{
+  padding: 30rpx 0;
+}
+.my_header_box_tabitem{
+  width: 220rpx;
+  height: 66rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.linewidr{
+  width: 2rpx;
+  height: 30rpx;
+  background-color: #0081ef;
+}
+
+.tab_item{
+  width: 120rpx;
+  height: 60rpx;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50rpx;
+}
+.tab_item_slider{
+  width: 120rpx;
+  height: 60rpx;
+  border-radius: 50rpx;
+  position: absolute;
+  left: 0;
+  top: 0;  
+  background-color: #000;
+  transition: all 0.2s linear;
+}
+.tab_item_actvie{
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease-in-out;
+}
+.product_item{
+  width: calc(50% - 20rpx);
+  border-radius: 20rpx;
+  overflow: hidden;
+  margin-right: 30rpx;
+  margin-bottom: 30rpx;
+}
+.product_item:nth-child(2n) {
+  margin-right: 0;
+}
+.product_image{
+  width: 100%;
+  height: 300rpx;
+  background-color: #0081ef;
+}
+

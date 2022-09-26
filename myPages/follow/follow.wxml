@@ -1,0 +1,55 @@
+<view class="bg-white">
+  <free-tabs 
+  tabs="{{list}}"  
+  height="80" 
+  isFixed="true"
+  currentTab="{{currentTab}}" 
+  bind:change="change" ></free-tabs>
+</view>
+<free-gap height="80"></free-gap>
+
+<view class="w100 follow_list flex align-center justify-between bg-white solid-bottom" wx:for="{{6}}" wx:key="index">
+  <view class="   flex align-center" >
+    <image src="http://q1.qlogo.cn/g?b=qq&nk=664423077&s=640" class="my_header_avatar"></image>
+    <view class="padding-left">
+      <view class=" text-bold">捕捉镜头</view>
+      <view class="flex align-center text-gray">
+        <view>作品</view>
+        <view class="follow_dot"></view>
+        <view>6</view>
+        <view class="follow_line"></view>
+        <view>粉丝</view>
+        <view class="follow_dot"></view>
+        <view>6</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="">
+    <view class="follow_button bg-blue">已关注</view>
+    <view class="follow_button bg-green margin-top-xs">私信</view>
+  </view>
+</view>
+
+<view class="w100 follow_list flex align-center justify-between bg-white solid-bottom" wx:for="{{2}}" wx:key="index">
+  <view class="   flex align-center" >
+    <image src="http://q1.qlogo.cn/g?b=qq&nk=664423077&s=640" class="my_header_avatar"></image>
+    <view class="padding-left">
+      <view class=" text-bold">捕捉镜头</view>
+      <view class="flex align-center text-gray">
+        <view>作品</view>
+        <view class="follow_dot"></view>
+        <view>6</view>
+        <view class="follow_line"></view>
+        <view>粉丝</view>
+        <view class="follow_dot"></view>
+        <view>6</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="">
+    <view class="follow_button bg-gray">取消关注</view>
+    <view class="follow_button bg-green margin-top-xs">私信</view>
+  </view>
+</view>

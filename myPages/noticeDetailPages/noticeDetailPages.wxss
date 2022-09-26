@@ -1,0 +1,6 @@
+page {
+  background-color: #fff;
+}
+.letting_space{
+  text-indent: 56rpx;
+}

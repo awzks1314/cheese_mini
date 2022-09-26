@@ -1,0 +1,87 @@
+<view class="bg-blue commun_head_box">
+  <free-input 
+  placeholder='请输入您要查询的内容'
+  close="true"
+  bgColor="transoprt"
+  class=" flex-sub"
+  disabled="true"
+  bindtap="goUrl" data-url="/pages/search/search"
+></free-input>
+</view>
+<view class="relative">
+  <view class="commun_head_input"></view>
+</view>
+<scroll-view scroll-x="true" class="scroll-style padding-bottom padding-left ">
+  <view class="community_card " wx:for="{{swiperList}}" wx:key="index">
+    <image src="{{item.url}}" class="community_card_image"></image>
+    <view class="community_card_width text-cut-2 padding-tb-xs text-bold">
+      Ruasia has that adcadsa，saysukiiayadsa，saysukiia，saysukiiayadsa，saysukiia
+    </view>
+    <view class="padding-top-xs flex align-center justify-between">
+      <free-tag type="blue">Trengind</free-tag>
+      <view class="flex align-center text-sm text-gray">
+        <free-icon name="time" size="32"></free-icon>
+        <text>1 min ago</text>
+      </view>
+    </view>
+  </view>
+</scroll-view>
+
+
+<!-- <view class="padding-lr flex align-center">
+  <view class="community_tab {{tabCurrentTab == 0 ?' community_tab_active':''}}" bindtap="changeTab" data-index="0">全部</view>
+  <view class="community_tab {{tabCurrentTab == 1 ?' community_tab_active':''}}" bindtap="changeTab" data-index="1">最新</view>
+  <view class="community_tab {{tabCurrentTab == 2 ?' community_tab_active':''}}" bindtap="changeTab" data-index="2">最热</view>
+</view> -->
+
+<view class="flex alignc-enter padding-lr ">
+  <view class="tab_iotem bg-orange margin-right">trending</view>
+  <view class="tab_iotem bg-blue">business</view>  
+</view>
+<view class="padding-lr">
+  <view class="com_content bg-white padding-sm radius margin-top" 
+  wx:for="{{5}}" wx:key="index" bindtap="goUrl" data-url="/communityPages/communityDetail/communityDetail">
+    <view class="flex align-center justify-between">
+      <view class="flex align-center">
+        <image src="http://q1.qlogo.cn/g?b=qq&nk=664423077&s=640" class="com_avatar"></image>
+        <view class="flex flex-direction margin-left">
+          <view class="text-bold padding-bottom-xs">Beepdth Aggerand</view>
+          <free-tag type="gray" radius='0' size="sm" effect='plain'>匿名</free-tag>
+        </view> 
+      </view>
+      <!-- <free-icon name="more" size="32" color="f0f0f0"></free-icon> -->
+    </view>
+
+    <view class="padding-tb">
+      <!-- <view class="text-bold">
+        GJ降息意味着房子有稳定保障了大萨达撒多？
+      </view> -->
+      <view>
+        <text class="">GJ降息意味着GGJ降息意味着GJ降息意味着房GJ降息意味着GJ降息意味着房J降息意味着房</text>
+      </view>
+      <!-- <view class="text-blue">阅读全文</view> -->
+    </view>
+
+    <view class="flex align-center justify-between">
+      <view class="flex align-center">
+        <free-icon name="share" ></free-icon>
+        <!-- <text class="text-gray padding-left-xs">分享</text> -->
+      </view>
+
+      <view class="flex align-center">
+        <view class="flex align-center"> 
+          <free-icon name="comment" ></free-icon>
+          <text class="text-gray padding-left-xs">117</text>
+        </view>
+        <!-- <view class="flex align-center padding-left">
+          <free-icon name="like" ></free-icon>
+          <text class="text-gray padding-left-xs">16</text>
+        </view> -->
+      </view>
+    </view>
+  </view>
+</view>
+<free-gap height="30"></free-gap>
+<view class="community_button" bindtap="goUrl" data-url="/communityPages/post/post">
+  <image src="/static/img/home/chess.png" class="community_edit "></image>
+</view>

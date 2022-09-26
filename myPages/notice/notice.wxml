@@ -1,0 +1,57 @@
+<view class="bg-white flex align-center padding-lr" bindtap="goUrl" data-url="/myPages/noticeDetail/noticeDetail" data-type="like">
+  <view class="radius_box bg-yellow">
+    <free-icon name="likefill" color="#fff" size="50"></free-icon>
+  </view>  
+  <view class="padding-tb-lg margin-left solid-bottom flex align-center justify-between flex-sub">
+    <text>赞</text>
+    <text class="red_dot">50</text>
+  </view>
+</view>
+<view class="bg-white flex align-center padding-lr" bindtap="goUrl" data-url="/myPages/noticeDetail/noticeDetail" data-type="commit">
+  <view class="radius_box bg-green">
+    <free-icon name="comment" color="#fff" size="50"></free-icon>
+  </view>  
+  <view class="padding-tb margin-left solid-bottom flex align-center justify-between flex-sub">
+    <text>评论消息</text>
+    <text class="red_dot">99+</text>
+  </view>
+</view>
+
+<view class="bg-white flex align-center padding-lr" bindtap="goUrl" data-url="/myPages/noticeDetail/noticeDetail" data-type="seting">
+  <view class="radius_box bg-blue">
+    <free-icon name="notificationfill" color="#fff" size="50"></free-icon>
+  </view>  
+  <view class="padding-tb margin-left solid-bottom flex align-center justify-between flex-sub">
+    <text class="">系统通知</text>
+    <text class="red_dot">25</text>
+  </view>
+</view>
+
+
+<view class="bg-white flex align-center padding-lr">
+  <image src="http://q1.qlogo.cn/g?b=qq&nk=664423077&s=640" class="my_header_avatar"></image>
+  <view class="padding-tb margin-left solid-bottom flex align-center justify-between flex-sub">
+    <view class="flex-sub">
+      <text>Helld sadh</text>
+      <text class="text-cut-1 text-gray padding-top-xs">你家着火了，快点回去帮忙啊你家着火了，快点回去帮忙啊你家着火了，快点回去帮忙啊</text>
+    </view>
+    <view class="flex flex-direction  align-end">
+      <text>03-01</text>
+      <view class="red_dot margin-top-xs">9</view>
+    </view>
+  </view>
+</view>
+
+<view class="bg-white flex align-center padding-lr" wx:for="{{5}}" wx:key="{{index}}">
+  <image src="http://q1.qlogo.cn/g?b=qq&nk=664423077&s=640" class="my_header_avatar"></image>
+  <view class="padding-tb margin-left solid-bottom flex align-center justify-between flex-sub">
+    <view class="flex-sub ">
+      <text>Helld sadh</text>
+      <view class="text-cut text-gray padding-top-xs">你家着火了，快点回去帮忙啊</view>
+    </view>
+    <view class="flex flex-direction  align-end">
+      <text>03-01</text>
+      <view class="red_dot margin-top-xs">9</view>
+    </view>
+  </view>
+</view>

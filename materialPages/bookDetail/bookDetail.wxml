@@ -1,0 +1,29 @@
+<view class="bookDetail bg-blue"></view>
+<view class="book_content">
+  <view class="book_content_image bg-green shadow">
+    1
+  </view>
+  <free-gap height="180"></free-gap>
+  <view class="padding">
+    <view class="text-sm padding-bottom text-center">
+      Edward Humes
+    </view>
+    <view class="text-xl padding-bottom text-center text-bold">
+      Door To Door
+    </view>
+    <free-gap height="40"></free-gap>
+    <view class="solid-bottom "></view>
+    <free-gap height="40"></free-gap>
+
+    <view>
+      <view>
+        <view></view>
+      </view>
+    </view>
+    <view class="flex align-center padding-top">
+      <view class="book_tab book_tab_active">About Book</view>
+      <view class="book_tab">Owner’s Info</view>
+    </view>
+  </view>
+  
+</view>

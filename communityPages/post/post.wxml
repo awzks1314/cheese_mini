@@ -1,0 +1,35 @@
+<view class="padding-top padding-left">
+  <scroll-view class="post_upload scroll-style" scroll-x="true"> 
+    <view class="post_upload_content " wx:for="{{imgList}}" wx:key="index" bindtap="ViewImage" data-url="{{imgList[index]}}">
+      <image src='{{imgList[index]}}' class="post_img_style" mode='aspectFill'></image>
+      <view class="free-tag bg-red" catchtap="DelImg" data-index="{{index}}">
+        <free-icon name="close" size='24' color='#fff'></free-icon>
+      </view>
+    </view>
+    <view class="post_upload_content bg-gray" bindtap="ChooseImage" wx:if="{{imgList.length<9}}">
+      <free-icon name="add" class="free-upicon"></free-icon>
+    </view>
+  </scroll-view>
+</view>
+<view class="relative padding-lr ">
+  <textarea maxlength="300" bindinput="textareaAInput" placeholder="有什么新鲜有趣内容，快来和别人分享吧" value="{{info}}"></textarea>
+  <view class="post_word_limit text-gray">{{info.length}}/300</view>
+</view>
+
+<view class="padding-lr">
+  <view class="solid-bottom"></view>
+</view>
+
+<!-- <view class="padding">
+  <input placeholder="输入标题" maxlength="20" class="post_input_style"></input>
+</view> -->
+<view class="padding  flex align-center justify-end">
+  <text class="text-lg padding-right-xs">匿名发送</text>
+  <switch class="blue" checked></switch>
+</view>
+
+<free-gap height="80"></free-gap>
+<view class=" info_button">
+  <view class="info_button_content">
+    <free-icon name="edit" color="#fff"></free-icon>立刻发帖</view>
+</view>

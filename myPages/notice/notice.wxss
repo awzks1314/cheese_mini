@@ -1,0 +1,26 @@
+.radius_box{
+
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.my_header_avatar{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+.red_dot{
+  display: block;
+  background-color: red;
+  border-radius: 50%;
+  width: 44rpx;
+  height: 44rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 24rpx;
+}

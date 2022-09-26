@@ -1,0 +1,43 @@
+<view class="padding solid-bottom">
+  <view class="text-bold">GJ降息意味着房子有稳定保障了大萨达撒多撒大萨达撒大萨达撒？</view>
+</view>
+
+<view class="padding">
+  <view class="flex align-center justify-between">
+    <view class="flex align-center">
+      <image src="http://q1.qlogo.cn/g?b=qq&nk=664423077&s=640" class="my_header_avatar"></image>
+      <text class="text-bold padding-left">芝士忍者</text>
+    </view>
+    <!-- <view class="commun_button   flex align-center">
+      <free-icon name="add" color="#0081ef"></free-icon>
+      <text class="text-blue">关注</text>
+    </view> -->
+  </view>
+  <view class="padding-tb text-gray">1212人赞同了该话题</view>
+
+  <view>
+    GJ降息意味着GJ降息意味着房子有稳定保障了大萨达撒多撒大萨达撒大萨达撒？房子有稳定保达撒大萨达撒？房子有稳定达撒大萨达撒？房子有稳定障了大萨达撒多撒大萨达撒大萨达撒？
+  </view>
+</view>
+
+<view class="commun_bottom_but">
+  <!-- <view class="commun_share_but bg-blue light">分享</view> -->
+  <view class="flex align-center w100">
+    <view class="flex align-center flex-sub justify-center"> 
+      <free-icon name="share" ></free-icon>
+      <text class="text-gray padding-left-xs">117</text>
+    </view>
+    <!-- <view class="flex align-center flex-sub justify-center"> 
+      <free-icon name="like" ></free-icon>
+      <text class="text-gray padding-left-xs">117</text>
+    </view> -->
+    <view class="flex align-center  flex-sub justify-center">
+      <free-icon name="favor" ></free-icon>
+      <text class="text-gray padding-left-xs">16</text>
+    </view>
+    <view class="flex align-center  flex-sub justify-center">
+      <free-icon name="comment" ></free-icon>
+      <text class="text-gray padding-left-xs">186</text>
+    </view>
+  </view>
+</view>

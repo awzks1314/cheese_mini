@@ -1,0 +1,85 @@
+page{
+  background-color: #fff;
+}
+.home_title{
+  font-weight: 700;
+}
+.home_sub{
+  color: #f57f7f;
+  font-weight: 700;
+}
+.home_box_one{
+  height: 240rpx;
+  border-radius: 20rpx;
+  background-image: url('https://z3.ax1x.com/2021/05/14/grhfMV.png');
+	background-size: cover;
+	background-position: center;
+}
+
+.menu_one{
+  
+}
+.menu_one_one{
+  height: 320rpx;
+  background-color: rgb(163, 140, 248);
+  border-radius: 20rpx;
+  margin-bottom: 20rpx;
+  background-image: url('https://z3.ax1x.com/2021/05/14/grhfMV.png');
+	background-size: cover;
+	background-position: center;
+}
+.menu_one_two{
+  height: 440rpx;
+  background-color: rgb(72, 162, 247);
+  border-radius: 20rpx;
+  background-image: url('https://z3.ax1x.com/2021/05/14/grhfMV.png');
+	background-size: cover;
+	background-position: center;
+}
+.menu_two_one{
+  height: 180rpx;
+  background-color: rgb(91, 162, 243);
+  border-radius: 20rpx;
+  margin-bottom: 20rpx;
+  background-image: url('https://z3.ax1x.com/2021/05/14/grhfMV.png');
+	background-size: cover;
+	background-position: center;
+}
+
+.menu_two_two{
+  height: 260rpx;
+  background-color: rgb(57, 238, 117);
+  border-radius: 20rpx;
+  margin-bottom: 20rpx;
+  background-image: url('https://z3.ax1x.com/2021/05/14/grhfMV.png');
+	background-size: cover;
+	background-position: center;
+}
+
+.menu_two_three{
+  height: 300rpx;
+  background-color: rgb(250, 169, 47);
+  border-radius: 20rpx;
+  margin-bottom: 20rpx;
+  background-image: url('https://z3.ax1x.com/2021/05/14/grhfMV.png');
+	background-size: cover;
+	background-position: center;
+}
+
+.whiteLight{
+  color: rgba(255, 255, 255, .6);
+}
+.home_image{
+  width: 100%;
+  height: 200rpx;
+  position: absolute;
+  bottom: 0;
+  right: -50rpx;
+  z-index: 1;
+}
+
+button {
+  padding: 0;
+  line-height: 1;
+  text-align:start;
+}

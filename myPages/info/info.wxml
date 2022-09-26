@@ -1,0 +1,28 @@
+<free-gap bgColor="#0081ef" height="80"></free-gap>
+<view class="info_style ">
+  <view class="info_avatar">
+    <image src="http://q1.qlogo.cn/g?b=qq&nk=664423077&s=640" class="my_header_avatar"></image>
+  </view>
+  <view class="">
+    <view class="free-form-group ">
+      <view class="title">昵称</view>
+      <input value="{{name}}" class="input_style"></input>
+    </view>
+    <!-- <view class="free-form-group ">
+      <view class="title">性别</view>
+      <switch class="switch-sex blue radius-xs" checked></switch>
+    </view> -->
+    <view class="free-form-group ">
+      <view class="title">学校</view>
+      <text class="text-blue">请选择学校</text>
+    </view>
+    <view class="free-form-group ">
+      <view class="title">职业</view>
+      <text>{{roles}}</text>
+    </view>
+  </view>
+</view>
+
+<view class="info_button">
+  <view class="info_button_content">确定</view>
+</view>

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "free-drawer":"/components/free-drawer/free-drawer"
+  },
+  "navigationBarTitleText": "资料上传"
+}

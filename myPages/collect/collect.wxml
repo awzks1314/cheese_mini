@@ -1,0 +1,49 @@
+<view class="bg-white">
+  <free-tabs 
+  tabs="{{list}}"  
+  height="80" 
+  isFixed="true"
+  currentTab="{{currentTab}}" 
+  bind:change="change" ></free-tabs>
+</view>
+<free-gap height="60"></free-gap>
+
+<view wx:if="{{currentTab != 1}}" class="padding-sm flex flex-wrap">
+  <view class="bg-blue radius  mater_item flex flex-direction" wx:for="{{3}}" wx:key="index">
+    <view class="mater_item_image"></view>
+    <view class="tab_one_style bg-white padding-sm">
+      <view class="mater_item_avatar_box">
+        <image src="http://q1.qlogo.cn/g?b=qq&nk=664423077&s=640" class="mater_item_avatar"></image>
+      </view>
+      <view class="margin-top">
+        <text class="text-bold text-blue">谈短篇小说的制作</text>
+      </view>
+      <view class="tag_content  flex flex-wrap">
+        <free-tag effect="light" radius="10rpx" type="gray" class="tag_item margin-right-xs">生物</free-tag>
+        <free-tag effect="light" radius="10rpx"  type="gray" class="tag_item margin-right-xs">化学</free-tag>
+        <free-tag effect="light" radius="10rpx" type="gray" class="tag_item margin-right-xs">英语</free-tag>
+      </view>
+    </view>
+
+    <free-icon name="likefill" class="collect_button" color="#fff"></free-icon>
+  </view>
+</view>
+
+<view wx:if="{{currentTab == 1}}">
+  <view class="margin-top bg-white radius padding-sm flex align-center justify-between" wx:for="{{5}}" wx:key="index">
+      <image src="http://q1.qlogo.cn/g?b=qq&nk=664423077&s=640" class="boook_avatar"></image>
+      <view class="padding-left flex-sub flex align-center justify-between">
+          <view>
+            <view class="text-bold">3D Design Basic</view>
+            <view class="text-sm text-gray margin-tb-xs">192人下载</view>
+            <view class="flex align-center">
+              <free-icon name="likefill" size="24" color="red"></free-icon>
+              <text class="text-sm padding-left-xs">4.9</text>
+            </view>
+          </view>
+          <view>
+            <free-icon name="likefill" size="50" color="#0081ef"></free-icon>
+          </view>
+      </view>
+    </view>
+</view>

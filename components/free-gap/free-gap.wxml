@@ -1,0 +1,6 @@
+<view style="background:{{bgColor}};height:{{height}}rpx;height:calc({{height}}rpx + constant(safe-area-inset-bottom));height:calc({{height}}rpx + env(safe-area-inset-bottom));margin-top:{{top}}rpx;margin-bottom:{{bottom}}rpx;" wx:if="{{isBottom}}">
+
+</view>
+<view style="background:{{bgColor}};height:{{height}}rpx;margin-top:{{top}}rpx;margin-bottom:{{bottom}}rpx;" wx:else>
+
+</view>

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "free-input":"/components/free-input/free-input",
+    "free-rate":"/components/free-rate/free-rate"
+  },
+  "navigationBarTitleText": ""
+}

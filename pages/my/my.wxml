@@ -1,0 +1,70 @@
+<view class="my_header_box"></view>
+<view class="my_header bg-white flex flex-direction align-center">
+ <view class="my_header_image_box">
+  <image src="http://q1.qlogo.cn/g?b=qq&nk=664423077&s=640" class="my_header_avatar"></image>
+ </view>
+  <view class="my_header_nikeName ">Hannah Gonzalez</view>
+  <view class="flex align-center">
+    <view class="flex align-center">
+      <!-- <image src="/static/img/icon/dianzan.png" 
+      class="my_header_box_image"></image> -->
+      <free-icon name="like" size="28"></free-icon>
+      <text class="padding-left-xs">168</text>
+    </view>
+    <view class="flex align-center margin-left">
+      <!-- <image src="/static/img/icon/huore.png" class="my_header_box_image"></image> -->
+      <free-icon name="attention" size="28"></free-icon>
+      <text class="padding-left-xs">8</text>
+    </view>
+  </view>
+  <view class="my_header_box_tab  flex align-center ">
+    <view class="my_header_box_tabitem margin-right" bindtap="toUrl" data-url="/myPages/task/task">
+      <image src="/static/img/home/chess.png" 
+      class="my_header_box_image1"></image>
+      <text>芝士值</text>
+    </view>
+    <view class="my_header_box_tabitem " bindtap="sign">
+      <image src="/static/img/icon/shoucang.png" 
+      class="my_header_box_image"></image>
+      <text>每日签到</text>
+    </view>
+  </view>
+
+  <view class="flex align-center relative margin-top-sm">
+    <view class="tab_item {{tabIndex == 0?'tab_item_actvie':''}}" bindtap="changeTab" data-index="0">上传</view>
+    <view class="tab_item {{tabIndex == 1?'tab_item_actvie':''}}" bindtap="changeTab" data-index="1">个人</view>
+    <view class="tab_item {{tabIndex == 2?'tab_item_actvie':''}}" bindtap="changeTab" data-index="2">收藏</view>
+    <view class="tab_item {{tabIndex == 3?'tab_item_actvie':''}}" bindtap="changeTab" data-index="3">下载</view>
+    <view class="tab_item_slider" style="left:{{tableft}}rpx;"></view>
+  </view>
+</view>
+
+<view class="padding flex flex-wrap">
+  <view class="product_item flex flex-direction bg-white shadow" wx:for="{{5}}" wx:key="index">
+    <view class="product_image"></view>
+    <view class="padding-sm ">
+      <text class="text-cut-1">大萨达的撒的撒大萨达大萨达 </text>
+    </view> 
+  </view>
+</view>
+
+<free-modal show="{{modal}}" custom="{{true}}"  width="500rpx">
+  <view class="sign_content flex flex-direction align-center">
+      <view class="text-bold text-lg">签到成功</view>
+      
+      <view class="padding ">
+        <view class=" flex align-center justify-center margin-bottom">
+          <view class="bg-blue padding-xs round">
+            <free-icon name="calendar" size="50" color="#fff"></free-icon>
+          </view>
+        </view>
+        恭喜你成功签到，芝士值+3
+      </view>
+      <!-- <view class="sign_button">
+        好的
+      </view> -->
+    </view>
+</free-modal>
+
+
+

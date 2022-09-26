@@ -1,0 +1,41 @@
+/* materialPages/bookDetail/bookDetail.wxss */
+page {
+  background-color: #fff;
+}
+.bookDetail{
+  height: 400rpx;
+}
+.book_content{
+  position: relative;
+  top: -50rpx;
+  border-top-left-radius: 60rpx;
+  border-top-right-radius: 60rpx;
+  background-color: #fff;
+}
+
+.book_content_image{
+  width: 240rpx;
+  height: 320rpx;
+  border-radius: 10rpx;
+  position: absolute;
+  top: -160rpx;
+  left: calc(50% - 120rpx);
+}
+.book_tab{
+  flex: 1;
+  text-align: center;
+  position: relative;
+}
+.book_tab_active{
+  font-weight: 800;
+}
+.book_tab_active::after{
+  position: absolute;
+  content: '';
+  bottom: -10rpx;
+  left: calc(50% - 50rpx);
+  width: 100rpx;
+  height: 6rpx;
+  border-radius: 6rpx;
+  background-color: #0081ef;
+}
