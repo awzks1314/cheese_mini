@@ -1,6 +1,6 @@
 {
   "usingComponents": {
-    "free-drawer":"/components/free-drawer/free-drawer"
+    "free-modal":"/components/free-modal/free-modal"
   },
   "navigationBarTitleText": "资料上传"
 }

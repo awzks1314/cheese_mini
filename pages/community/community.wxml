@@ -1,3 +1,10 @@
+<view style='height:0;'>
+  <free-navBar title='' background='rgba(0,0,0,0)'     >
+    <view class='padding-lr' slot="left" bindtap="goUrl" data-url="/pages/message/message">
+      <free-icon name="notice" color="#fff" ></free-icon>
+    </view>
+</free-navBar>
+</view>
 <view class="bg-blue commun_head_box">
   <free-input 
   placeholder='请输入您要查询的内容'

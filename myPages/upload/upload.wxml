@@ -86,13 +86,16 @@
   <view class="info_button_content ">提交审核</view>
 </view>
 
-<free-bottom-popup show="{{noteShow}}" bgcolor="transport"  bind:close="close">
-    <!-- bind:close="close" -->
-    <view class="share_content padding bg-white">
-      <view class="text-center padding text-bold">上传说明</view>
-      <view>1.的撒的撒多撒大萨达少打点萨多撒大萨达少打点萨达萨达大萨达多撒大萨达少打点萨达萨达大萨达多撒大萨达少打点萨达萨达大萨达达萨达大萨达</view>
-      <view class="padding-tb-xs">2.的撒的撒多撒大萨达少打点萨多撒大萨达少打点萨达萨达大萨达多撒大萨达少打点萨达萨达大萨达多撒大萨达少打点萨达萨达大萨达达萨达大萨达</view>
-      <view class="padding-tb-xs">2.的撒的撒多撒大萨达少打点萨多撒大萨达少打点萨达萨达大萨达多撒大萨达少打点萨达萨达大萨达多撒大萨达少打点萨达萨达大萨达达萨达大萨达</view>
-      <free-gap height="50"></free-gap>
+
+<free-modal show="{{noteShow}}" custom="{{true}}"  width="500rpx">
+  <view class="share_content  bg-white relative">
+    <view class="text-center padding-lr padding-bottom text-bold">上传说明</view>
+    <view>1.的撒的撒多撒大萨达少打点萨多撒大萨达少打点萨达萨达大萨达多撒大萨达少打点萨达萨达大萨达多撒大萨达少打点萨达萨达大萨达达萨达大萨达</view>
+    <view class="padding-tb-xs">2.的撒的撒多撒大萨达少打点萨多撒大萨达少打点萨达萨达大萨达多撒大萨达少打点萨达萨达大萨达多撒大萨达少打点萨达萨达大萨达达萨达大萨达</view>
+    <view class="padding-tb-xs">2.的撒的撒多撒大萨达少打点萨多撒大萨达少打点萨达萨达大萨达多撒大萨达少打点萨达萨达大萨达多撒大萨达少打点萨达萨达大萨达达萨达大萨达</view>
+    <!-- <free-gap height="50"></free-gap> -->
+    <view class="adCloseMain" catchtap="openNote">
+      <free-icon name="close" size="28"></free-icon>
     </view>
-  </free-bottom-popup>
+  </view>
+</free-modal>

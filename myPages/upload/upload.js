@@ -45,13 +45,16 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({
+      noteShow:true
+    })
   },
   changeType(e) {
     this.setData({
       categoryIndex:e.currentTarget.dataset.index
     })
   },
+  // 关闭
   openNote() {
     this.setData({
       noteShow:!this.data.noteShow

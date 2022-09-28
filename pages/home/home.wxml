@@ -8,7 +8,7 @@
   <view class=" home_box_one">
     <image src="https://cheese-ninja.oss-cn-shenzhen.aliyuncs.com/banner/10.png?x-oss-process=style/img-sm" class="home_box_one"></image>
   </view>
-</view>
+</view> 
 
 <view class="padding-lr">
   <view  class="flex align-center justify-between">

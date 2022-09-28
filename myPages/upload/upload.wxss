@@ -80,11 +80,7 @@ page {
   width: 80rpx;
   height: 80rpx;
 }
-.share_content{
-  border-top-left-radius: 20rpx;
-  border-top-right-radius: 20rpx;
-  overflow: hidden;
-}
+
 
 .process_wrap {
   position: relative;
@@ -127,4 +123,22 @@ page {
   left: 0;
   width: 100%;
   transition:  all 10s linear;
+}
+.share_content{
+  border-top-left-radius: 20rpx;
+  border-top-right-radius: 20rpx;
+  /* overflow: hidden; */
+}
+.adCloseMain{
+  position: absolute;
+  width: 50rpx;
+  height: 50rpx;
+  bottom: -120rpx;
+  right: calc(50% - 20rpx);
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  border: 2rpx solid #aaaaaa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

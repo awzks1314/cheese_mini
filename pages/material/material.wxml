@@ -43,7 +43,7 @@
       论文
     </view>
   </scroll-view>
-
+ 
   
   <scroll-view class="scroll-style" scroll-x="true">
     <view class="bg-blue radius  mater_item flex flex-direction" wx:for="{{3}}" wx:key="index" >
@@ -61,7 +61,8 @@
           <free-tag effect="light" size="sm" radius="10rpx" type="blue" class="tag_item margin-right-xs">生物</free-tag>
           <free-tag effect="light" size="sm" radius="10rpx"  type="blue" class="tag_item margin-right-xs">化学</free-tag>
         </view>
-        <free-icon name="more" color="#0081ef" catchtap="openBottomShare"></free-icon>
+        <!-- <free-icon name="more" color="#0081ef" catchtap="openBottomShare"></free-icon> -->
+        <free-icon name="like" color="#0081ef"  catchtap="openBottomShare"></free-icon>
       </view>
     </view>
   </view>
@@ -72,21 +73,18 @@
       <!-- bindtap="detailPage" data-id="1" -->
       <view class="boook_avatar bg-blue"></view>
         <view class="flex-sub padding-left">
-          <view class=" flex-sub ">
-            <view class="text-bold text-cut-2">2022年新能源策略报告（光伏、储能、风电）：能源革命加速，龙头强者恒强</view>
-            <view class="flex align-center">
-              <free-tag effect="light" size="sm" radius="10rpx" type="blue" class="tag_item margin-right-xs">生物</free-tag>
-              <free-tag effect="light" size="sm" radius="10rpx"  type="blue" class="tag_item margin-right-xs">化学</free-tag>
-              <free-tag effect="light" size="sm" radius="10rpx" type="blue" class="tag_item margin-right-xs">英语</free-tag>
+          <view class="text-bold text-cut-2">2022年新能源策略报告（光伏、储能、风电）：能源革命加速，龙头ss所示强者恒强</view>
+          <view class="flex align-center  padding-top-xs">
+            <image src="/static/img/1.jpg" mode="aspectFill" class="mater_item_avatars"></image>
+            <view class="flex align-center padding-left-sm">
+              <free-tag effect="light" size="sm" radius="10rpx" type="blue" class=" margin-right-xs">生物</free-tag>
+              <free-tag effect="light" size="sm" radius="10rpx"  type="blue" class=" margin-right-xs">化学</free-tag>
+              <free-tag effect="light" size="sm" radius="10rpx" type="blue" class=" margin-right-xs">英语</free-tag>
             </view>
           </view>
-          <view class="flex align-center justify-between margin-top">
+          <view class="flex align-center justify-between margin-top-xs">
             <view class="text-sm text-gray  flex align-center">
-              <view class="flex align-center">
-                <free-icon name="my" size="26"></free-icon>
-                <text class="padding-left-xxs ">东吴国际</text>
-              </view>
-              <view class="flex align-center padding-left-sm">
+              <view class="flex align-center ">
                 <free-icon name="copy" size="26"></free-icon>
                 <text class="padding-left-xxs">98页</text>
               </view>
@@ -95,7 +93,8 @@
                 <text class="padding-left-xxs">165阅读</text>
               </view>
             </view>
-            <free-icon name="more" color="#0081ef" catchtap="openBottomShare"></free-icon>
+            <!-- <free-icon name="more" color="#0081ef" catchtap="openBottomShare"></free-icon> -->
+            <free-icon name="likefill" color="#0081ef"  catchtap="openBottomShare"></free-icon>
           </view>
         </view>
       </view>
@@ -112,23 +111,63 @@
     <view class="padding relative h100" >
       <view>
       <free-gap height="160"></free-gap>
-        <view class="text-bold">资料分类</view>
+        <view class="text-bold padding-bottom">Category</view>
         <view class="flex flex-wrap">
-          <text class="drawer_item">书籍</text>
-          <text class="drawer_item">论文</text>
-          <text class="drawer_item">笔记</text>
+          <text class="drawer_item drawer_item_active">IA</text>
+          <text class="drawer_item">EE</text>
+          <text class="drawer_item">TOK</text>
+          <text class="drawer_item">Notes</text>
+          <text class="drawer_item">Other</text>
         </view>
 
-        <view class="text-bold margin-top">资料分类</view>
-        <view class="flex flex-wrap">
-          <text class="drawer_item">书籍</text>
-          <text class="drawer_item">论文</text>
-          <text class="drawer_item">笔记</text>
+        <view class="text-bold margin-top padding-tb">Subject</view>
+        <view class="subject_input">
+          <text>Type a subject</text>
+          <free-icon name="triangledownfill" size="28"></free-icon>
+        </view>
+
+        <view class="text-bold margin-top padding-tb">Level</view>
+        <view class="flex align-center flex-wrap">
+          <view class="flex align-center margin-left-lg">
+            <free-icon name="squarecheckfill" color="#0081ef"></free-icon>
+            <view class="padding-left-xs">HL</view>
+          </view>
+          <view class="flex align-center margin-left-lg">
+            <free-icon name="square"></free-icon>
+            <view class="padding-left-xs">SL</view>
+          </view>
+        </view>
+
+        <view class="text-bold margin-top padding-tb">Session</view>
+        <view class="padding-left-lg">
+          <view class="flex align-center margin-bottom ">
+            <free-icon name="squarecheckfill" color="#0081ef"></free-icon>
+            <view class="padding-left-xs">May 2022</view>
+          </view>
+          <view class="flex align-center margin-bottom ">
+            <free-icon name="square"></free-icon>
+            <view class="padding-left-xs">November 2021</view>
+          </view>
+          <view class="flex align-center margin-bottom ">
+            <free-icon name="square"></free-icon>
+            <view class="padding-left-xs">May 2021</view>
+          </view>
+          <view class="flex align-center margin-bottom ">
+            <free-icon name="square"></free-icon>
+            <view class="padding-left-xs">November 2020</view>
+          </view>
+          <view class="flex align-center margin-bottom ">
+            <free-icon name="square"></free-icon>
+            <view class="padding-left-xs">May 2020</view>
+          </view>
+          <view class="flex align-center margin-bottom ">
+            <free-icon name="square"></free-icon>
+            <view class="padding-left-xs">November 2019</view>
+          </view>
         </view>
       </view>
-
       <view class="drawer_button">
-        确定
+        Apply
       </view>
     </view>
   </free-drawer >

@@ -65,8 +65,19 @@
           "query": "",
           "launchMode": "default",
           "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/material/material",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }
+  },
+  "projectname": "tribune",
+  "setting": {
+    "compileHotReLoad": false
   }
 }

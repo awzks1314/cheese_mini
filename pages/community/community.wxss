@@ -1,5 +1,5 @@
 .commun_head_box{
-  height: 320rpx;
+  height: 360rpx;
   background-image: url('https://z3.ax1x.com/2021/05/14/grhfMV.png');
 	background-size: cover;
   background-position: center;
