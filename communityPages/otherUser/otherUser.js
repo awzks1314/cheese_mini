@@ -15,12 +15,7 @@ Page({
       url: e.currentTarget.dataset.url
     })
   },
-  // 开始签到
-  sign() {
-    this.setData({
-      modal:true
-    })
-  },
+  
   changeTab(e) {
     this.setData({
       tabIndex:e.currentTarget.dataset.index,
@@ -45,6 +40,23 @@ Page({
     wx.navigateTo({
       url: data.url,
     })
+  },
+  handlerGobackClick(delta) {
+    const pages = getCurrentPages();
+    if (pages.length >= 2) {
+      wx.navigateBack({
+        delta: delta
+      });
+    } else {
+      wx.navigateTo({
+        url: '/pages/home/home'
+      });
+    }
+  },
+  handlerGohomeClick() {
+    wx.switchTab({
+      url: '/pages/home/home'
+    });
   },
   /**
    * 用户点击右上角分享

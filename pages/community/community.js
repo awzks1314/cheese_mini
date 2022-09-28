@@ -18,13 +18,11 @@ Page({
     swiperList:[
       {id:0,type:'image',url:'https://ossweb-img.qq.com/images/lol/web201310/skin/big84003.jpg'},
       {id:1,type:'image',url:'https://ossweb-img.qq.com/images/lol/web201310/skin/big84004.jpg'},
-      {id:2,type:'image',url:'https://ossweb-img.qq.com/images/lol/web201310/skin/big84005.jpg'},
-      {id:3,type:'image',url:'https://ossweb-img.qq.com/images/lol/web201310/skin/big84006.jpg'},
-      {id:4,type:'image',url:'https://ossweb-img.qq.com/images/lol/web201310/skin/big84007.jpg'},
-      {id:5,type:'image',url:'https://ossweb-img.qq.com/images/lol/web201310/skin/big84008.jpg'},
+      {id:2,type:'image',url:'https://ossweb-img.qq.com/images/lol/web201310/skin/big84005.jpg'}
     ],
     cardCur:0,
-    tabCurrentTab:0
+    tabCurrentTab:0,
+    commitShow:false,//评论
   },
 
   /**
@@ -32,6 +30,18 @@ Page({
    */
   onLoad: function (options) {
 
+  },
+  // 打开评论
+  openCommit() {
+    this.setData({
+      commitShow:!this.data.commitShow
+    })
+  },
+  // 关闭评论
+  closeCommit() {
+    this.setData({
+      commitShow:!this.data.commitShow
+    })
   },
   change(e) {
     console.log(e)

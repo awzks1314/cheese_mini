@@ -1,6 +1,6 @@
 <view class="input_box padding-lr padding-bottom">
   <view class="w100 flex align-center justify-between">
-    <view class="flex align-center" bindtap="toUrl" data-url="/myPages/myInfo/myInfo">
+    <view class="flex align-center" >
       <image src="http://q1.qlogo.cn/g?b=qq&nk=664423077&s=640" class="my_header_avatar"></image>
       <view class="flex flex-direction padding-left">
         <text class="big_text">Hello，Rasel</text>

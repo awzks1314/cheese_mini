@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/my/my",
+    "pages/question/question",
     "pages/material/material",
     "pages/community/community",
     "pages/home/home",
@@ -49,7 +50,8 @@
       "root": "communityPages",
       "pages": [
         "post/post",
-        "communityDetail/communityDetail"
+        "communityDetail/communityDetail",
+        "otherUser/otherUser"
       ]
     }
   ],
@@ -81,12 +83,6 @@
         "text": "发现",
         "iconPath": "static/img/tabbarIcon/t6.png",
         "selectedIconPath": "static/img/tabbarIcon/t5.png"
-      },
-      {
-        "pagePath": "pages/message/message",
-        "text": "消息",
-        "iconPath": "static/img/tabbarIcon/t11.png",
-        "selectedIconPath": "static/img/tabbarIcon/t12.png"
       },
       {
         "pagePath": "pages/my/my",

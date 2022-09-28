@@ -5,7 +5,11 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    banner:[
+      {
+        url:"https://cheese-ninja.oss-cn-shenzhen.aliyuncs.com/banner/1.png?x-oss-process=style/img-sm"
+      }
+    ]
   },
 
   /**

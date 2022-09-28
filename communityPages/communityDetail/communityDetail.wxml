@@ -4,7 +4,7 @@
 
 <view class="padding">
   <view class="flex align-center justify-between">
-    <view class="flex align-center">
+    <view class="flex align-center" bindtap="goUrl" data-url="/communityPages/otherUser/otherUser">
       <image src="http://q1.qlogo.cn/g?b=qq&nk=664423077&s=640" class="my_header_avatar"></image>
       <text class="text-bold padding-left">芝士忍者</text>
     </view>

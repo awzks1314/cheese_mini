@@ -1,4 +1,4 @@
-<view class="padding">
+<view class="padding-lg">
   <view class="upload_li flex align-center justify-between solid-bottom">
     <view class="title">How This Works</view>
     <text class="text-blue" bindtap="openNote">open</text>
@@ -10,29 +10,33 @@
       <view class="upload_item {{categoryIndex==1?'upload_item_active':''}}" bindtap="changeType" data-index="1">EE</view>
       <view class="upload_item {{categoryIndex==2?'upload_item_active':''}}" bindtap="changeType" data-index="2">TOK</view>
       <view class="upload_item {{categoryIndex==3?'upload_item_active':''}}" bindtap="changeType" data-index="3">NOTES</view>
-    </view>
+    </view> 
   </view>
-  <view class="upload_li flex align-center justify-between solid-bottom">
+  <view class="upload_li flex align-center justify-between solid-bottom" wx:if="{{categoryIndex != 2}}">
     <view class="title">学科</view>
     <view class="flex align-center">
       <text class="text-blue">Select</text>
     </view>
   </view>
-  <view class="upload_li solid-bottom" wx:if="{{categoryIndex == 0 || categoryIndex == 3}}">
+  <view class="upload_li solid-bottom" wx:if="{{categoryIndex != 2}}">
     <view class="title">level</view>
     <view class="w100 flex align-cenetr">
       <view class="upload_item upload_item_active">HL</view>
       <view class="upload_item">SL</view>
     </view>
   </view>
-  <view class="upload_li flex align-center justify-between solid-bottom">
+
+  <view class="upload_li flex align-center justify-between {{categoryIndex==0?'opacity':'opacitys'}}" >
     <view class="title">分数</view>
-    <picker bindchange="bindPickerChange" value="{{scoreIndex}}" range="{{arrayScore}}">
-        <view class="picker text-blue">
-          {{score || 'Select'}}
-        </view>
-      </picker>
+      <view class="text-lg text-blue">{{precent}}</view>
   </view>
+  <view class="process_wrap {{categoryIndex==0?'opacity':'opacitys'}}" >
+    <view class="line" bindtap="moveTo"></view>
+    <view class="active_line" style="width:{{2*progress}}rpx;" bindtap="moveTo"></view>
+    <view class="spot" style="left:{{2*progress}}rpx" bindtouchmove="moveTo"  catchtouchstart="buttonStart"></view>
+  </view>
+  <view class="solid-bottom padding-top-lg {{categoryIndex==0?'opacity':'opacitys'}}" ></view>
+
   <view class="upload_li flex align-center justify-between solid-bottom">
     <view class="title">Session</view>
     <picker bindchange="bindPickerChange" value="{{sessionIndex}}" range="{{arraySession}}">

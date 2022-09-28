@@ -1,49 +1,46 @@
-<!-- <free-input 
-  placeholder='请输入您想要查找的资料'
-  close="true"
-  bind:input="input"
-  bind:confirm = "confirm"
-  bind:close = "close" 
-  extreaWord="搜索"
-></free-input> -->
+<free-navBar title='' background='rgba(0,0,0,0)'     >
+  <view class='padding-lr' slot="left" bindtap="goUrl" data-url="/pages/question/question">
+    <image src="/static/img/home/header_left_image.png" class="header_left_image"></image>
+  </view>
+</free-navBar>
+
 <view class="padding-lr padding-tb-sm">
-  <view class=" bg-blue home_box_one">
-    
+  <view class=" home_box_one">
+    <image src="https://cheese-ninja.oss-cn-shenzhen.aliyuncs.com/banner/10.png?x-oss-process=style/img-sm" class="home_box_one"></image>
   </view>
 </view>
 
 <view class="padding-lr">
   <view  class="flex align-center justify-between">
-    <text class="home_title">常用工具</text>
-    <!-- <text class="home_sub">查看更多</text> -->
+    <text class="home_title">Category</text>
   </view>
   <view class="margin-top flex">
     <view class="menu_one flex-sub margin-right" bindtap="goUrl" data-url="/homePages/teacher/teacher">
       <view class="menu_one_one padding relative">
-        <text class="text-bold text-xl text-white">投简历</text>
+        <text class="text-white">投简历</text>
         <view class="whiteLight light text-bold text-sm padding-top-xs">已加入141645名</view>
-        <image src="/static/img/home/p1.png" class="home_image" mode="aspectFit"></image>
+        <image src="https://cheese-ninja.oss-cn-shenzhen.aliyuncs.com/3Dicon/10.png?x-oss-process=style/img-sm" class="home_image" mode="aspectFill"></image>
       </view>
       <view class="menu_one_two padding relative" bindtap="goUrl" data-url="/myPages/upload/upload">
-        <text class="text-bold text-xl text-white">赚钱</text>
+        <text class=" text-white">赚钱</text>
         <view class="whiteLight light text-bold text-sm padding-top-xs">分享资料也能赚钱</view>
-        <image src="/static/img/home/p2.png" class="home_image" mode="aspectFit"></image>
+        <image src="https://cheese-ninja.oss-cn-shenzhen.aliyuncs.com/3Dicon/13.png?x-oss-process=style/img-sm" class="home_image_two" mode="aspectFill"></image>
       </view>
     </view>
     <view class="menu_two flex-sub ">
       <view class="menu_two_one padding relative" bindtap="swicthPage" data-url="/pages/community/community">
-        <text class="text-bold text-xl text-white">逛论坛</text>
-        <image src="/static/img/home/p3.png" class="home_image" mode="aspectFit"></image>
+        <text class=" text-white">逛论坛</text>
+        <image src="https://cheese-ninja.oss-cn-shenzhen.aliyuncs.com/3Dicon/7.png?x-oss-process=style/img-sm" class="home_image_three" mode="aspectFit"></image>
       </view>
       <button class="menu_two_two padding relative" open-type="contact">
-        <text class="text-bold text-xl text-white">问客服</text>
-        <view class="whiteLight light text-bold text-sm padding-top-xs">一对一在线</view>
-        <image src="/static/img/home/p4.png" class="home_image" mode="aspectFit"></image>
+        <text class="text-white ">问客服</text>
+        <view class="whiteLight light text-bold text-sm padding-top-sm">一对一在线</view>
+        <image src="https://cheese-ninja.oss-cn-shenzhen.aliyuncs.com/3Dicon/14.png?x-oss-process=style/img-sm" class="home_image_four" mode="aspectFit"></image>
       </button>
       <view class="menu_two_three padding relative" bindtap="swicthPage" data-url="/pages/material/material">
-        <text class="text-bold text-xl text-white">找资料</text>
+        <text class=" text-white">找资料</text>
         <view class="whiteLight light text-bold text-sm padding-top-xs">海量资料在线下载</view>
-        <image src="/static/img/home/p5.png" class="home_image" mode="aspectFit"></image>
+        <image src="https://cheese-ninja.oss-cn-shenzhen.aliyuncs.com/3Dicon/6.png?x-oss-process=style/img-sm" class="home_image_five" mode="aspectFit"></image>
       </view>
     </view>
   </view>

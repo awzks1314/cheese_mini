@@ -19,3 +19,9 @@ App({
 
   }
 })
+// {
+  //   "pagePath": "pages/message/message",
+  //   "text": "消息",
+  //   "iconPath": "static/img/tabbarIcon/t11.png",
+  //   "selectedIconPath": "static/img/tabbarIcon/t12.png"
+  // },
