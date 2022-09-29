@@ -96,17 +96,17 @@
       </view>
     </view>
   </swiper-item>
-  <swiper-item class="swiper_style">
+  <!-- <swiper-item class="swiper_style">
     <view class="padding-lr-lg flex flex-wrap padding-tb-sm" >
-      <view wx:for="{{10}}" wx:key="index" class="product_item flex flex-direction bg-white shadow-main swiper-item{{current}}{{index}}">
+      <view wx:for="{{10}}" wx:key="index" class="product_item flex flex-direction bg-white swiper-item{{current}}{{index}}">
         <view class="product_image"></view>
         <view class="padding-sm ">
           <text class="text-cut-1">大萨达的撒的撒大萨达大萨达 </text>
         </view> 
       </view>
     </view>
-  </swiper-item>
-  <swiper-item class="swiper_style">
+  </swiper-item> -->
+  <swiper-item class="swiper_style" wx:for="{{2}}" wx:key='index'>
     <scroll-view class="scroll-style" scroll-x="true">
       <view class="bg-blue radius  mater_item flex flex-direction" wx:for="{{3}}" wx:key="index" >
         <!-- bindtap="detailPage" data-id="1" -->
@@ -129,7 +129,7 @@
     </view>
   </scroll-view>
     <view class="padding-lr">
-        <view class="margin-top bg-white radius padding-sm flex align-center" wx:for="{{5}}" wx:key="index" >
+        <view wx:for="{{5}}" wx:key="index"  class="margin-top bg-white radius padding-sm flex align-center swiper-item{{current}}{{index}}" >
         <!-- bindtap="detailPage" data-id="1" -->
         <view class="boook_avatar bg-blue"></view>
           <view class="flex-sub padding-left">

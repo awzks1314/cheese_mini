@@ -54,7 +54,7 @@
 </view>
 
 <free-judgeLogin 
-  showLogin="{{true}}"
+  showLogin="{{showLogin}}"
   url="/pages/login/login"
   title="登录享受更多精彩~"
   ></free-judgeLogin>

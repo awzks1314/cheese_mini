@@ -9,14 +9,19 @@ Page({
       {
         url:"https://cheese-ninja.oss-cn-shenzhen.aliyuncs.com/banner/1.png?x-oss-process=style/img-sm"
       }
-    ]
+    ],
+    showLogin:false
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-
+    setTimeout(() => {
+      this.setData({
+        showLogin:true
+      })
+    }, 200);
   },
   goUrl(e) {
     console.log(e)

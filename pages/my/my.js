@@ -57,7 +57,7 @@ Page({
       tableft:e.currentTarget.dataset.index*167.5 + 40,
       current:e.currentTarget.dataset.index
     },() => {
-      this.getSwiperHeight(this,'.swiper-item'+e.currentTarget.dataset.index +'9')
+      this.getSwiperHeight(this,'.swiper-item'+e.currentTarget.dataset.index +'4')
     })
   },
   // 滑动
@@ -67,7 +67,7 @@ Page({
       tabIndex:e.detail.current,
       tableft:e.detail.current*167.5 + 40
     },() => {
-      this.getSwiperHeight(this,'.swiper-item'+e.detail.current +'9')
+      this.getSwiperHeight(this,'.swiper-item'+e.detail.current +'4')
     })
   },
   // 开始签到
@@ -111,9 +111,9 @@ Page({
     let that = p;
     query.select(element).boundingClientRect(
       function (e) {
-        // console.log(e);
+        console.log(e);
         that.setData({
-          swiperHeight: (e.height + 20 )*5+ 'px'
+          swiperHeight: (e.height + 40 )*5+ 'px'
         })
       }).exec();
   },
