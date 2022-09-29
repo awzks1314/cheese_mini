@@ -14,8 +14,6 @@
   <view class="my_header_nikeName ">Hannah Gonzalez</view>
   <view class="flex align-center">
     <view class="flex align-center">
-      <!-- <image src="/static/img/icon/dianzan.png" 
-      class="my_header_box_image"></image> -->
       <free-icon name="like" size="28"></free-icon>
       <text class="padding-left-xs">168</text>
     </view>
@@ -69,8 +67,34 @@
     </view>
   </swiper-item>
 
-  <swiper-item class="swiper_style">
-    个人信息暂时
+  <swiper-item class="swiper_style ">
+    <view class="padding-lr padding-top">
+      <view class="radius bg-white padding">
+        <view class="flex align-center justify-between  solid-bottom padding-bottom">
+          <text>名字</text>
+          <text class="text-blue">Hannah Gonzalez</text>
+        </view>
+        <view class="flex align-center justify-between  solid-bottom padding-tb">
+          <text>学校</text>
+          <text class="text-blue">英国伦敦大学</text>
+        </view>
+        <view class="flex align-center justify-between   solid-bottom padding-tb">
+          <text>角色</text>
+          <text class="text-blue">teacher</text>
+        </view>
+        <view class="flex align-center justify-between   padding-top">
+          <text>课程体系</text>
+          <text class="text-blue">IB</text>
+        </view>
+      </view>
+
+      <view class="radius bg-white padding margin-top">
+        <view class="flex align-center justify-between">
+          <text>课程</text>
+          <text class="text-blue">HL</text>
+        </view>
+      </view>
+    </view>
   </swiper-item>
   <swiper-item class="swiper_style">
     <view class="padding-lr-lg flex flex-wrap padding-tb-sm" >

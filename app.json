@@ -1,10 +1,10 @@
 {
   "pages": [
+    "pages/home/home",
     "pages/my/my",
     "pages/question/question",
     "pages/material/material",
     "pages/community/community",
-    "pages/home/home",
     "pages/login/login",
     "pages/message/message",
     "pages/search/search"
@@ -31,7 +31,9 @@
     {
       "root": "homePages",
       "pages": [
-        "teacher/teacher"
+        "teacher/teacher",
+        "moneyPages/moneyPages",
+        "addTeacher/addTeacher"
       ]
     },
     {
@@ -105,6 +107,7 @@
     "free-loadmore": "/components/free-loadmore/free-loadmore",
     "free-empty": "/components/free-empty/free-empty",
     "free-guidance": "/components/free-guidance/free-guidance",
+     "free-judgeLogin":"/components/free-judgeLogin/free-judgeLogin",
     "free-bottom-popup": "/components/free-bottom-popup/free-bottom-popup"
   },
   "sitemapLocation": "sitemap.json"

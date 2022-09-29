@@ -89,7 +89,7 @@
 </view>
 
 <view class="community_button" bindtap="goUrl" data-url="/communityPages/post/post">
-  <image src="/static/img/home/chess.png" class="community_edit "></image>
+  <image src="/static/img/home/chess.png" class="community_edit bg-white shadow"></image>
 </view>
 <free-gap height="30"></free-gap>
 <free-gap height="120" wx:if="{{commitShow}}"></free-gap>
@@ -99,7 +99,7 @@
 <view class="commit_bottom_input {{commitShow?'inputShow':'inputClose'}}" >
   <view class="commit_bottom_inputStyle">
     <free-icon name="edit" class="padding-right-sm"></free-icon>
-    <input type="text" placeholder="说点什么呗~"/>
+    <input type="text" cursor-spacing="15" class="flex-sub" focus="{{commitShow}}" placeholder="说点什么呗~"/>
   </view>
   <view class="text-blue">确定</view>
 </view>

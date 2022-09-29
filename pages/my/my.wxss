@@ -29,10 +29,10 @@
   top: -120rpx;
 }
 .my_header_avatar{
-  width: 170rpx;
-  height: 170rpx;
+  width: 220rpx;
+  height: 220rpx;
   border-radius: 50%;
-  background-color: #e7ebed;
+  background-color: #fff;
 }
 
 .my_header_nikeName{
@@ -168,7 +168,7 @@
 
 /* 上传资料 */
 .whiteBorder {
-  color: rgb(224, 214, 214);
+  color: #aaa;
 }
 .up_text{
   font-weight: 700;

@@ -16,7 +16,10 @@ Page({
     cardCur:0,
     currentTab:0,
     show:false,
-    bottomShare:false
+    bottomShare:false,
+    category:'IA',
+    level:'HL',
+    session:'May 2022'
   },
  
   /**
@@ -30,6 +33,10 @@ Page({
     this.setData({
       show:true
     })
+  },
+  // 阻止筛选
+  closeClose() {
+
   },
   openBottomShare(){
     this.setData({
@@ -62,6 +69,17 @@ Page({
     wx.navigateTo({
       url: '/materialPages/bookDetail/bookDetail'
     })
+  },
+  // 切换category
+  changeCategory(e) {
+    this.setData({
+      category:e.currentTarget.dataset.type
+    })
+  },
+  // 切换level/seesion
+  changeName(e) {
+    this.setData({
+      [e.currentTarget.dataset.name]:e.currentTarget.dataset.type  })
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

@@ -216,3 +216,22 @@ swiper {
   background-color: #0081ef;
   color: #fff;
 }
+
+.collectNote{
+  position: absolute;
+  top: 10rpx;
+  right: 10rpx;
+}
+.community_button{
+  position: fixed;
+  bottom: 200rpx;
+  right:20rpx;
+}
+.community_edit{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

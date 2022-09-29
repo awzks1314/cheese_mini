@@ -46,8 +46,8 @@
  
   
   <scroll-view class="scroll-style" scroll-x="true">
-    <view class="bg-blue radius  mater_item flex flex-direction" wx:for="{{3}}" wx:key="index" >
-      <!-- bindtap="detailPage" data-id="1" -->
+    <view class="bg-blue radius  mater_item flex flex-direction relative" wx:for="{{3}}" wx:key="index" >
+    <free-icon name="like" color="#fff"  class="collectNote"></free-icon>
     <view class="mater_item_image"></view>
     <view class="tab_one_style bg-white padding-sm">
       <view class="mater_item_avatar_box">
@@ -61,19 +61,19 @@
           <free-tag effect="light" size="sm" radius="10rpx" type="blue" class="tag_item margin-right-xs">生物</free-tag>
           <free-tag effect="light" size="sm" radius="10rpx"  type="blue" class="tag_item margin-right-xs">化学</free-tag>
         </view>
-        <!-- <free-icon name="more" color="#0081ef" catchtap="openBottomShare"></free-icon> -->
-        <free-icon name="like" color="#0081ef"  catchtap="openBottomShare"></free-icon>
+        <free-icon name="more" color="#0081ef" catchtap="openBottomShare"></free-icon>
       </view>
     </view>
   </view>
   </scroll-view>
 
     <view class="padding-lr">
-      <view class="margin-top bg-white radius padding-sm flex align-center" wx:for="{{5}}" wx:key="index" >
+      <view class="margin-top bg-white radius padding-sm flex align-center relative" wx:for="{{5}}" wx:key="index" >
       <!-- bindtap="detailPage" data-id="1" -->
+      <free-icon name="likefill" color="#0081ef"  class="collectNote"></free-icon>
       <view class="boook_avatar bg-blue"></view>
         <view class="flex-sub padding-left">
-          <view class="text-bold text-cut-2">2022年新能源策略报告（光伏、储能、风电）：能源革命加速，龙头ss所示强者恒强</view>
+          <view class="text-bold text-cut-2 padding-right-sm">2022年新能源策略报告（光伏、储能风电）：能源革命加速，龙头ss所示强者恒强</view>
           <view class="flex align-center  padding-top-xs">
             <image src="/static/img/1.jpg" mode="aspectFill" class="mater_item_avatars"></image>
             <view class="flex align-center padding-left-sm">
@@ -93,11 +93,11 @@
                 <text class="padding-left-xxs">165阅读</text>
               </view>
             </view>
-            <!-- <free-icon name="more" color="#0081ef" catchtap="openBottomShare"></free-icon> -->
-            <free-icon name="likefill" color="#0081ef"  catchtap="openBottomShare"></free-icon>
+            <free-icon name="more" color="#0081ef" catchtap="openBottomShare"></free-icon>
           </view>
         </view>
       </view>
+      
     </view>
   </view>
 
@@ -105,47 +105,45 @@
     show="{{show}}"
     mode="right" 
     closeable="{{false}}"
-    bind:open="open"
-    bind:close="close"
     length="70%">
-    <view class="padding relative h100" >
+    <view class="padding relative h100" catchtap="closeClose">
       <view>
       <free-gap height="160"></free-gap>
         <view class="text-bold padding-bottom">Category</view>
         <view class="flex flex-wrap">
-          <text class="drawer_item drawer_item_active">IA</text>
-          <text class="drawer_item">EE</text>
-          <text class="drawer_item">TOK</text>
-          <text class="drawer_item">Notes</text>
-          <text class="drawer_item">Other</text>
+          <text class="drawer_item {{category == 'IA'?'drawer_item_active':''}}" catchtap="changeCategory"  data-type="IA">IA</text>
+          <text class="drawer_item {{category == 'EE'?'drawer_item_active':''}}"  catchtap="changeCategory" data-type="EE">EE</text>
+          <text class="drawer_item {{category == 'TOK'?'drawer_item_active':''}}" catchtap="changeCategory" data-type="TOK">TOK</text>
+          <text class="drawer_item {{category == 'Notes'?'drawer_item_active':''}}" catchtap="changeCategory" data-type="Notes">Notes</text>
+          <text class="drawer_item {{category == 'Other'?'drawer_item_active':''}}" catchtap="changeCategory" data-type="Other">Other</text>
         </view>
 
         <view class="text-bold margin-top padding-tb">Subject</view>
         <view class="subject_input">
-          <text>Type a subject</text>
+          <input type="text" placeholder="Type a subject"/>
           <free-icon name="triangledownfill" size="28"></free-icon>
         </view>
 
-        <view class="text-bold margin-top padding-tb">Level</view>
-        <view class="flex align-center flex-wrap">
-          <view class="flex align-center margin-left-lg">
-            <free-icon name="squarecheckfill" color="#0081ef"></free-icon>
+        <view class="text-bold margin-top padding-tb" wx:if="{{category != 'TOK'}}">Level</view>
+        <view class="flex align-center flex-wrap" wx:if="{{category != 'TOK'}}">
+          <view class="flex align-center margin-left-lg"  catchtap="changeName" data-type="HL" data-name="level">
+            <free-icon name="{{level== 'HL'?'squarecheckfill':'square'}}" color="{{level== 'HL'?'#0081ef':''}}"></free-icon>
             <view class="padding-left-xs">HL</view>
           </view>
-          <view class="flex align-center margin-left-lg">
-            <free-icon name="square"></free-icon>
+          <view class="flex align-center margin-left-lg" catchtap="changeName" data-type="SL" data-name="level">
+            <free-icon name="{{level== 'SL'?'squarecheckfill':'square'}}" color="{{level== 'SL'?'#0081ef':'#aaa'}}"></free-icon>
             <view class="padding-left-xs">SL</view>
           </view>
         </view>
 
         <view class="text-bold margin-top padding-tb">Session</view>
         <view class="padding-left-lg">
-          <view class="flex align-center margin-bottom ">
-            <free-icon name="squarecheckfill" color="#0081ef"></free-icon>
+          <view class="flex align-center margin-bottom " catchtap="changeName" data-type="May 2022" data-name="session">
+            <free-icon name="{{session== 'May 2022'?'squarecheckfill':'square'}}" color="{{session== 'May 2022'?'#0081ef':'#aaa'}}"></free-icon>
             <view class="padding-left-xs">May 2022</view>
           </view>
-          <view class="flex align-center margin-bottom ">
-            <free-icon name="square"></free-icon>
+          <view class="flex align-center margin-bottom " catchtap="changeName" data-type="November 2021" data-name="session">
+            <free-icon name="{{session== 'November 2021'?'squarecheckfill':'square'}}" color="{{session== 'November 2021'?'#0081ef':'#aaa'}}"></free-icon>
             <view class="padding-left-xs">November 2021</view>
           </view>
           <view class="flex align-center margin-bottom ">
@@ -224,3 +222,10 @@
         </view> -->
     </view>
   </free-bottom-popup>
+
+<view class="community_button" bindtap="goUrl" data-url="/communityPages/post/post">
+  <!-- <image src="/static/img/home/chess.png" class="community_edit "></image> -->
+  <view class="community_edit bg-blue shadow">
+    <free-icon name="commentfill" color="#fff" size="50"></free-icon>
+  </view>
+</view>

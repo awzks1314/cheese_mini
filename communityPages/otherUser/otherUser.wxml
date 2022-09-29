@@ -5,29 +5,27 @@
 <view class="my_header_box"></view>
 <view class="my_header bg-white flex flex-direction align-center">
  <view class="my_header_image_box">
-  <image src="http://q1.qlogo.cn/g?b=qq&nk=664423077&s=640" class="my_header_avatar"></image>
+  <image src="/static/img/1.jpg" mode="aspectFill" class="my_header_avatar"></image>
  </view>
   <view class="my_header_nikeName ">Hannah Gonzalez</view>
   <view class="flex align-center">
     <view class="flex align-center">
-      <!-- <image src="/static/img/icon/dianzan.png" 
-      class="my_header_box_image"></image> -->
       <free-icon name="like" size="28"></free-icon>
       <text class="padding-left-xs">168</text>
     </view>
     <view class="flex align-center margin-left">
-      <!-- <image src="/static/img/icon/huore.png" class="my_header_box_image"></image> -->
       <free-icon name="attention" size="28"></free-icon>
       <text class="padding-left-xs">8</text>
     </view>
   </view>
 
-  <view class="w100 gyy flex align-center  relative padding-bottom margin-top">
-    <view class="tab_item {{tabIndex == 0?'tab_item_actvie':''}}" bindtap="changeTab" data-index="0">上传</view>
+  <view class="w100 gyy flex align-center justify-center relative padding-bottom margin-top">
+    <view class="tab_item bg-blue" bindtap="goUrl" data-url="/messagePages/messageDetail/messageDetail">私信</view>
+    <!-- <view class="tab_item {{tabIndex == 0?'tab_item_actvie':''}}" bindtap="changeTab" data-index="0">上传</view>
     <view class="tab_item {{tabIndex == 1?'tab_item_actvie':''}}" bindtap="changeTab" data-index="1">个人</view>
     <view class="tab_item {{tabIndex == 2?'tab_item_actvie':''}}" bindtap="changeTab" data-index="2">收藏</view>
     <view class="tab_item {{tabIndex == 3?'tab_item_actvie':''}}" bindtap="changeTab" data-index="3">下载</view>
-    <view class="tab_item_slider" style="left:{{tableft}}rpx;"></view>
+    <view class="tab_item_slider" style="left:{{tableft}}rpx;"></view> -->
   </view>
 </view>
 
@@ -41,9 +39,9 @@
 </view>
 
 <free-gap height="120"></free-gap>
-<view class="info_button " bindtap="goUrl" data-url="/messagePages/messageDetail/messageDetail">
+<!-- <view class="info_button " bindtap="goUrl" data-url="/messagePages/messageDetail/messageDetail">
   <view class="info_button_content bg-green shadow-main">发消息</view>
-</view>
+</view> -->
 
 
 

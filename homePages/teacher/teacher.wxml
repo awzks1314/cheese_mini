@@ -44,11 +44,11 @@
   </view>
 </view>
 
-<free-gap height="80"></free-gap>
-<view class=" info_button">
+<!-- <free-gap height="80"></free-gap> -->
+<!-- <view class=" info_button">
   <view class="info_button_content">
     <free-icon name="add" color="#fff"></free-icon>申请老师</view>
-</view>
+</view> -->
 
 <free-backTop 
   scrollTop="{{scrollTop}}" 

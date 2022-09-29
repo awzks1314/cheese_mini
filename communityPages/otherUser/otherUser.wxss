@@ -30,8 +30,8 @@
   top: -100rpx;
 }
 .my_header_avatar{
-  width: 170rpx;
-  height: 170rpx;
+  width: 200rpx;
+  height: 200rpx;
   border-radius: 50%;
   background-color: #e7ebed;
 }
@@ -75,7 +75,8 @@
 .tab_item{
   width: 167.5rpx;
   height: 60rpx;
-  color: #000;
+  /* color: #000; */
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
