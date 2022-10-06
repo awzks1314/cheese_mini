@@ -39,8 +39,10 @@ textarea {
 }
 .post_word_limit{
   position: absolute;
+  width: calc(100% - 40rpx);
   bottom: 0rpx;
   right: 20rpx;
+  z-index: 99;
 }
 .info_button{
   width: 100%;
@@ -51,7 +53,7 @@ textarea {
 }
 .info_button_content{
   height: 100%;
-  background-color: #0081ef;
+  background-color: #436FC4;
   border-radius: 50rpx;
   display: flex;
   align-items: center;
@@ -60,4 +62,10 @@ textarea {
 }
 .post_input_style{
   font-weight: 800;
+}
+.post_left{
+  width: 30%;
+}
+.post_right{
+  width: 70%;
 }

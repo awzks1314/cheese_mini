@@ -65,7 +65,7 @@
 
   <view class="padding-bottom solid-bottom">
     <view class="flex  bgwhite align-center padding-top">
-      <view class="title text-bold">你的课程</view>
+      <view class="title text-bold">你的成绩单</view>
     </view>
     <view class="myPages_upload flex flex-direction align-center justify-center text-blue ">
       <image src="/static/img/icon/upload.png" class="upload_image"></image>

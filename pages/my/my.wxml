@@ -91,78 +91,47 @@
       <view class="radius bg-white padding margin-top">
         <view class="flex align-center justify-between">
           <text>课程</text>
-          <text class="text-blue">HL</text>
+          <view>
+            <free-tag effect="light" size="sm" radius="10rpx" type="blue" class="tag_item margin-right-xs">英语</free-tag>
+            <free-tag effect="light" size="sm" radius="10rpx" type="blue" class="tag_item margin-right-xs">英语</free-tag>
+            <free-tag effect="light" size="sm" radius="10rpx" type="blue" class="tag_item margin-right-xs">英语</free-tag>
+            <free-tag effect="light" size="sm" radius="10rpx" type="blue" class="tag_item">英语</free-tag>
+          </view>
         </view>
       </view>
     </view>
   </swiper-item>
-  <!-- <swiper-item class="swiper_style">
+  <swiper-item class="swiper_style">
     <view class="padding-lr-lg flex flex-wrap padding-tb-sm" >
-      <view wx:for="{{10}}" wx:key="index" class="product_item flex flex-direction bg-white swiper-item{{current}}{{index}}">
-        <view class="product_image"></view>
-        <view class="padding-sm ">
-          <text class="text-cut-1">大萨达的撒的撒大萨达大萨达 </text>
-        </view> 
-      </view>
-    </view>
-  </swiper-item> -->
-  <swiper-item class="swiper_style" wx:for="{{2}}" wx:key='index'>
-    <scroll-view class="scroll-style" scroll-x="true">
-      <view class="bg-blue radius  mater_item flex flex-direction" wx:for="{{3}}" wx:key="index" >
-        <!-- bindtap="detailPage" data-id="1" -->
-      <view class="mater_item_image"></view>
-      <view class="tab_one_style bg-white padding-sm">
-        <view class="mater_item_avatar_box">
-          <image src="http://q1.qlogo.cn/g?b=qq&nk=664423077&s=640" class="mater_item_avatar"></image>
-        </view>
-        <view class="margin-top">
-          <text class="text-bold">谈短篇小说的制作</text>
-        </view>
-        <view class="flex align-center justify-between">
-          <view class="tag_content  flex flex-wrap align-center">
-            <free-tag effect="light" size="sm" radius="10rpx" type="blue" class="tag_item margin-right-xs">生物</free-tag>
-            <free-tag effect="light" size="sm" radius="10rpx"  type="blue" class="tag_item margin-right-xs">化学</free-tag>
-          </view>
-          <free-icon name="more" color="#0081ef" catchtap="openBottomShare"></free-icon>
-        </view>
-      </view>
-    </view>
-  </scroll-view>
-    <view class="padding-lr">
-        <view wx:for="{{5}}" wx:key="index"  class="margin-top bg-white radius padding-sm flex align-center swiper-item{{current}}{{index}}" >
-        <!-- bindtap="detailPage" data-id="1" -->
-        <view class="boook_avatar bg-blue"></view>
-          <view class="flex-sub padding-left">
-            <view class=" flex-sub ">
-              <view class="text-bold text-cut-2">2022年新能源策略报告（光伏、储能、风电）：能源革命加速，龙头强者恒强</view>
-              <view class="flex align-center">
-                <free-tag effect="light" size="sm" radius="10rpx" type="blue" class="tag_item margin-right-xs">生物</free-tag>
-                <free-tag effect="light" size="sm" radius="10rpx"  type="blue" class="tag_item margin-right-xs">化学</free-tag>
-                <free-tag effect="light" size="sm" radius="10rpx" type="blue" class="tag_item margin-right-xs">英语</free-tag>
-              </view>
-            </view>
-            <view class="flex align-center justify-between margin-top">
-              <view class="text-sm text-gray  flex align-center">
-                <view class="flex align-center">
-                  <free-icon name="my" size="26"></free-icon>
-                  <text class="padding-left-xxs ">东吴国际</text>
-                </view>
-                <view class="flex align-center padding-left-sm">
-                  <free-icon name="copy" size="26"></free-icon>
-                  <text class="padding-left-xxs">98页</text>
-                </view>
-                <view class="flex align-center padding-left-sm">
-                  <free-icon name="attention" size="26"></free-icon>
-                  <text class="padding-left-xxs">165阅读</text>
-                </view>
-              </view>
-              <free-icon name="more" color="#0081ef" catchtap="openBottomShare"></free-icon>
-            </view>
+      <view wx:for="{{10}}" wx:key="index" class="product_item flex flex-direction bg-white swiper-item{{current}}{{index}}" bindtap="toUrl" data-url="/materialPages/myCollectBook/myCollectBook">
+        
+        <view class="product_box flex ">
+          <view class="product_image flex-twice"></view>
+          <view class="flex-sub">
+            <view class="product_image1"></view>
+            <view class="product_image2"></view>
           </view>
         </view>
+        <view class="w100  text-bold  padding-tb padding-left-sm text-lg">Biology </view>
       </view>
-    
+    </view>
   </swiper-item>
+  <swiper-item class="swiper_style">
+    <view class="padding-lr-lg flex flex-wrap padding-tb-sm" >
+      <view wx:for="{{10}}" wx:key="index" class="product_item flex flex-direction bg-white swiper-item{{current}}{{index}}" bindtap="toUrl" data-url="/materialPages/myCollectBook/myCollectBook">
+        
+        <view class="product_box flex ">
+          <view class="product_image flex-twice"></view>
+          <view class="flex-sub">
+            <view class="product_image1"></view>
+            <view class="product_image2"></view>
+          </view>
+        </view>
+        <view class="w100  text-bold  padding-tb padding-left-sm text-lg">Biology </view>
+      </view>
+    </view>
+  </swiper-item>
+  
 </swiper>
 
 <free-gap height="20"></free-gap>
@@ -275,3 +244,54 @@
 
     </view>
   </free-bottom-popup>
+
+
+  <free-drawer 
+    show="{{infoShow}}"
+    mode="bottom" 
+    closeable="{{false}}"
+    length="50%">
+    <view class="padding relative h100" catchtap="closeClose">
+      <view>
+        <!-- <free-gap height="160"></free-gap> -->
+          <view class="flex align-center justify-between margin-bottom">
+            <text class="text-bold">名字</text>
+            <input type="text" class="flex-sub text-right" placeholder="请输入你的名字"/>
+          </view>
+          
+
+          <view class="flex align-center justify-between margin-bottom">
+            <text class="text-bold">学校</text>
+            <input type="text" class="flex-sub text-right" placeholder="请输入你的学校"/>
+          </view>
+
+          <view class="flex align-center justify-between margin-bottom">
+            <text class="text-bold">角色</text>
+            <text class="text-blue">学生</text>
+          </view>
+
+          <view class="flex align-center justify-between margin-bottom">
+            <text class="text-bold">课程体系</text>
+            <input type="text" class="flex-sub text-right" placeholder="请输入你的课程体系"/>
+          </view>
+
+          <view class="flex align-center justify-between">
+            <text>课程</text>
+            <view class="flex-sub flex align-center justify-between">
+              <input type="text" class="flex-sub text-right" placeholder="请输入你的课程，最多四个"/>
+              <text class="text-blue padding-left">确定</text>
+            </view>
+         </view>
+          
+          <view class="flex flex-wrap margin-top-xs">
+            <text class="drawer_item ">IA</text>
+            <text class="drawer_item ">EE</text>
+            <text class="drawer_item ">TOK</text>
+            <text class="drawer_item ">Notes</text>
+          </view>
+          <view class="drawer_button">
+            保存
+          </view>
+      </view> 
+    </view>
+  </free-drawer >

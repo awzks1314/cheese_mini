@@ -1,4 +1,4 @@
-<free-navBar title='' background='rgba(0,0,0,0)'     >
+<free-navBar title='' background='#fff'     >
   <view class='padding-lr' slot="left" bindtap="goUrl" data-url="/pages/question/question">
     <image src="/static/img/home/header_left_image.png" class="header_left_image"></image>
   </view>

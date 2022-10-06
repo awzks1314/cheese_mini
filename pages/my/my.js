@@ -17,7 +17,8 @@ Page({
     cheeseShow:false,//芝士弹窗
     bottomShare:false,//更多
     uploadList:[],
-    current:0
+    current:0,
+    infoShow:false,//个人资料
   },
   onPageScroll(e) {
     let opciaty = e.scrollTop / 130;
@@ -36,7 +37,7 @@ Page({
       opciaty = 1;
       this.setData({ 
         background: `rgba(255,255,255)` ,
-        color:"#0081ef"
+        color:"#436FC4"
       });
     } else if (opciaty <= 0) {
       opciaty = 0;
@@ -97,6 +98,10 @@ Page({
     this.setData({
       bottomShare:false
     })
+  },
+  // 阻止个人信息
+  closeClose() {
+
   },
   toUrl(e) {
     let data = e.currentTarget.dataset

@@ -1,25 +1,40 @@
-<view style='height:0;'>
-  <free-navBar title='' background='rgba(0,0,0,0)'     >
-    <view class='padding-lr' slot="left" bindtap="goUrl" data-url="/pages/message/message">
-      <free-icon name="notice" color="#fff" ></free-icon>
-    </view>
+<free-navBar title='' background='rgba(255,255,255)'     >
+  <view class='padding-lr' slot="left" bindtap="goUrl" data-url="/pages/message/message">
+    <free-icon name="notice" ></free-icon>
+  </view>
+  <view slot="center" class="flex-sub">
+    <free-input 
+      placeholder='请输入您要查询的内容'
+      close="true"
+      bgColor="transoprt"
+      class=" flex-sub"
+      margin="0"
+      disabled="true"
+      bindtap="goUrl" data-url="/pages/search/search"
+    ></free-input>
+  </view>
 </free-navBar>
+
+<view class="padding-lr padding-tb-sm">
+  <view class="flex align-end">
+    <view class="community_tab {{tabTab == 0 ?' community_tab_style':''}}" bindtap="changeTab" data-index="0" data-name="tabTab">树洞</view>
+    <view class="community_tab {{tabTab == 1 ?' community_tab_style':''}}" bindtap="changeTab" data-index="1" data-name="tabTab">申请</view>
+    <view class="community_tab {{tabTab == 2 ?' community_tab_style':''}}" bindtap="changeTab" data-index="2" data-name="tabTab">补习</view>
+  </view>
+
+  <!-- <view class="flex alignc-enter margin-top ">
+    <view class="tab_iotem bg-orange margin-right">trending</view>
+    <view class="tab_iotem bg-blue">business</view>  
+  </view> -->
+  <view class="margin-top-sm flex align-center">
+    <view class="community_tab {{tabCurrentTab == 0 ?' community_tab_active':''}}" bindtap="changeTab" data-index="0" data-name="tabCurrentTab">全部</view>
+    <view class="community_tab {{tabCurrentTab == 1 ?' community_tab_active':''}}" bindtap="changeTab" data-index="1" data-name="tabCurrentTab">最新</view>
+    <view class="community_tab {{tabCurrentTab == 2 ?' community_tab_active':''}}" bindtap="changeTab" data-index="2" data-name="tabCurrentTab">下载</view>
+    <view class="community_tab {{tabCurrentTab == 3 ?' community_tab_active':''}}" bindtap="changeTab" data-index="3" data-name="tabCurrentTab">收藏</view>
+  </view>
 </view>
-<view class="bg-blue commun_head_box">
-  <free-input 
-  placeholder='请输入您要查询的内容'
-  close="true"
-  bgColor="transoprt"
-  class=" flex-sub"
-  disabled="true"
-  bindtap="goUrl" data-url="/pages/search/search"
-></free-input>
-</view>
-<view class="relative">
-  <view class="commun_head_input"></view>
-</view>
-<scroll-view scroll-x="true" class="scroll-style padding-bottom padding-left ">
-  <view class="community_card " wx:for="{{swiperList}}" wx:key="index">
+<scroll-view scroll-x="true" class="scroll-style  padding-left ">
+  <view class="community_card" wx:for="{{swiperList}}" wx:key="index">
     <image src="{{item.url}}" class="community_card_image"></image>
     <view class="community_card_width text-cut-2 padding-tb-xs text-bold">
       Ruasia has that adcadsa，saysukiiayadsa，saysukiia，saysukiiayadsa，saysukiia
@@ -35,18 +50,8 @@
 </scroll-view>
 
 
-<!-- <view class="padding-lr flex align-center">
-  <view class="community_tab {{tabCurrentTab == 0 ?' community_tab_active':''}}" bindtap="changeTab" data-index="0">全部</view>
-  <view class="community_tab {{tabCurrentTab == 1 ?' community_tab_active':''}}" bindtap="changeTab" data-index="1">最新</view>
-  <view class="community_tab {{tabCurrentTab == 2 ?' community_tab_active':''}}" bindtap="changeTab" data-index="2">最热</view>
-</view> -->
-
-<view class="flex alignc-enter padding-lr ">
-  <view class="tab_iotem bg-orange margin-right">trending</view>
-  <view class="tab_iotem bg-blue">business</view>  
-</view>
 <view class="padding-lr">
-  <view class="com_content bg-white padding-sm radius margin-top" 
+  <view class="com_content bg-white padding-sm radius margin-top solid-bottom"  
   wx:for="{{5}}" wx:key="index" >
     <view class="flex align-center justify-between">
       <view class="flex align-center" bindtap="goUrl" data-url="/communityPages/otherUser/otherUser">

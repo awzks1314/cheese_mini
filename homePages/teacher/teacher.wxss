@@ -22,7 +22,7 @@
 }
 .info_button_content{
   height: 100%;
-  background-color: #0081ef;
+  background-color: #436FC4;
   border-radius: 50rpx;
   display: flex;
   align-items: center;

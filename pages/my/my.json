@@ -1,6 +1,7 @@
 {
   "usingComponents": {
-    "free-modal":"/components/free-modal/free-modal"
+    "free-modal":"/components/free-modal/free-modal",
+    "free-drawer":"/components/free-drawer/free-drawer"
   },
   "navigationBarTitleText": "",
   "navigationStyle": "custom"

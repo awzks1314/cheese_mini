@@ -41,7 +41,7 @@ page {
   /* padding: 10rpx 20rpx; */
 }
 .upload_item_active{
-  background-color: #0081ef;
+  background-color: #436FC4;
   color: #fff;
 }
 .myPages_upload{
@@ -49,7 +49,7 @@ page {
   height: 300rpx;
   border-radius: 20rpx;
   margin: 30rpx 0;
-  border: 4rpx dotted #0081ef;
+  border: 4rpx dotted #436FC4;
 }
 
 .upload_image{
@@ -68,7 +68,7 @@ page {
 }
 .info_button_content{
   height: 100%;
-  background-color: #0081ef;
+  background-color: #436FC4;
   border-radius: 50rpx;
   display: flex;
   align-items: center;

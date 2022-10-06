@@ -1,3 +1,6 @@
+page {
+  /* background-color: #fff; */
+}
 .commun_head_box{
   height: 360rpx;
   background-image: url('https://z3.ax1x.com/2021/05/14/grhfMV.png');
@@ -66,23 +69,41 @@
   display: block;
 }
 .community_tab{
-  width: 80rpx;
+  width: 100rpx;
   text-align: center;
+  color: #919293
 }
 .community_tab_active{
   position: relative;
   font-weight: 700;
-  font-size: 36rpx;
+  color: #333;
 }
-.community_tab_active::after {
+/* .community_tab_active::after {
   content: ' ';
   width: 70rpx;
   height: 10rpx;
-  background-color: #0081ef;
+  background-color: #436FC4;
   border-radius: 20rpx;
   position: absolute;
   bottom: 1rpx;
   left: 5rpx;
+  z-index: -1;
+} */
+.community_tab_style{
+  position: relative;
+  font-weight: 700;
+  font-size: 30rpx;
+  color: #333;
+}
+.community_tab_style::after {
+  content: ' ';
+  width: 70rpx;
+  height: 10rpx;
+  background-color: #436FC4;
+  border-radius: 20rpx;
+  position: absolute;
+  bottom: 1rpx;
+  left: 15rpx;
   z-index: -1;
 }
 button{

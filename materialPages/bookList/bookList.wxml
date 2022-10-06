@@ -1,0 +1,36 @@
+<view class="padding text-xl text-bold">
+  Notes
+</view>
+
+<view class="padding-lr">
+  <view class="margin-bottom bg-white radius  flex align-center relative" wx:for="{{5}}" wx:key="index" bindtap="toUrl" data-url="/materialPages/bookDetail/bookDetail">
+  <!-- bindtap="detailPage" data-id="1" -->
+  <free-icon name="likefill" color="#436FC4"  class="collectNote"></free-icon>
+  <view class="boook_avatar bg-blue"></view>
+    <view class="flex-sub padding-left">
+      <view class="text-bold text-cut-2 padding-right-sm">2022年新能源策略报告（光伏、储能风电）：能源革命加速，龙头ss所示强者恒强</view>
+      <view class="flex align-center  padding-top-xs">
+        <image src="/static/img/1.jpg" mode="aspectFill" class="mater_item_avatars"></image>
+        <view class="flex align-center padding-left-sm">
+          <free-tag effect="light" size="sm" radius="10rpx" type="blue" class=" margin-right-xs">生物</free-tag>
+          <free-tag effect="light" size="sm" radius="10rpx"  type="blue" class=" margin-right-xs">化学</free-tag>
+          <free-tag effect="light" size="sm" radius="10rpx" type="blue" class=" margin-right-xs">英语</free-tag>
+        </view>
+      </view>
+      <view class="flex align-center justify-between margin-top-xs">
+        <view class="text-sm text-gray  flex align-center">
+          <view class="flex align-center ">
+            <free-icon name="copy" size="26"></free-icon>
+            <text class="padding-left-xxs">98页</text>
+          </view>
+          <view class="flex align-center padding-left-sm">
+            <free-icon name="attention" size="26"></free-icon>
+            <text class="padding-left-xxs">165阅读</text>
+          </view>
+        </view>
+        <free-icon name="more" color="#436FC4" catchtap="openBottomShare"></free-icon>
+      </view>
+    </view>
+  </view>
+  
+</view>

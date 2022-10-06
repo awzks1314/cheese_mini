@@ -1,6 +1,16 @@
-<view class="input_box padding-lr padding-bottom">
-  <view class="w100 flex align-center justify-between">
-    <view class="flex align-center" >
+<view style="height:0;">
+  <free-navBar title='' background='transoprt'     >
+  <view class='padding-lr' slot="left" bindtap="goUrl" data-url="/pages/question/question">
+    <!-- <view class="upload_button bg-green " bindtap="toUrl" data-url="/myPages/upload/upload">
+    <image src="/static/img/home/Paper Upload.png" class="upload_image"></image>
+      <text>Upload</text>
+    </view> -->
+  </view>
+</free-navBar>
+</view> 
+<view class="input_box ">
+  <view class="w100 flex align-end justify-between">
+    <view class="flex align-center" bindtap="swicthTab" data-url="/pages/my/my">
       <image src="http://q1.qlogo.cn/g?b=qq&nk=664423077&s=640" class="my_header_avatar"></image>
       <view class="flex flex-direction padding-left">
         <text class="big_text">Hello，Rasel</text>
@@ -8,81 +18,92 @@
       </view>
     </view>
 
-    <view class="upload_button bg-green " bindtap="toUrl" data-url="/myPages/upload/upload">资料上传</view>
-  </view>
-  <view class="w100 padding-xs radius margin-top bg-white flex align-center ">
-    <free-icon name="search" color="#000" class="padding-left-xs" size="32"></free-icon>
-    <input type="text" placeholder="请输入资料" class="input_style"/> 
-    <view class="image_box" bindtap="openShow">
-      <image src="/static/img/home/filter.png" class="input_image"></image>
+    <view class="upload_button bg-green " bindtap="toUrl" data-url="/myPages/upload/upload">
+    <image src="/static/img/home/Paper Upload.png" class="upload_image"></image>
+      <text>Upload</text>
     </view>
+  </view>
+
+  <view class="input_header    bg-white flex align-center">
+    <image src="/static/img/home/Search.png" class="input_search_img"></image>
+    <input type="text" placeholder="Search your notes" class="input_style"/> 
+    <view class="input_line"></view>
+    <image src="/static/img/home/filter.png" class="input_image"></image>
   </view>
 </view>
 
-<free-gap height="400"></free-gap>
-<swiper class="card-swiper {{true?'square-dot':'round-dot'}}" indicator-dots="true" circular="true" autoplay="true"  interval="5000" duration="500" bindchange="cardSwiper" indicator-color="#fff" indicator-active-color="#0081ef" 		previous-margin="35px" 	next-margin="20px">
+<free-gap height="84"></free-gap>
+<view class="flex align-center">
+  <view class="mater_two_tab {{currentTab == 0?'mater_two_tab_active':''}}" bindtap="changeTab" data-index="0">
+    全部
+  </view>
+  <view class="mater_two_tab {{currentTab == 1?'mater_two_tab_active':''}}" bindtap="changeTab" data-index="1">
+    书籍
+  </view>
+  <view class="mater_two_tab {{currentTab == 2?'mater_two_tab_active':''}}" bindtap="changeTab" data-index="2">
+    笔记
+  </view>
+  <view class="mater_two_tab {{currentTab == 3?'mater_two_tab_active':''}}" bindtap="changeTab" data-index="3">
+    论文
+  </view>
+</view>
+
+<swiper class="card-swiper {{true?'square-dot':'round-dot'}}" indicator-dots="true" circular="true" autoplay="true"  interval="5000" duration="500" bindchange="cardSwiper" indicator-color="#fff" indicator-active-color="#436FC4" 		previous-margin="35px" 	next-margin="20px">
   <swiper-item wx:for="{{swiperList}}" wx:key='index' class="{{cardCur == index?'cur':''}}">
     <view class="swiper-item">
-      <image src="{{item.url}}" mode="aspectFill" ></image>
+      <image src="{{item.url}}"  ></image>
     </view>
   </swiper-item>
 </swiper>
 
-<view class="padding-bottom">
-  <scroll-view scroll-x="true" class="scroll-style">
-    <view class="mater_two_tab {{currentTab == 0?'mater_two_tab_active':''}}" bindtap="changeTab" data-index="0">
-      全部
-    </view>
-    <view class="mater_two_tab {{currentTab == 1?'mater_two_tab_active':''}}" bindtap="changeTab" data-index="1">
-      书籍
-    </view>
-    <view class="mater_two_tab {{currentTab == 2?'mater_two_tab_active':''}}" bindtap="changeTab" data-index="2">
-      笔记
-    </view>
-    <view class="mater_two_tab {{currentTab == 3?'mater_two_tab_active':''}}" bindtap="changeTab" data-index="3">
-      论文
-    </view>
-  </scroll-view>
- 
-  
+<view class="padding-bottom">  
   <scroll-view class="scroll-style" scroll-x="true">
-    <view class="bg-blue radius  mater_item flex flex-direction relative" wx:for="{{3}}" wx:key="index" >
-    <free-icon name="like" color="#fff"  class="collectNote"></free-icon>
-    <view class="mater_item_image"></view>
+    <view class=" radius  mater_item flex flex-direction relative" wx:for="{{3}}" wx:key="index" bindtap="toUrl" data-url="/materialPages/bookAll/bookAll">
+    
+    <view class="tags">
+      Biology
+    </view>
+    <view class="collectNote">
+      <free-icon name="like" size="26" ></free-icon>
+    </view>
+    <view class="mater_item_image bg-gray"></view>
     <view class="tab_one_style bg-white padding-sm">
       <view class="mater_item_avatar_box">
         <image src="http://q1.qlogo.cn/g?b=qq&nk=664423077&s=640" class="mater_item_avatar"></image>
       </view>
-      <view class="margin-top">
-        <text class="text-bold">谈短篇小说的制作</text>
-      </view>
-      <view class="flex align-center justify-between">
-        <view class="tag_content  flex flex-wrap align-center">
-          <free-tag effect="light" size="sm" radius="10rpx" type="blue" class="tag_item margin-right-xs">生物</free-tag>
-          <free-tag effect="light" size="sm" radius="10rpx"  type="blue" class="tag_item margin-right-xs">化学</free-tag>
-        </view>
-        <free-icon name="more" color="#0081ef" catchtap="openBottomShare"></free-icon>
+      <view class="margin-top tag_content">
+        <text class="text-bold text-cut-2">2022 New Energy Strategy Report （Photovoltaic，Energy Storage Wind Popo</text>
       </view>
     </view>
   </view>
   </scroll-view>
 
     <view class="padding-lr">
-      <view class="margin-top bg-white radius padding-sm flex align-center relative" wx:for="{{5}}" wx:key="index" >
+      <view class="margin-top bg-white radius padding-xs flex align-center relative" wx:for="{{5}}" wx:key="index" bindtap="toUrl" data-url="/materialPages/bookDetail/bookDetail">
       <!-- bindtap="detailPage" data-id="1" -->
-      <free-icon name="likefill" color="#0081ef"  class="collectNote"></free-icon>
-      <view class="boook_avatar bg-blue"></view>
-        <view class="flex-sub padding-left">
+      
+      <view class="collectNotes">
+        <free-icon name="likefill" size="26"  ></free-icon>
+      </view>
+      <view class="boook_avatar bg-gray"></view>
+        <view class="flex-sub padding-left-xs">
+          <view class="flex padding-bottom-xs">
+            <text class="tag_xueke ">Biochemistry</text>
+          </view>
           <view class="text-bold text-cut-2 padding-right-sm">2022年新能源策略报告（光伏、储能风电）：能源革命加速，龙头ss所示强者恒强</view>
-          <view class="flex align-center  padding-top-xs">
+          <!-- <view class="flex align-center  padding-top-xs">
             <image src="/static/img/1.jpg" mode="aspectFill" class="mater_item_avatars"></image>
             <view class="flex align-center padding-left-sm">
               <free-tag effect="light" size="sm" radius="10rpx" type="blue" class=" margin-right-xs">生物</free-tag>
               <free-tag effect="light" size="sm" radius="10rpx"  type="blue" class=" margin-right-xs">化学</free-tag>
               <free-tag effect="light" size="sm" radius="10rpx" type="blue" class=" margin-right-xs">英语</free-tag>
             </view>
-          </view>
+          </view> -->
           <view class="flex align-center justify-between margin-top-xs">
+            <view class="flex align-center">
+              <image src="/static/img/1.jpg" mode="aspectFill" class="mater_item_avatars"></image>
+              <text class="padding-left-xs text-sm text-gray">Michelle Augustine</text>
+            </view>
             <view class="text-sm text-gray  flex align-center">
               <view class="flex align-center ">
                 <free-icon name="copy" size="26"></free-icon>
@@ -93,11 +114,11 @@
                 <text class="padding-left-xxs">165阅读</text>
               </view>
             </view>
-            <free-icon name="more" color="#0081ef" catchtap="openBottomShare"></free-icon>
+            <!-- <free-icon name="more" color="#436FC4" catchtap="openBottomShare"></free-icon> -->
           </view>
         </view>
       </view>
-      
+       
     </view>
   </view>
 
@@ -115,52 +136,57 @@
           <text class="drawer_item {{category == 'EE'?'drawer_item_active':''}}"  catchtap="changeCategory" data-type="EE">EE</text>
           <text class="drawer_item {{category == 'TOK'?'drawer_item_active':''}}" catchtap="changeCategory" data-type="TOK">TOK</text>
           <text class="drawer_item {{category == 'Notes'?'drawer_item_active':''}}" catchtap="changeCategory" data-type="Notes">Notes</text>
-          <text class="drawer_item {{category == 'Other'?'drawer_item_active':''}}" catchtap="changeCategory" data-type="Other">Other</text>
+          <text class="drawer_item {{category == 'Ps'?'drawer_item_active':''}}" catchtap="changeCategory" data-type="Ps">Ps</text>
         </view>
-
-        <view class="text-bold margin-top padding-tb">Subject</view>
-        <view class="subject_input">
-          <input type="text" placeholder="Type a subject"/>
-          <free-icon name="triangledownfill" size="28"></free-icon>
-        </view>
-
-        <view class="text-bold margin-top padding-tb" wx:if="{{category != 'TOK'}}">Level</view>
-        <view class="flex align-center flex-wrap" wx:if="{{category != 'TOK'}}">
-          <view class="flex align-center margin-left-lg"  catchtap="changeName" data-type="HL" data-name="level">
-            <free-icon name="{{level== 'HL'?'squarecheckfill':'square'}}" color="{{level== 'HL'?'#0081ef':''}}"></free-icon>
-            <view class="padding-left-xs">HL</view>
+        <view wx:if="{{category == 'Ps'}}">
+          <view class="text-bold margin-top padding-tb" >学科</view>
+          <view class="subject_input">
+            <input type="text" placeholder="Type a subject"/>
+            <free-icon name="triangledownfill" size="28"></free-icon>
           </view>
-          <view class="flex align-center margin-left-lg" catchtap="changeName" data-type="SL" data-name="level">
-            <free-icon name="{{level== 'SL'?'squarecheckfill':'square'}}" color="{{level== 'SL'?'#0081ef':'#aaa'}}"></free-icon>
-            <view class="padding-left-xs">SL</view>
+
+          <view class="text-bold margin-top padding-tb" >国家</view>
+          <view class="subject_input" >
+            <input type="text" placeholder="Type a subject"/>
+            <free-icon name="triangledownfill" size="28"></free-icon>
           </view>
         </view>
+        <view wx:if="{{category != 'Ps'}}">
+          <view class="text-bold margin-top padding-tb" wx:if="{{category != 'TOK'}}">Subject</view>
+          <view class="subject_input" wx:if="{{category != 'TOK'}}">
+            <input type="text" placeholder="Type a subject"/>
+            <free-icon name="triangledownfill" size="28"></free-icon>
+          </view>
 
-        <view class="text-bold margin-top padding-tb">Session</view>
-        <view class="padding-left-lg">
-          <view class="flex align-center margin-bottom " catchtap="changeName" data-type="May 2022" data-name="session">
-            <free-icon name="{{session== 'May 2022'?'squarecheckfill':'square'}}" color="{{session== 'May 2022'?'#0081ef':'#aaa'}}"></free-icon>
-            <view class="padding-left-xs">May 2022</view>
+          <view class="text-bold margin-top padding-tb" wx:if="{{category == 'IA' || category == 'Notes'}}">Level</view>
+          <view class="flex align-center flex-wrap" wx:if="{{category == 'IA' || category == 'Notes'}}">
+            <view class="flex align-center margin-left-lg"  catchtap="changeName" data-type="HL" data-name="level">
+              <free-icon name="{{level== 'HL'?'squarecheckfill':'square'}}" color="{{level== 'HL'?'#436FC4':''}}"></free-icon>
+              <view class="padding-left-xs">HL</view>
+            </view>
+            <view class="flex align-center margin-left-lg" catchtap="changeName" data-type="SL" data-name="level">
+              <free-icon name="{{level== 'SL'?'squarecheckfill':'square'}}" color="{{level== 'SL'?'#436FC4':'#aaa'}}"></free-icon>
+              <view class="padding-left-xs">SL</view>
+            </view>
           </view>
-          <view class="flex align-center margin-bottom " catchtap="changeName" data-type="November 2021" data-name="session">
-            <free-icon name="{{session== 'November 2021'?'squarecheckfill':'square'}}" color="{{session== 'November 2021'?'#0081ef':'#aaa'}}"></free-icon>
-            <view class="padding-left-xs">November 2021</view>
+          <view class="text-bold margin-top padding-tb" >成绩</view>
+          <view class="padding-left-lg">
+            <view class="flex align-center margin-bottom" wx:for="{{seeionArray}}" wx:key="index" catchtap="changeName" data-index="{{index}}" data-indexname="sessionIndex" data-name="session" >
+              <free-icon name="{{sessionIndex== index?'squarecheckfill':'square'}}" color="{{sessionIndex== index?'#436FC4':'#aaa'}}"></free-icon>
+              <view class="padding-left-xs">{{item}}</view>
+            </view>
           </view>
-          <view class="flex align-center margin-bottom ">
-            <free-icon name="square"></free-icon>
-            <view class="padding-left-xs">May 2021</view>
-          </view>
-          <view class="flex align-center margin-bottom ">
-            <free-icon name="square"></free-icon>
-            <view class="padding-left-xs">November 2020</view>
-          </view>
-          <view class="flex align-center margin-bottom ">
-            <free-icon name="square"></free-icon>
-            <view class="padding-left-xs">May 2020</view>
-          </view>
-          <view class="flex align-center margin-bottom ">
-            <free-icon name="square"></free-icon>
-            <view class="padding-left-xs">November 2019</view>
+          <view class="text-bold margin-top padding-tb">Session</view>
+          <view class="padding-left-lg">
+            <view class="flex align-center margin-bottom " catchtap="changeName" data-type="May 2022" data-name="session">
+              <free-icon name="{{session== 'May 2022'?'squarecheckfill':'square'}}" color="{{session== 'May 2022'?'#436FC4':'#aaa'}}"></free-icon>
+              <view class="padding-left-xs">May 2022</view>
+            </view>
+            <view class="flex align-center margin-bottom " catchtap="changeName" data-type="November 2021" data-name="session">
+              <free-icon name="{{session== 'November 2021'?'squarecheckfill':'square'}}" color="{{session== 'November 2021'?'#436FC4':'#aaa'}}"></free-icon>
+              <view class="padding-left-xs">November 2021</view>
+            </view>
+           
           </view>
         </view>
       </view>
@@ -193,7 +219,7 @@
             </view>
           </view>
         </view>
-        <view class="solid-bottom padding-bottom-sm bg-white flex align-center justify-center">
+        <view class=" padding-bottom-sm bg-white flex align-center justify-center">
           <view class="share_read">阅读</view>
         </view>
         <view class="flex align-center justify-center  bg-white padding-tb">
@@ -224,8 +250,7 @@
   </free-bottom-popup>
 
 <view class="community_button" bindtap="goUrl" data-url="/communityPages/post/post">
-  <!-- <image src="/static/img/home/chess.png" class="community_edit "></image> -->
-  <view class="community_edit bg-blue shadow">
+  <button class="community_edit bg-blue shadow" open-type="contact">
     <free-icon name="commentfill" color="#fff" size="50"></free-icon>
-  </view>
+  </button>
 </view>

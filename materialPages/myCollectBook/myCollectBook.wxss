@@ -1,0 +1,70 @@
+
+.mater_two_tab{
+  width: 150rpx;
+  height: 60rpx;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+  color: #000;
+  border-radius: 50rpx;
+  margin-left: 30rpx;
+}
+.mater_two_tab:nth-last-child(1) {
+  margin-right: 30rpx;
+}
+.mater_two_tab_active{
+  background-color: #436FC4;
+  color: #FFF;
+}
+
+.boook_avatar{
+  width: 120rpx;
+  height: 160rpx;
+  border-radius: 10rpx;
+}
+.mater_item{
+  display: inline-flex;
+  width: 320rpx;
+  margin-top: 20rpx;
+  margin-left: 30rpx;
+}
+.mater_item:nth-last-child(1){
+  margin-right: 30rpx;
+}
+.mater_item_image{
+  width: 380rpx;
+  height: 120rpx;
+}
+.tag_content{
+  width: 380rpx;
+}
+.tag_item{
+  margin-top: 10rpx;
+}
+.tab_one_style{
+  position: relative;
+}
+.mater_item_avatar{
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+}
+.mater_item_avatars{
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+}
+.mater_item_avatar_box{
+  position: absolute;
+  top: -30rpx;
+  background-color: #fff;
+  border-top-right-radius: 50rpx;
+  border-top-left-radius: 50rpx;
+  padding: 10rpx 20rpx;
+}
+.collectNote{
+  position: absolute;
+  top: 10rpx;
+  right: 10rpx;
+}

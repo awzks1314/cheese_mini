@@ -12,7 +12,7 @@
 .my_header_box{
   height: 300rpx;
   z-index: 99;
-  background-color: #0081ef;
+  background-color: #436FC4;
   background-image: url('https://z3.ax1x.com/2021/05/14/grhfMV.png');
 	background-size: cover;
 	background-position: center;
@@ -69,7 +69,7 @@
 .linewidr{
   width: 2rpx;
   height: 30rpx;
-  background-color: #0081ef;
+  background-color: #436FC4;
 }
 
 .tab_item{
@@ -111,7 +111,7 @@
 .product_image{
   width: 100%;
   height: 300rpx;
-  background-color: #0081ef;
+  background-color: #436FC4;
 }
 
 .info_button{

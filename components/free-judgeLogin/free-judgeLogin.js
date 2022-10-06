@@ -18,11 +18,11 @@ Component({
     },
     bgColor:{
       type:String,
-      value:'#0081ef'
+      value:'#436FC4'
     },
     color:{
       type:String,
-      value:'#0081ef'
+      value:'#436FC4'
     },
     // 登录跳转地址
     url : {

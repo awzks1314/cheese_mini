@@ -22,6 +22,7 @@ Page({
     ],
     cardCur:0,
     tabCurrentTab:0,
+    tabTab:0,//树洞、申请、补习
     commitShow:false,//评论
   },
 
@@ -51,7 +52,7 @@ Page({
   },
   changeTab(e) {
     this.setData({
-      tabCurrentTab:e.currentTarget.dataset.index
+      [e.currentTarget.dataset.name]:e.currentTarget.dataset.index
     })
   },
   goUrl(e) {

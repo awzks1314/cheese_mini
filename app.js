@@ -1,5 +1,8 @@
 // app.js
+let reque = require('utils/request.js')
 App({
+  axios: reque.axios,//请求
+  toast: reque.toast,//消息提醒
   onLaunch() {
     wx.getSystemInfo({
       success: e => {

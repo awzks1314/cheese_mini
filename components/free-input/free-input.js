@@ -105,7 +105,7 @@ Component({
     // 额外按钮颜色
     extreaColor:{
       type:String,
-      value:'#0081ef'
+      value:'#436FC4'
     },
     height:{
       type:String,

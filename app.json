@@ -1,10 +1,9 @@
 {
   "pages": [
-    "pages/home/home",
+    "pages/community/community",
+    "pages/material/material",
     "pages/my/my",
     "pages/question/question",
-    "pages/material/material",
-    "pages/community/community",
     "pages/login/login",
     "pages/message/message",
     "pages/search/search"
@@ -45,7 +44,10 @@
     {
       "root": "materialPages",
       "pages": [
-        "bookDetail/bookDetail"
+        "bookDetail/bookDetail",
+        "bookAll/bookAll",
+        "bookList/bookList",
+        "myCollectBook/myCollectBook"
       ]
     },
     {
@@ -64,33 +66,33 @@
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
-    "color": "#aaaaaa",
+    "color": "#868686",
     "selectedColor": "#000",
     "backgroundColor": "#FFFFFF",
     "list": [
       {
-        "pagePath": "pages/home/home",
-        "text": "首页",
-        "iconPath": "static/img/tabbarIcon/t2.png",
-        "selectedIconPath": "static/img/tabbarIcon/t1.png"
-      },
-      {
         "pagePath": "pages/community/community",
-        "text": "社区",
-        "iconPath": "static/img/tabbarIcon/t4.png",
-        "selectedIconPath": "static/img/tabbarIcon/t3.png"
+        "text": "Discovery",
+        "iconPath": "static/img/tabbarIcon/Discovery.png",
+        "selectedIconPath": "static/img/tabbarIcon/Discovery1.png"
       },
       {
         "pagePath": "pages/material/material",
-        "text": "发现",
-        "iconPath": "static/img/tabbarIcon/t6.png",
-        "selectedIconPath": "static/img/tabbarIcon/t5.png"
+        "text": "Find",
+        "iconPath": "static/img/tabbarIcon/find.png",
+        "selectedIconPath": "static/img/tabbarIcon/find1.png"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "text": "Notifications",
+        "iconPath": "static/img/tabbarIcon/Notifications.png",
+        "selectedIconPath": "static/img/tabbarIcon/Notifications1.png"
       },
       {
         "pagePath": "pages/my/my",
-        "text": "我的",
-        "iconPath": "static/img/tabbarIcon/t8.png",
-        "selectedIconPath": "static/img/tabbarIcon/t7.png"
+        "text": "Profile",
+        "iconPath": "static/img/tabbarIcon/Profile.png",
+        "selectedIconPath": "static/img/tabbarIcon/Profile1.png"
       }
     ]
   },
@@ -107,7 +109,7 @@
     "free-loadmore": "/components/free-loadmore/free-loadmore",
     "free-empty": "/components/free-empty/free-empty",
     "free-guidance": "/components/free-guidance/free-guidance",
-     "free-judgeLogin":"/components/free-judgeLogin/free-judgeLogin",
+    "free-judgeLogin": "/components/free-judgeLogin/free-judgeLogin",
     "free-bottom-popup": "/components/free-bottom-popup/free-bottom-popup"
   },
   "sitemapLocation": "sitemap.json"

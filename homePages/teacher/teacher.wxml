@@ -27,7 +27,7 @@
 
       <view>
         <view class="flex align-center padding-tb-xs">
-          <free-icon name="time" color="#0081ef" size="28"></free-icon>
+          <free-icon name="time" color="#436FC4" size="28"></free-icon>
           <text class="text-gray text-sm padding-left-xs">279 hours tutoring</text>
         </view>
 

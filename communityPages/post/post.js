@@ -6,9 +6,23 @@ Page({
    */
   data: {
     imgList:[],
-    info:""
+    info:"",
+    show:false,
+    arraySession:['树洞','申请','补习'],
+    sessionIndex:0,
+    name:""
   },
-
+  openShow(){
+    this.setData({
+      show:!this.data.show
+    })
+  },
+  bindPickerChange(e) {
+    console.log(e)
+    this.setData({
+      name:this.data.arraySession[e.detail.value]
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

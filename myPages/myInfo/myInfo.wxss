@@ -1,6 +1,6 @@
 /* pages/my/my.wxss */
 page {
-  background-color: #0081ef;
+  background-color: #436FC4;
 }
 .my_header{
   height: 480rpx;
@@ -15,13 +15,13 @@ page {
   padding: 6rpx 0 6rpx 10rpx;
   border-top-left-radius: 50rpx;
   border-bottom-left-radius: 50rpx;
-  background-color: #0081ef;
+  background-color: #436FC4;
   color: #fff;
 }
 .my_header_footer{
   position: absolute;
   bottom: 0;
-  border-right: 770rpx solid #0081ef;
+  border-right: 770rpx solid #436FC4;
   border-left: 0 solid transparent;
   border-top: 60rpx solid transparent;
   border-bottom: 0 solid transparent;
@@ -139,7 +139,7 @@ button {
   
 }
 .sign_button{
-  background-color: #0081ef;
+  background-color: #436FC4;
   padding: 6rpx 18rpx;
   border-radius: 50rpx;
   color: #fff;

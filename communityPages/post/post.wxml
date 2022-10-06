@@ -13,7 +13,15 @@
 </view>
 <view class="relative padding-lr ">
   <textarea maxlength="300" bindinput="textareaAInput" placeholder="有什么新鲜有趣内容，快来和别人分享吧" value="{{info}}"></textarea>
-  <view class="post_word_limit text-gray">{{info.length}}/300</view>
+  <view class="post_word_limit flex align-center justify-between ">
+    <!-- <view class="text-blue" bindtap="openShow"># 选择话题 #</view> -->
+    <picker bindchange="bindPickerChange" value="{{sessionIndex}}" range="{{arraySession}}">
+        <view class="picker text-blue">
+          # {{name || '选择话题'}} # 
+        </view>
+      </picker>
+    <view class="text-gray">{{info.length}}/300</view>
+  </view>
 </view>
 
 <view class="padding-lr">
@@ -33,3 +41,17 @@
   <view class="info_button_content">
     <free-icon name="edit" color="#fff"></free-icon>立刻发帖</view>
 </view>
+<free-drawer 
+    show="{{show}}"
+    mode="bottom" 
+    closeable="{{false}}"
+    length="50%">
+    <view class="flex align-center justify-between">
+      <view class="post_left">
+        <view>树洞</view>
+      </view>
+      <view class="post_right">
+        <text>2</text>
+      </view>
+    </view>
+    </free-drawer>
