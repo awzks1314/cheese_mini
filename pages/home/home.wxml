@@ -53,8 +53,11 @@
   </view>
 </view>
 
-<free-judgeLogin 
+<free-gap height="160"></free-gap>
+<free-tabbar list="{{tabList}}" current="0" ></free-tabbar>
+
+<!-- <free-judgeLogin 
   showLogin="{{showLogin}}"
   url="/pages/login/login"
   title="登录享受更多精彩~"
-  ></free-judgeLogin>
+  ></free-judgeLogin> -->

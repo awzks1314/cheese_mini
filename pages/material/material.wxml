@@ -11,7 +11,7 @@
 <view class="input_box ">
   <view class="w100 flex align-end justify-between">
     <view class="flex align-center" bindtap="swicthTab" data-url="/pages/my/my">
-      <image src="http://q1.qlogo.cn/g?b=qq&nk=664423077&s=640" class="my_header_avatar"></image>
+      <image src="/static/img/find/avatar.png" class="my_header_avatar"></image>
       <view class="flex flex-direction padding-left">
         <text class="big_text">Hello，Rasel</text>
         <text class="big_text_sub">let's start learning!</text>
@@ -28,93 +28,76 @@
     <image src="/static/img/home/Search.png" class="input_search_img"></image>
     <input type="text" placeholder="Search your notes" class="input_style"/> 
     <view class="input_line"></view>
-    <image src="/static/img/home/filter.png" class="input_image"></image>
+    <image src="/static/img/home/filter.png" class="input_image" bindtap="openShow"></image>
   </view>
 </view>
 
 <free-gap height="84"></free-gap>
-<view class="flex align-center">
-  <view class="mater_two_tab {{currentTab == 0?'mater_two_tab_active':''}}" bindtap="changeTab" data-index="0">
-    全部
+<view class="flex align-center two_tab_box">
+  
+  <scroll-view scroll-x="true" class="scroll-style">
+    <view class="mater_two_tab {{currentTab == index?'mater_two_tab_active':''}}" bindtap="changeTab" data-index="{{index}}" wx:for="{{AllCategory}}" wx:key="index">
+    {{item}}
   </view>
-  <view class="mater_two_tab {{currentTab == 1?'mater_two_tab_active':''}}" bindtap="changeTab" data-index="1">
-    书籍
-  </view>
-  <view class="mater_two_tab {{currentTab == 2?'mater_two_tab_active':''}}" bindtap="changeTab" data-index="2">
-    笔记
-  </view>
-  <view class="mater_two_tab {{currentTab == 3?'mater_two_tab_active':''}}" bindtap="changeTab" data-index="3">
-    论文
-  </view>
+  </scroll-view>
 </view>
 
-<swiper class="card-swiper {{true?'square-dot':'round-dot'}}" indicator-dots="true" circular="true" autoplay="true"  interval="5000" duration="500" bindchange="cardSwiper" indicator-color="#fff" indicator-active-color="#436FC4" 		previous-margin="35px" 	next-margin="20px">
+<!-- <swiper class="card-swiper {{true?'square-dot':'round-dot'}}" indicator-dots="true" circular="true" autoplay="true"  interval="5000" duration="500" bindchange="cardSwiper" indicator-color="#fff" indicator-active-color="#436FC4" 		previous-margin="35px" 	next-margin="20px">
   <swiper-item wx:for="{{swiperList}}" wx:key='index' class="{{cardCur == index?'cur':''}}">
     <view class="swiper-item">
       <image src="{{item.url}}"  ></image>
     </view>
   </swiper-item>
-</swiper>
+</swiper> -->
 
-<view class="padding-bottom">  
+<view class="card_scrool">  
   <scroll-view class="scroll-style" scroll-x="true">
-    <view class=" radius  mater_item flex flex-direction relative" wx:for="{{3}}" wx:key="index" bindtap="toUrl" data-url="/materialPages/bookAll/bookAll">
-    
+    <view class="  mater_item flex flex-direction relative" wx:for="{{3}}" wx:key="index" bindtap="toUrl" data-url="/materialPages/bookAll/bookAll">
     <view class="tags">
-      Biology
+      Biochemistry
     </view>
     <view class="collectNote">
-      <free-icon name="like" size="26" ></free-icon>
+      <image src="/static/img/find/collect.png" class="collect_image"></image>
     </view>
-    <view class="mater_item_image bg-gray"></view>
-    <view class="tab_one_style bg-white padding-sm">
+    <image src="/static/img/find/bg.png" class="mater_item_image"></image>
+    <view class="tab_one_style bg-white ">
       <view class="mater_item_avatar_box">
-        <image src="http://q1.qlogo.cn/g?b=qq&nk=664423077&s=640" class="mater_item_avatar"></image>
+        <image src="/static/img/find/avatar.png" class="mater_item_avatar"></image>
       </view>
-      <view class="margin-top tag_content">
-        <text class="text-bold text-cut-2">2022 New Energy Strategy Report （Photovoltaic，Energy Storage Wind Popo</text>
+      <view class=" tag_content">
+        <text class=" text-cut-2">2022 New Energy Strategy Report (Photovoltaic, Energy</text>
       </view>
     </view>
   </view>
   </scroll-view>
 
-    <view class="padding-lr">
-      <view class="margin-top bg-white radius padding-xs flex align-center relative" wx:for="{{5}}" wx:key="index" bindtap="toUrl" data-url="/materialPages/bookDetail/bookDetail">
-      <!-- bindtap="detailPage" data-id="1" -->
-      
-      <view class="collectNotes">
-        <free-icon name="likefill" size="26"  ></free-icon>
+    <view class="">
+      <view class="list_card  flex align-center relative" wx:for="{{5}}" wx:key="index" bindtap="toUrl" data-url="/materialPages/bookDetail/bookDetail">
+      <view class="collectNote collectNotes">
+      <image src="/static/img/find/collect.png" class="collect_image"></image>
+    </view>
+      <view class="relative">
+        <image src="" class="boook_avatar bg-gray"></image>
+        <view class="group_box">
+          <image src="/static/img/find/Path.png" class="group"></image>
+          <view>8.5 MB</view>
+        </view>
+        <view class="path_box">
+          <image src="/static/img/find/Group.png" class="group"></image>
+          <view>12 Pages</view>
+        </view>
       </view>
-      <view class="boook_avatar bg-gray"></view>
-        <view class="flex-sub padding-left-xs">
-          <view class="flex padding-bottom-xs">
-            <text class="tag_xueke ">Biochemistry</text>
+        <view class="right_content">
+          <view class=" flex">
+            <text class="tag_xueke">Biochemistry</text>
           </view>
-          <view class="text-bold text-cut-2 padding-right-sm">2022年新能源策略报告（光伏、储能风电）：能源革命加速，龙头ss所示强者恒强</view>
-          <!-- <view class="flex align-center  padding-top-xs">
-            <image src="/static/img/1.jpg" mode="aspectFill" class="mater_item_avatars"></image>
-            <view class="flex align-center padding-left-sm">
-              <free-tag effect="light" size="sm" radius="10rpx" type="blue" class=" margin-right-xs">生物</free-tag>
-              <free-tag effect="light" size="sm" radius="10rpx"  type="blue" class=" margin-right-xs">化学</free-tag>
-              <free-tag effect="light" size="sm" radius="10rpx" type="blue" class=" margin-right-xs">英语</free-tag>
-            </view>
-          </view> -->
-          <view class="flex align-center justify-between margin-top-xs">
+          <view class="tag_content text-cut-2">2022 New Energy Strategy Report (Photovoltaic, Energy Storage Wind Pos</view>
+          <view class="flex align-center justify-between">
+            <image src="/static/img/find/avatar.png" mode="aspectFill" class="mater_item_avatars"></image>
             <view class="flex align-center">
-              <image src="/static/img/1.jpg" mode="aspectFill" class="mater_item_avatars"></image>
-              <text class="padding-left-xs text-sm text-gray">Michelle Augustine</text>
+                <image src="/static/img/find/Eye.png" class="eye"></image>
+                <view class="eye_text">7.2K Views</view>
             </view>
-            <view class="text-sm text-gray  flex align-center">
-              <view class="flex align-center ">
-                <free-icon name="copy" size="26"></free-icon>
-                <text class="padding-left-xxs">98页</text>
-              </view>
-              <view class="flex align-center padding-left-sm">
-                <free-icon name="attention" size="26"></free-icon>
-                <text class="padding-left-xxs">165阅读</text>
-              </view>
-            </view>
-            <!-- <free-icon name="more" color="#436FC4" catchtap="openBottomShare"></free-icon> -->
           </view>
         </view>
       </view>
@@ -129,7 +112,6 @@
     length="70%">
     <view class="padding relative h100" catchtap="closeClose">
       <view>
-      <free-gap height="160"></free-gap>
         <view class="text-bold padding-bottom">Category</view>
         <view class="flex flex-wrap">
           <text class="drawer_item {{category == 'IA'?'drawer_item_active':''}}" catchtap="changeCategory"  data-type="IA">IA</text>
@@ -254,3 +236,5 @@
     <free-icon name="commentfill" color="#fff" size="50"></free-icon>
   </button>
 </view>
+<free-gap height="160"></free-gap>
+<free-tabbar list="{{tabList}}" current="1" ></free-tabbar>

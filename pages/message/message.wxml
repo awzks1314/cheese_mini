@@ -1,38 +1,33 @@
-<view class="flex bg-white padding-tb solid-bottom radius margin-bottom-sm">
-  <view class="flex-sub  flex flex-direction align-center padding-lr" bindtap="goUrl" data-url="/myPages/noticeDetail/noticeDetail" data-type="like">
-    <view class="radius_box bg-yellow">
-      <free-icon name="likefill" color="#fff" size="50"></free-icon>
-    </view>  
-    <text class="padding-top-xs">赞</text>
-  </view>
-  <view class="flex-sub flex flex-direction align-center padding-lr" bindtap="goUrl" data-url="/myPages/noticeDetail/noticeDetail" data-type="commit">
-    <view class="radius_box bg-green">
-      <free-icon name="comment" color="#fff" size="50"></free-icon>
-    </view>  
-    <text class="padding-top-xs">评论消息</text>
-  </view>
+<view class="header_box">
+  <view class="header_content">
+    <view class="flex flex-direction align-center right_one" bindtap="goUrl" data-url="/myPages/noticeDetail/noticeDetail" data-type="like">
+      <image src="/static/img/notifications/Frame34.png" class="header_image"></image>
+      <text class="header_text">Interest</text>
+    </view>
+    <view class="flex flex-direction align-center right_two" bindtap="goUrl" data-url="/myPages/noticeDetail/noticeDetail" data-type="commit">
+      <image src="/static/img/notifications/Frame35.png" class="header_image"></image> 
+      <text class="header_text">Comment</text>
+    </view>
 
-  <view class="flex-sub flex flex-direction align-center padding-lr" bindtap="goUrl" data-url="/myPages/noticeDetail/noticeDetail" data-type="seting">
-    <view class="radius_box bg-blue">
-      <free-icon name="notificationfill" color="#fff" size="50"></free-icon>
-    </view>  
-    <text class="padding-top-xs">系统通知</text>
-  </view>
-</view>
-
-<view class="bg-white flex align-center padding-lr" wx:for="{{5}}" wx:key="{{index}}" bindtap="goUrl" data-url="/messagePages/messageDetail/messageDetail" >
-  <view class="relative my_header_avatar ">
-    <image src="http://q1.qlogo.cn/g?b=qq&nk=664423077&s=640" class="my_header_avatar"></image>
-    <view class="red_dot_content">
-      <text class="red_dot"></text>
+    <view class="flex flex-direction align-center" bindtap="goUrl" data-url="/myPages/noticeDetail/noticeDetail" data-type="seting">
+      <image src="/static/img/notifications/Frame36.png" class="header_image"></image>
+      <text class="header_text">Notifications</text>
     </view>
   </view>
-  <view class="message_message_title padding-tb margin-left solid-bottom">
-    <view class="flex align-center justify-between">
-      <text class="text-bold">Jerome Bell</text>
-      <text>Yesterday</text>
-    </view>
-    <view class=" text-cut text-gray padding-top-sm">When will you join?</view>
+</view>
+<free-gap height="136"></free-gap>
+<view class="list_box">
+  <view class="list_item" wx:for="{{5}}" wx:key="{{index}}" bindtap="goUrl" data-url="/messagePages/messageDetail/messageDetail" >
+    <image src="/static/img/notifications/Rectangle25.png" class="my_header_avatar"></image>
+    <view class="message_message_title">
+      <view class="message_message_title_top">
+        <text class="message_message_title_top_one">Jerome Bell</text>
+        <text class="message_message_title_top_two">2m ago</text>
+      </view>
+      <view class="message_message_title_bottom text-cut">When will you join?</view>
   </view>
 </view>
+</view>
 
+<free-gap height="160"></free-gap>
+<free-tabbar list="{{tabList}}" current="3" ></free-tabbar>

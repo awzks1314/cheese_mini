@@ -1,10 +1,11 @@
-// pages/community/community.js
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    tabList:app.globalData.list,
     time:0,
     animation:true,
     bgColor:'#f1f1f1', 

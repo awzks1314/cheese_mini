@@ -1,4 +1,3 @@
-// pages/material/material.js
 const app = getApp()
 Page({
 
@@ -6,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    tabList:app.globalData.list,
     swiperList:[
       {id:0,type:'image',url:'https://cheese-ninja.oss-cn-shenzhen.aliyuncs.com/banner/12.png?x-oss-process=style/img-sm'},
       {id:1,type:'image',url:'https://cheese-ninja.oss-cn-shenzhen.aliyuncs.com/banner/16.png?x-oss-process=style/img-sm'},
@@ -19,7 +19,8 @@ Page({
     category:'IA',
     level:'HL',
     sessionIndex:0,
-    seeionArray:['A','B','C']
+    seeionArray:['A','B','C'],
+    AllCategory:['All','Books','Notes','Paper','Thesis','Thesis','Thesis']
   },
  
   /**

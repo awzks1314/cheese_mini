@@ -1,10 +1,11 @@
-// myPages/notice/notice.js
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    tabList:app.globalData.list,
 
   },
   goUrl(e) {

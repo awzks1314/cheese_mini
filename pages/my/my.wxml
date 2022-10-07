@@ -1,46 +1,58 @@
-<view style='height:0;'>
-  <free-navBar  background='{{background}}'>
-    <view class='padding-lr' slot="left" bindtap="toUrl" data-url="/pages/message/message">
-      <free-icon name="notice" color="{{color}}" size="50"></free-icon>
-    </view>
-</free-navBar>
-</view>
-<view class="my_header_box"></view>
-<view class="my_header bg-white flex flex-direction align-center">
- <view class="my_header_image_box">
-  <image src="/static/img/1.jpg" mode="aspectFill" class="my_header_avatar"></image>
- </view>
 
-  <view class="my_header_nikeName ">Hannah Gonzalez</view>
+<free-navBar title='' background='#436FC4'     >
+  <view slot="left" class="my_header_now">
+    <image src="/static/img/profile/Group.png" class="my_heaedr_now"></image>
+    <text class="my_header_text">Subscribe Now</text>
+  </view>
+</free-navBar>
+<view class="my_header_box">
+  <!-- <view class="my_header_now">
+    <image src="/static/img/profile/Group.png" class="my_heaedr_now"></image>
+    <text class="my_header_text">Subscribe Now</text>
+  </view> -->
+</view>
+<view class="my_header  flex flex-direction align-center">
+  <!-- <image src="https://cheese-ninja.oss-cn-shenzhen.aliyuncs.com/avatar/Female/Avatarz_black0307.png?x-oss-process=style/img-sm"class="my_header_avatar"></image> -->
+  <view class="my_header_avatar" style="background: url('https://cheese-ninja.oss-cn-shenzhen.aliyuncs.com/avatar/Female/Avatarz_black0307.png?x-oss-process=style/img-sm') center no-repeat;background-size:320rpx;">
+  
+  </view>
+  <view class="my_header_nikeName ">Hannah Gonzales</view>
   <view class="flex align-center">
     <view class="flex align-center">
-      <free-icon name="like" size="28"></free-icon>
-      <text class="padding-left-xs">168</text>
+     <image src="/static/img/profile/Path.png" class="path"></image>
+      <text class="path_text">168</text>
     </view>
     <view class="flex align-center margin-left">
-      <!-- <image src="/static/img/icon/huore.png" class="my_header_box_image"></image> -->
-      <free-icon name="attention" size="28"></free-icon>
-      <text class="padding-left-xs">8</text>
+      <image src="/static/img/profile/eye.png" class="eye"></image>
+      <text class="path_text">23.5K</text>
     </view> 
   </view>
-  <view class="my_header_box_tab  flex align-center bg-white shadow-main radius">
-    <view class="my_header_box_tabitem margin-right" bindtap="openCheese" >
-      <image src="/static/img/home/chess.png" 
+
+  <view class="my_header_box_tab ">
+    <view class="my_header_box_tabitem" bindtap="openCheese" >
+      <image src="/static/img/profile/sr-cheese.png" 
       class="my_header_box_image1"></image>
-      <text>芝士值</text>
+      <view>
+        <view class="checc_name">Cheese Value</view>
+        <view class="checc_value">131</view>
+      </view>
     </view>
-    <view class="my_header_box_tabitem " bindtap="sign">
-      <image src="/static/img/icon/shoucang.png" 
+    <view class="checc_line"></view>
+    <view class="my_header_box_tabitem" bindtap="sign" >
+      <image src="/static/img/profile/Vector.png" 
       class="my_header_box_image"></image>
-      <text>每日签到</text>
+      <view>
+        <view class="checc_name">Daily Check-in</view>
+        <view class="checc_value">131</view>
+      </view>
     </view>
   </view>
 
-  <view class="w100 gyy flex align-center  relative padding-bottom {{isFixed?'fixed':''}}" style="top:{{top}}px">
-    <view class="tab_item {{tabIndex == 0?'tab_item_actvie':''}}" bindtap="changeTab" data-index="0">上传</view>
-    <view class="tab_item {{tabIndex == 1?'tab_item_actvie':''}}" bindtap="changeTab" data-index="1">个人</view>
-    <view class="tab_item {{tabIndex == 2?'tab_item_actvie':''}}" bindtap="changeTab" data-index="2">收藏</view>
-    <view class="tab_item {{tabIndex == 3?'tab_item_actvie':''}}" bindtap="changeTab" data-index="3">下载</view>
+  <view class="tab_box {{isFixed?'fixed':''}}" style="top:{{top}}px">
+    <view class="tab_item {{tabIndex == 0?'tab_item_actvie':''}}" bindtap="changeTab" data-index="0">Upload</view>
+    <view class="tab_item {{tabIndex == 1?'tab_item_actvie':''}}" bindtap="changeTab" data-index="1">Personal</view>
+    <view class="tab_item {{tabIndex == 2?'tab_item_actvie':''}}" bindtap="changeTab" data-index="2">Collect</view>
+    <view class="tab_item {{tabIndex == 3?'tab_item_actvie':''}}" bindtap="changeTab" data-index="3">Download</view>
     <view class="tab_item_slider" style="left:{{tableft}}rpx;"></view>
   </view>
 </view>
@@ -68,36 +80,39 @@
   </swiper-item>
 
   <swiper-item class="swiper_style ">
-    <view class="padding-lr padding-top">
-      <view class="radius bg-white padding">
-        <view class="flex align-center justify-between  solid-bottom padding-bottom">
-          <text>名字</text>
-          <text class="text-blue">Hannah Gonzalez</text>
+    <view class="one_padding">
+      <view class="one_item_box">
+        <view class="one_list_item">
+          <text class="one_list_name">Name</text>
+          <text class="one_list_value">Hannah Gonzalez</text>
         </view>
-        <view class="flex align-center justify-between  solid-bottom padding-tb">
-          <text>学校</text>
-          <text class="text-blue">英国伦敦大学</text>
+        <view class="one_list_line"></view>
+        <view class="one_list_item">
+          <text class="one_list_name">School</text>
+          <text class="one_list_value">University of London</text>
         </view>
-        <view class="flex align-center justify-between   solid-bottom padding-tb">
-          <text>角色</text>
-          <text class="text-blue">teacher</text>
+        <view class="one_list_line"></view>
+        <view class="one_list_item">
+          <text class="one_list_name">Role</text>
+          <text class="one_list_value">Teacher</text>
         </view>
-        <view class="flex align-center justify-between   padding-top">
-          <text>课程体系</text>
-          <text class="text-blue">IB</text>
+        <view class="one_list_line"></view>
+        <view class="one_list_item">
+          <text class="one_list_name">Curiculum Structure</text>
+          <text class="one_list_value">IB</text>
+        </view>
+        <view class="one_list_line"></view>
+        <view class="one_list_item">
+          <text class="one_list_name">Cureses</text>
+          <text class="one_list_value">HL</text>
         </view>
       </view>
+    </view>
 
-      <view class="radius bg-white padding margin-top">
-        <view class="flex align-center justify-between">
-          <text>课程</text>
-          <view>
-            <free-tag effect="light" size="sm" radius="10rpx" type="blue" class="tag_item margin-right-xs">英语</free-tag>
-            <free-tag effect="light" size="sm" radius="10rpx" type="blue" class="tag_item margin-right-xs">英语</free-tag>
-            <free-tag effect="light" size="sm" radius="10rpx" type="blue" class="tag_item margin-right-xs">英语</free-tag>
-            <free-tag effect="light" size="sm" radius="10rpx" type="blue" class="tag_item">英语</free-tag>
-          </view>
-        </view>
+    <view class="edit_box">
+      <view class="edit_box_content">
+        <image src="/static/img/profile/Edit.png" class="edit_box_image"></image>
+        <view>Edit</view>
       </view>
     </view>
   </swiper-item>
@@ -295,3 +310,6 @@
       </view> 
     </view>
   </free-drawer >
+
+  <free-gap height="160"></free-gap>
+  <free-tabbar list="{{tabList}}" current="4" ></free-tabbar>

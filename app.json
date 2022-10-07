@@ -1,11 +1,12 @@
 {
   "pages": [
+    "pages/my/my",
     "pages/community/community",
     "pages/material/material",
-    "pages/my/my",
     "pages/question/question",
     "pages/login/login",
     "pages/message/message",
+    "pages/upload/upload",
     "pages/search/search"
   ],
   "subPackages": [
@@ -22,7 +23,6 @@
         "follow/follow",
         "vip/vip",
         "noticeDetail/noticeDetail",
-        "upload/upload",
         "noticeDetailPages/noticeDetailPages",
         "myInfoNew/myInfoNew"
       ]
@@ -69,6 +69,7 @@
     "color": "#868686",
     "selectedColor": "#000",
     "backgroundColor": "#FFFFFF",
+    "custom": true,
     "list": [
       {
         "pagePath": "pages/community/community",
@@ -81,6 +82,12 @@
         "text": "Find",
         "iconPath": "static/img/tabbarIcon/find.png",
         "selectedIconPath": "static/img/tabbarIcon/find1.png"
+      },
+      {
+        "iconPath":"static/img/tabbarIcon/add.png",
+        "selectedIconPath":"static/img/tabbarIcon/add.png",
+        "text": "Upload",
+        "pagePath":"pages/upload/upload"
       },
       {
         "pagePath": "pages/message/message",
@@ -110,7 +117,8 @@
     "free-empty": "/components/free-empty/free-empty",
     "free-guidance": "/components/free-guidance/free-guidance",
     "free-judgeLogin": "/components/free-judgeLogin/free-judgeLogin",
-    "free-bottom-popup": "/components/free-bottom-popup/free-bottom-popup"
+    "free-bottom-popup": "/components/free-bottom-popup/free-bottom-popup",
+    "free-tabbar":"/components/free-tabbar/free-tabbar"
   },
   "sitemapLocation": "sitemap.json"
 }

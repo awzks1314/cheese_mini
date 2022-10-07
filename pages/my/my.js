@@ -5,10 +5,11 @@ Page({
    * 页面的初始数据
    */
   data: {
+    tabList:app.globalData.list,
     tabIndex:0,
-    tableft:40,
+    tableft:0,
     modal:false,
-    swiperHeight:'300px',
+    swiperHeight:'400px',
     background:'rgba(0,0,0,0)',
     color:'#fff',
     isFixed:false,
@@ -55,7 +56,7 @@ Page({
   changeTab(e) {
     this.setData({
       tabIndex:e.currentTarget.dataset.index,
-      tableft:e.currentTarget.dataset.index*167.5 + 40,
+      tableft:e.currentTarget.dataset.index*175.5,
       current:e.currentTarget.dataset.index
     },() => {
       this.getSwiperHeight(this,'.swiper-item'+e.currentTarget.dataset.index +'4')
@@ -66,7 +67,7 @@ Page({
     this.setData({
       current:e.detail.current,
       tabIndex:e.detail.current,
-      tableft:e.detail.current*167.5 + 40
+      tableft:e.detail.current*175.5
     },() => {
       this.getSwiperHeight(this,'.swiper-item'+e.detail.current +'4')
     })
@@ -126,7 +127,7 @@ Page({
     //创建节点选择器
     let query = wx.createSelectorQuery();
     let that = this
-    query.select('.gyy').boundingClientRect(
+    query.select('.tab_box').boundingClientRect(
       function (s) {
         that.setData({
           gyyHeight: s.top - app.globalData.CustomBar,

@@ -1,10 +1,11 @@
-// pages/home/home.js
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    tabList:app.globalData.list,
     banner:[
       {
         url:"https://cheese-ninja.oss-cn-shenzhen.aliyuncs.com/banner/1.png?x-oss-process=style/img-sm"
