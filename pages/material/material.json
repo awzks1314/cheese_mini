@@ -4,6 +4,10 @@
     "free-drawer":"/components/free-drawer/free-drawer"
   },
   "navigationBarBackgroundColor": "#436FC4",
+<<<<<<< HEAD
   "navigationBarTitleText": "",
   "navigationStyle": "custom"
+=======
+  "navigationBarTitleText": ""
+>>>>>>> d8d0021d89ec1fc581c2a453c655815aed83797b
 }

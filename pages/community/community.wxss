@@ -83,7 +83,11 @@ padding: 4rpx;
   color: #fff;
   border-radius: 50rpx;
   padding: 8rpx 16rpx;
+<<<<<<< HEAD
   font-size:20rpx;
+=======
+  font-size:16rpx;
+>>>>>>> d8d0021d89ec1fc581c2a453c655815aed83797b
 }
 .tab_one_style{
   position: relative;
@@ -105,8 +109,13 @@ color: #1B1B1B;
 }
 .teacher_arrow{
   font-weight: 400;
+<<<<<<< HEAD
 font-size: 26rpx;
 line-height: 30rpx;
+=======
+font-size: 24rpx;
+line-height: 28rpx;
+>>>>>>> d8d0021d89ec1fc581c2a453c655815aed83797b
 letter-spacing: -0.33rpx;
 
 color: #436FC3;
@@ -147,7 +156,11 @@ margin-top: 8rpx;
 .com_content{
   padding: 16rpx;
   width: 702rpx;
+<<<<<<< HEAD
 height: 342rpx;
+=======
+height: 304rpx;
+>>>>>>> d8d0021d89ec1fc581c2a453c655815aed83797b
 
 background: #FFFFFF;
 box-shadow: 0px 8rpx 24rpx rgba(0, 0, 0, 0.04), 0px 4px 12px rgba(0, 0, 0, 0.04);
@@ -175,8 +188,13 @@ width: 134rpx;
 background: #4E9DF9;
 border-radius: 28rpx;
 font-weight: 700;
+<<<<<<< HEAD
 font-size: 20rpx;
 line-height: 22rpx;
+=======
+font-size: 16rpx;
+line-height: 18rpx;
+>>>>>>> d8d0021d89ec1fc581c2a453c655815aed83797b
 
 color: #F8F8F8;
 margin-top: 8rpx;
@@ -194,8 +212,13 @@ color: #868686;
 }
 .com_content_word{
   font-weight: 400;
+<<<<<<< HEAD
 font-size: 26rpx;
 line-height: 30rpx;
+=======
+font-size: 24rpx;
+line-height: 28rpx;
+>>>>>>> d8d0021d89ec1fc581c2a453c655815aed83797b
 
 color: #000000;
 margin-top: 16rpx;

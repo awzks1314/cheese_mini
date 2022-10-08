@@ -10,25 +10,55 @@
         {
           "name": "",
           "pathName": "pages/material/material",
+<<<<<<< HEAD
+=======
           "query": "",
           "launchMode": "default",
           "scene": null
         },
         {
           "name": "",
+          "pathName": "pages/message/message",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "myPages/upload/upload",
+>>>>>>> d8d0021d89ec1fc581c2a453c655815aed83797b
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+<<<<<<< HEAD
           "pathName": "homePages/teacher/teacher",
+=======
+          "pathName": "pages/community/community",
+>>>>>>> d8d0021d89ec1fc581c2a453c655815aed83797b
           "query": "",
           "launchMode": "default",
           "scene": null
         },
         {
           "name": "",
+<<<<<<< HEAD
           "pathName": "homePages/teacherDetail/teacherDetail",
+=======
+          "pathName": "communityPages/post/post",
+>>>>>>> d8d0021d89ec1fc581c2a453c655815aed83797b
           "query": "",
           "launchMode": "default",
           "scene": null
         }
       ]
     }
+  },
+  "projectname": "tribune",
+  "setting": {
+    "compileHotReLoad": false,
+    "urlCheck": false
   }
 }

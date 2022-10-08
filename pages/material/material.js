@@ -27,7 +27,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
+<<<<<<< HEAD
     // this.getAll()
+=======
+    this.getAll()
+>>>>>>> d8d0021d89ec1fc581c2a453c655815aed83797b
   },
   getAll() {
     app.axios({

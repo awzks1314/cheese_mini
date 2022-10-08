@@ -2,6 +2,10 @@
   <view slot="center" class="header_search">
     <image src="/static/img/community/Search.png" class="header_image"></image>
       <text>Search your notes</text>
+<<<<<<< HEAD
+=======
+    <!-- bindtap="goUrl" data-url="/pages/search/search" -->
+>>>>>>> d8d0021d89ec1fc581c2a453c655815aed83797b
   </view>
 </free-navBar>
 
@@ -89,6 +93,12 @@
   </view>
 </view>
 
+<<<<<<< HEAD
+=======
+<view class="community_button" bindtap="goUrl" data-url="/communityPages/post/post">
+  <image src="/static/img/home/chess.png" class="community_edit bg-white shadow"></image>
+</view>
+>>>>>>> d8d0021d89ec1fc581c2a453c655815aed83797b
 <!-- <free-gap height="30"></free-gap> -->
 <free-gap height="120" wx:if="{{commitShow}}"></free-gap>
 

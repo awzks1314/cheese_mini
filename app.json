@@ -32,8 +32,12 @@
       "pages": [
         "teacher/teacher",
         "moneyPages/moneyPages",
+<<<<<<< HEAD
         "addTeacher/addTeacher",
         "teacherDetail/teacherDetail"
+=======
+        "addTeacher/addTeacher"
+>>>>>>> d8d0021d89ec1fc581c2a453c655815aed83797b
       ]
     },
     {
@@ -85,10 +89,17 @@
         "selectedIconPath": "static/img/tabbarIcon/find1.png"
       },
       {
+<<<<<<< HEAD
         "iconPath": "static/img/tabbarIcon/add.png",
         "selectedIconPath": "static/img/tabbarIcon/add.png",
         "text": "Upload",
         "pagePath": "pages/upload/upload"
+=======
+        "iconPath":"static/img/tabbarIcon/add.png",
+        "selectedIconPath":"static/img/tabbarIcon/add.png",
+        "text": "Upload",
+        "pagePath":"pages/upload/upload"
+>>>>>>> d8d0021d89ec1fc581c2a453c655815aed83797b
       },
       {
         "pagePath": "pages/message/message",
@@ -119,7 +130,11 @@
     "free-guidance": "/components/free-guidance/free-guidance",
     "free-judgeLogin": "/components/free-judgeLogin/free-judgeLogin",
     "free-bottom-popup": "/components/free-bottom-popup/free-bottom-popup",
+<<<<<<< HEAD
     "free-tabbar": "/components/free-tabbar/free-tabbar"
+=======
+    "free-tabbar":"/components/free-tabbar/free-tabbar"
+>>>>>>> d8d0021d89ec1fc581c2a453c655815aed83797b
   },
   "sitemapLocation": "sitemap.json"
 }
