@@ -1,35 +1,73 @@
-<view class="padding-top padding-left">
-  <scroll-view class="post_upload scroll-style" scroll-x="true"> 
-    <view class="post_upload_content " wx:for="{{imgList}}" wx:key="index" bindtap="ViewImage" data-url="{{imgList[index]}}">
-      <image src='{{imgList[index]}}' class="post_img_style" mode='aspectFill'></image>
-      <view class="free-tag bg-red" catchtap="DelImg" data-index="{{index}}">
-        <free-icon name="close" size='24' color='#fff'></free-icon>
+<view class="upload_box">
+  <view class="upload_padding">
+    <scroll-view class="post_upload scroll-style" scroll-x="true"> 
+      <view class="post_upload_content " wx:for="{{imgList}}" wx:key="index" bindtap="ViewImage" data-url="{{imgList[index]}}">
+        <image src='{{imgList[index]}}' class="post_img_style" mode='aspectFill'></image>
+        <view class="free-tag bg-red" catchtap="DelImg" data-index="{{index}}">
+          <free-icon name="close" size='24' color='#fff'></free-icon>
+        </view>
+      </view>
+      <view class="post_upload_content bg-gray" bindtap="ChooseImage" wx:if="{{imgList.length<9}}">
+        <free-icon name="add" class="free-upicon" color="#436FC3"></free-icon>
+      </view>
+    </scroll-view>
+    <textarea maxlength="300" bindinput="textareaAInput" placeholder="Write your content..." value="{{info}}"></textarea>
+    <view>
+      <view class="list_tag">List of Tags</view>
+      <view class="flex align-center">
+        <view class="tag">Add your tag</view>
+        <view class="tag">Add your tag</view>
+        <view class="tag">Add your tag</view>
       </view>
     </view>
-    <view class="post_upload_content bg-gray" bindtap="ChooseImage" wx:if="{{imgList.length<9}}">
-      <free-icon name="add" class="free-upicon"></free-icon>
-    </view>
-  </scroll-view>
-</view>
-<view class="relative padding-lr ">
-  <textarea maxlength="300" bindinput="textareaAInput" placeholder="有什么新鲜有趣内容，快来和别人分享吧" value="{{info}}"></textarea>
-  <view class="post_word_limit text-gray">{{info.length}}/300</view>
+  </view>
+  <view class=""></view>
+  <view class="top_bottom flex align-center">
+    <switch class="blue"></switch>
+    <view class="switch_txt">Post with anonymity</view>
+  </view>
+
+  <view class="sanjiao"></view>
+  <view class="sanjiaos"></view>
 </view>
 
-<view class="padding-lr">
-  <view class="solid-bottom"></view>
-</view>
 
-<!-- <view class="padding">
-  <input placeholder="输入标题" maxlength="20" class="post_input_style"></input>
+
+
+<!-- <view class="relative padding-lr ">
+  <view class="post_word_limit flex align-center justify-between ">
+    <picker bindchange="bindPickerChange" value="{{sessionIndex}}" range="{{arraySession}}">
+        <view class="picker text-blue">
+          # {{name || '选择话题'}} # 
+        </view>
+      </picker>
+    <view class="text-gray">{{info.length}}/300</view>
+  </view>
 </view> -->
-<view class="padding  flex align-center justify-end">
-  <text class="text-lg padding-right-xs">匿名发送</text>
-  <switch class="blue" checked></switch>
+
+<view class="bottom_box">
+  <view class="bottom_item bottom_active">Thought</view>
+  <view class="bottom_item ">Application</view>
+  <view class="bottom_item">Upload Notes</view>
 </view>
 
-<free-gap height="80"></free-gap>
-<view class=" info_button">
+
+<!-- <free-gap height="80"></free-gap> -->
+<!-- <view class=" info_button">
   <view class="info_button_content">
     <free-icon name="edit" color="#fff"></free-icon>立刻发帖</view>
-</view>
+</view> -->
+<free-drawer 
+    show="{{show}}"
+    mode="bottom" 
+    closeable="{{false}}"
+    length="50%">
+    <view class="flex align-center justify-between">
+      <view class="post_left">
+        <view>树洞</view>
+      </view>
+      <view class="post_right">
+        <text>2</text>
+      </view>
+    </view>
+    </free-drawer>

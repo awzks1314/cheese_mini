@@ -1,0 +1,89 @@
+
+<view class="upload_li flex align-center">
+<image src="/static/img/upload/path.png" class="upload_li_image"></image>
+  <view class="title">How This Works</view>
+  <image src="/static/img/upload/up.png" class="upload_li_image_up" bindtap="openNote"></image>
+</view>
+
+<view class="list_title">Select a category</view>
+<view class="w100 flex align-cenetr flex-wrap">
+  <view class="upload_item {{categoryIndex==0?'upload_item_active':''}}" bindtap="changeType" data-index="0">IA</view>
+  <view class="upload_item {{categoryIndex==1?'upload_item_active':''}}" bindtap="changeType" data-index="1">EE</view>
+  <view class="upload_item {{categoryIndex==2?'upload_item_active':''}}" bindtap="changeType" data-index="2">TOK</view>
+  <view class="upload_item {{categoryIndex==3?'upload_item_active':''}}" bindtap="changeType" data-index="3">NOTES</view>
+</view> 
+
+<view class="list_title"  wx:if="{{categoryIndex != 2}}">Subject</view>
+<view class="upload_li_select flex align-center justify-between " wx:if="{{categoryIndex != 2}}">
+  <view class="upload_gray">Select subject</view>
+  <image src="/static/img/upload/down.png" class="upload_li_image_down" bindtap="openNote"></image>
+</view>
+
+<view class="list_title" wx:if="{{categoryIndex != 2}}">Level</view>
+<view class="w100 flex align-cenetr flex-wrap" wx:if="{{categoryIndex != 2}}">
+  <view class="upload_item {{categoryIndex==0?'upload_item_active':''}}" bindtap="changeType" data-index="0">HL</view>
+  <view class="upload_item {{categoryIndex==1?'upload_item_active':''}}" bindtap="changeType" data-index="1">SL</view>
+</view> 
+
+<view class="list_title" wx:if="{{categoryIndex != 2}}">Grads</view>
+<view class="w100 flex align-cenetr flex-wrap" wx:if="{{categoryIndex != 2}}">
+  <view class="upload_item _number {{categoryIndex==index?'upload_item_active':''}}" bindtap="changeType" data-index="0" wx:for="{{7}}" wx:key="index">{{item + 1}}</view>
+</view> 
+
+
+<view class="list_title">Session</view>
+<view class="upload_li_select flex align-center justify-between ">
+  <view class="upload_gray">Select Session</view>
+  <image src="/static/img/upload/down.png" class="upload_li_image_down" bindtap="openNote"></image>
+</view>
+<!-- <picker bindchange="bindPickerChange" value="{{sessionIndex}}" range="{{arraySession}}">
+      <view class="picker text-blue">
+        {{session || 'Select'}}
+      </view>
+    </picker> -->
+<view class="list_title">Topic</view>
+<view class="upload_li_select flex align-center justify-between ">
+  <input type="text" class="input" placeholder-class="upload_gray" placeholder="Please enter a title"/>
+</view>
+
+
+<view class="list_title">Your IA</view>
+<view class="myPages_upload flex flex-direction align-center justify-center text-blue ">
+  <image src="/static/img/upload/upload.png" class="upload_image"></image>
+  <view class="upload_title">Upload a PDF</view>
+  <view class="upload_text">Supported formats PDF.</view>
+  <view class="upload_text">The PDF format is less than 10 MB.</view>
+</view>
+
+<view class="list_title">Your Course</view>
+<view class="myPages_upload flex flex-direction align-center justify-center text-blue ">
+  <image src="/static/img/upload/upload.png" class="upload_image"></image>
+  <view class="upload_title">Upload a PDF</view>
+  <view class="upload_text">Supported formats PDF.</view>
+  <view class="upload_text">The PDF format is less than 10 MB.</view>
+</view>
+
+<view class="list_title">Your WeChat</view>
+<view class="upload_li_select flex align-center justify-between ">
+  <input type="text" class="input" placeholder-class="upload_gray" placeholder="Please enter your WeChat"/>
+</view>
+
+
+<free-gap height="140"></free-gap>
+<view class="info_button">
+  <view class="info_button_content ">Submit Review</view>
+</view>
+
+
+<free-modal show="{{noteShow}}" custom="{{true}}"  width="500rpx">
+  <view class="share_content  bg-white relative">
+    <view class="text-center padding-lr padding-bottom text-bold">上传说明</view>
+    <view>1.的撒的撒多撒大萨达少打点萨多撒大萨达少打点萨达萨达大萨达多撒大萨达少打点萨达萨达大萨达多撒大萨达少打点萨达萨达大萨达达萨达大萨达</view>
+    <view class="padding-tb-xs">2.的撒的撒多撒大萨达少打点萨多撒大萨达少打点萨达萨达大萨达多撒大萨达少打点萨达萨达大萨达多撒大萨达少打点萨达萨达大萨达达萨达大萨达</view>
+    <view class="padding-tb-xs">2.的撒的撒多撒大萨达少打点萨多撒大萨达少打点萨达萨达大萨达多撒大萨达少打点萨达萨达大萨达多撒大萨达少打点萨达萨达大萨达达萨达大萨达</view>
+    <!-- <free-gap height="50"></free-gap> -->
+    <view class="adCloseMain" catchtap="openNote">
+      <free-icon name="close" size="28"></free-icon>
+    </view>
+  </view>
+</free-modal>

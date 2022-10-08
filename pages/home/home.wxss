@@ -12,9 +12,9 @@ page{
   width: 690rpx;
   height: 345rpx;
   border-radius: 20rpx;
-  background-image: url('https://z3.ax1x.com/2021/05/14/grhfMV.png');
+  /* background-image: url('https://z3.ax1x.com/2021/05/14/grhfMV.png');
 	background-size: cover;
-	background-position: center;
+	background-position: center; */
 }
 
 .menu_one{

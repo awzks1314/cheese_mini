@@ -1,18 +1,75 @@
-// pages/my/my.js
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    tabList:app.globalData.list,
     tabIndex:0,
-    tableft:40,
-    modal:false
+    tableft:0,
+    modal:false,
+    swiperHeight:'400px',
+    background:'rgba(0,0,0,0)',
+    color:'#fff',
+    isFixed:false,
+    top:0,
+    gyyTop:0,
+    cheeseShow:false,//芝士弹窗
+    bottomShare:false,//更多
+    uploadList:[],
+    current:0,
+    infoShow:false,//个人资料
   },
-  goUrl(e) {
-    console.log(e)
-    wx.navigateTo({
-      url: e.currentTarget.dataset.url
+  onPageScroll(e) {
+    let opciaty = e.scrollTop / 130;
+    if (e.scrollTop >= this.data.gyyHeight) {
+      this.setData({
+        isFixed:true,
+        top:this.data.gyyTop
+      })
+    }else {
+      this.setData({
+        isFixed:false,
+        top:0
+      })
+    }
+    if (opciaty >= 1) {
+      opciaty = 1;
+      this.setData({ 
+        background: `rgba(255,255,255)` ,
+        color:"#436FC4"
+      });
+    } else if (opciaty <= 0) {
+      opciaty = 0;
+      this.setData({ background: `rgba(0,0,0,${opciaty})` 
+      ,
+      color:"#fff"});
+    }
+    
+  },
+  onLoad() {
+    // this.getSwiperHeight(this,'.swiper-item9')
+    this.getTopHeight()
+  },
+  // 上传、个人、收藏、下载
+  changeTab(e) {
+    this.setData({
+      tabIndex:e.currentTarget.dataset.index,
+      tableft:e.currentTarget.dataset.index*175.5,
+      current:e.currentTarget.dataset.index
+    },() => {
+      this.getSwiperHeight(this,'.swiper-item'+e.currentTarget.dataset.index +'4')
+    })
+  },
+  // 滑动
+  changeSwiper(e) {
+    this.setData({
+      current:e.detail.current,
+      tabIndex:e.detail.current,
+      tableft:e.detail.current*175.5
+    },() => {
+      this.getSwiperHeight(this,'.swiper-item'+e.detail.current +'4')
     })
   },
   // 开始签到
@@ -21,23 +78,30 @@ Page({
       modal:true
     })
   },
-  changeTab(e) {
+  // 打开cheese
+  openCheese() {
     this.setData({
-      tabIndex:e.currentTarget.dataset.index,
-      tableft:e.currentTarget.dataset.index*167.5 + 40
+      cheeseShow:true
     })
   },
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady() {
-
+  close() {
+    this.setData({
+      cheeseShow:false
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow() {
+  // 打开资料更多
+  openBottomShare(){
+    this.setData({
+      bottomShare:true
+    })
+  },
+  closeBottomShare() {
+    this.setData({
+      bottomShare:false
+    })
+  },
+  // 阻止个人信息
+  closeClose() {
 
   },
   toUrl(e) {
@@ -45,6 +109,31 @@ Page({
     wx.navigateTo({
       url: data.url,
     })
+  },
+  getSwiperHeight(p, element){
+    //创建节点选择器
+    let query = wx.createSelectorQuery();
+    //选择id
+    let that = p;
+    query.select(element).boundingClientRect(
+      function (e) {
+        console.log(e);
+        that.setData({
+          swiperHeight: (e.height + 40 )*5+ 'px'
+        })
+      }).exec();
+  },
+  getTopHeight() {
+    //创建节点选择器
+    let query = wx.createSelectorQuery();
+    let that = this
+    query.select('.tab_box').boundingClientRect(
+      function (s) {
+        that.setData({
+          gyyHeight: s.top - app.globalData.CustomBar,
+          gyyTop:app.globalData.CustomBar
+        })
+      }).exec();
   },
   /**
    * 用户点击右上角分享

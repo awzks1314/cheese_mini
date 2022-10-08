@@ -14,7 +14,18 @@ Page({
   onLoad(options) {
 
   },
-
+  handlerGobackClick(delta) {
+    const pages = getCurrentPages();
+    if (pages.length >= 2) {
+      wx.navigateBack({
+        delta: delta
+      });
+    } else {
+      wx.navigateTo({
+        url: '/pages/home/home'
+      });
+    }
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

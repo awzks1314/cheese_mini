@@ -3,5 +3,6 @@
     "free-input":"/components/free-input/free-input",
     "free-rate":"/components/free-rate/free-rate"
   },
-  "navigationBarTitleText": ""
+  "navigationBarTitleText": "",
+  "navigationStyle": "custom"
 }

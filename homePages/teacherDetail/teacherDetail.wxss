@@ -1,0 +1,19 @@
+.my_header_box{
+  height: 224rpx;
+  background-color: #436FC4;
+}
+.my_header{
+  padding-top: 80rpx;
+  position: relative;
+}
+.my_header_avatar{
+  position: absolute;
+  width: 160rpx;
+  height: 160rpx;
+  left: 296rpx;
+  top: -80rpx;
+  border-radius: 50%;
+  border: 4rpx solid #FFFFFF;
+  object-fit: cover;
+  background-color: #e35464 !important;
+}

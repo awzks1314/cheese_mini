@@ -67,7 +67,7 @@
             </view>
           </view>
           <view>
-            <free-icon name="likefill" size="50" color="#0081ef"></free-icon>
+            <free-icon name="likefill" size="50" color="#436FC4"></free-icon>
           </view>
       </view>
     </view>

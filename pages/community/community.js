@@ -1,10 +1,11 @@
-// pages/community/community.js
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    tabList:app.globalData.list,
     time:0,
     animation:true,
     bgColor:'#f1f1f1', 
@@ -22,6 +23,7 @@ Page({
     ],
     cardCur:0,
     tabCurrentTab:0,
+    tabTab:0,//树洞、申请、补习
     commitShow:false,//评论
   },
 
@@ -51,7 +53,7 @@ Page({
   },
   changeTab(e) {
     this.setData({
-      tabCurrentTab:e.currentTarget.dataset.index
+      [e.currentTarget.dataset.name]:e.currentTarget.dataset.index
     })
   },
   goUrl(e) {

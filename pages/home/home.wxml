@@ -1,14 +1,21 @@
-<free-navBar title='' background='rgba(0,0,0,0)'     >
+<free-navBar title='' background='#fff'     >
   <view class='padding-lr' slot="left" bindtap="goUrl" data-url="/pages/question/question">
     <image src="/static/img/home/header_left_image.png" class="header_left_image"></image>
   </view>
 </free-navBar>
-
-<view class="padding-lr padding-tb-sm">
+<free-input 
+  placeholder='请输入您要查询的内容'
+  close="true"
+  bgColor="transoprt"
+  class=" flex-sub"
+  disabled="true"
+  bindtap="goUrl" data-url="/pages/search/search"
+></free-input>
+<view class="padding-lr padding-bottom">
   <view class=" home_box_one">
     <image src="https://cheese-ninja.oss-cn-shenzhen.aliyuncs.com/banner/10.png?x-oss-process=style/img-sm" class="home_box_one"></image>
   </view>
-</view>
+</view> 
 
 <view class="padding-lr">
   <view  class="flex align-center justify-between">
@@ -17,11 +24,11 @@
   <view class="margin-top flex">
     <view class="menu_one flex-sub margin-right" bindtap="goUrl" data-url="/homePages/teacher/teacher">
       <view class="menu_one_one padding relative">
-        <text class="text-white">投简历</text>
+        <text class="text-white">找老师</text>
         <view class="whiteLight light text-bold text-sm padding-top-xs">已加入141645名</view>
         <image src="https://cheese-ninja.oss-cn-shenzhen.aliyuncs.com/3Dicon/10.png?x-oss-process=style/img-sm" class="home_image" mode="aspectFill"></image>
       </view>
-      <view class="menu_one_two padding relative" bindtap="goUrl" data-url="/myPages/upload/upload">
+      <view class="menu_one_two padding relative" bindtap="goUrl" data-url="/homePages/moneyPages/moneyPages">
         <text class=" text-white">赚钱</text>
         <view class="whiteLight light text-bold text-sm padding-top-xs">分享资料也能赚钱</view>
         <image src="https://cheese-ninja.oss-cn-shenzhen.aliyuncs.com/3Dicon/13.png?x-oss-process=style/img-sm" class="home_image_two" mode="aspectFill"></image>
@@ -45,3 +52,12 @@
     </view>
   </view>
 </view>
+
+<free-gap height="160"></free-gap>
+<free-tabbar list="{{tabList}}" current="0" ></free-tabbar>
+
+<!-- <free-judgeLogin 
+  showLogin="{{showLogin}}"
+  url="/pages/login/login"
+  title="登录享受更多精彩~"
+  ></free-judgeLogin> -->

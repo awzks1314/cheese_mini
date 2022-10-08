@@ -1,0 +1,26 @@
+page {
+  background-color: #fff;
+}
+.boook_avatar{
+  width: 120rpx;
+  height: 160rpx;
+  border-radius: 10rpx;
+}
+.collectNote{
+  position: absolute;
+  top: 10rpx;
+  right: 10rpx;
+}
+.mater_item_avatars{
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+}
+.mater_item_avatar_box{
+  position: absolute;
+  top: -30rpx;
+  background-color: #fff;
+  border-top-right-radius: 50rpx;
+  border-top-left-radius: 50rpx;
+  padding: 10rpx 20rpx;
+}

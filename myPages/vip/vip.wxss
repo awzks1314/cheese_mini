@@ -39,7 +39,7 @@ page {
   margin-right: 0;
 }
 .vip_type_card_active{
-  border: 3rpx solid #0081ef;
+  border: 3rpx solid #436FC4;
 }
 
 .vip_buy_button{

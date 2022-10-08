@@ -1,29 +1,41 @@
-// pages/material/material.js
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    tabList:app.globalData.list,
     swiperList:[
-      {id:0,type:'image',url:'https://ossweb-img.qq.com/images/lol/web201310/skin/big84003.jpg'},
-      {id:1,type:'image',url:'https://ossweb-img.qq.com/images/lol/web201310/skin/big84004.jpg'},
-      {id:2,type:'image',url:'https://ossweb-img.qq.com/images/lol/web201310/skin/big84005.jpg'},
-      {id:3,type:'image',url:'https://ossweb-img.qq.com/images/lol/web201310/skin/big84006.jpg'},
-      {id:4,type:'image',url:'https://ossweb-img.qq.com/images/lol/web201310/skin/big84007.jpg'},
-      {id:5,type:'image',url:'https://ossweb-img.qq.com/images/lol/web201310/skin/big84008.jpg'}
+      {id:0,type:'image',url:'https://cheese-ninja.oss-cn-shenzhen.aliyuncs.com/banner/12.png?x-oss-process=style/img-sm'},
+      {id:1,type:'image',url:'https://cheese-ninja.oss-cn-shenzhen.aliyuncs.com/banner/16.png?x-oss-process=style/img-sm'},
+      {id:2,type:'image',url:'https://cheese-ninja.oss-cn-shenzhen.aliyuncs.com/banner/14.png?x-oss-process=style/img-sm'},
+      {id:3,type:'image',url:'https://cheese-ninja.oss-cn-shenzhen.aliyuncs.com/banner/15.png?x-oss-process=style/img-sm'}
     ],
     cardCur:0,
     currentTab:0,
     show:false,
-    bottomShare:false
+    bottomShare:false,
+    category:'IA',
+    level:'HL',
+    sessionIndex:0,
+    seeionArray:['A','B','C'],
+    AllCategory:['All','Books','Notes','Paper','Thesis','Thesis','Thesis']
   },
  
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-
+    // this.getAll()
+  },
+  getAll() {
+    app.axios({
+      url:'document/show',
+      method:'get'
+    }).then(res => {
+      console.log(res)
+    })
   },
   // 打开筛选
   openShow() {
@@ -31,9 +43,13 @@ Page({
       show:true
     })
   },
+  // 阻止筛选
+  closeClose() {
+
+  },
   openBottomShare(){
     this.setData({
-      bottomShare:true
+      bottomShare:false
     })
   },
   close() {
@@ -45,6 +61,11 @@ Page({
   cardSwiper(e) {
     this.setData({
       cardCur: e.detail.current
+    })
+  },
+  swicthTab (e) {
+    wx.switchTab({
+      url: e.currentTarget.dataset.url
     })
   },
   toUrl(e) {
@@ -63,6 +84,20 @@ Page({
       url: '/materialPages/bookDetail/bookDetail'
     })
   },
+  // 切换category
+  changeCategory(e) {
+    this.setData({
+      category:e.currentTarget.dataset.type
+    })
+  },
+  // 切换level/seesion
+  changeName(e) {
+    this.setData({
+      [e.currentTarget.dataset.name]:e.currentTarget.dataset.type ,
+      [e.currentTarget.dataset.indexname]:e.currentTarget.dataset.index  
+    })
+  },
+  
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

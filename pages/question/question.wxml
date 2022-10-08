@@ -16,7 +16,7 @@
           
         </view>
         <view class="on_item_icon_box">
-          <free-icon name="roundcheckfill" class="on_item_icon" color="#0081ef"></free-icon>
+          <free-icon name="roundcheckfill" class="on_item_icon" color="#436FC4"></free-icon>
         </view>
         <view class="text-center ">老师</view>
       </view>

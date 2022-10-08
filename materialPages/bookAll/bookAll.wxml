@@ -1,0 +1,77 @@
+
+<view class="bookAll_header ">
+  <view class="bookItem flex justify-center text-bold text-xl">2022年新能源报告</view>
+  <view class="bookItem flex align-end justify-center padding-tb">
+    <text>作者：</text>
+    <image src="/static/img/1.jpg" mode="aspectFill" class="mater_item_avatars"></image>
+    <text>东吴国际</text>
+  </view>
+  <view class="bookItem flex align-center justify-center">
+    <view class=" flex align-end justify-start">
+      <text>阅读：</text>
+      <text>200</text>
+    </view>
+    <view class=" flex align-end justify-start padding-left">
+      <text>rating：</text>
+      <text>3.5</text>
+    </view>
+  </view>
+
+  <view class="btn_box flex align-center justify-around">
+    <view class="flex-sub flex align-center justify-center flex-direction">
+      <free-icon name="rounddown" color="#436FC4"></free-icon>
+      <text class="text-bold padding-top-xs">SAVE</text>
+    </view>
+    <view class="flex-sub flex align-center justify-center flex-direction">
+      <free-icon name="xiazai" color="#436FC4"></free-icon>
+      <text class="text-bold padding-top-xs">DOWNLOAD</text>
+    </view>
+    <view class="flex-sub flex align-center justify-center flex-direction">
+      <free-icon name="share" color="#436FC4"></free-icon>
+      <text class="text-bold padding-top-xs">SHARE</text>
+    </view>
+  </view>
+</view>
+
+
+<view class="flex align-center justify-between padding">
+  <view class="text-lg text-bold">Notes</view>
+  <view class="text-blue" bindtap="toUrl" data-url="/materialPages/bookList/bookList">展开</view>
+</view>
+<view>
+  <scroll-view class="scroll-style" scroll-x="true">
+    <view class=" radius  mater_item flex flex-direction" wx:for="{{3}}" wx:key="index" bindtap="toUrl" data-url="/materialPages/bookDetail/bookDetail">
+    <view class="mater_item_image bg-blue"></view>
+    <view class="tab_one_style   bg-white padding-tb-sm">
+      <view class="tag_content text-bold text-lg"> 
+        5-TUBE-Additives - PMLS LEC
+      </view>
+      <view class="flex align-center padding-top-sm">
+        <free-icon name="like" color="#436FC4"></free-icon>
+        <text class="text-blue padding-left-sm">100%(11)</text> 
+      </view>
+    </view>
+  </view>
+  </scroll-view>
+</view>
+
+<view class="flex align-center justify-between padding">
+  <view class="text-lg text-bold">Similar</view>
+  <view class="text-blue" bindtap="toUrl" data-url="/materialPages/bookList/bookList">展开</view>
+</view>
+<view>
+  <scroll-view class="scroll-style" scroll-x="true">
+    <view class=" radius  mater_item flex flex-direction" wx:for="{{3}}" wx:key="index" bindtap="toUrl" data-url="/materialPages/bookDetail/bookDetail">
+    <view class="mater_item_image bg-blue"></view>
+    <view class="tab_one_style   bg-white padding-tb-sm">
+      <view class="tag_content text-bold text-lg"> 
+        5-TUBE-Additives - PMLS LEC
+      </view>
+      <view class="flex align-center padding-top-sm">
+        <free-icon name="like" color="#436FC4"></free-icon>
+        <text class="text-blue padding-left-sm">100%(11)</text> 
+      </view>
+    </view>
+  </view>
+  </scroll-view>
+</view>

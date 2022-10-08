@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "free-modal":"/components/free-modal/free-modal"
+  },
+  "navigationBarTitleText": "Upload Data",
+  "navigationBarBackgroundColor": "#436FC4",
+  "navigationBarTextStyle": "white"
+}

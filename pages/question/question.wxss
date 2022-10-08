@@ -8,7 +8,7 @@ swiper{
   height: 100%;
 }
 .swiper_style{
-  width: 100%;
+  width: calc(100% - 80rpx) !important;
   height: 100%;
   position: relative;
 }
@@ -20,7 +20,7 @@ swiper{
   width: 170rpx;
   height: 240rpx;
   border-radius: 50rpx;
-  background-color: #0081ef;
+  background-color: #436FC4;
 }
 .on_item_icon_box{
   width: 46rpx;
@@ -52,7 +52,7 @@ swiper{
   line-height: 70rpx;
 }
 .two_item_tab_active{
-  background-color: #0081ef;
+  background-color: #436FC4;
   color: #fff;
 }
 

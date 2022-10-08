@@ -34,7 +34,7 @@ Component({
     // 背景色
     backgroundColor:{
       type:String,
-      value:'#0081ef'
+      value:'#436FC4'
     },
     // 动画,type == 1下有效
     animation:{

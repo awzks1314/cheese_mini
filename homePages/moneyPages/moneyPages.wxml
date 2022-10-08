@@ -1,0 +1,6 @@
+<view class=" home_box_one margin-bottom" bindtap="goUrl" data-url="/homePages/addTeacher/addTeacher">
+  <image src="https://cheese-ninja.oss-cn-shenzhen.aliyuncs.com/banner/4.png?x-oss-process=style/img-sm" class="home_box_one"></image>
+</view>
+<view class=" home_box_one" bindtap="goUrl" data-url="/myPages/upload/upload">
+  <image src="https://cheese-ninja.oss-cn-shenzhen.aliyuncs.com/banner/15.png?x-oss-process=style/img-sm" class="home_box_one"></image>
+</view>

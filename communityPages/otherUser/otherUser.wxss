@@ -12,7 +12,7 @@
 .my_header_box{
   height: 300rpx;
   z-index: 99;
-  background-color: #0081ef;
+  background-color: #436FC4;
   background-image: url('https://z3.ax1x.com/2021/05/14/grhfMV.png');
 	background-size: cover;
 	background-position: center;
@@ -30,8 +30,8 @@
   top: -100rpx;
 }
 .my_header_avatar{
-  width: 170rpx;
-  height: 170rpx;
+  width: 200rpx;
+  height: 200rpx;
   border-radius: 50%;
   background-color: #e7ebed;
 }
@@ -69,13 +69,14 @@
 .linewidr{
   width: 2rpx;
   height: 30rpx;
-  background-color: #0081ef;
+  background-color: #436FC4;
 }
 
 .tab_item{
   width: 167.5rpx;
   height: 60rpx;
-  color: #000;
+  /* color: #000; */
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -110,7 +111,7 @@
 .product_image{
   width: 100%;
   height: 300rpx;
-  background-color: #0081ef;
+  background-color: #436FC4;
 }
 
 .info_button{

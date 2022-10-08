@@ -1,54 +1,38 @@
-<free-input 
-  class="input_style"
-  placeholder='请输入您想要查找的老师名字'
-  close="true"
-  bind:input="input"
-  bind:confirm = "confirm"
-  bind:close = "close" 
-></free-input>
-<view class="padding">
-  <view class="padding-sm bg-white radius flex margin-bottom" wx:for="{{7}}" wx:key="index">
-    <image src="https://joeschmoe.io/api/v1/random" class="my_header_avatar bg-white shadow-warp"></image>
-    <view class="padding-left flex-sub">
-      <text class="text-bold">Jads dsaddsw</text>
-      
-      <view class="text-gray text-sm  padding-tb-xs">
-        <text>英国伦敦大学</text>
-        <text class="padding-left">高中数学骨干教师</text>
+<free-navBar title='' background='#436FC4'     >
+  <view class='left_back' slot="left" bindtap="goUrl" >
+    <image src="/static/img/icon/ArrowLeft.png" class="header_left_image"></image>
+  </view>
+  <view slot="center" class="header_search">
+    <image src="/static/img/community/Search.png" class="header_image"></image>
+    <input type="text" placeholder="Search your notes" class="input_style"/> 
+    <view class="input_line"></view>
+    <image src="/static/img/home/filter.png" class="input_image" bindtap="openShow"></image>
+  </view>
+</free-navBar>
+<view class="list_item_box">
+  <view class="list_item" wx:for="{{7}}" wx:key="index" bindtap="goUrl" data-url="/homePages/teacherDetail/teacherDetail">
+    <image src="/static/img/community/Rectangle34.png" class="my_header_avatar"></image>
+    <view class="list_content">
+      <view class="list_item_name">Jessica Iskandar</view>
+      <view class="list_item_school">
+        <text>University of Cambridge</text>
       </view>
-
-      <view class="">
-        <free-rate 
-        current="{{3}}"
-        size="26"
-          ></free-rate>
-          <text class="text-sm text-bold padding-left-xs">3.7</text>
+      <view class="list_item_tag_box">
+        <view class="list_item_tag bg-blueLight">Biochemistry</view>
+        <view class="list_item_tag bg-pinkLight">Physics</view>
       </view>
-
-      <view>
-        <view class="flex align-center padding-tb-xs">
-          <free-icon name="time" color="#0081ef" size="28"></free-icon>
-          <text class="text-gray text-sm padding-left-xs">279 hours tutoring</text>
-        </view>
-
-        <view class="flex align-center">
-          <free-tag size="sm" type="blue" effect="light" class="margin-left-xs">Python</free-tag>
-          <free-tag size="sm" type="blue" effect="light" class="margin-left-xs">Java</free-tag>
-          <free-tag size="sm" type="blue" effect="light" class="margin-left-xs">Net</free-tag>
-        </view>
-      </view>
-      <view class="padding-top-xs flex align-center text-gray text-sm">
-        2+ years of Computer Science tutoring experience，Significant coding experience
+      <view class="list_item_desc">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero...
       </view>
     </view>
   </view>
 </view>
 
-<free-gap height="80"></free-gap>
-<view class=" info_button">
+<!-- <free-gap height="80"></free-gap> -->
+<!-- <view class=" info_button">
   <view class="info_button_content">
     <free-icon name="add" color="#fff"></free-icon>申请老师</view>
-</view>
+</view> -->
 
 <free-backTop 
   scrollTop="{{scrollTop}}" 

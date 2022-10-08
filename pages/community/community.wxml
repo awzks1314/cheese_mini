@@ -1,90 +1,95 @@
-<view class="bg-blue commun_head_box">
-  <free-input 
-  placeholder='请输入您要查询的内容'
-  close="true"
-  bgColor="transoprt"
-  class=" flex-sub"
-  disabled="true"
-  bindtap="goUrl" data-url="/pages/search/search"
-></free-input>
+<free-navBar title='' background='#436FC4'     >
+  <view slot="center" class="header_search">
+    <image src="/static/img/community/Search.png" class="header_image"></image>
+      <text>Search your notes</text>
+  </view>
+</free-navBar>
+
+<view class="tab_box">
+  <view class="tab_card">
+    <view class="community_tab {{tabTab == 0 ?' community_tab_style':''}}" bindtap="changeTab" data-index="0" data-name="tabTab">Home</view>
+    <view class="community_tab {{tabTab == 1 ?' community_tab_style':''}}" bindtap="changeTab" data-index="1" data-name="tabTab">Chat</view>
+    <view class="community_tab {{tabTab == 2 ?' community_tab_style':''}}" bindtap="changeTab" data-index="2" data-name="tabTab">Teacher</view>
+  </view>
 </view>
-<view class="relative">
-  <view class="commun_head_input"></view>
-</view>
-<scroll-view scroll-x="true" class="scroll-style padding-bottom padding-left ">
-  <view class="community_card " wx:for="{{swiperList}}" wx:key="index">
-    <image src="{{item.url}}" class="community_card_image"></image>
-    <view class="community_card_width text-cut-2 padding-tb-xs text-bold">
-      Ruasia has that adcadsa，saysukiiayadsa，saysukiia，saysukiiayadsa，saysukiia
+
+<view class="card_scrool">  
+  <scroll-view class="scroll-style" scroll-x="true">
+    <view class="  mater_item flex flex-direction relative" wx:for="{{3}}" wx:key="index" bindtap="toUrl" data-url="/materialPages/bookAll/bookAll">
+    <view class="tags">
+      Biochemistry
     </view>
-    <view class="padding-top-xs flex align-center justify-between">
-      <free-tag type="blue">Trengind</free-tag>
-      <view class="flex align-center text-sm text-gray">
-        <free-icon name="time" size="32"></free-icon>
-        <text>1 min ago</text>
+
+    <image src="/static/img/find/bg.png" class="mater_item_image"></image>
+    <view class="tab_one_style bg-white ">
+      <view class=" tag_content">
+        <text class=" text-cut-2">2022 New Energy Strategy Report (Photovoltaic, Energy</text>
       </view>
     </view>
   </view>
-</scroll-view>
-
-
-<!-- <view class="padding-lr flex align-center">
-  <view class="community_tab {{tabCurrentTab == 0 ?' community_tab_active':''}}" bindtap="changeTab" data-index="0">全部</view>
-  <view class="community_tab {{tabCurrentTab == 1 ?' community_tab_active':''}}" bindtap="changeTab" data-index="1">最新</view>
-  <view class="community_tab {{tabCurrentTab == 2 ?' community_tab_active':''}}" bindtap="changeTab" data-index="2">最热</view>
-</view> -->
-
-<view class="flex alignc-enter padding-lr ">
-  <view class="tab_iotem bg-orange margin-right">trending</view>
-  <view class="tab_iotem bg-blue">business</view>  
+  </scroll-view>
 </view>
-<view class="padding-lr">
-  <view class="com_content bg-white padding-sm radius margin-top" 
+
+<view class="teacher">
+  <view class="teacher_title">Recommendation Teachers</view>
+  <view class="teacher_arrow">see all</view>
+</view>
+<view class="teacher_scroll">
+  <scroll-view class="scroll-style" scroll-x="true">
+    <view class="teacher_scroll_item" wx:for="{{5}}" wx:key="index">
+      <image src="/static/img/community/Rectangle34.png" class="teacher_scroll_item_image"></image>
+      <view class="teacher_scroll_item_name">Steffany Chou</view>
+    </view>
+  </scroll-view>
+</view>
+
+
+<view class="teacher">
+  <view class="teacher_title">Top Discussion</view>
+  <view class="teacher_arrow">see all</view>
+</view>
+<view class="item_card">
+  <view class="com_content "  
   wx:for="{{5}}" wx:key="index" >
     <view class="flex align-center justify-between">
-      <view class="flex align-center" bindtap="goUrl" data-url="/communityPages/otherUser/otherUser">
-        <image src="http://q1.qlogo.cn/g?b=qq&nk=664423077&s=640" class="com_avatar"></image>
-        <view class="flex flex-direction margin-left">
-          <view class="text-bold padding-bottom-xs">Beepdth Aggerand</view>
-          <free-tag type="gray" radius="50rpx" size="sm" effect='plain'>匿名</free-tag>
+      <view class="flex align-center w100" bindtap="goUrl" data-url="/communityPages/otherUser/otherUser">
+        <image src="/static/img/notifications/Rectangle25.png" class="com_avatar"></image>
+        <view class="flex flex-direction flex-sub">
+          <view class="flex justify-between flex-sub">
+            <view class="com_title">Beepdth Aggerand</view>
+            <view class="com_time">5m ago</view>
+          </view>
+          <view class="com_tag">Biochemistry</view>
         </view> 
       </view>
-      <!-- <free-icon name="more" size="32" color="f0f0f0"></free-icon> -->
     </view>
 
-    <view class="padding-tb" bindtap="goUrl" data-url="/communityPages/communityDetail/communityDetail">
-      <!-- <view class="text-bold">
-        GJ降息意味着房子有稳定保障了大萨达撒多？
-      </view> -->
-      <view>
-        <text class="">GJ降息意味着GGJ降息意味着GJ降息意味着房GJ降息意味着GJ降息意味着房J降息意味着房</text>
-      </view>
-      <!-- <view class="text-blue">阅读全文</view> -->
+    <view class="com_content_word" bindtap="goUrl" data-url="/communityPages/communityDetail/communityDetail">
+      <text class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis</text>
     </view>
 
-    <view class="flex align-center justify-between">
-      <button class="flex align-center bg-white" open-type="share">
-        <free-icon name="share" ></free-icon>
-      </button>
-
+    <view class="com_tag_list flex align-center justify-between">
       <view class="flex align-center" bindtap="openCommit">
         <view class="flex align-center"> 
-          <free-icon name="comment" ></free-icon>
-          <text class="text-gray padding-left-xs">117</text>
+          <image src="/static/img/community/Group.png" class="group"></image>
+          <text class="com_gray_text">117</text>
         </view>
-        <!-- <view class="flex align-center padding-left">
-          <free-icon name="like" ></free-icon>
-          <text class="text-gray padding-left-xs">16</text>
-        </view> -->
+        <view class="flex align-center"> 
+          <image src="/static/img/community/path.png" class="path"></image>
+          <text class="com_gray_text">27</text>
+        </view>
       </view>
+      
+      <button class="flex align-center bg-white" open-type="share">
+        <image src="/static/img/community/share.png" class="share"></image>
+          <text class="com_gray_text">Share</text>
+      </button>
+
     </view>
   </view>
 </view>
 
-<view class="community_button" bindtap="goUrl" data-url="/communityPages/post/post">
-  <image src="/static/img/home/chess.png" class="community_edit "></image>
-</view>
-<free-gap height="30"></free-gap>
+<!-- <free-gap height="30"></free-gap> -->
 <free-gap height="120" wx:if="{{commitShow}}"></free-gap>
 
 <view class="commit_bottom_inputBox" wx:if="{{commitShow}}" bindtap="openCommit">
@@ -92,7 +97,9 @@
 <view class="commit_bottom_input {{commitShow?'inputShow':'inputClose'}}" >
   <view class="commit_bottom_inputStyle">
     <free-icon name="edit" class="padding-right-sm"></free-icon>
-    <input type="text" placeholder="说点什么呗~"/>
+    <input type="text" cursor-spacing="15" class="flex-sub" focus="{{commitShow}}" placeholder="说点什么呗~"/>
   </view>
   <view class="text-blue">确定</view>
 </view>
+<free-gap height="160"></free-gap>
+<free-tabbar list="{{tabList}}" current="0" ></free-tabbar>

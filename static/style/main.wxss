@@ -65,7 +65,7 @@ page{
   background-color: var(--ghostWhite);
 	font-size: 28rpx;
 	color: var(--black);
-	font-family: Helvetica Neue, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 view,
@@ -1428,7 +1428,7 @@ radio {
 switch::after,
 switch::before {
 	font-family: "icomoon";
-	content: "\e910";
+	content: "";
 	position: absolute;
 	color: var(--white) !important;
 	top: 0%;
@@ -1447,7 +1447,7 @@ switch::before {
 }
 
 switch::before {
-	content: "\e911";
+	content: "";
 	right: 0;
 	transform: scale(1, 1);
 	left: auto;

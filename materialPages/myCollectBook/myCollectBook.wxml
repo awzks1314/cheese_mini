@@ -1,0 +1,72 @@
+<view class="padding-tb">
+  <scroll-view scroll-x="true" class="scroll-style">
+    <view class="mater_two_tab {{currentTab == 0?'mater_two_tab_active':''}}" bindtap="changeTab" data-index="0">
+      全部
+    </view>
+    <view class="mater_two_tab {{currentTab == 1?'mater_two_tab_active':''}}" bindtap="changeTab" data-index="1">
+      书籍
+    </view>
+    <view class="mater_two_tab {{currentTab == 2?'mater_two_tab_active':''}}" bindtap="changeTab" data-index="2">
+      笔记
+    </view>
+    <view class="mater_two_tab {{currentTab == 3?'mater_two_tab_active':''}}" bindtap="changeTab" data-index="3">
+      论文
+    </view>
+  </scroll-view>
+ 
+  
+  <scroll-view class="scroll-style" scroll-x="true">
+    <view class="bg-blue radius  mater_item flex flex-direction relative" wx:for="{{3}}" wx:key="index" bindtap="toUrl" data-url="/materialPages/bookAll/bookAll">
+    <free-icon name="like" color="#fff"  class="collectNote"></free-icon>
+    <view class="mater_item_image"></view>
+    <view class="tab_one_style bg-white padding-sm">
+      <view class="mater_item_avatar_box">
+        <image src="http://q1.qlogo.cn/g?b=qq&nk=664423077&s=640" class="mater_item_avatar"></image>
+      </view>
+      <view class="margin-top">
+        <text class="text-bold">谈短篇小说的制作</text>
+      </view>
+      <view class="flex align-center justify-between">
+        <view class="tag_content  flex flex-wrap align-center">
+          <free-tag effect="light" size="sm" radius="10rpx" type="blue" class="tag_item margin-right-xs">生物</free-tag>
+          <free-tag effect="light" size="sm" radius="10rpx"  type="blue" class="tag_item margin-right-xs">化学</free-tag>
+        </view>
+        <free-icon name="more" color="#436FC4" catchtap="openBottomShare"></free-icon>
+      </view>
+    </view>
+  </view>
+  </scroll-view>
+
+    <view class="padding-lr">
+      <view class="margin-top bg-white radius padding-sm flex align-center relative" wx:for="{{5}}" wx:key="index" bindtap="toUrl" data-url="/materialPages/bookDetail/bookDetail">
+      <!-- bindtap="detailPage" data-id="1" -->
+      <free-icon name="likefill" color="#436FC4"  class="collectNote"></free-icon>
+      <view class="boook_avatar bg-blue"></view>
+        <view class="flex-sub padding-left">
+          <view class="text-bold text-cut-2 padding-right-sm">2022年新能源策略报告（光伏、储能风电）：能源革命加速，龙头ss所示强者恒强</view>
+          <view class="flex align-center  padding-top-xs">
+            <image src="/static/img/1.jpg" mode="aspectFill" class="mater_item_avatars"></image>
+            <view class="flex align-center padding-left-sm">
+              <free-tag effect="light" size="sm" radius="10rpx" type="blue" class=" margin-right-xs">生物</free-tag>
+              <free-tag effect="light" size="sm" radius="10rpx"  type="blue" class=" margin-right-xs">化学</free-tag>
+              <free-tag effect="light" size="sm" radius="10rpx" type="blue" class=" margin-right-xs">英语</free-tag>
+            </view>
+          </view>
+          <view class="flex align-center justify-between margin-top-xs">
+            <view class="text-sm text-gray  flex align-center">
+              <view class="flex align-center ">
+                <free-icon name="copy" size="26"></free-icon>
+                <text class="padding-left-xxs">98页</text>
+              </view>
+              <view class="flex align-center padding-left-sm">
+                <free-icon name="attention" size="26"></free-icon>
+                <text class="padding-left-xxs">165阅读</text>
+              </view>
+            </view>
+            <free-icon name="more" color="#436FC4" catchtap="openBottomShare"></free-icon>
+          </view>
+        </view>
+      </view>
+      
+    </view>
+  </view>

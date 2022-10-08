@@ -1,61 +1,153 @@
-<view style='height:0;'>
-  <free-navBar title='' background='rgba(0,0,0,0)'     >
-    <view class='padding-lr' slot="left" bindtap="toUrl" data-url="/pages/message/message">
-      <free-icon name="notice" color="#fff" ></free-icon>
-    </view>
-</free-navBar>
-</view>
-<view class="my_header_box"></view>
-<view class="my_header bg-white flex flex-direction align-center">
- <view class="my_header_image_box">
-  <image src="/static/img/1.jpg" mode="aspectFill" class="my_header_avatar"></image>
- </view>
 
-  <view class="my_header_nikeName ">Hannah Gonzalez</view>
+<free-navBar title='' background='#436FC4'     >
+  <view slot="left" class="my_header_now">
+    <image src="/static/img/profile/Group.png" class="my_heaedr_now"></image>
+    <text class="my_header_text">Subscribe Now</text>
+  </view>
+</free-navBar>
+<view class="my_header_box">
+  <!-- <view class="my_header_now">
+    <image src="/static/img/profile/Group.png" class="my_heaedr_now"></image>
+    <text class="my_header_text">Subscribe Now</text>
+  </view> -->
+</view>
+<view class="my_header  flex flex-direction align-center">
+  <view class="my_header_avatar" style="background: url('https://cheese-ninja.oss-cn-shenzhen.aliyuncs.com/avatar/Female/Avatarz_black0307.png?x-oss-process=style/img-sm') center no-repeat;background-size:320rpx;">
+  </view>
+  <view class="my_header_nikeName ">Hannah Gonzales</view>
   <view class="flex align-center">
     <view class="flex align-center">
-      <!-- <image src="/static/img/icon/dianzan.png" 
-      class="my_header_box_image"></image> -->
-      <free-icon name="like" size="28"></free-icon>
-      <text class="padding-left-xs">168</text>
+     <image src="/static/img/profile/Path.png" class="path"></image>
+      <text class="path_text">168</text>
     </view>
     <view class="flex align-center margin-left">
-      <!-- <image src="/static/img/icon/huore.png" class="my_header_box_image"></image> -->
-      <free-icon name="attention" size="28"></free-icon>
-      <text class="padding-left-xs">8</text>
+      <image src="/static/img/profile/eye.png" class="eye"></image>
+      <text class="path_text">23.5K</text>
     </view> 
   </view>
-  <view class="my_header_box_tab  flex align-center bg-white shadow-main radius">
-    <view class="my_header_box_tabitem margin-right" bindtap="toUrl" data-url="/myPages/task/task">
-      <image src="/static/img/home/chess.png" 
+
+  <view class="my_header_box_tab ">
+    <view class="my_header_box_tabitem" bindtap="openCheese" >
+      <image src="/static/img/profile/sr-cheese.png" 
       class="my_header_box_image1"></image>
-      <text>芝士值</text>
+      <view>
+        <view class="checc_name">Cheese Value</view>
+        <view class="checc_value">131</view>
+      </view>
     </view>
-    <view class="my_header_box_tabitem " bindtap="sign">
-      <image src="/static/img/icon/shoucang.png" 
+    <view class="checc_line"></view>
+    <view class="my_header_box_tabitem" bindtap="sign" >
+      <image src="/static/img/profile/Vector.png" 
       class="my_header_box_image"></image>
-      <text>每日签到</text>
+      <view>
+        <view class="checc_name">Daily Check-in</view>
+        <view class="checc_value">131</view>
+      </view>
     </view>
   </view>
 
-  <view class="w100 gyy flex align-center  relative padding-bottom ">
-    <view class="tab_item {{tabIndex == 0?'tab_item_actvie':''}}" bindtap="changeTab" data-index="0">上传</view>
-    <view class="tab_item {{tabIndex == 1?'tab_item_actvie':''}}" bindtap="changeTab" data-index="1">个人</view>
-    <view class="tab_item {{tabIndex == 2?'tab_item_actvie':''}}" bindtap="changeTab" data-index="2">收藏</view>
-    <view class="tab_item {{tabIndex == 3?'tab_item_actvie':''}}" bindtap="changeTab" data-index="3">下载</view>
+  <view class="tab_box {{isFixed?'fixed':''}}" style="top:{{top}}px">
+    <view class="tab_item {{tabIndex == 0?'tab_item_actvie':''}}" bindtap="changeTab" data-index="0">Upload</view>
+    <view class="tab_item {{tabIndex == 1?'tab_item_actvie':''}}" bindtap="changeTab" data-index="1">Personal</view>
+    <view class="tab_item {{tabIndex == 2?'tab_item_actvie':''}}" bindtap="changeTab" data-index="2">Collect</view>
+    <view class="tab_item {{tabIndex == 3?'tab_item_actvie':''}}" bindtap="changeTab" data-index="3">Download</view>
     <view class="tab_item_slider" style="left:{{tableft}}rpx;"></view>
   </view>
 </view>
 
-<view class="padding-lg flex flex-wrap">
-  <view class="product_item flex flex-direction bg-white shadow-main" wx:for="{{5}}" wx:key="index">
-    <view class="product_image"></view>
-    <view class="padding-sm ">
-      <text class="text-cut-1">大萨达的撒的撒大萨达大萨达 </text>
-    </view> 
-  </view>
-</view>
+<swiper style="height: {{swiperHeight}}" bindchange="changeSwiper" current="{{current}}">
+  <swiper-item class="swiper_style">
+    <view class="padding " wx:if="{{uploadList.length == 0}}">
+      <view class="radius flex align-center justify-between padding bg-white">
+        <view class="">
+          <text class="text-bold up_text ">开始你的第一篇资料上传</text>
+          <view class="text-sm whiteBorder">上传首篇内容，开通创作中心</view>
+        </view>
 
+        <view class="my_header_vip_btn bg-gradual-blue text-lg" bindtap="toUrl" data-url="/myPages/upload/upload">去上传</view>
+      </view>
+    </view>
+    <view class="padding-lr-lg flex flex-wrap padding-tb-sm" wx:else>
+      <view wx:for="{{10}}" wx:key="index" class="product_item flex flex-direction bg-white shadow-main swiper-item{{index}}">
+        <view class="product_image"></view>
+        <view class="padding-sm ">
+          <text class="text-cut-1">大萨达的撒的撒大萨达大萨达 </text>
+        </view> 
+      </view>
+    </view>
+  </swiper-item>
+
+  <swiper-item class="swiper_style ">
+    <view class="one_padding">
+      <view class="one_item_box">
+        <view class="one_list_item">
+          <text class="one_list_name">Name</text>
+          <text class="one_list_value">Hannah Gonzalez</text>
+        </view>
+        <view class="one_list_line"></view>
+        <view class="one_list_item">
+          <text class="one_list_name">School</text>
+          <text class="one_list_value">University of London</text>
+        </view>
+        <view class="one_list_line"></view>
+        <view class="one_list_item">
+          <text class="one_list_name">Role</text>
+          <text class="one_list_value">Teacher</text>
+        </view>
+        <view class="one_list_line"></view>
+        <view class="one_list_item">
+          <text class="one_list_name">Curiculum Structure</text>
+          <text class="one_list_value">IB</text>
+        </view>
+        <view class="one_list_line"></view>
+        <view class="one_list_item">
+          <text class="one_list_name">Cureses</text>
+          <text class="one_list_value">HL</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="edit_box">
+      <view class="edit_box_content">
+        <image src="/static/img/profile/Edit.png" class="edit_box_image"></image>
+        <view>Edit</view>
+      </view>
+    </view>
+  </swiper-item>
+  <swiper-item class="swiper_style">
+    <view class="padding-lr-lg flex flex-wrap padding-tb-sm" >
+      <view wx:for="{{10}}" wx:key="index" class="product_item flex flex-direction bg-white swiper-item{{current}}{{index}}" bindtap="toUrl" data-url="/materialPages/myCollectBook/myCollectBook">
+        
+        <view class="product_box flex ">
+          <view class="product_image flex-twice"></view>
+          <view class="flex-sub">
+            <view class="product_image1"></view>
+            <view class="product_image2"></view>
+          </view>
+        </view>
+        <view class="w100  text-bold  padding-tb padding-left-sm text-lg">Biology </view>
+      </view>
+    </view>
+  </swiper-item>
+  <swiper-item class="swiper_style">
+    <view class="padding-lr-lg flex flex-wrap padding-tb-sm" >
+      <view wx:for="{{10}}" wx:key="index" class="product_item flex flex-direction bg-white swiper-item{{current}}{{index}}" bindtap="toUrl" data-url="/materialPages/myCollectBook/myCollectBook">
+        
+        <view class="product_box flex ">
+          <view class="product_image flex-twice"></view>
+          <view class="flex-sub">
+            <view class="product_image1"></view>
+            <view class="product_image2"></view>
+          </view>
+        </view>
+        <view class="w100  text-bold  padding-tb padding-left-sm text-lg">Biology </view>
+      </view>
+    </view>
+  </swiper-item>
+  
+</swiper>
+
+<free-gap height="20"></free-gap>
 <free-modal show="{{modal}}" custom="{{true}}"  width="500rpx">
   <view class="sign_content flex flex-direction align-center">
       <view class="text-bold text-lg">签到成功</view>
@@ -74,5 +166,148 @@
     </view>
 </free-modal>
 
+<free-bottom-popup show="{{cheeseShow}}" bgcolor="transport"  bind:close="close">
+    <!-- bind:close="close" -->
+    <view class="share_content padding bg-white">
+      <view class="task_card bg-blue flex flex-direction align-center justify-center">
+      <text class="text-white text-lg text-bold">0</text>
+      <view class="padding-top-xs">我的芝士值</view>
+    </view>
+    <view class="bg-white  padding radius">
+      <view class="text-bold">日常任务</view>
+        <view class="flex align-center justify-between padding-tb solid-bottom">
+          <view class=" flex align-center">
+            <view class="task_list_img bg-blue ">
+              <free-icon name="likefill" color="#fff"></free-icon>
+            </view>
+
+            <view class="padding-left">
+              <text class="text-bold">关注公众号（1/2）</text>
+              <view class="text-sm text-blue padding-top-xs">芝士值+3</view>
+            </view>
+          </view>
+          <view>
+          <view class="task_list_button bg-gray">立即领取</view>
+        </view>
+      </view>
+
+    <view class="flex align-center justify-between margin-top">
+      <view class="flex align-center">
+        <view class="task_list_img bg-green ">
+          <free-icon name="likefill" color="#fff"></free-icon>
+        </view>
+
+        <view class="padding-left">
+          <text class="text-bold">每日签到</text>
+          <view class="text-sm text-blue padding-top-xs">芝士值+5</view>
+        </view>
+      </view>
+
+      <view>
+        <view class="task_list_button bg-green">去分享</view>
+      </view>
+      </view>
+    </view>
+    <!-- <free-gap height="50"></free-gap> -->
+  </view>
+</free-bottom-popup>
+
+<free-bottom-popup show="{{bottomShare}}" bgcolor="transport" bind:close="closeBottomShare">
+    <view class="share_content">
+      
+        <view class=" flex  align-center justify-center bg-white padding-tb share_padding">
+          <image src="http://q1.qlogo.cn/g?b=qq&nk=664423077&s=640" class="share_image"></image>
+
+          <view class="padding-left share_right_box flex flex-direction justify-around">
+            <view class="share_title text-center">2022年新能源策略报告（光伏、储能、风电）：能源革命加速，龙头强者恒强</view>
+            <view class="flex align-center ">
+              <text class="padding-left-xxs ">作者：东吴国际</text>
+            </view>
+            <view class="flex align-center ">
+              <text class="padding-left-xxs">阅读：165次</text>
+            </view>
+            <view class="flex align-center ">
+              <text class="padding-left-xxs">页数：98页</text>
+            </view>
+          </view>
+        </view>
+        <view class="solid-bottom padding-bottom-sm bg-white flex align-center justify-center">
+          <view class="share_read">阅读</view>
+        </view>
+        <view class="flex align-center justify-center  bg-white padding-tb">
+          <view class="share_item">
+            <view class="share_item_image bg-blue">
+              <free-icon name="likefill" color="#fff"></free-icon>
+            </view>
+            <text>收藏</text>
+          </view>
+          <view class="share_item">
+            <view class="share_item_image bg-green">
+              <free-icon name="xiazai" color="#fff"></free-icon>
+            </view>
+            <text>下载</text>
+          </view>
+          <view class="share_item">
+            <view class="share_item_image bg-yellow">
+              <free-icon name="share" color="#fff"></free-icon>
+            </view>
+            <text>分享</text>
+          </view>
+        </view>
+
+    </view>
+  </free-bottom-popup>
 
 
+  <free-drawer 
+    show="{{infoShow}}"
+    mode="bottom" 
+    closeable="{{false}}"
+    length="50%">
+    <view class="padding relative h100" catchtap="closeClose">
+      <view>
+        <!-- <free-gap height="160"></free-gap> -->
+          <view class="flex align-center justify-between margin-bottom">
+            <text class="text-bold">名字</text>
+            <input type="text" class="flex-sub text-right" placeholder="请输入你的名字"/>
+          </view>
+          
+
+          <view class="flex align-center justify-between margin-bottom">
+            <text class="text-bold">学校</text>
+            <input type="text" class="flex-sub text-right" placeholder="请输入你的学校"/>
+          </view>
+
+          <view class="flex align-center justify-between margin-bottom">
+            <text class="text-bold">角色</text>
+            <text class="text-blue">学生</text>
+          </view>
+
+          <view class="flex align-center justify-between margin-bottom">
+            <text class="text-bold">课程体系</text>
+            <input type="text" class="flex-sub text-right" placeholder="请输入你的课程体系"/>
+          </view>
+
+          <view class="flex align-center justify-between">
+            <text>课程</text>
+            <view class="flex-sub flex align-center justify-between">
+              <input type="text" class="flex-sub text-right" placeholder="请输入你的课程，最多四个"/>
+              <text class="text-blue padding-left">确定</text>
+            </view>
+         </view>
+          
+          <view class="flex flex-wrap margin-top-xs">
+            <text class="drawer_item ">IA</text>
+            <text class="drawer_item ">EE</text>
+            <text class="drawer_item ">TOK</text>
+            <text class="drawer_item ">Notes</text>
+          </view>
+          <view class="drawer_button">
+            保存
+          </view>
+      </view> 
+    </view>
+  </free-drawer >
+
+  <free-gap height="160"></free-gap>
+  <free-tabbar list="{{tabList}}" current="4" ></free-tabbar>

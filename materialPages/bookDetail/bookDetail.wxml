@@ -1,29 +1,64 @@
-<view class="bookDetail bg-blue"></view>
-<view class="book_content">
-  <view class="book_content_image bg-green shadow">
-    1
-  </view>
-  <free-gap height="180"></free-gap>
-  <view class="padding">
-    <view class="text-sm padding-bottom text-center">
-      Edward Humes
-    </view>
-    <view class="text-xl padding-bottom text-center text-bold">
-      Door To Door
-    </view>
-    <free-gap height="40"></free-gap>
-    <view class="solid-bottom "></view>
-    <free-gap height="40"></free-gap>
+<view style='height:0;'>
+  <free-navBar back="{{true}}" iconTheme="white" bindback="handlerGobackClick"  background='rgba(0,0,0,0)'>
+    
+</free-navBar>
+</view>
+<view class="imageBox">
+  <image src="" class="imageBox" mode="aspectFill"></image>
+</view>
+<view class="name">
+  The Merry Men and Other Tales and Fables
+</view>
+<view>
+  Narrated by David Sedaris.Tracey Ullman
+</view>
 
-    <view>
-      <view>
-        <view></view>
-      </view>
-    </view>
-    <view class="flex align-center padding-top">
-      <view class="book_tab book_tab_active">About Book</view>
-      <view class="book_tab">Owner’s Info</view>
-    </view>
+<view class="sub_box flex align-end">
+  <free-icon name="favor_fill_light" color="#fbbd08"></free-icon>
+  <view class="text-bold padding-lr-xs">4.9</view>
+  <view class="text-gray ">(182 reviews)</view>
+</view>
+
+<free-gap height="30"></free-gap>
+<view class="flex align-center justify-between">
+  <view class="flex align-center">
+    <free-icon name="time" size="34"></free-icon>
+    <text class="lin_text">2h 45min</text>
   </view>
-  
+
+  <view class="flex align-center">
+    <free-icon name="tag" size="34"></free-icon>
+    <text class="lin_text">6 Episode</text>
+  </view>
+
+  <view class="flex align-center">
+    <free-icon name="time" size="34"></free-icon>
+    <text class="lin_text">ENG</text>
+  </view>
+</view>
+
+<view class="btn_box flex align-center justify-around">
+  <view class="flex-sub flex align-center justify-center flex-direction">
+    <free-icon name="rounddown" color="#436FC4"></free-icon>
+    <text class="text-bold padding-top-xs">SAVE</text>
+  </view>
+  <view class="flex-sub flex align-center justify-center flex-direction">
+    <free-icon name="xiazai" color="#436FC4"></free-icon>
+    <text class="text-bold padding-top-xs">DOWNLOAD</text>
+  </view>
+  <view class="flex-sub flex align-center justify-center flex-direction">
+    <free-icon name="share" color="#436FC4"></free-icon>
+    <text class="text-bold padding-top-xs">SHARE</text>
+  </view>
+</view>
+
+<view class="text-bold">Summary</view>
+<view class="detail_content">
+  The TheBabyEagleOnce upon a time there was a baby eagle living in a nest perched on a cliff overlooking a beautiful valley with waterfalls and streams, trees and lots ofTheBa byEagleOnce upon a time there was a baby eagle living in a nest perched on a cliff overloo a beautiful valley with waterfalls and streams, trees and lots of
+</view>
+
+<free-gap height="120"></free-gap>
+<view class="post_bottom flex align-center justify-around">
+  <view class="read">READ</view>
+  <view class="play">play</view>
 </view>

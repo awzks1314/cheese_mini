@@ -183,5 +183,5 @@
 .category-dot-active {
   width: 40rpx;
   height: 6rpx;
-  background: #0081ef;
+  background: #436FC4;
 }

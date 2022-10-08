@@ -4,6 +4,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  /* border-top-left-radius: 20rpx;
+  border-top-right-radius: 20rpx; */
   z-index: 996;
 }
 

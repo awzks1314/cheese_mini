@@ -7,16 +7,16 @@ page{
 	--olive: #1c1d1a;
 	--green: #39b54a;
 	--cyan: #1cbbb4;
-	--blue: #0081ff;
+	--blue: #436FC4;
 	--purple: #6739b6;
 	--mauve: #9c26b0;
-	--pink: #e03997;
+	--pink: #F2A5AE;
 	--brown: #a5673f;
 	--grey: #8799a3;
 	--black: #333333;
 	--darkGray: #666666;
 	--gray: #919293;
-	--ghostWhite: #f4f5f7;
+	--ghostWhite: #F8F8F8;
   --white: #ffffff;
   /* 浅色 */
 	--redLight: #fadbd9;
@@ -25,10 +25,10 @@ page{
 	--oliveLight: #e8f4d9;
 	--greenLight: #d7f0db;
 	--cyanLight: #d2f1f0;
-	--blueLight: #cce6ff;
+	--blueLight: #4E9DF9;
 	--purpleLight: #e1d7f0;
 	--mauveLight: #ebd4ef;
-	--pinkLight: #f9d7ea;
+	--pinkLight: #F2A5AE;
 	--brownLight: #ede1d9;
 	--greyLight: #e7ebed;
 	/* 渐变色 */
@@ -167,7 +167,10 @@ page{
 	background-color: var(--blue);
 	color: var(--white);
 }
-
+.bg-blueLight{
+  background-color: var(--blueLight);
+	color: #f0f0f0;
+}
 .bg-purple {
 	background-color: var(--purple);
 	color: var(--white);
@@ -182,7 +185,10 @@ page{
 	background-color: var(--pink);
 	color: var(--white);
 }
-
+.bg-pinkLight{
+  background-color: var(--pinkLight);
+	color: #f0f0f0;
+}
 .bg-brown {
 	background-color: var(--brown);
 	color: var(--white);
