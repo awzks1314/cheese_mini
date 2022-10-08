@@ -1,5 +1,5 @@
 <free-navBar title='' background='#436FC4'     >
-  <view class='left_back' slot="left" bindtap="goUrl" >
+  <view class='left_back' slot="left" bindtap="handlerGobackClick" >
     <image src="/static/img/icon/ArrowLeft.png" class="header_left_image"></image>
   </view>
   <view slot="center" class="header_search">
@@ -21,36 +21,14 @@
         <view class="list_item_tag bg-blueLight">Biochemistry</view>
         <view class="list_item_tag bg-pinkLight">Physics</view>
       </view>
-<<<<<<< HEAD
+
       <view class="list_item_desc">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero...
-=======
-
-      <view>
-        <view class="flex align-center padding-tb-xs">
-          <free-icon name="time" color="#436FC4" size="28"></free-icon>
-          <text class="text-gray text-sm padding-left-xs">279 hours tutoring</text>
-        </view>
-
-        <view class="flex align-center">
-          <free-tag size="sm" type="blue" effect="light" class="margin-left-xs">Python</free-tag>
-          <free-tag size="sm" type="blue" effect="light" class="margin-left-xs">Java</free-tag>
-          <free-tag size="sm" type="blue" effect="light" class="margin-left-xs">Net</free-tag>
-        </view>
-      </view>
-      <view class="padding-top-xs flex align-center text-gray text-sm">
-        2+ years of Computer Science tutoring experience，Significant coding experience
->>>>>>> d8d0021d89ec1fc581c2a453c655815aed83797b
       </view>
     </view>
   </view>
 </view>
 
-<!-- <free-gap height="80"></free-gap> -->
-<!-- <view class=" info_button">
-  <view class="info_button_content">
-    <free-icon name="add" color="#fff"></free-icon>申请老师</view>
-</view> -->
 
 <free-backTop 
   scrollTop="{{scrollTop}}" 

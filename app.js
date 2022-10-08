@@ -33,11 +33,12 @@ App({
         "selectedIconPath": "/static/img/tabbarIcon/find1.png"
       },
       {
+        "pagePath":"/pages/upload/upload",
         text:"",
         iconPath:"/static/img/tabbarIcon/add.png",
         selectedIconPath:"/static/img/tabbarIcon/add.png",
         number:0,//角标
-        pagePath:"/Pages/upload/upload"
+        
       },
       {
         "pagePath": "/pages/message/message",

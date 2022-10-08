@@ -1,15 +1,16 @@
-// homePages/teacherDetail/teacherDetail.js
+// myPages/forum/forum.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    tabTab:0,
+    show:false
   },
-  changeTab(e) {
-    this.setData({
-      [e.currentTarget.dataset.name]:e.currentTarget.dataset.index
+  goUrl(e) {
+    console.log(e)
+    wx.navigateTo({
+      url: e.currentTarget.dataset.url
     })
   },
   handlerGobackClick(delta) {
@@ -28,7 +29,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-
+    this.setData({
+      show:true
+    })
   },
 
   /**

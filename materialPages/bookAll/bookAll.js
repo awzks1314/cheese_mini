@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    bottomShare:false
   },
   handlerGobackClick(delta) {
     const pages = getCurrentPages();
@@ -14,8 +14,8 @@ Page({
         delta: delta
       });
     } else {
-      wx.navigateTo({
-        url: '/pages/home/home'
+      wx.switchTab({
+        url: '/pages/community/community'
       });
     }
   },
@@ -23,6 +23,23 @@ Page({
     wx.navigateTo({
       url: e.currentTarget.dataset.url
     })
+  },
+  close() {
+    this.setData({
+      bottomShare:!this.data.bottomShare
+    })
+  },
+  handlerGobackClick(delta) {
+    const pages = getCurrentPages();
+    if (pages.length >= 2) {
+      wx.navigateBack({
+        delta: delta
+      });
+    } else {
+      wx.switchTab({
+        url: '/pages/community/community'
+      });
+    }
   },
   /**
    * 生命周期函数--监听页面加载

@@ -79,7 +79,7 @@
   </scroll-view>
 
     <view class="">
-      <view class="list_card  flex align-center relative" wx:for="{{5}}" wx:key="index" bindtap="toUrl" data-url="/materialPages/bookDetail/bookDetail">
+      <view class="list_card  flex align-center relative" wx:for="{{5}}" wx:key="index" bindtap="close">
       <view class="collectNote collectNotes">
       <image src="/static/img/find/collect.png" class="collect_image"></image>
     </view>
@@ -119,6 +119,7 @@
     length="70%">
     <view class="padding relative h100" catchtap="closeClose">
       <view>
+      <free-gap height="160"></free-gap>
         <view class="text-bold padding-bottom">Category</view>
         <view class="flex flex-wrap">
           <text class="drawer_item {{category == 'IA'?'drawer_item_active':''}}" catchtap="changeCategory"  data-type="IA">IA</text>
@@ -188,53 +189,46 @@
   <free-bottom-popup show="{{bottomShare}}" bgcolor="transport" bind:close="close">
     <!-- bind:close="close" -->
     <view class="share_content">
-      
-        <view class=" flex  align-center justify-center bg-white padding-tb share_padding">
-          <image src="http://q1.qlogo.cn/g?b=qq&nk=664423077&s=640" class="share_image"></image>
+      <view class="flex">
+        <image src="/static/img/community/Rectangle34.png" class="share_avatar"></image>
+        <view>
+          <view class="share_title">The Merry Men and Other Tales and Fables</view>
+          <view class="flex align-center">
+            <image src="/static/img/notifications/Rectangle25.png" class="avatar_name"></image>
+            <text class="avatar_name_tr">Author by David Sedaris</text>
+          </view>
+          <free-gap height="16"></free-gap>
+          <view class="flex align-center">
+            <image src="/static/img/icon/eye_gray.png" class="icon_eye"></image>
+            <text class="icon_text">200</text>
+            <image src="/static/img/icon/like_gray.png" class="icon_like"></image>
+            <text class="icon_text">30</text>
+            <image src="/static/img/icon/book.png" class="icon_like"></image>
+            <text class="icon_text">Read 100 Page 100</text>
+          </view>
+        </view>
+      </view>
 
-          <view class="padding-left share_right_box flex flex-direction justify-around">
-            <view class="share_title text-center">2022年新能源策略报告（光伏、储能、风电）：能源革命加速，龙头强者恒强</view>
-            <view class="flex align-center ">
-              <!-- <free-icon name="my" size="26"></free-icon> -->
-              <text class="padding-left-xxs ">作者：东吴国际</text>
-            </view>
-            <view class="flex align-center ">
-              <!-- <free-icon name="attention" size="26"></free-icon> -->
-              <text class="padding-left-xxs">阅读：165次</text>
-            </view>
-            <view class="flex align-center ">
-              <!-- <free-icon name="copy" size="26"></free-icon> -->
-              <text class="padding-left-xxs">页数：98页</text>
-            </view>
-          </view>
+      <view class="down_box">
+        <view class="flex-sub flex align-center justify-center flex-direction">
+          <image src="/static/img/icon/like.png" class="like"></image>
+          <text class="like_name">SAVE</text>
         </view>
-        <view class=" padding-bottom-sm bg-white flex align-center justify-center">
-          <view class="share_read">阅读</view>
+        <view class="flex-sub flex align-center justify-center flex-direction">
+          <image src="/static/img/icon/down.png" class="like"></image>
+          <text class="like_name">DOWNLOAD</text>
         </view>
-        <view class="flex align-center justify-center  bg-white padding-tb">
-          <view class="share_item">
-            <view class="share_item_image bg-blue">
-              <free-icon name="likefill" color="#fff"></free-icon>
-            </view>
-            <text>收藏</text>
-          </view>
-          <view class="share_item">
-            <view class="share_item_image bg-green">
-              <free-icon name="xiazai" color="#fff"></free-icon>
-            </view>
-            <text>下载</text>
-          </view>
-          <view class="share_item">
-            <view class="share_item_image bg-yellow">
-              <free-icon name="share" color="#fff"></free-icon>
-            </view>
-            <text>分享</text>
-          </view>
+        <view class="flex-sub flex align-center justify-center flex-direction">
+          <image src="/static/img/icon/share.png" class="like"></image>
+          <text class="like_name">SHARE</text>
         </view>
+      </view>
 
-        <!-- <view class="padding text-center margin-top-xs bg-white" catchtap="close">
-          关闭
-        </view> -->
+      <view class="read">
+        <image src="/static/img/icon/read_white.png" class="icon_eye"></image>
+        <text>Read</text>
+      </view>
+      <free-gap height="150"></free-gap>
     </view>
   </free-bottom-popup>
 

@@ -9,7 +9,7 @@ Page({
     tabIndex:0,
     tableft:0,
     modal:false,
-    swiperHeight:'400px',
+    swiperHeight:'200px',
     background:'rgba(0,0,0,0)',
     color:'#fff',
     isFixed:false,
@@ -22,7 +22,6 @@ Page({
     infoShow:false,//个人资料
   },
   onPageScroll(e) {
-    let opciaty = e.scrollTop / 130;
     if (e.scrollTop >= this.data.gyyHeight) {
       this.setData({
         isFixed:true,
@@ -34,18 +33,18 @@ Page({
         top:0
       })
     }
-    if (opciaty >= 1) {
-      opciaty = 1;
-      this.setData({ 
-        background: `rgba(255,255,255)` ,
-        color:"#436FC4"
-      });
-    } else if (opciaty <= 0) {
-      opciaty = 0;
-      this.setData({ background: `rgba(0,0,0,${opciaty})` 
-      ,
-      color:"#fff"});
-    }
+    // if (opciaty >= 1) {
+    //   opciaty = 1;
+    //   this.setData({ 
+    //     background: `rgba(255,255,255)` ,
+    //     color:"#436FC4"
+    //   });
+    // } else if (opciaty <= 0) {
+    //   opciaty = 0;
+    //   this.setData({ background: `rgba(0,0,0,${opciaty})` 
+    //   ,
+    //   color:"#fff"});
+    // }
     
   },
   onLoad() {
@@ -59,7 +58,7 @@ Page({
       tableft:e.currentTarget.dataset.index*175.5,
       current:e.currentTarget.dataset.index
     },() => {
-      this.getSwiperHeight(this,'.swiper-item'+e.currentTarget.dataset.index +'4')
+      
     })
   },
   // 滑动
@@ -67,9 +66,11 @@ Page({
     this.setData({
       current:e.detail.current,
       tabIndex:e.detail.current,
+      swiperHeight:'400px',
       tableft:e.detail.current*175.5
     },() => {
-      this.getSwiperHeight(this,'.swiper-item'+e.detail.current +'4')
+      this.getSwiperHeight(this,'.list_flag' + e.detail.current)
+      
     })
   },
   // 开始签到
@@ -115,11 +116,12 @@ Page({
     let query = wx.createSelectorQuery();
     //选择id
     let that = p;
+    console.log(element)
     query.select(element).boundingClientRect(
       function (e) {
         console.log(e);
         that.setData({
-          swiperHeight: (e.height + 40 )*5+ 'px'
+          swiperHeight: element == '.list_flag1'?(e.top - 360 )+ 'px' :(e.top - 380 )+ 'px'
         })
       }).exec();
   },

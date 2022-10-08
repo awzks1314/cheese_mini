@@ -33,7 +33,7 @@
   overflow: hidden;
 }
 .input_line{
-  height: 60rpx;
+  height: 40rpx;
   width: 2rpx;
   background-color: #f0f0f0;
 }

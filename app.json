@@ -24,7 +24,8 @@
         "vip/vip",
         "noticeDetail/noticeDetail",
         "noticeDetailPages/noticeDetailPages",
-        "myInfoNew/myInfoNew"
+        "myInfoNew/myInfoNew",
+        "forum/forum"
       ]
     },
     {

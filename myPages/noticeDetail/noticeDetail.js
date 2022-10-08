@@ -6,6 +6,7 @@ Page({
    */
   data: {
     type:'commit',
+    title:'Comments',
     popupShow:false
   },
 
@@ -16,11 +17,8 @@ Page({
     console.log(options)
     if (options.type) {
       this.setData({
-        type:options.type
-      },() => {
-        wx.setNavigationBarTitle({
-          title: options.type == 'like'?'收到点赞':options.type == 'commit'?'我的评论':"系统通知",
-        })
+        type:options.type,
+        title:options.type == 'like'?'Likes':options.type == 'commit'?'Comments':"Forum",
       })
     }
   },
@@ -39,6 +37,18 @@ Page({
     this.setData({
       popupShow:false
     })
+  },
+  handlerGobackClick(delta) {
+    const pages = getCurrentPages();
+    if (pages.length >= 2) {
+      wx.navigateBack({
+        delta: delta
+      });
+    } else {
+      wx.switchTab({
+        url: '/pages/community/community'
+      });
+    }
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

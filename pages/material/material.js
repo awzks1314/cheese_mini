@@ -47,14 +47,9 @@ Page({
   closeClose() {
 
   },
-  openBottomShare(){
-    this.setData({
-      bottomShare:false
-    })
-  },
   close() {
     this.setData({
-      bottomShare:false
+      bottomShare:!this.data.bottomShare
     })
   },
   // 滑动轮播

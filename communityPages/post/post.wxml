@@ -47,7 +47,7 @@
 
 <view class="bottom_box">
   <view class="bottom_item bottom_active">Thought</view>
-  <view class="bottom_item ">Application</view>
+  <!-- <view class="bottom_item ">Application</view> -->
   <view class="bottom_item">Upload Notes</view>
 </view>
 

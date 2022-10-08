@@ -46,7 +46,7 @@
     </view>
   </view>
 
-  <view class="tab_box {{isFixed?'fixed':''}}" style="top:{{top}}px">
+  <view class="tab_box {{isFixed?'fixed':''}}" style="top:{{top}}px;left:{{top?24:0}}rpx;">
     <view class="tab_item {{tabIndex == 0?'tab_item_actvie':''}}" bindtap="changeTab" data-index="0">Upload</view>
     <view class="tab_item {{tabIndex == 1?'tab_item_actvie':''}}" bindtap="changeTab" data-index="1">Personal</view>
     <view class="tab_item {{tabIndex == 2?'tab_item_actvie':''}}" bindtap="changeTab" data-index="2">Collect</view>
@@ -75,6 +75,7 @@
         </view> 
       </view>
     </view>
+    <view class="list_flag0"></view>
   </swiper-item>
 
   <swiper-item class="swiper_style ">
@@ -113,36 +114,27 @@
         <view>Edit</view>
       </view>
     </view>
+    <view class="list_flag1"></view>
   </swiper-item>
   <swiper-item class="swiper_style">
-    <view class="padding-lr-lg flex flex-wrap padding-tb-sm" >
-      <view wx:for="{{10}}" wx:key="index" class="product_item flex flex-direction bg-white swiper-item{{current}}{{index}}" bindtap="toUrl" data-url="/materialPages/myCollectBook/myCollectBook">
-        
-        <view class="product_box flex ">
-          <view class="product_image flex-twice"></view>
-          <view class="flex-sub">
-            <view class="product_image1"></view>
-            <view class="product_image2"></view>
-          </view>
-        </view>
-        <view class="w100  text-bold  padding-tb padding-left-sm text-lg">Biology </view>
+    <view class="three_box" >
+      <view wx:for="{{18}}" wx:key="index" class="product_item swiper-item{{current}}{{index}}" bindtap="toUrl" data-url="/materialPages/myCollectBook/myCollectBook">
+        <image src="/static/img/icon/banner.png" class="product_image"></image>
+        <image src="/static/img/icon/bg-white.png" class="product_white"></image>
+        <view class="product_name">Biology </view>
       </view>
     </view>
+    <view class="list_flag2"></view>
   </swiper-item>
   <swiper-item class="swiper_style">
-    <view class="padding-lr-lg flex flex-wrap padding-tb-sm" >
-      <view wx:for="{{10}}" wx:key="index" class="product_item flex flex-direction bg-white swiper-item{{current}}{{index}}" bindtap="toUrl" data-url="/materialPages/myCollectBook/myCollectBook">
-        
-        <view class="product_box flex ">
-          <view class="product_image flex-twice"></view>
-          <view class="flex-sub">
-            <view class="product_image1"></view>
-            <view class="product_image2"></view>
-          </view>
-        </view>
-        <view class="w100  text-bold  padding-tb padding-left-sm text-lg">Biology </view>
+    <view class="three_box" >
+      <view wx:for="{{13}}" wx:key="index" class="product_item swiper-item{{current}}{{index}}" bindtap="toUrl" data-url="/materialPages/myCollectBook/myCollectBook">
+        <image src="/static/img/icon/banner.png" class="product_image"></image>
+        <image src="/static/img/icon/bg-white.png" class="product_white"></image>
+        <view class="product_name">Biology </view>
       </view>
     </view>
+    <view class="list_flag3"></view>
   </swiper-item>
   
 </swiper>

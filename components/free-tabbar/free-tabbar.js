@@ -78,12 +78,11 @@ Component({
   methods: {
     handleClick(e){
       // 1
+      console.log(e)
       this.triggerEvent("click", {
         index: e.currentTarget.dataset.index
       })
-      if(!e.currentTarget.dataset.url){
-        return
-      }
+      
       wx.switchTab({
         url: e.currentTarget.dataset.url,
       })

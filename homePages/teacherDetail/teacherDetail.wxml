@@ -1,7 +1,96 @@
+<view style="height: 0;">
+  <free-navBar title='' background='transport'     >
+  <view class='left_back' slot="left" bindtap="handlerGobackClick" >
+    <image src="/static/img/icon/ArrowLeft.png" class="header_left_image"></image>
+  </view>
+</free-navBar>
+</view>
 <view class="my_header_box">
 </view>
 <view class="my_header  flex flex-direction align-center">
-  <view class="my_header_avatar" style="background: url('https://cheese-ninja.oss-cn-shenzhen.aliyuncs.com/avatar/Female/Avatarz_black0307.png?x-oss-process=style/img-sm') center no-repeat;background-size:380rpx; background-position: 46%; ">
+  <view class="my_header_avatar" style="background: url('https://cheese-ninja.oss-cn-shenzhen.aliyuncs.com/avatar/Female/Avatarz_black0307.png?x-oss-process=style/img-sm') center no-repeat;background-size:350rpx; background-position:46% 6%; ">
   </view>
+  <view class="role_box">Teacher</view>
 </view>
-<view>1</view>
+<view class="my_header_nikeName ">Hannah Gonzales</view>
+
+<view class="detail_scroll">
+  <view class="flex align-cenetr justify-between">
+    <view class="flex align-center">
+      <image src="/static/img/icon/Group.png" class="group"></image>
+      <view class="rate_number">4.5</view>
+      <view class="views_number"> (112 Reviews)</view>
+    </view>
+    <view class="see_all">see all</view>
+  </view>
+
+  <scroll-view class="scroll-style" scroll-x="true">
+    <view class="teacher_scroll_item" wx:for="{{5}}" wx:key="index">
+      <view class="flex">
+        <image src="/static/img/notifications/Rectangle25.png" class="com_avatar"></image>
+        <view class="flex-sub">
+          <view class="flex justify-between flex-sub">
+            <view class="com_title">Beepdth Aggerand</view>
+            <view class="com_time">5m ago</view>
+          </view>
+          <view class="com_tag">
+            <image src="/static/img/icon/Star.png" class="start" wx:for="{{4}}" wx:key="index"></image>
+            <image src="/static/img/icon/Star1.png" class="start" ></image>
+          </view>
+        </view>
+      </view>
+
+      <view class="com_conent">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.
+      </view>
+    </view>
+  </scroll-view>
+</view>
+
+<view class="tab_box">
+  <view class="tab_card">
+    <view class="community_tab {{tabTab == 0 ?' community_tab_style':''}}" bindtap="changeTab" data-index="0" data-name="tabTab">About</view>
+    <view class="community_tab {{tabTab == 1 ?' community_tab_style':''}}" bindtap="changeTab" data-index="1" data-name="tabTab">Upload</view>
+    <view class="community_tab {{tabTab == 2 ?' community_tab_style':''}}" bindtap="changeTab" data-index="2" data-name="tabTab">Collect</view>
+  </view>
+
+  <view class="one_item_box">
+    <view class="one_list_item_extra">
+        <text class="one_list_name">Name</text>
+        <view class="one_list_content">
+          <view class="list_content_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad li tor...</view>
+          <text class="see_deatil">see datail</text>
+        </view>
+      </view>
+      <view class="one_list_line"></view>
+      <view class="one_list_item">
+        <text class="one_list_name">Name</text>
+        <text class="one_list_value">Hannah Gonzalez</text>
+      </view>
+      <view class="one_list_line"></view>
+      <view class="one_list_item">
+        <text class="one_list_name">School</text>
+        <text class="one_list_value">University of London</text>
+      </view>
+      <view class="one_list_line"></view>
+      <view class="one_list_item">
+        <text class="one_list_name">Role</text>
+        <text class="one_list_value">Teacher</text>
+      </view>
+      <view class="one_list_line"></view>
+      <view class="one_list_item">
+        <text class="one_list_name">Curiculum Structure</text>
+        <text class="one_list_value">IB</text>
+      </view>
+      <view class="one_list_line"></view>
+      <view class="one_list_item">
+        <text class="one_list_name">Cureses</text>
+        <text class="one_list_value">HL</text>
+      </view>
+    </view>
+</view>
+
+<free-gap height="120"></free-gap>
+<view class=" info_button">
+  <view class="info_button_content">Hire</view>
+</view>

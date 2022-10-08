@@ -1,3 +1,126 @@
+.like_box{
+  padding: 24rpx;
+}
+.left_back {
+  padding: 0 32.5rpx;
+}
+.header_left_image {
+  width: 30rpx;
+  height: 24rpx;
+}
+.center_style{
+  font-weight: 400;
+  font-size: 32rpx;
+  line-height: 36rpx;
+  letter-spacing: -0.33rpx;
+  color: #FFFFFF;
+}
+.my_header_avatar{
+  width: 72rpx;
+  height: 72rpx;
+  border-radius: 16rpx;
+}
+.liek_list{
+  padding:16rpx;
+  width: 702rpx;
+/* height: 152rpx; */
+background: #FFFFFF;
+box-shadow: 0px 8rpx 24rpx rgba(0, 0, 0, 0.04), 0px 8rpx 24rpx rgba(0, 0, 0, 0.04);
+border-radius: 32rpx;
+margin-bottom: 24rpx;
+}
+.right_content{
+  padding-left: 24rpx;
+}
+.name_style{
+  font-weight: 700;
+font-size: 28rpx;
+line-height: 32rpx;
+color: #1B1B1B;
+}
+.time_style{
+  font-weight: 400;
+  font-size: 26rpx;
+  line-height: 30rpx;
+  color: #868686;
+}
+.desc_stylle{
+margin-bottom: 13rpx;
+}
+.descs_stylle{
+  margin-bottom: 16rpx;
+}
+.reply_style{
+  margin-top: 8rpx;
+  margin-bottom: 9rpx;
+}
+.text-grt{
+  color:#868686 !important;
+}
+.share_box{
+  width: 140rpx;
+  height: 48rpx;
+
+  border: 2rpx solid #EDEDED;
+  border-radius: 80rpx;
+    font-weight: 400;
+  font-size: 26rpx;
+  /* identical to box height */
+  color: #436FC3;
+  /* padding: 8rpx 16rpx; */
+  margin-top: 16rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.share{
+  width: 22rpx;
+  height: 20rpx;
+  margin-right: 8rpx;
+}
+.commit_style{
+  font-weight: 400;
+  font-size: 26rpx;
+  line-height: 30rpx;
+  margin-bottom: 16rpx;
+  color: #1B1B1B;
+}
+.book{
+  width: 23rpx;
+  height: 30rpx;
+  margin-right: 24rpx;
+}
+.banenr{
+  width: 82rpx;
+  height: 82rpx;
+  border-radius: 8rpx;
+  margin-top: 8rpx;
+}
+.avatar{
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 8rpx;
+  margin-right: 16rpx;
+}
+.avatar_text{
+  width: 510rpx;
+  font-weight: 400;
+  font-size: 26rpx;
+  line-height: 30rpx;
+  color: #1B1B1B;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 .red_dot{
   width:18rpx;
   height: 18rpx;
@@ -14,11 +137,7 @@
   align-items: center;
   justify-content: center;
 }
-.my_header_avatar{
-  width: 80rpx;
-  height: 80rpx;
-  border-radius: 50%;
-}
+
 
 .commit_btn{
   border: 2rpx solid #f0f0f0;
@@ -58,3 +177,5 @@
   flex: 1;
   overflow: hidden;
 }
+
+

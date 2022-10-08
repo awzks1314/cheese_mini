@@ -30,11 +30,11 @@
   </scroll-view>
 </view>
 
-<view class="teacher">
+<view class="teacher" bindtap="goUrl" data-url="/homePages/teacher/teacher">
   <view class="teacher_title">Recommendation Teachers</view>
-  <view class="teacher_arrow">see all</view>
+  <view class="teacher_arrow" >see all</view>
 </view>
-<view class="teacher_scroll">
+<view class="teacher_scroll" bindtap="goUrl" data-url="/homePages/teacher/teacher">
   <scroll-view class="scroll-style" scroll-x="true">
     <view class="teacher_scroll_item" wx:for="{{5}}" wx:key="index">
       <image src="/static/img/community/Rectangle34.png" class="teacher_scroll_item_image"></image>
@@ -52,7 +52,7 @@
   <view class="com_content "  
   wx:for="{{5}}" wx:key="index" >
     <view class="flex align-center justify-between">
-      <view class="flex align-center w100" bindtap="goUrl" data-url="/communityPages/otherUser/otherUser">
+      <view class="flex align-center w100" bindtap="goUrl" data-url="/myPages/forum/forum">
         <image src="/static/img/notifications/Rectangle25.png" class="com_avatar"></image>
         <view class="flex flex-direction flex-sub">
           <view class="flex justify-between flex-sub">
@@ -64,7 +64,7 @@
       </view>
     </view>
 
-    <view class="com_content_word" bindtap="goUrl" data-url="/communityPages/communityDetail/communityDetail">
+    <view class="com_content_word" bindtap="goUrl" data-url="/myPages/forum/forum">
       <text class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis</text>
     </view>
 

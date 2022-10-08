@@ -356,3 +356,103 @@ swiper {
   align-items: center;
   justify-content: center;
 }
+
+.share_content{
+  border-radius: 24rpx 24rpx 0px 0px;
+  overflow: hidden;
+  background-color: #fff;
+  padding: 24rpx;
+}
+.share_avatar{
+  width: 132rpx;
+  height: 200rpx;
+  border-radius: 16rpx;
+  margin-right: 16rpx;
+}
+.share_title{
+  font-weight: 700;
+font-size: 32rpx;
+line-height: 36rpx;
+letter-spacing: -0.33rpx;
+
+color: #000000;
+margin-bottom: 16rpx;
+}
+.avatar_name{
+  border: 2rpx solid #EBEBEB;
+  border-radius: 50%;
+  width: 56rpx;
+  height: 56rpx;
+}
+.avatar_name_tr{
+  font-weight: 400;
+font-size: 26rpx;
+line-height: 30rpx;
+/* identical to box height */
+
+letter-spacing: -0.33rpx;
+
+color: #000000;
+padding-left: 8rpx;
+}
+.icon_eye{
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 8rpx;
+}
+.icon_like{
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 13rpx;
+  margin-left: 40rpx;
+}
+.icon_text{
+  font-weight: 400;
+  font-size: 26rpx;
+  line-height: 30rpx;
+  /* identical to box height */
+  
+  letter-spacing: -0.33rpx;
+  
+  color: #868686;
+}
+
+.down_box{
+  width: 702rpx;
+height: 194rpx;
+background: #F6F7F9;
+border-radius: 24rpx;
+display: flex;
+align-items: center;
+margin-top: 32rpx;
+}
+
+.read{
+width: 702rpx;
+height: 96rpx;
+
+background: #436FC3;
+border-radius: 24rpx;
+display: flex;
+align-items: center;
+justify-content: center;
+font-weight: 400;
+font-size: 26rpx;
+line-height: 30rpx;
+letter-spacing: -0.33rpx;
+
+color: #FFFFFF;
+margin-top: 24rpx;
+}
+.like{
+  height: 80rpx;
+  width: 80rpx;
+  margin-bottom: 16rpx;
+}
+.like_name{
+  font-weight: 400;
+  font-size: 26rpx;
+  line-height: 30rpx;
+
+color: #000000;
+}

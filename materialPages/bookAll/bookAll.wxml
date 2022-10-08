@@ -1,77 +1,147 @@
-
+<free-navBar title='' background='#436FC3'>
+  <view class='left_back' slot="left" bindtap="handlerGobackClick" >
+    <image src="/static/img/icon/ArrowLeft.png" class="header_left_image"></image>
+  </view>
+</free-navBar>
 <view class="bookAll_header ">
-  <view class="bookItem flex justify-center text-bold text-xl">2022年新能源报告</view>
-  <view class="bookItem flex align-end justify-center padding-tb">
-    <text>作者：</text>
-    <image src="/static/img/1.jpg" mode="aspectFill" class="mater_item_avatars"></image>
-    <text>东吴国际</text>
-  </view>
-  <view class="bookItem flex align-center justify-center">
-    <view class=" flex align-end justify-start">
-      <text>阅读：</text>
-      <text>200</text>
-    </view>
-    <view class=" flex align-end justify-start padding-left">
-      <text>rating：</text>
-      <text>3.5</text>
-    </view>
+  <view class="bookItem">2022 New Energy Report</view>
+  <image src="/static/img/find/avatar.png" class="mater_item_avatars"></image>
+  <view class="type_name">Soochow International</view>
+  <view class="icon_box flex align-center">
+    <image src="/static/img/icon/eye.png" class="eye"></image>
+    <text>200</text>
+    <image src="/static/img/icon/like_round.png" class="like_round"></image>
+    <text>3.5</text>
   </view>
 
-  <view class="btn_box flex align-center justify-around">
+  <view class="btn_box flex align-center">
     <view class="flex-sub flex align-center justify-center flex-direction">
-      <free-icon name="rounddown" color="#436FC4"></free-icon>
-      <text class="text-bold padding-top-xs">SAVE</text>
+      <image src="/static/img/icon/like.png" class="like"></image>
+      <text class="like_name">SAVE</text>
     </view>
     <view class="flex-sub flex align-center justify-center flex-direction">
-      <free-icon name="xiazai" color="#436FC4"></free-icon>
-      <text class="text-bold padding-top-xs">DOWNLOAD</text>
+      <image src="/static/img/icon/down.png" class="like"></image>
+      <text class="like_name">DOWNLOAD</text>
     </view>
     <view class="flex-sub flex align-center justify-center flex-direction">
-      <free-icon name="share" color="#436FC4"></free-icon>
-      <text class="text-bold padding-top-xs">SHARE</text>
+      <image src="/static/img/icon/share.png" class="like"></image>
+      <text class="like_name">SHARE</text>
     </view>
   </view>
 </view>
 
-
-<view class="flex align-center justify-between padding">
-  <view class="text-lg text-bold">Notes</view>
-  <view class="text-blue" bindtap="toUrl" data-url="/materialPages/bookList/bookList">展开</view>
+<free-gap height="76"></free-gap>
+<view class="teacher" bindtap="toUrl" data-url="/materialPages/bookList/bookList">
+  <view class="teacher_title">Notes</view>
+  <view class="teacher_arrow">see all</view>
 </view>
-<view>
+
+<view class="card_scrool">
   <scroll-view class="scroll-style" scroll-x="true">
-    <view class=" radius  mater_item flex flex-direction" wx:for="{{3}}" wx:key="index" bindtap="toUrl" data-url="/materialPages/bookDetail/bookDetail">
-    <view class="mater_item_image bg-blue"></view>
-    <view class="tab_one_style   bg-white padding-tb-sm">
-      <view class="tag_content text-bold text-lg"> 
-        5-TUBE-Additives - PMLS LEC
+    <view class=" mater_item flex flex-direction relative" wx:for="{{3}}" wx:key="index" bindtap="close" >
+      <view class="tags">
+        <image src="/static/img/icon/like_sm.png" class="like_sm"></image>
+        <view>100% (11)</view>
       </view>
-      <view class="flex align-center padding-top-sm">
-        <free-icon name="like" color="#436FC4"></free-icon>
-        <text class="text-blue padding-left-sm">100%(11)</text> 
+      <image src="/static/img/find/bg.png" class="mater_item_image"></image>
+      <view class="tab_one_style bg-white ">
+        <view class=" tag_content">
+          <text class=" text-cut-2">2022 New Energy Strategy Report (Photovoltaic, Energy</text>
+        </view>
       </view>
     </view>
-  </view>
   </scroll-view>
 </view>
 
-<view class="flex align-center justify-between padding">
-  <view class="text-lg text-bold">Similar</view>
-  <view class="text-blue" bindtap="toUrl" data-url="/materialPages/bookList/bookList">展开</view>
+<view class="teacher" bindtap="toUrl" data-url="/materialPages/bookList/bookList">
+  <view class="teacher_title">Notes</view>
+  <view class="teacher_arrow">see all</view>
 </view>
-<view>
+
+<view class="card_scrool">
   <scroll-view class="scroll-style" scroll-x="true">
-    <view class=" radius  mater_item flex flex-direction" wx:for="{{3}}" wx:key="index" bindtap="toUrl" data-url="/materialPages/bookDetail/bookDetail">
-    <view class="mater_item_image bg-blue"></view>
-    <view class="tab_one_style   bg-white padding-tb-sm">
-      <view class="tag_content text-bold text-lg"> 
-        5-TUBE-Additives - PMLS LEC
+    <view class=" mater_item flex flex-direction relative" wx:for="{{3}}" wx:key="index" bindtap="close" >
+      <view class="tags">
+        <image src="/static/img/icon/like_sm.png" class="like_sm"></image>
+        <view>100% (11)</view>
       </view>
-      <view class="flex align-center padding-top-sm">
-        <free-icon name="like" color="#436FC4"></free-icon>
-        <text class="text-blue padding-left-sm">100%(11)</text> 
+      <image src="/static/img/find/bg.png" class="mater_item_image"></image>
+      <view class="tab_one_style bg-white ">
+        <view class=" tag_content">
+          <text class=" text-cut-2">2022 New Energy Strategy Report (Photovoltaic, Energy</text>
+        </view>
       </view>
     </view>
-  </view>
   </scroll-view>
 </view>
+
+
+<view class="teacher" bindtap="toUrl" data-url="/materialPages/bookList/bookList">
+  <view class="teacher_title">Notes</view>
+  <view class="teacher_arrow">see all</view>
+</view>
+
+<view class="card_scrool">
+  <scroll-view class="scroll-style" scroll-x="true">
+    <view class=" mater_item flex flex-direction relative" wx:for="{{3}}" wx:key="index"  bindtap="close" >
+      <view class="tags">
+        <image src="/static/img/icon/like_sm.png" class="like_sm"></image>
+        <view>100% (11)</view>
+      </view>
+      <image src="/static/img/find/bg.png" class="mater_item_image"></image>
+      <view class="tab_one_style bg-white ">
+        <view class=" tag_content">
+          <text class=" text-cut-2">2022 New Energy Strategy Report (Photovoltaic, Energy</text>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+
+<free-gap height="20"></free-gap>
+
+
+<free-bottom-popup show="{{bottomShare}}" bgcolor="transport" bind:close="close">
+    <!-- bind:close="close" -->
+    <view class="share_content">
+      <view class="flex">
+        <image src="/static/img/community/Rectangle34.png" class="share_avatar"></image>
+        <view>
+          <view class="share_title">The Merry Men and Other Tales and Fables</view>
+          <view class="flex align-center">
+            <image src="/static/img/notifications/Rectangle25.png" class="avatar_name"></image>
+            <text class="avatar_name_tr">Author by David Sedaris</text>
+          </view>
+          <free-gap height="16"></free-gap>
+          <view class="flex align-center">
+            <image src="/static/img/icon/eye_gray.png" class="icon_eye"></image>
+            <text class="icon_text">200</text>
+            <image src="/static/img/icon/like_gray.png" class="icon_like"></image>
+            <text class="icon_text">30</text>
+            <image src="/static/img/icon/book.png" class="icon_like"></image>
+            <text class="icon_text">Read 100 Page 100</text>
+          </view>
+        </view>
+      </view>
+
+      <view class="down_box">
+        <view class="flex-sub flex align-center justify-center flex-direction">
+          <image src="/static/img/icon/like.png" class="like"></image>
+          <text class="like_name">SAVE</text>
+        </view>
+        <view class="flex-sub flex align-center justify-center flex-direction">
+          <image src="/static/img/icon/down.png" class="like"></image>
+          <text class="like_name">DOWNLOAD</text>
+        </view>
+        <view class="flex-sub flex align-center justify-center flex-direction">
+          <image src="/static/img/icon/share.png" class="like"></image>
+          <text class="like_name">SHARE</text>
+        </view>
+      </view>
+
+      <view class="read">
+        <image src="/static/img/icon/read_white.png" class="icon_eye"></image>
+        <text>Read</text>
+      </view>
+    </view>
+  </free-bottom-popup>

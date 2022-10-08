@@ -1,12 +1,24 @@
-.my_header_box{
+.left_back {
+  padding-left: 32.5rpx;
+}
+
+.header_left_image {
+  width: 30rpx;
+  height: 24rpx;
+}
+
+.my_header_box {
   height: 224rpx;
   background-color: #436FC4;
 }
-.my_header{
+
+.my_header {
   padding-top: 80rpx;
   position: relative;
+
 }
-.my_header_avatar{
+
+.my_header_avatar {
   position: absolute;
   width: 160rpx;
   height: 160rpx;
@@ -16,4 +28,251 @@
   border: 4rpx solid #FFFFFF;
   object-fit: cover;
   background-color: #e35464 !important;
+}
+
+.role_box {
+  padding: 8rpx 16rpx;
+  position: absolute;
+  width: 124rpx;
+  height: 46rpx;
+  left: 318rpx;
+  top: 40rpx;
+
+  background: #88D7FD;
+  border: 2rpx solid #FFFFFF;
+  border-radius: 48rpx;
+  font-weight: 400;
+  font-size: 26rpx;
+  line-height: 30rpx;
+  /* identical to box height */
+  letter-spacing: -0.33rpx;
+  text-align: center;
+  color: #F8F8F8;
+}
+
+.my_header_nikeName {
+  font-weight: 700;
+  font-size: 32rpx;
+  line-height: 36rpx;
+  letter-spacing: -0.33rpx;
+  color: #000000;
+  padding-bottom: 41rpx;
+  padding-top: 12rpx;
+  text-align: center;
+}
+
+.detail_scroll {
+  padding: 0 24rpx 22rpx;
+}
+
+.group {
+  width: 36rpx;
+  height: 36rpx;
+  margin-left: 6rpx;
+}
+
+.rate_number {
+  font-weight: 700;
+  font-size: 26rpx;
+  line-height: 30rpx;
+  /* identical to box height */
+
+  letter-spacing: -0.33rpx;
+  color: #1B1B1B;
+  padding-left: 14rpx;
+}
+
+.views_number {
+  font-weight: 700;
+  font-size: 26rpx;
+  line-height: 30rpx;
+  /* identical to box height */
+  letter-spacing: -0.33rpx;
+  color: #868686;
+  margin-left: 8rpx;
+}
+
+.see_all {
+  font-weight: 400;
+  font-size: 26rpx;
+  line-height: 30rpx;
+  /* identical to box height */
+  letter-spacing: -0.33rpx;
+  color: #436FC3;
+}
+
+.teacher_scroll_item {
+  display: inline-flex;
+  flex-direction: column;
+  padding: 24rpx;
+  margin-top: 22rpx;
+  width: 590rpx;
+  height: 260rpx;
+
+  background: #FFFFFF;
+  box-shadow: 0px 8rpx 24rpx rgba(0, 0, 0, 0.04);
+  border-radius: 32rpx;
+  margin-right: 24rpx;
+}
+
+.com_avatar {
+  width: 88rpx;
+  height: 88rpx;
+  border-radius: 24rpx;
+  margin-right: 24rpx;
+}
+
+.com_title {
+  font-weight: 700;
+  font-size: 28rpx;
+  line-height: 32rpx;
+
+  color: #1B1B1B;
+  padding-top: 4rpx;
+}
+
+.com_time {
+  font-weight: 400;
+  font-size: 26rpx;
+  line-height: 30rpx;
+  /* identical to box height */
+
+  text-align: center;
+
+  color: #868686;
+
+}
+
+.com_tag {
+  margin-top: 19.5rpx;
+}
+
+.start {
+  width: 26.5rpx;
+  height: 25rpx;
+  margin-right: 13rpx;
+}
+
+.com_conent {
+  white-space: normal !important;
+  width: 542rpx;
+  height: 108rpx;
+  font-weight: 400;
+  font-size: 26rpx;
+  line-height: 140%;
+  /* or 18px */
+  margin-top: 16rpx;
+  color: #000000;
+}
+
+.tab_box {
+  padding: 8rpx 24rpx 24rpx;
+}
+
+.tab_card {
+  width: 460rpx;
+  height: 88rpx;
+  background: #FFFFFF;
+  border: 2rpx solid #EEEEEE;
+  border-radius: 80rpx;
+  display: flex;
+  padding: 4rpx;
+  margin: 0 auto 24rpx;
+}
+
+.community_tab {
+  width: 173.5rpx;
+  height: 80rpx;
+  border-radius: 80rpx;
+  font-weight: 400;
+  font-size: 26rpx;
+  line-height: 30rpx;
+  /* identical to box height */
+  letter-spacing: -0.33rpx;
+  color: #868686;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.community_tab_style {
+  background-color: #436FC3;
+  border-radius: 40px;
+  color: #ffffff !important;
+}
+
+
+.one_item_box{
+  border-radius: 24rpx;
+  background-color: #fff;
+}
+.one_list_item{
+  padding: 32rpx;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+.one_list_line{
+  width: 638rpx;
+  height: 0px;
+  border: 2rpx solid #F7F7F7;
+  margin-left: 32rpx;
+}
+.one_list_name{
+  font-weight: 400;
+  font-size: 26rpx;
+  line-height: 30rpx;
+  letter-spacing: -0.33rpx;
+  color: #868686;
+}
+.one_list_value{
+  font-weight: 400;
+  font-size: 26rpx;
+  line-height: 30rpx;
+  letter-spacing: -0.33rpx;
+color: #1B1B1B;
+}
+.one_list_item_extra{
+  padding: 32rpx;
+}
+.one_list_content{
+  margin-top: 16rpx;
+  position: relative;
+}
+.list_content_text{
+  font-weight: 400;
+font-size: 26rpx;
+line-height: 140%;
+/* or 18px */
+
+
+color: #000000;
+}
+.see_deatil{
+  color: #436FC3;
+  position: absolute;
+  right: 0;
+  bottom: 4rpx;
+  
+}
+.info_button{
+  padding: 24rpx 16rpx;
+
+width: 702rpx;
+height: 96rpx;
+
+background: #436FC3;
+border-radius: 24rpx;
+font-weight: 400;
+font-size: 26rpx;
+  line-height: 30rpx;
+  letter-spacing: -0.33rpx;
+
+color: #FFFFFF;
+position: fixed;
+bottom: 20rpx;
+left: 24rpx;
+display: flex;
+align-items: center;
+justify-content: center;
 }

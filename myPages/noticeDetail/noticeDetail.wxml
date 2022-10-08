@@ -1,12 +1,18 @@
+<free-navBar title='' background='#436FC3'>
+  <view class='left_back' slot="left" bindtap="handlerGobackClick" >
+    <image src="/static/img/icon/ArrowLeft.png" class="header_left_image"></image>
+  </view>
+  <view slot="center" class="center_style">{{title}}</view>
+</free-navBar>
+
 <view class="padding-lr" wx:if="{{type=='seting'}}">
-  
   <view class="padding-top ">
     <view class="text-center text-gray text-sm">2019/09/11 20:00</view>
     <view class="padding bg-white margin-top radius">
       <view class="flex align-center justify-between">
         <text class="text-bold">您的资料上传没有通过</text>
         <text class="red_dot"></text>
-      </view>
+      </view> 
     </view>
   </view>
   
@@ -25,70 +31,63 @@
 </view>
 
 
-<view wx:if="{{type == 'like'}}">
-  <view class="bg-white flex align-center padding-lr">
-    <image src="http://q1.qlogo.cn/g?b=qq&nk=664423077&s=640" class="my_header_avatar"></image>
-    <view class="padding-tb margin-left solid-bottom  flex-sub">
-      <view  class="flex align-center justify-between">
-        <view class="flex align-center">
-          <text>彭于晏</text>
-          <view class="red_dot margin-left-xs"></view>
-        </view>
-        <text>8小时前</text>
+<view class="like_box" wx:if="{{type == 'like'}}">
+  <view class="liek_list flex">
+    <image src="/static/img/notifications/Rectangle25.png" class="my_header_avatar"></image>
+    
+    <view class="right_content flex-sub">
+      <view class=" flex justify-between ">
+        <view class="name_style">Jessica Iskandar</view>
+        <view class="time_style">5m ago</view>
       </view>
-
-      <view class="padding-top-xs flex align-center">
-        <free-icon name="likefill" color="#fbbd08" size="30" ></free-icon>
-        <view class="text-cut-1 padding-left-xs">赞了您的资料
-          <text class="text-blue">《dhklsahdlasjdjasl saas》</text>
+      <view class="flex align-center justify-between">
+        <view>
+          <view class="time_style desc_stylle">Liked your file</view>
+          <view class="flex">
+            <image src="/static/img/message/book.png" class="book"></image>
+            <text>Scientist.pdf</text>
+          </view>
         </view>
+        <image src="/static/img/message/banner.png" class="banenr"></image>
       </view>
     </view>
   </view>
 
-  <view class="bg-white flex align-center padding-lr" wx:for="{{6}}" wx:key="index">
-    <image src="http://q1.qlogo.cn/g?b=qq&nk=664423077&s=640" class="my_header_avatar"></image>
-    <view class="padding-tb margin-left solid-bottom  flex-sub">
-      <view  class="flex align-center justify-between">
-        <view class="flex align-center">
-          <text>吴彦祖</text>
-          <!-- <view class="red_dot margin-left-xs"></view> -->
-        </view>
-        <text>昨天</text>
+  <view class="liek_list flex" wx:for="{{7}}" wx:key="index">
+    <image src="/static/img/notifications/Rectangle25.png" class="my_header_avatar"></image>
+    
+    <view class="right_content flex-sub">
+      <view class=" flex justify-between ">
+        <view class="name_style">Jessica Iskandar</view>
+        <view class="time_style">5m ago</view>
       </view>
-
-      <view class="padding-top-xs flex align-center">
-        <free-icon name="likefill" color="#fbbd08" size="30" ></free-icon>
-        <view class="text-cut-1 padding-left-xs">赞了您的话题
-          <text class="text-blue">《dhklsah》</text>
-        </view>
+      <view class="time_style descs_stylle">Liked your comment</view>
+      <view class="flex-sub flex align-center">
+        <image src="/static/img/message/avatar.png" class="avatar"></image>
+        <view class="avatar_text text-cut">Lorem ipsum dolor sit amet, consectetur sdsa ds</view>
       </view>
     </view>
   </view>
 </view>
 
-<view wx:if="{{type == 'commit'}}">
-  <view class="bg-white flex  padding-lr padding-top" wx:for="{{4}}" wx:key="index">
-    <image src="http://q1.qlogo.cn/g?b=qq&nk=664423077&s=640" class="my_header_avatar "></image>
-    <view class="solid-bottom padding-left flex-sub">
-      <view class="  flex-sub flex align-center justify-between">
-        <view  class="">
-          <view class="flex align-center">
-            <text class="text-bold">彭于晏</text>
-            <view class="red_dot margin-left-xs"></view>
-          </view>
-          <text class="text-gray">8小时前</text>
-        </view>
-        <free-tag   radius="10rpx" bindtap="openCommit">回复</free-tag>
+<view class="like_box" wx:if="{{type == 'commit'}}">
+  <view class="liek_list flex" wx:for="{{7}}" wx:key="index">
+    <image src="/static/img/notifications/Rectangle25.png" class="my_header_avatar"></image>
+    
+    <view class="right_content flex-sub">
+      <view class=" flex justify-between ">
+        <view class="name_style">Jessica Iskandar</view>
+        <view class="time_style">5m ago</view>
       </view>
-
-      <view class="padding-tb">
-        <view>sjdlajlj大苏打撒旦撒sjdlajlj大苏打撒旦撒大撒大撒大撒大撒打赏大撒大撒大苏打撒旦大撒大撒大撒大撒打赏大撒大撒大苏打撒旦。</view>
-
-        <view class="commit_box">
-          <text class="text-bold">回复我的评论：</text>
-          <text class="text-gray">大撒大撒大撒的撒大是打算房地产v仔细看v罗迪克大师傅地方</text>
-        </view>
+      <view class="time_style reply_style">Replied your comment</view>
+      <view class="commit_style">Lorem ipsum dolor sit amet, consectetur adipiscing...</view>
+      <view class="flex-sub flex align-center">
+        <image src="/static/img/message/avatar.png" class="avatar"></image>
+        <view class="avatar_text text-cut text-grt">Lorem ipsum dolor sit amet, consectetur sdsa ds</view>
+      </view>
+      <view class="share_box" bindtap="goUrl" data-url="/myPages/forum/forum">
+        <image src="/static/img/message/sahre.png" class="share"></image>
+        <text>Reply</text>
       </view>
     </view>
   </view>
