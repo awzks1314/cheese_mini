@@ -1,22 +1,11 @@
-<<<<<<< HEAD
+
 <!-- <view style="height:0;">
   <free-navBar title='' background='transoprt'     >
   <view class='padding-lr' slot="left" bindtap="goUrl" data-url="/pages/question/question">
+
   </view>
 </free-navBar>
 </view>  -->
-=======
-<view style="height:0;">
-  <free-navBar title='' background='transoprt'     >
-  <view class='padding-lr' slot="left" bindtap="goUrl" data-url="/pages/question/question">
-    <!-- <view class="upload_button bg-green " bindtap="toUrl" data-url="/myPages/upload/upload">
-    <image src="/static/img/home/Paper Upload.png" class="upload_image"></image>
-      <text>Upload</text>
-    </view> -->
-  </view>
-</free-navBar>
-</view> 
->>>>>>> d8d0021d89ec1fc581c2a453c655815aed83797b
 <view class="input_box ">
   <view class="w100 flex align-end justify-between">
     <view class="flex align-center" bindtap="swicthTab" data-url="/pages/my/my">
@@ -32,7 +21,6 @@
         <text class="big_text_sub">let's start learning!</text>
       </view>
     </view>
-<<<<<<< HEAD
   </view>
 
   <view class="input_header    bg-white flex align-center">
@@ -40,13 +28,7 @@
     <input type="text" placeholder="Search your notes" class="input_style"/> 
     <view class="input_line"></view>
     <image src="/static/img/home/filter.png" class="input_image" bindtap="openShow"></image>
-=======
 
-    <view class="upload_button bg-green " bindtap="toUrl" data-url="/myPages/upload/upload">
-    <image src="/static/img/home/Paper Upload.png" class="upload_image"></image>
-      <text>Upload</text>
-    </view>
->>>>>>> d8d0021d89ec1fc581c2a453c655815aed83797b
   </view>
 
   <view class="input_header    bg-white flex align-center">
@@ -59,10 +41,7 @@
 
 <free-gap height="84"></free-gap>
 <view class="flex align-center two_tab_box">
-<<<<<<< HEAD
-=======
-  
->>>>>>> d8d0021d89ec1fc581c2a453c655815aed83797b
+
   <scroll-view scroll-x="true" class="scroll-style">
     <view class="mater_two_tab {{currentTab == index?'mater_two_tab_active':''}}" bindtap="changeTab" data-index="{{index}}" wx:for="{{AllCategory}}" wx:key="index">
     {{item}}
@@ -93,11 +72,7 @@
         <image src="/static/img/find/avatar.png" class="mater_item_avatar"></image>
       </view>
       <view class=" tag_content">
-<<<<<<< HEAD
         <text class=" text-cut-2">2022 New Energy Strategy Reportddddd (Photovoltaic, Energy</text>
-=======
-        <text class=" text-cut-2">2022 New Energy Strategy Report (Photovoltaic, Energy</text>
->>>>>>> d8d0021d89ec1fc581c2a453c655815aed83797b
       </view>
     </view>
   </view>
@@ -123,11 +98,7 @@
           <view class=" flex">
             <text class="tag_xueke">Biochemistry</text>
           </view>
-<<<<<<< HEAD
           <view class="tag_content text-cut-2">2022 New Energy Strategy Report (Photovoltaic, Energy Storage Wind Portddddds</view>
-=======
-          <view class="tag_content text-cut-2">2022 New Energy Strategy Report (Photovoltaic, Energy Storage Wind Pos</view>
->>>>>>> d8d0021d89ec1fc581c2a453c655815aed83797b
           <view class="flex align-center justify-between">
             <image src="/static/img/find/avatar.png" mode="aspectFill" class="mater_item_avatars"></image>
             <view class="flex align-center">
