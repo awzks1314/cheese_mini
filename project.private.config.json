@@ -68,5 +68,9 @@
         }
       ]
     }
+  },
+  "projectname": "tribune",
+  "setting": {
+    "compileHotReLoad": true
   }
 }
