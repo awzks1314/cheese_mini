@@ -17,6 +17,13 @@
   visibility: visible;
 }
 
+.line_white{
+  width: 60rpx;
+  height: 6rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+  margin: 0 auto 20rpx;
+}
 .free-popup-mask {
   position: fixed;
   top: 0;

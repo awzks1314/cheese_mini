@@ -5,5 +5,7 @@
   },
   "navigationBarBackgroundColor": "#436FC4",
   "navigationBarTitleText": "",
+  "onPullDownRefresh":true,
+  "scrollTop":50,
   "navigationStyle": "custom"
 }

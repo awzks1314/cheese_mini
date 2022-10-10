@@ -47,10 +47,10 @@
   </view>
 
   <view class="tab_box {{isFixed?'fixed':''}}" style="top:{{top}}px;left:{{top?24:0}}rpx;">
-    <view class="tab_item {{tabIndex == 0?'tab_item_actvie':''}}" bindtap="changeTab" data-index="0">Upload</view>
-    <view class="tab_item {{tabIndex == 1?'tab_item_actvie':''}}" bindtap="changeTab" data-index="1">Personal</view>
-    <view class="tab_item {{tabIndex == 2?'tab_item_actvie':''}}" bindtap="changeTab" data-index="2">Collect</view>
-    <view class="tab_item {{tabIndex == 3?'tab_item_actvie':''}}" bindtap="changeTab" data-index="3">Download</view>
+    <view class="tab_item {{tabIndex == 0?'tab_item_actvie':''}}" bindtap="changeTab" data-index="0">上传</view>
+    <view class="tab_item {{tabIndex == 1?'tab_item_actvie':''}}" bindtap="changeTab" data-index="1">资料</view>
+    <view class="tab_item {{tabIndex == 2?'tab_item_actvie':''}}" bindtap="changeTab" data-index="2">收藏</view>
+    <view class="tab_item {{tabIndex == 3?'tab_item_actvie':''}}" bindtap="changeTab" data-index="3">下载</view>
     <view class="tab_item_slider" style="left:{{tableft}}rpx;"></view>
   </view>
 </view>
@@ -120,8 +120,9 @@
     <view class="three_box" >
       <view wx:for="{{18}}" wx:key="index" class="product_item swiper-item{{current}}{{index}}" bindtap="toUrl" data-url="/materialPages/myCollectBook/myCollectBook">
         <image src="/static/img/icon/banner.png" class="product_image"></image>
-        <image src="/static/img/icon/bg-white.png" class="product_white"></image>
-        <view class="product_name">Biology </view>
+        <view class="product_name">Biology
+          <image src="/static/img/icon/bg-white.png" class="product_white"></image>
+        </view>
       </view>
     </view>
     <view class="list_flag2"></view>
@@ -130,8 +131,9 @@
     <view class="three_box" >
       <view wx:for="{{13}}" wx:key="index" class="product_item swiper-item{{current}}{{index}}" bindtap="toUrl" data-url="/materialPages/myCollectBook/myCollectBook">
         <image src="/static/img/icon/banner.png" class="product_image"></image>
-        <image src="/static/img/icon/bg-white.png" class="product_white"></image>
-        <view class="product_name">Biology </view>
+        <view class="product_name">Biology
+          <image src="/static/img/icon/bg-white.png" class="product_white"></image>
+        </view>
       </view>
     </view>
     <view class="list_flag3"></view>

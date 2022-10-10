@@ -22,13 +22,13 @@ App({
     list:[
       {
         "pagePath": "/pages/community/community",
-        "text": "Discovery",
+        "text": "首页",
         "iconPath": "/static/img/tabbarIcon/Discovery.png",
         "selectedIconPath": "/static/img/tabbarIcon/Discovery1.png"
       },
       {
         "pagePath": "/pages/material/material",
-        "text": "Resource",
+        "text": "资料库",
         "iconPath": "/static/img/tabbarIcon/find.png",
         "selectedIconPath": "/static/img/tabbarIcon/find1.png"
       },
@@ -42,13 +42,13 @@ App({
       },
       {
         "pagePath": "/pages/message/message",
-        "text": "Notifications",
+        "text": "消息",
         "iconPath": "/static/img/tabbarIcon/Notifications.png",
         "selectedIconPath": "/static/img/tabbarIcon/Notifications1.png"
       },
       {
         "pagePath": "/pages/my/my",
-        "text": "Profile",
+        "text": "我",
         "iconPath": "/static/img/tabbarIcon/Profile.png",
         "selectedIconPath": "/static/img/tabbarIcon/Profile1.png"
       }

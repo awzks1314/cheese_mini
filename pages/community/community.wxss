@@ -52,7 +52,7 @@ padding: 4rpx;
 }
 .mater_item{
   display: inline-flex;
-  width: 328rpx;
+  width: 376rpx;
   height: 248rpx;
   margin-right: 16rpx;
   border-radius: 24rpx;
@@ -62,12 +62,12 @@ padding: 4rpx;
   margin-right: 0;
 }
 .mater_item_image{
-  width: 328rpx;
+  width: 376rpx;
   height: 136rpx;
 }
 .tag_content{
   white-space:normal !important;  
-  font-size: 20rpx;
+  font-size: 26rpx;
   color: #1B1B1B;
   font-weight: 700;
   line-height: 160%;
@@ -169,7 +169,7 @@ color: #1B1B1B;
 .com_tag{
   padding: 11rpx 16rpx;
   height: 40rpx;
-width: 134rpx;
+/* width: 134rpx; */
 background: #4E9DF9;
 border-radius: 28rpx;
 font-weight: 700;

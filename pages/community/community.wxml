@@ -59,7 +59,9 @@
             <view class="com_title">Beepdth Aggerand</view>
             <view class="com_time">5m ago</view>
           </view>
-          <view class="com_tag">Biochemistry</view>
+          <view class="flex">
+            <view class="com_tag">Biochemistry</view>
+          </view>
         </view> 
       </view>
     </view>

@@ -18,7 +18,7 @@ Page({
     if (options.type) {
       this.setData({
         type:options.type,
-        title:options.type == 'like'?'Likes':options.type == 'commit'?'Comments':"Forum",
+        title:options.type == 'like'?'赞和收藏':options.type == 'commit'?'评论':"通知",
       })
     }
   },

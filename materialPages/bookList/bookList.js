@@ -5,11 +5,16 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    bottomShare:false
   },
   toUrl(e) {
     wx.navigateTo({
       url: e.currentTarget.dataset.url
+    })
+  },
+  close() {
+    this.setData({
+      bottomShare:!this.data.bottomShare
     })
   },
   /**

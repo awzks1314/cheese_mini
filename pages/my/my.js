@@ -120,9 +120,14 @@ Page({
     query.select(element).boundingClientRect(
       function (e) {
         console.log(e);
+        let height = element == '.list_flag1'?(e.top - 360 ):(e.top - 380 )
+        if (height < 300) {
+          height = 300
+        }
         that.setData({
-          swiperHeight: element == '.list_flag1'?(e.top - 360 )+ 'px' :(e.top - 380 )+ 'px'
+          swiperHeight: height + 'px'
         })
+        
       }).exec();
   },
   getTopHeight() {

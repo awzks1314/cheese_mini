@@ -1,23 +1,25 @@
-<view class="header_box">
-  <view class="header_content">
-    <view class="flex flex-direction align-center right_one" bindtap="goUrl" data-url="/myPages/noticeDetail/noticeDetail" data-type="like">
-      <image src="/static/img/notifications/Frame36.png" class="header_image"></image>
-      <text class="header_text">Interest</text>
-    </view>
-    <view class="flex flex-direction align-center right_two" bindtap="goUrl" data-url="/myPages/noticeDetail/noticeDetail" data-type="commit">
-      <image src="/static/img/notifications/Frame35.png" class="header_image"></image> 
-      <text class="header_text">Comment</text>
-    </view>
+<view class="isFixed">
+  <view class="header_box">
+    <view class="header_content">
+      <view class="flex flex-direction align-center right_one" bindtap="goUrl" data-url="/myPages/noticeDetail/noticeDetail" data-type="like">
+        <image src="/static/img/notifications/Frame36.png" class="header_image"></image>
+        <text class="header_text">赞和收藏</text>
+      </view>
+      <view class="flex flex-direction align-center right_two" bindtap="goUrl" data-url="/myPages/noticeDetail/noticeDetail" data-type="commit">
+        <image src="/static/img/notifications/Frame35.png" class="header_image"></image> 
+        <text class="header_text">评论</text>
+      </view>
 
-    <view class="flex flex-direction align-center" bindtap="goUrl" data-url="/myPages/noticeDetail/noticeDetail" data-type="seting">
-      <image src="/static/img/notifications/Frame34.png" class="header_image"></image>
-      <text class="header_text">Notifications</text>
+      <view class="flex flex-direction align-center" bindtap="goUrl" data-url="/myPages/noticeDetail/noticeDetail" data-type="seting">
+        <image src="/static/img/notifications/Frame34.png" class="header_image"></image>
+        <text class="header_text">通知</text>
+      </view>
     </view>
   </view>
 </view>
-<free-gap height="136"></free-gap>
+<free-gap height="240"></free-gap>
 <view class="list_box">
-  <view class="list_item" wx:for="{{5}}" wx:key="{{index}}" bindtap="goUrl" data-url="/messagePages/messageDetail/messageDetail" >
+  <view class="list_item" wx:for="{{10}}" wx:key="{{index}}" bindtap="goUrl" data-url="/messagePages/messageDetail/messageDetail" >
     <image src="/static/img/notifications/Rectangle25.png" class="my_header_avatar"></image>
     <view class="message_message_title">
       <view class="message_message_title_top">
@@ -29,5 +31,5 @@
 </view>
 </view>
 
-<free-gap height="160"></free-gap>
+<free-gap height="120"></free-gap>
 <free-tabbar list="{{tabList}}" current="3" ></free-tabbar>

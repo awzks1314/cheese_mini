@@ -60,7 +60,7 @@ color: #FFFFFF;
 }
 .mater_item{
   display: inline-flex;
-  width: 328rpx;
+  width: 376rpx;
   height: 264rpx;
   margin-right: 16rpx;
   border-radius: 24rpx;
@@ -70,12 +70,12 @@ color: #FFFFFF;
   margin-right: 0;
 }
 .mater_item_image{
-  width: 328rpx;
+  width: 376rpx;
   height: 136rpx;
 }
 .tag_content{
   white-space:normal !important;  
-  font-size: 20rpx;
+  font-size: 26rpx; 
   color: #1B1B1B;
   font-weight: 700;
   line-height: 160%;
@@ -94,9 +94,26 @@ color: #FFFFFF;
   font-size:16rpx;
   display: flex;
 }
+.collectNote{
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  top: 16rpx;
+  left: 16rpx;
+  background-color: #fff;
+  border-radius: 64rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.collect_image{
+  width: 24rpx;
+  height: 24rpx;
+}
 .tab_one_style{
   position: relative;
-  padding: 24rpx 16rpx 40rpx;
+  /* padding: 24rpx 16rpx 40rpx; */
+  padding: 24rpx 16rpx 30rpx;
 }
 .like_sm{
   width: 18rpx;

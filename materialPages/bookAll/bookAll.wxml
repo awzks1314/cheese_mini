@@ -17,31 +17,34 @@
   <view class="btn_box flex align-center">
     <view class="flex-sub flex align-center justify-center flex-direction">
       <image src="/static/img/icon/like.png" class="like"></image>
-      <text class="like_name">SAVE</text>
+      <text class="like_name">收藏</text>
     </view>
     <view class="flex-sub flex align-center justify-center flex-direction">
       <image src="/static/img/icon/down.png" class="like"></image>
-      <text class="like_name">DOWNLOAD</text>
+      <text class="like_name">下载</text>
     </view>
     <view class="flex-sub flex align-center justify-center flex-direction">
       <image src="/static/img/icon/share.png" class="like"></image>
-      <text class="like_name">SHARE</text>
+      <text class="like_name">分享</text>
     </view>
   </view>
 </view>
 
 <free-gap height="76"></free-gap>
 <view class="teacher" bindtap="toUrl" data-url="/materialPages/bookList/bookList">
-  <view class="teacher_title">Notes</view>
-  <view class="teacher_arrow">see all</view>
+  <view class="teacher_title">笔记</view>
+  <view class="teacher_arrow">展开</view>
 </view>
 
 <view class="card_scrool">
   <scroll-view class="scroll-style" scroll-x="true">
     <view class=" mater_item flex flex-direction relative" wx:for="{{3}}" wx:key="index" bindtap="close" >
-      <view class="tags">
+      <!-- <view class="tags">
         <image src="/static/img/icon/like_sm.png" class="like_sm"></image>
         <view>100% (11)</view>
+      </view> -->
+      <view class="collectNote">
+        <image src="/static/img/find/collect.png" class="collect_image"></image>
       </view>
       <image src="/static/img/find/bg.png" class="mater_item_image"></image>
       <view class="tab_one_style bg-white ">
@@ -54,8 +57,8 @@
 </view>
 
 <view class="teacher" bindtap="toUrl" data-url="/materialPages/bookList/bookList">
-  <view class="teacher_title">Notes</view>
-  <view class="teacher_arrow">see all</view>
+  <view class="teacher_title">推荐</view>
+  <view class="teacher_arrow">展开</view>
 </view>
 
 <view class="card_scrool">

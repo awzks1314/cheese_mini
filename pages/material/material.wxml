@@ -1,12 +1,5 @@
-
-<!-- <view style="height:0;">
-  <free-navBar title='' background='transoprt'     >
-  <view class='padding-lr' slot="left" bindtap="goUrl" data-url="/pages/question/question">
-
-  </view>
-</free-navBar>
-</view>  -->
-<view class="input_box ">
+<view class="isFixed">
+  <view class="input_box ">
   <view class="w100 flex align-end justify-between">
     <view class="flex align-center" bindtap="swicthTab" data-url="/pages/my/my">
       <image src="/static/img/find/avatar.png" class="my_header_avatar"></image>
@@ -38,16 +31,16 @@
     <image src="/static/img/home/filter.png" class="input_image" bindtap="openShow"></image>
   </view>
 </view>
-
-<free-gap height="84"></free-gap>
+<free-gap height="84" bgColor="#f0f0f0"></free-gap>
 <view class="flex align-center two_tab_box">
-
   <scroll-view scroll-x="true" class="scroll-style">
     <view class="mater_two_tab {{currentTab == index?'mater_two_tab_active':''}}" bindtap="changeTab" data-index="{{index}}" wx:for="{{AllCategory}}" wx:key="index">
     {{item}}
   </view>
   </scroll-view>
 </view>
+</view>
+
 
 <!-- <swiper class="card-swiper {{true?'square-dot':'round-dot'}}" indicator-dots="true" circular="true" autoplay="true"  interval="5000" duration="500" bindchange="cardSwiper" indicator-color="#fff" indicator-active-color="#436FC4" 		previous-margin="35px" 	next-margin="20px">
   <swiper-item wx:for="{{swiperList}}" wx:key='index' class="{{cardCur == index?'cur':''}}">
@@ -56,7 +49,7 @@
     </view>
   </swiper-item>
 </swiper> -->
-
+<free-gap height="464"></free-gap>
 <view class="card_scrool">  
   <scroll-view class="scroll-style" scroll-x="true">
     <view class="  mater_item flex flex-direction relative" wx:for="{{3}}" wx:key="index" bindtap="toUrl" data-url="/materialPages/bookAll/bookAll">
@@ -81,8 +74,8 @@
     <view class="">
       <view class="list_card  flex align-center relative" wx:for="{{5}}" wx:key="index" bindtap="close">
       <view class="collectNote collectNotes">
-      <image src="/static/img/find/collect.png" class="collect_image"></image>
-    </view>
+        <image src="/static/img/find/collect.png" class="collect_image"></image>
+      </view>
       <view class="relative">
         <image src="" class="boook_avatar bg-gray"></image>
         <view class="group_box">
@@ -108,7 +101,6 @@
           </view>
         </view>
       </view>
-       
     </view>
   </view>
 
@@ -203,8 +195,8 @@
             <text class="icon_text">200</text>
             <image src="/static/img/icon/like_gray.png" class="icon_like"></image>
             <text class="icon_text">30</text>
-            <image src="/static/img/icon/book.png" class="icon_like"></image>
-            <text class="icon_text">Read 100 Page 100</text>
+            <!-- <image src="/static/img/icon/book.png" class="icon_like"></image>
+            <text class="icon_text">Read 100 Page 100</text> -->
           </view>
         </view>
       </view>
@@ -212,15 +204,15 @@
       <view class="down_box">
         <view class="flex-sub flex align-center justify-center flex-direction">
           <image src="/static/img/icon/like.png" class="like"></image>
-          <text class="like_name">SAVE</text>
+          <text class="like_name">收藏</text>
         </view>
         <view class="flex-sub flex align-center justify-center flex-direction">
           <image src="/static/img/icon/down.png" class="like"></image>
-          <text class="like_name">DOWNLOAD</text>
+          <text class="like_name">下载</text>
         </view>
         <view class="flex-sub flex align-center justify-center flex-direction">
           <image src="/static/img/icon/share.png" class="like"></image>
-          <text class="like_name">SHARE</text>
+          <text class="like_name">分享</text>
         </view>
       </view>
 

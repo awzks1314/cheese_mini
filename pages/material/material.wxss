@@ -1,3 +1,10 @@
+.isFixed{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+}
 .header_left_image{
   width: 40rpx;
   height: 40rpx;
@@ -15,7 +22,7 @@
   left: 0;
   width: 100%;
   z-index: 99;
-  padding: 0 24rpx 94rpx;
+  padding: 0 0 94rpx;
 }
 .input_header{
   position: absolute;
@@ -49,6 +56,7 @@
 }
 .my_header_avatar{
   width: 88rpx;
+  margin-left:24rpx;
   height: 88rpx;
   border-radius: 50%;
 }
@@ -117,7 +125,9 @@
   left: 16rpx;
 }
 .two_tab_box{
-  margin: 0 24rpx 24rpx;
+  padding: 0 24rpx 24rpx;
+  background-color: #f0f0f0;
+  /* background-color: red; */
 }
 .mater_two_tab{
   padding: 16rpx 30rpx;
