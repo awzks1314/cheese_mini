@@ -33,7 +33,7 @@ App({
         "selectedIconPath": "/static/img/tabbarIcon/find1.png"
       },
       {
-        "pagePath":"/pages/upload/upload",
+        "pagePath":"/communityPages/post/post",
         text:"",
         iconPath:"/static/img/tabbarIcon/add.png",
         selectedIconPath:"/static/img/tabbarIcon/add.png",

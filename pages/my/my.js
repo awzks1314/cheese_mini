@@ -9,7 +9,7 @@ Page({
     tabIndex:0,
     tableft:0,
     modal:false,
-    swiperHeight:'200px',
+    swiperHeight:'640rpx',
     background:'rgba(0,0,0,0)',
     color:'#fff',
     isFixed:false,

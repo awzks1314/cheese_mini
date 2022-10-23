@@ -6,11 +6,12 @@
   height: 24rpx;
 }
 .bookAll_header{
-  height: 472rpx;
+  height: 648rpx;
+  padding-top: 204rpx;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #436FC4;
+  /* background-color: #436FC4; */
   position: relative;
 }
 .bookItem{
@@ -113,7 +114,7 @@ color: #FFFFFF;
 .tab_one_style{
   position: relative;
   /* padding: 24rpx 16rpx 40rpx; */
-  padding: 24rpx 16rpx 30rpx;
+  padding: 24rpx 16rpx 20rpx;
 }
 .like_sm{
   width: 18rpx;
@@ -246,8 +247,8 @@ display: flex;
 align-items: center;
 justify-content: center;
 font-weight: 400;
-font-size: 26rpx;
-line-height: 30rpx;
+font-size: 32rpx;
+line-height: 36rpx;
 letter-spacing: -0.33rpx;
 
 color: #FFFFFF;

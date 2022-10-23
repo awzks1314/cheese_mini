@@ -48,6 +48,23 @@
           <image src="/static/img/message/like.png" class="like"></image>
           <text class="commit_text">129</text>
         </view>
+        <view class="commit_agin flex">
+          <image src="/static/img/notifications/Rectangle25.png" class="my_header_avatar_sm"></image>
+          <view class="right_content_item flex-sub">
+            <view class=" flex justify-between ">
+              <view class="name_style">Doreathe</view>
+              <view class="time_style">5m ago</view>
+            </view>
+            <view class="commit_mains">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis
+            </view>
+            <view class="flex">
+              <image src="/static/img/message/commit.png" class="commit"></image>
+              <image src="/static/img/message/like.png" class="like"></image>
+              <text class="commit_text">129</text>
+            </view>
+          </view>
+        </view>
       </view>
     </view>
     <view class="line_width"></view>
@@ -76,7 +93,10 @@
 </view>
 
 <free-gap height="140"></free-gap>
-<view class="commit_input flex {{show?'apper':''}}">
+<view class="commit_input flex align-center {{show?'apper':''}}">
   <image src="/static/img/notifications/Rectangle25.png" class="my_header_avatar_commit"></image>
   <input type="text" class="commit_inputStyle" placeholder="Reply" placeholder-class="place_style"/>
+  <image src="/static/img/message/heart.png" class="heart"></image>
+  <view class="heart_text">230</view>
+  <image src="/static/img/message/sahres.png" class="sahres"></image>
 </view>

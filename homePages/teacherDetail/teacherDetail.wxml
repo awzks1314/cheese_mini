@@ -6,6 +6,7 @@
 </free-navBar>
 </view>
 <view class="my_header_box">
+<image src="/static/img/home/bg.png" class="bg_image"> </image>
 </view>
 <view class="my_header  flex flex-direction align-center">
   <view class="my_header_avatar" style="background: url('https://cheese-ninja.oss-cn-shenzhen.aliyuncs.com/avatar/Female/Avatarz_black0307.png?x-oss-process=style/img-sm') center no-repeat;background-size:350rpx; background-position:46% 6%; ">

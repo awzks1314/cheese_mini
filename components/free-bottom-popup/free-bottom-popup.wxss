@@ -4,7 +4,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 99999;
+  z-index: 9999999;
   visibility: hidden;
   transform: translate3d(0, 100%, 0);
   transform-origin: center;
@@ -18,8 +18,8 @@
 }
 
 .line_white{
-  width: 60rpx;
-  height: 6rpx;
+  width: 80rpx;
+  height: 8rpx;
   background-color: #fff;
   border-radius: 20rpx;
   margin: 0 auto 20rpx;
@@ -31,7 +31,7 @@
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.6);
-  z-index: 99996;
+  z-index: 9999996;
   transition: all 0.3s ease-in-out;
   opacity: 0;
   visibility: hidden;

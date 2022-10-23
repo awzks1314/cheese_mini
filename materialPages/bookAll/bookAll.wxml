@@ -1,9 +1,11 @@
-<free-navBar title='' background='#436FC3'>
+<view style="height: 0;">
+  <free-navBar title='' background='rgba(0,0,0,0)'>
   <view class='left_back' slot="left" bindtap="handlerGobackClick" >
     <image src="/static/img/icon/ArrowLeft.png" class="header_left_image"></image>
   </view>
 </free-navBar>
-<view class="bookAll_header ">
+</view>
+<view class="bookAll_header" style="background-image: url('/static/img/banner.png');">
   <view class="bookItem">2022 New Energy Report</view>
   <image src="/static/img/find/avatar.png" class="mater_item_avatars"></image>
   <view class="type_name">Soochow International</view>
@@ -14,16 +16,16 @@
     <text>3.5</text>
   </view>
 
-  <view class="btn_box flex align-center">
-    <view class="flex-sub flex align-center justify-center flex-direction">
+  <view class="btn_box flex align-center justify-between">
+    <view class=" flex align-center justify-center flex-direction">
       <image src="/static/img/icon/like.png" class="like"></image>
       <text class="like_name">收藏</text>
     </view>
-    <view class="flex-sub flex align-center justify-center flex-direction">
+    <view class=" flex align-center justify-center flex-direction">
       <image src="/static/img/icon/down.png" class="like"></image>
       <text class="like_name">下载</text>
     </view>
-    <view class="flex-sub flex align-center justify-center flex-direction">
+    <view class=" flex align-center justify-center flex-direction">
       <image src="/static/img/icon/share.png" class="like"></image>
       <text class="like_name">分享</text>
     </view>
@@ -64,32 +66,12 @@
 <view class="card_scrool">
   <scroll-view class="scroll-style" scroll-x="true">
     <view class=" mater_item flex flex-direction relative" wx:for="{{3}}" wx:key="index" bindtap="close" >
-      <view class="tags">
+      <!-- <view class="tags">
         <image src="/static/img/icon/like_sm.png" class="like_sm"></image>
         <view>100% (11)</view>
-      </view>
-      <image src="/static/img/find/bg.png" class="mater_item_image"></image>
-      <view class="tab_one_style bg-white ">
-        <view class=" tag_content">
-          <text class=" text-cut-2">2022 New Energy Strategy Report (Photovoltaic, Energy</text>
-        </view>
-      </view>
-    </view>
-  </scroll-view>
-</view>
-
-
-<view class="teacher" bindtap="toUrl" data-url="/materialPages/bookList/bookList">
-  <view class="teacher_title">Notes</view>
-  <view class="teacher_arrow">see all</view>
-</view>
-
-<view class="card_scrool">
-  <scroll-view class="scroll-style" scroll-x="true">
-    <view class=" mater_item flex flex-direction relative" wx:for="{{3}}" wx:key="index"  bindtap="close" >
-      <view class="tags">
-        <image src="/static/img/icon/like_sm.png" class="like_sm"></image>
-        <view>100% (11)</view>
+      </view> -->
+      <view class="collectNote">
+        <image src="/static/img/find/collect.png" class="collect_image"></image>
       </view>
       <image src="/static/img/find/bg.png" class="mater_item_image"></image>
       <view class="tab_one_style bg-white ">
@@ -121,8 +103,8 @@
             <text class="icon_text">200</text>
             <image src="/static/img/icon/like_gray.png" class="icon_like"></image>
             <text class="icon_text">30</text>
-            <image src="/static/img/icon/book.png" class="icon_like"></image>
-            <text class="icon_text">Read 100 Page 100</text>
+            <!-- <image src="/static/img/icon/book.png" class="icon_like"></image>
+            <text class="icon_text">Read 100 Page 100</text> -->
           </view>
         </view>
       </view>

@@ -6,7 +6,7 @@
         <view class="free-tag bg-red" catchtap="DelImg" data-index="{{index}}">
           <free-icon name="close" size='24' color='#fff'></free-icon>
         </view>
-      </view>
+      </view> 
       <view class="post_upload_content bg-gray" bindtap="ChooseImage" wx:if="{{imgList.length<9}}">
         <free-icon name="add" class="free-upicon" color="#436FC3"></free-icon>
       </view>
@@ -21,7 +21,7 @@
       </view>
     </view>
   </view>
-  <view class=""></view>
+  <view class="line_hen"></view>
   <view class="top_bottom flex align-center">
     <switch class="blue"></switch>
     <view class="switch_txt">Post with anonymity</view>
@@ -30,44 +30,39 @@
   <view class="sanjiao"></view>
   <view class="sanjiaos"></view>
 </view>
-
-
-
-
-<!-- <view class="relative padding-lr ">
-  <view class="post_word_limit flex align-center justify-between ">
-    <picker bindchange="bindPickerChange" value="{{sessionIndex}}" range="{{arraySession}}">
-        <view class="picker text-blue">
-          # {{name || '选择话题'}} # 
-        </view>
-      </picker>
-    <view class="text-gray">{{info.length}}/300</view>
-  </view>
-</view> -->
-
 <view class="bottom_box">
   <view class="bottom_item bottom_active">Thought</view>
-  <!-- <view class="bottom_item ">Application</view> -->
-  <view class="bottom_item">Upload Notes</view>
+  <view class="bottom_item" bindtap="toUrl" data-url="/pages/upload/upload">Upload Notes</view>
 </view>
 
+<view class="bottom_post">
+  <!-- <view class="bottom_post_top">
+    <view class="bottom_post_top_line"></view>
+  </view> -->
 
-<!-- <free-gap height="80"></free-gap> -->
-<!-- <view class=" info_button">
-  <view class="info_button_content">
-    <free-icon name="edit" color="#fff"></free-icon>立刻发帖</view>
-</view> -->
-<free-drawer 
-    show="{{show}}"
-    mode="bottom" 
-    closeable="{{false}}"
-    length="50%">
-    <view class="flex align-center justify-between">
-      <view class="post_left">
-        <view>树洞</view>
-      </view>
-      <view class="post_right">
-        <text>2</text>
-      </view>
+  <view class="flex align-center justify-between">
+    <view class="bottom_post_item bg-blue">
+      <image src="/static/img/home/add.png" class="add"></image>
+      <view class="add_text">Apply to become
+a teacher</view>
     </view>
-    </free-drawer>
+    <view class="bottom_post_item bg-grr" bindtap="toUrl" data-url="/pages/upload/upload">
+      <image src="/static/img/home/kefu.png" class="kefu"></image>
+      <text class="add_text">Ask for help</text>
+    </view>
+  </view>
+</view>
+<free-drawer 
+  show="{{show}}"
+  mode="bottom" 
+  closeable="{{false}}"
+  length="50%">
+  <view class="flex align-center justify-between">
+    <view class="post_left">
+      <view>树洞</view>
+    </view>
+    <view class="post_right">
+      <text>2</text>
+    </view>
+  </view>
+</free-drawer>

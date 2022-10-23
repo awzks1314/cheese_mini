@@ -20,9 +20,15 @@ Page({
     level:'HL',
     sessionIndex:0,
     seeionArray:['A','B','C'],
-    AllCategory:['All','Books','Notes','Paper','Thesis','Thesis','Thesis']
+    AllCategory:['All','Books','Notes','Paper','Thesis','Thesis','Thesis'],
+    scrollTop:0,
+    isCollect:false
   },
- 
+ onPageScroll(e) {
+  this.setData({
+    scrollTop:e.scrollTop
+  })
+ },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -37,10 +43,16 @@ Page({
       console.log(res)
     })
   },
-  // 打开筛选
-  openShow() {
+  // 点击收藏
+  collect() {
     this.setData({
-      show:true
+      isCollect:!this.data.isCollect
+    })
+  },
+  // 打开筛选
+  filterClose() {
+    this.setData({
+      show:!this.data.show
     })
   },
   // 阻止筛选
@@ -52,6 +64,7 @@ Page({
       bottomShare:!this.data.bottomShare
     })
   },
+  
   // 滑动轮播
   cardSwiper(e) {
     this.setData({

@@ -14,10 +14,11 @@
   height: 184rpx;
   background: #FFFFFF;
   border-radius: 24rpx;
-  padding: 32rpx 88rpx 32rpx 90rpx;
+  padding: 32rpx 88rpx 26rpx 90rpx;
   display: flex;
   align-items: center;
   position: absolute;
+  justify-content: space-between;
   left: 24rpx;
   top: 24rpx;
 }
@@ -33,10 +34,11 @@ line-height: 28rpx;
 color: #000000;
 }
 .right_one{
-  margin-right: 128rpx;
+  
 }
 .right_two{
-  margin-right: 104rpx;
+  /* margin-right: 140rpx;
+  margin-left: 140rpx; */
 }
 .list_box{
   padding: 0 24rpx 24rpx;

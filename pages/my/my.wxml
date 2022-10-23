@@ -6,11 +6,8 @@
   </view>
 </free-navBar>
 <view class="my_header_box">
-  <!-- <view class="my_header_now">
-    <image src="/static/img/profile/Group.png" class="my_heaedr_now"></image>
-    <text class="my_header_text">Subscribe Now</text>
-  </view> -->
-</view>
+
+</view> 
 <view class="my_header  flex flex-direction align-center">
   <view class="my_header_avatar" style="background: url('https://cheese-ninja.oss-cn-shenzhen.aliyuncs.com/avatar/Female/Avatarz_black0307.png?x-oss-process=style/img-sm') center no-repeat;background-size:320rpx;">
   </view>
@@ -37,7 +34,7 @@
     </view>
     <view class="checc_line"></view>
     <view class="my_header_box_tabitem" bindtap="sign" >
-      <image src="/static/img/profile/Vector.png" 
+      <image src="/static/img/find/calendar-2.png" 
       class="my_header_box_image"></image>
       <view>
         <view class="checc_name">Daily Check-in</view>
@@ -57,15 +54,25 @@
 
 <swiper style="height: {{swiperHeight}}" bindchange="changeSwiper" current="{{current}}">
   <swiper-item class="swiper_style">
-    <view class="padding " wx:if="{{uploadList.length == 0}}">
-      <view class="radius flex align-center justify-between padding bg-white">
+    <view class="tab_style">
+      <view class="tab_item_in tab_active">Resource</view>
+      <view class="tab_item_in">Post</view>
+    </view>
+    <view class="upload_box" wx:if="{{uploadList.length == 0}}">
+      <view class="upload_style">
+        <image src="/static/img/profile/upload.png" class="upload_image"></image>
+        <view class="upload_text">Upload File</view>
+        <view class="upload_desc">Supported formats PDF</view>
+        <view class="upload_desc">The PDF format is less than 10 MB.</view>
+      </view>
+      <!-- <view class="radius flex align-center justify-between padding bg-white">
         <view class="">
           <text class="text-bold up_text ">开始你的第一篇资料上传</text>
           <view class="text-sm whiteBorder">上传首篇内容，开通创作中心</view>
         </view>
 
-        <view class="my_header_vip_btn bg-gradual-blue text-lg" bindtap="toUrl" data-url="/myPages/upload/upload">去上传</view>
-      </view>
+        <view class="my_header_vip_btn bg-gradual-blue text-lg" bindtap="toUrl" data-url="/communityPages/post/post">去上传</view>
+      </view> -->
     </view>
     <view class="padding-lr-lg flex flex-wrap padding-tb-sm" wx:else>
       <view wx:for="{{10}}" wx:key="index" class="product_item flex flex-direction bg-white shadow-main swiper-item{{index}}">
@@ -81,6 +88,11 @@
   <swiper-item class="swiper_style ">
     <view class="one_padding">
       <view class="one_item_box">
+        <view class="one_list_items flex align-center justify-end">
+          <image src="/static/img/profile/Edit.png" class="edit_box_image"></image>
+          <view>Edit</view> 
+        </view>
+        <view class="one_list_line"></view>
         <view class="one_list_item">
           <text class="one_list_name">Name</text>
           <text class="one_list_value">Hannah Gonzalez</text>
@@ -108,12 +120,12 @@
       </view>
     </view>
 
-    <view class="edit_box">
+    <!-- <view class="edit_box">
       <view class="edit_box_content">
         <image src="/static/img/profile/Edit.png" class="edit_box_image"></image>
         <view>Edit</view>
       </view>
-    </view>
+    </view> -->
     <view class="list_flag1"></view>
   </swiper-item>
   <swiper-item class="swiper_style">

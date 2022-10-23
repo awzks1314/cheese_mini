@@ -1,21 +1,18 @@
-<free-navBar title='' background='#436FC4'     >
-  <view slot="center" class="header_search">
-    <image src="/static/img/community/Search.png" class="header_image"></image>
-      <text>Search your notes</text>
+<free-navBar title='' background='#F8F8F8'     >
+  <view slot="center" class="tab_card">
+    <view class="community_tab {{tabTab == 0 ?' community_tab_style':''}}" bindtap="changeTab" data-index="0" data-name="tabTab">Home</view>
+      <view class="community_tab {{tabTab == 1 ?' community_tab_style':''}}" bindtap="changeTab" data-index="1" data-name="tabTab">Chat</view>
+      <view class="community_tab {{tabTab == 2 ?' community_tab_style':''}}" bindtap="changeTab" data-index="2" data-name="tabTab">Teacher</view>
   </view>
 </free-navBar>
-
-<view class="tab_box">
-  <view class="tab_card">
-    <view class="community_tab {{tabTab == 0 ?' community_tab_style':''}}" bindtap="changeTab" data-index="0" data-name="tabTab">Home</view>
-    <view class="community_tab {{tabTab == 1 ?' community_tab_style':''}}" bindtap="changeTab" data-index="1" data-name="tabTab">Chat</view>
-    <view class="community_tab {{tabTab == 2 ?' community_tab_style':''}}" bindtap="changeTab" data-index="2" data-name="tabTab">Teacher</view>
-  </view>
+<view  class="search_box">
+  <image src="/static/img/community/Search.png" class="header_image"></image>
+    <text>{{tabTab == 0?'Search your notes':tabTab == 1?'Search':'Search your Teacher'}}</text>
 </view>
 
-<view class="card_scrool">  
+<view class="card_scrool" wx:if="{{tabTab == 0}}">  
   <scroll-view class="scroll-style" scroll-x="true">
-    <view class="  mater_item flex flex-direction relative" wx:for="{{3}}" wx:key="index" bindtap="toUrl" data-url="/materialPages/bookAll/bookAll">
+    <view class="  mater_item flex flex-direction relative" wx:for="{{3}}" wx:key="index" bindtap="goUrl" data-url="/materialPages/bookAll/bookAll">
     <view class="tags">
       Biochemistry
     </view>
@@ -23,18 +20,26 @@
     <image src="/static/img/find/bg.png" class="mater_item_image"></image>
     <view class="tab_one_style bg-white ">
       <view class=" tag_content">
-        <text class=" text-cut-2">2022 New Energy Strategy Report (Photovoltaic, Energy</text>
+        <text class=" text-cut-2">2022 New Energy Strategy Report (Photovoltaic, Energy...</text>
       </view>
     </view>
   </view>
   </scroll-view>
 </view>
 
-<view class="teacher" bindtap="goUrl" data-url="/homePages/teacher/teacher">
-  <view class="teacher_title">Recommendation Teachers</view>
-  <view class="teacher_arrow" >see all</view>
+<view class="flex align-center two_tab_box" wx:if="{{tabTab == 1}}">
+  <scroll-view scroll-x="true" class="scroll-style">
+    <view class="mater_two_tab {{currentTab == index?'mater_two_tab_active':''}}" bindtap="changeTab" data-index="{{index}}" wx:for="{{AllCategory}}" wx:key="index">
+    {{item}}
+  </view>
+  </scroll-view>
 </view>
-<view class="teacher_scroll" bindtap="goUrl" data-url="/homePages/teacher/teacher">
+
+<view class="teacher" bindtap="goUrl" data-url="/homePages/teacher/teacher" wx:if="{{tabTab == 0}}">
+  <view class="teacher_title">Recommendation Teachers</view>
+  <view class="teacher_arrow" >展开</view>
+</view>
+<view class="teacher_scroll" bindtap="goUrl" data-url="/homePages/teacher/teacher" wx:if="{{tabTab == 0}}">
   <scroll-view class="scroll-style" scroll-x="true">
     <view class="teacher_scroll_item" wx:for="{{5}}" wx:key="index">
       <image src="/static/img/community/Rectangle34.png" class="teacher_scroll_item_image"></image>
@@ -43,12 +48,45 @@
   </scroll-view>
 </view>
 
+<view class="list_item_box" wx:if="{{tabTab == 2}}">
+  <view class="list_item" wx:for="{{7}}" wx:key="index" bindtap="goUrl" data-url="/homePages/teacherDetail/teacherDetail">
+    <image src="/static/img/community/Rectangle34.png" class="my_header_avatar"></image>
+    <view class="list_content">
+      <view class="list_item_name">Jessica Iskandar</view>
+      <view class="list_item_school">
+        <text>University of Cambridge</text>
+      </view>
+      <view class="list_item_tag_box">
+        <view class="list_item_tag bg-blueLight">Biochemistry</view>
+        <view class="list_item_tag bg-pinkLight">Physics</view>
+      </view>
 
-<view class="teacher">
-  <view class="teacher_title">Top Discussion</view>
-  <view class="teacher_arrow">see all</view>
+      <view class="list_item_desc">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero...
+      </view>
+    </view>
+  </view>
 </view>
-<view class="item_card">
+
+<view class="plus_box" wx:if="{{tabTab == 1}}">
+  <image src="/static/img/home/Plus.png" class="plus"></image>
+  <text>New Post</text>
+</view>
+
+<view class="filter_box" wx:if="{{tabTab == 2}}">
+  <image src="/static/img/home/blue.png" class="filter"></image>
+  <text>Filter</text>
+</view>
+
+<view class="add_box" wx:if="{{tabTab == 2}}">
+  <image src="/static/img/home/add.png" class="add"></image>
+</view>
+
+<view class="teacher" wx:if="{{tabTab  == 0}}">
+  <view class="teacher_title">Top Discussion</view>
+  <view class="teacher_arrow">展开</view>
+</view>
+<view class="item_card" wx:if="{{tabTab != 2}}">
   <view class="com_content "  
   wx:for="{{5}}" wx:key="index" >
     <view class="flex align-center justify-between">

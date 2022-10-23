@@ -9,9 +9,12 @@
 
 .my_header_box {
   height: 224rpx;
-  background-color: #436FC4;
+  /* background-color: #436FC4; */
 }
-
+.bg_image{
+  width: 100%;
+  height: 224rpx;
+}
 .my_header {
   padding-top: 80rpx;
   position: relative;
@@ -264,8 +267,8 @@ height: 96rpx;
 background: #436FC3;
 border-radius: 24rpx;
 font-weight: 400;
-font-size: 26rpx;
-  line-height: 30rpx;
+font-size: 32rpx;
+  line-height: 36rpx;
   letter-spacing: -0.33rpx;
 
 color: #FFFFFF;

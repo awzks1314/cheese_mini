@@ -25,6 +25,7 @@ Page({
     tabCurrentTab:0,
     tabTab:0,//树洞、申请、补习
     commitShow:false,//评论
+    AllCategory:['All','Math','Chemistry','History','Biology'],
   },
 
   /**

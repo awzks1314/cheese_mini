@@ -1,7 +1,7 @@
 <view class="isFixed">
   <view class="header_box">
     <view class="header_content">
-      <view class="flex flex-direction align-center right_one" bindtap="goUrl" data-url="/myPages/noticeDetail/noticeDetail" data-type="like">
+      <view class="flex flex-direction align-center justify-between " bindtap="goUrl" data-url="/myPages/noticeDetail/noticeDetail" data-type="like">
         <image src="/static/img/notifications/Frame36.png" class="header_image"></image>
         <text class="header_text">赞和收藏</text>
       </view>

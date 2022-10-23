@@ -85,7 +85,7 @@ color:#1B1B1B ;
   height: 144rpx;
   background: #FFFFFF;
   border-radius: 24rpx;
-  padding: 40rpx 74rpx 40rpx 74rpx;
+  padding: 40rpx 42rpx 40rpx 74rpx;
   margin-top: 32rpx;
   margin-bottom: 24rpx;
   display: flex;
@@ -122,12 +122,16 @@ color: #868686;
   height: 0px;
   border: 2rpx solid #DADCDF;
   transform: rotate(90deg);
+  /* margin-right: 10rpx; */
+}
+.padding-le {
+  padding-right: 6rpx;
 }
 .my_header_box_image{
-  width: 39rpx;
-  height: 37rpx;
+  width: 48rpx;
+  height: 48rpx;
   margin-right: 20.5rpx;
-  margin-left: 66rpx;
+  margin-left: 64rpx;
 }
 .tab_box{
   position: relative;
@@ -181,6 +185,15 @@ color: #868686;
  display: flex;
  justify-content: space-between;
  align-items: center;
+}
+.one_list_items{
+  padding: 32rpx;
+  font-weight: 400;
+  font-size: 26rpx;
+  line-height: 30rpx;
+  letter-spacing: -0.33rpx;
+
+  color: #436FC3;
 }
 .one_list_line{
   width: 638rpx;
@@ -513,4 +526,65 @@ swiper {
 }
 .drawer_item:nth-child(3n) {
   margin-right: 0;
+}
+.tab_style{
+  padding: 36rpx 0 72rpx 24rpx;
+  display: flex;
+}
+.tab_item_in{
+  font-weight: 400;
+  font-size: 28rpx;
+  line-height: 32rpx;
+  letter-spacing: -0.33rpx;
+  color: #1B1B1B;
+  margin-right: 40rpx;
+}
+.tab_active{
+  font-weight: 700;
+  color: #436FC3;
+  position: relative;
+}
+.tab_active::after {
+  content: "";
+  width: 32rpx;
+  height: 4rpx;
+  border-radius: 20rpx;
+  position: absolute;
+  left: calc(50% - 16rpx);
+  bottom: -8rpx;
+  background-color: #436FC3;
+}
+.upload_box{
+  padding: 0 26rpx 0 22rpx;
+}
+.upload_style {
+  padding: 104rpx 24rpx;
+width: 702rpx;
+/* height: 476rpx; */
+background: #FFFFFF;
+border: 2rpx dashed #436FC3;
+border-radius: 32rpx; 
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+.upload_image{
+width: 128rpx;
+height: 128rpx;
+}
+.upload_text{
+  font-weight: 700;
+font-size: 28rpx;
+line-height: 32rpx;
+color: #1B1B1B;
+margin: 24rpx 0 16rpx;
+}
+.upload_desc{
+  font-weight: 400;
+font-size: 26rpx;
+line-height: 30rpx;
+
+color: #868686;
+margin-bottom: 8rpx;
 }

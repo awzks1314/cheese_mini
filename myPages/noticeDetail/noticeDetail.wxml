@@ -5,27 +5,15 @@
   <view slot="center" class="center_style">{{title}}</view>
 </free-navBar>
 
-<view class="padding-lr" wx:if="{{type=='seting'}}">
-  <view class="padding-top ">
-    <view class="text-center text-gray text-sm">2019/09/11 20:00</view>
-    <view class="padding bg-white margin-top radius">
-      <view class="flex align-center justify-between">
-        <text class="text-bold">您的资料上传没有通过</text>
-        <text class="red_dot"></text>
-      </view> 
-    </view>
-  </view>
-  
-  <view wx:for="{{3}}" wx:key="index" class="padding-top" bindtap="goUrl" data-url="/myPages/noticeDetailPages/noticeDetailPages">
-    <view class="text-center text-gray text-sm">2019/09/11 20:00</view>
-    <view class="padding bg-white margin-top radius">
-      <view class="flex align-center justify-between">
-        <text class="text-bold">您的资料上传没有通过</text>
-        <text class="red_dot"></text>
+<view class="padding-lr" wx:if="{{type=='seting'}}">  
+  <!-- <view wx:for="{{3}}" wx:key="index" class="padding-top" bindtap="goUrl" data-url="/myPages/noticeDetailPages/noticeDetailPages"> -->
+  <view class="liek_list flex margin-top" wx:for="{{5}}" wx:key="index">
+    <view class="right_content flex-sub">
+      <view class=" flex justify-between ">
+        <view class="name_style">Jessica Iskandar</view>
+        <view class="time_style">5m ago</view>
       </view>
-      <view class="margin-top-xs text-gray text-cut-1">
-        这里显示填写的资料审核原因审核原因这里显示填写的资料审核原因审核原因这
-      </view>
+      <view class="time_style desc_stylle text-cut-3 padding-top-sm">Liked your iked your iked your  your iked your iked your iked your iked your iked your iked your iked your  your iked your iked your  your iked your iked your  your iked your iked your file</view>
     </view>
   </view>
 </view>

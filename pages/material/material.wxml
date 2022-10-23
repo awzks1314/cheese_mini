@@ -1,4 +1,4 @@
-<view class="isFixed">
+<view class="{{scrollTop >0 ?'isFixed':''}}">
   <view class="input_box ">
   <view class="w100 flex align-end justify-between">
     <view class="flex align-center" bindtap="swicthTab" data-url="/pages/my/my">
@@ -6,8 +6,8 @@
       <view class="flex flex-direction padding-left">
         <view class="flex align-center">
           <text class="big_text">Hello，Rasel</text>
-          <view class="upload_button bg-green " bindtap="toUrl" data-url="/myPages/upload/upload">
-            <image src="/static/img/home/Paper Upload.png" class="upload_image"></image>
+          <view class="upload_button bg-blue " bindtap="toUrl" data-url="/myPages/upload/upload">
+            <image src="/static/img/home/upload.png" class="upload_image"></image>
               <text>Upload</text>
             </view>
         </view>
@@ -27,11 +27,11 @@
   <view class="input_header    bg-white flex align-center">
     <image src="/static/img/home/Search.png" class="input_search_img"></image>
     <input type="text" placeholder="Search your notes" class="input_style"/> 
-    <view class="input_line"></view>
-    <image src="/static/img/home/filter.png" class="input_image" bindtap="openShow"></image>
+    <!-- <view class="input_line"></view>
+    <image src="/static/img/home/filter.png" class="input_image" bindtap="openShow"></image> -->
   </view>
 </view>
-<free-gap height="84" bgColor="#f0f0f0"></free-gap>
+<free-gap height="84" bgColor="#f0f0f0" ></free-gap>
 <view class="flex align-center two_tab_box">
   <scroll-view scroll-x="true" class="scroll-style">
     <view class="mater_two_tab {{currentTab == index?'mater_two_tab_active':''}}" bindtap="changeTab" data-index="{{index}}" wx:for="{{AllCategory}}" wx:key="index">
@@ -49,14 +49,14 @@
     </view>
   </swiper-item>
 </swiper> -->
-<free-gap height="464"></free-gap>
+<free-gap height="464" wx:if="{{scrollTop >0}}"></free-gap>
 <view class="card_scrool">  
   <scroll-view class="scroll-style" scroll-x="true">
     <view class="  mater_item flex flex-direction relative" wx:for="{{3}}" wx:key="index" bindtap="toUrl" data-url="/materialPages/bookAll/bookAll">
     <view class="tags">
       Biochemistry
     </view>
-    <view class="collectNote">
+    <view class="collectNote {{isCollect?'bg-red':'bg-white'}}" catchtap="collect">
       <image src="/static/img/find/collect.png" class="collect_image"></image>
     </view>
     <image src="/static/img/find/bg.png" class="mater_item_image"></image>
@@ -73,19 +73,11 @@
 
     <view class="">
       <view class="list_card  flex align-center relative" wx:for="{{5}}" wx:key="index" bindtap="close">
-      <view class="collectNote collectNotes">
+      <view class="collectNote collectNotes {{isCollect?'bg-red':'bg-white'}}" catchtap="collect">
         <image src="/static/img/find/collect.png" class="collect_image"></image>
       </view>
       <view class="relative">
-        <image src="" class="boook_avatar bg-gray"></image>
-        <view class="group_box">
-          <image src="/static/img/find/Path.png" class="group"></image>
-          <view>8.5 MB</view>
-        </view>
-        <view class="path_box">
-          <image src="/static/img/find/Group.png" class="group"></image>
-          <view>12 Pages</view>
-        </view>
+        <view src="/static/img/community/Rectangle34.png" class="boook_avatar bg-gray"></view>
       </view>
         <view class="right_content">
           <view class=" flex">
@@ -95,8 +87,12 @@
           <view class="flex align-center justify-between">
             <image src="/static/img/find/avatar.png" mode="aspectFill" class="mater_item_avatars"></image>
             <view class="flex align-center">
-                <image src="/static/img/find/Eye.png" class="eye"></image>
-                <view class="eye_text">7.2K Views</view>
+              <image src="/static/img/find/Group.png" class="group"></image>
+              <view class="eye_text sss">8.5 MB</view>
+              <image src="/static/img/find/path.png" class="path_box"></image>
+              <view class="eye_text sss">12 Pages</view>
+              <image src="/static/img/find/Eye.png" class="eye"></image>
+              <view class="eye_text">7.2K Views</view>
             </view>
           </view>
         </view>
@@ -104,15 +100,12 @@
     </view>
   </view>
 
-  <free-drawer 
-    show="{{show}}"
-    mode="right" 
-    closeable="{{false}}"
-    length="70%">
-    <view class="padding relative h100" catchtap="closeClose">
+  <free-bottom-popup
+    show="{{show}}" bind:close="filterClose" bgcolor="transport" height="80%">
+    <view class="filter_box_style">
       <view>
-      <free-gap height="160"></free-gap>
-        <view class="text-bold padding-bottom">Category</view>
+        <view class="filter_title_main">Filter</view>
+        <view class="filter_title">Category</view>
         <view class="flex flex-wrap">
           <text class="drawer_item {{category == 'IA'?'drawer_item_active':''}}" catchtap="changeCategory"  data-type="IA">IA</text>
           <text class="drawer_item {{category == 'EE'?'drawer_item_active':''}}"  catchtap="changeCategory" data-type="EE">EE</text>
@@ -121,63 +114,64 @@
           <text class="drawer_item {{category == 'Ps'?'drawer_item_active':''}}" catchtap="changeCategory" data-type="Ps">Ps</text>
         </view>
         <view wx:if="{{category == 'Ps'}}">
-          <view class="text-bold margin-top padding-tb" >学科</view>
+          <view class="filter_title" >学科</view>
           <view class="subject_input">
             <input type="text" placeholder="Type a subject"/>
             <free-icon name="triangledownfill" size="28"></free-icon>
           </view>
 
-          <view class="text-bold margin-top padding-tb" >国家</view>
+          <view class="filter_title" >国家</view>
           <view class="subject_input" >
             <input type="text" placeholder="Type a subject"/>
             <free-icon name="triangledownfill" size="28"></free-icon>
           </view>
         </view>
         <view wx:if="{{category != 'Ps'}}">
-          <view class="text-bold margin-top padding-tb" wx:if="{{category != 'TOK'}}">Subject</view>
+          <view class="filter_title" wx:if="{{category != 'TOK'}}">Subject</view>
           <view class="subject_input" wx:if="{{category != 'TOK'}}">
             <input type="text" placeholder="Type a subject"/>
             <free-icon name="triangledownfill" size="28"></free-icon>
           </view>
 
-          <view class="text-bold margin-top padding-tb" wx:if="{{category == 'IA' || category == 'Notes'}}">Level</view>
-          <view class="flex align-center flex-wrap" wx:if="{{category == 'IA' || category == 'Notes'}}">
-            <view class="flex align-center margin-left-lg"  catchtap="changeName" data-type="HL" data-name="level">
-              <free-icon name="{{level== 'HL'?'squarecheckfill':'square'}}" color="{{level== 'HL'?'#436FC4':''}}"></free-icon>
-              <view class="padding-left-xs">HL</view>
+          <view class="filter_title" wx:if="{{category == 'IA' || category == 'Notes'}}">Level</view>
+          <view class="flex align-center" wx:if="{{category == 'IA' || category == 'Notes'}}">
+            <view class="flex align-center"  catchtap="changeName" data-type="HL" data-name="level">
+              <image src="/static/img/home/{{level== 'HL'?'sel':'unsel'}}.png" class="sel"></image>
+              <view class="sel_text sel_right">HL</view>
             </view>
-            <view class="flex align-center margin-left-lg" catchtap="changeName" data-type="SL" data-name="level">
-              <free-icon name="{{level== 'SL'?'squarecheckfill':'square'}}" color="{{level== 'SL'?'#436FC4':'#aaa'}}"></free-icon>
-              <view class="padding-left-xs">SL</view>
+            <view class="flex align-center " catchtap="changeName" data-type="SL" data-name="level">
+              <image src="/static/img/home/{{level== 'SL'?'sel':'unsel'}}.png" class="sel"></image>
+              <view class="sel_text">SL</view>
             </view>
           </view>
-          <view class="text-bold margin-top padding-tb" >成绩</view>
-          <view class="padding-left-lg">
+          <view class="filter_title" >Skor</view>
+          <view class="flex align-center">
             <view class="flex align-center margin-bottom" wx:for="{{seeionArray}}" wx:key="index" catchtap="changeName" data-index="{{index}}" data-indexname="sessionIndex" data-name="session" >
-              <free-icon name="{{sessionIndex== index?'squarecheckfill':'square'}}" color="{{sessionIndex== index?'#436FC4':'#aaa'}}"></free-icon>
-              <view class="padding-left-xs">{{item}}</view>
+              <image src="/static/img/home/{{sessionIndex== index?'sel':'unsel'}}.png" class="sel"></image>
+              <view class="sel_text sel_right">{{item}}</view>
             </view>
           </view>
-          <view class="text-bold margin-top padding-tb">Session</view>
-          <view class="padding-left-lg">
-            <view class="flex align-center margin-bottom " catchtap="changeName" data-type="May 2022" data-name="session">
-              <free-icon name="{{session== 'May 2022'?'squarecheckfill':'square'}}" color="{{session== 'May 2022'?'#436FC4':'#aaa'}}"></free-icon>
-              <view class="padding-left-xs">May 2022</view>
+          <view class="filter_title">Session</view>
+          <view class="">
+            <view class="sel_item flex align-center " catchtap="changeName" data-type="May 2022" data-name="session">
+              <image src="/static/img/home/{{session== 'May 2022'?'sel':'unsel'}}.png" class="sel"></image>
+              <view class="sel_text">May 2022</view>
             </view>
-            <view class="flex align-center margin-bottom " catchtap="changeName" data-type="November 2021" data-name="session">
-              <free-icon name="{{session== 'November 2021'?'squarecheckfill':'square'}}" color="{{session== 'November 2021'?'#436FC4':'#aaa'}}"></free-icon>
-              <view class="padding-left-xs">November 2021</view>
+            <view class="sel_item flex align-center " catchtap="changeName" data-type="May 2022" data-name="session">
+              <image src="/static/img/home/{{session== 'November 2021'?'sel':'unsel'}}.png" class="sel"></image>
+              <view class="sel_text">November 2021</view>
             </view>
-           
           </view>
         </view>
       </view>
       <view class="drawer_button">
         Apply
       </view>
+      <!-- <free-gap height="160"></free-gap> -->
     </view>
-  </free-drawer >
+  </free-bottom-popup >
 
+<!-- read -->
   <free-bottom-popup show="{{bottomShare}}" bgcolor="transport" bind:close="close">
     <!-- bind:close="close" -->
     <view class="share_content">
@@ -220,14 +214,21 @@
         <image src="/static/img/icon/read_white.png" class="icon_eye"></image>
         <text>Read</text>
       </view>
-      <free-gap height="150"></free-gap>
+      <!-- <free-gap height="150"></free-gap> -->
     </view>
   </free-bottom-popup>
 
-<view class="community_button" bindtap="goUrl" data-url="/communityPages/post/post">
+
+
+<view class="filter_box" bindtap="filterClose">
+  <image src="/static/img/community/filter.png" class="filter"></image>
+  <text>Filter</text>
+</view>
+
+<!-- <view class="community_button" bindtap="goUrl" data-url="/communityPages/post/post">
   <button class="community_edit bg-blue shadow" open-type="contact">
     <free-icon name="commentfill" color="#fff" size="50"></free-icon>
   </button>
-</view>
+</view> -->
 <free-gap height="160"></free-gap>
 <free-tabbar list="{{tabList}}" current="1" ></free-tabbar>

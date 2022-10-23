@@ -58,16 +58,10 @@
   color: transparent;
 }
 .border-radius-left{
-  border-top-left-radius: 100rpx;
-  border-top-right-radius: 100rpx;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 100rpx;
+  border-radius: 24rpx 24rpx 24rpx 0px;
 }
 
 .border-radius-right{
-  border-top-left-radius: 50rpx;
-  border-top-right-radius: 50rpx;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 50rpx;
+  border-radius: 24rpx 24rpx 0px 24rpx;
 }
 

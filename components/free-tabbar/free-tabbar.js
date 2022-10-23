@@ -82,10 +82,15 @@ Component({
       this.triggerEvent("click", {
         index: e.currentTarget.dataset.index
       })
-      
-      wx.switchTab({
-        url: e.currentTarget.dataset.url,
-      })
+      if (e.currentTarget.dataset.index == 2) {
+        wx.navigateTo({
+          url:e.currentTarget.dataset.url ,
+        })
+      }else {
+        wx.switchTab({
+          url: e.currentTarget.dataset.url,
+        })
+      }
     }
   }
 })

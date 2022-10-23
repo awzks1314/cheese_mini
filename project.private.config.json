@@ -46,7 +46,7 @@
         {
           "name": "",
           "pathName": "myPages/noticeDetail/noticeDetail",
-          "query": "type=commit",
+          "query": "type=seting",
           "launchMode": "default",
           "scene": null
         },
@@ -74,6 +74,48 @@
         {
           "name": "",
           "pathName": "materialPages/bookList/bookList",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/community/community",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "communityPages/post/post",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/upload/upload",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "homePages/teacherDetail/teacherDetail",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "messagePages/messageDetail/messageDetail",
+          "query": "type=undefined",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/my/my",
           "query": "",
           "launchMode": "default",
           "scene": null
