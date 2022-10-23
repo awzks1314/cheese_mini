@@ -1,7 +1,7 @@
-<free-navBar title='' background='#436FC3'>
-  <view class='left_back' slot="left" bindtap="handlerGobackClick" >
+<free-navBar title='' background='#F8F8F8' back="true" bind:back="handlerGobackClick">
+  <!-- <view class='left_back' slot="left" bindtap="handlerGobackClick" >
     <image src="/static/img/icon/ArrowLeft.png" class="header_left_image"></image>
-  </view>
+  </view> -->
   <view slot="center" class="center_style">{{title}}</view>
 </free-navBar>
 
@@ -30,7 +30,7 @@
       </view>
       <view class="flex align-center justify-between">
         <view>
-          <view class="time_style desc_stylle">Liked your file</view>
+          <view class="time_style desc_stylle">收藏了你的⽂件</view>
           <view class="flex">
             <image src="/static/img/message/book.png" class="book"></image>
             <text>Scientist.pdf</text>
@@ -49,7 +49,7 @@
         <view class="name_style">Jessica Iskandar</view>
         <view class="time_style">5m ago</view>
       </view>
-      <view class="time_style descs_stylle">Liked your comment</view>
+      <view class="time_style descs_stylle">赞了你的评论</view>
       <view class="flex-sub flex align-center">
         <image src="/static/img/message/avatar.png" class="avatar"></image>
         <view class="avatar_text text-cut">Lorem ipsum dolor sit amet, consectetur sdsa ds</view>

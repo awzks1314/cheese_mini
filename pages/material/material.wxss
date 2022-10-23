@@ -159,12 +159,11 @@
 box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.04);
 }
 .tag_xueke{
-  background-color: #367FF7;
-  color: #fff;
+  
   border-radius: 50rpx;
   padding: 8rpx 16rpx;
   font-size:20rpx;
-  margin: 8rpx 0;
+  margin: 8rpx 8rpx 8rpx 0;
 }
 .tag_content{
   height: 84rpx;
@@ -201,13 +200,13 @@ margin-bottom: 8rpx;
   margin-right: 31rpx;
 }
 .path_box{
-  width: 18rpx;
-  height: 15rpx;
+  width: 24rpx;
+  height: 24rpx;
   margin-right: 7rpx;
 }
 .group{
-  width: 14rpx;
-  height: 18rpx;
+  width: 24rpx;
+  height: 24rpx;
   margin-right: 9rpx;
 }
 swiper {
@@ -231,7 +230,7 @@ swiper {
   margin-right: 8rpx;
 }
 .drawer_item{
-  width: 128rpx;
+  width: 116rpx;
   padding: 16rpx 32rpx;
   height: 62rpx;
   border-radius: 48rpx;
@@ -277,6 +276,12 @@ swiper {
   border-top-left-radius: 20rpx;
   border-top-right-radius: 20rpx;
   overflow: hidden;
+  height: 800rpx;
+}
+.aggress{
+  font-size: 26rpx;
+  text-align: center;
+  margin-top: 20rpx;
 }
 .share_padding{
   padding-top: 80rpx;
@@ -399,6 +404,16 @@ letter-spacing: -0.33rpx;
 color: #000000;
 padding-left: 8rpx;
 }
+.icon_group{
+  width: 36rpx;
+  height: 36rpx;
+  margin-right: 8rpx;
+}
+.icon_path{
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 8rpx;
+}
 .icon_eye{
   width: 40rpx;
   height: 40rpx;
@@ -484,7 +499,7 @@ color: #000000;
 }
 
 .filter_box_style{
-  padding: 40rpx 22rpx 20rpx;
+  padding: 40rpx 40rpx 20rpx;
   background-color: #fff;
   border-radius: 12px 12px 0px 0px;
 }

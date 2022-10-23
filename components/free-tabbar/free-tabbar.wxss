@@ -66,24 +66,24 @@ backdrop-filter: blur(10px);
   text-align: center;  
 }
 .free-icon-0 {
-  width: 38.6rpx !important;
-  height: 38.6rpx !important;
+  width: 44.8rpx !important;
+  height: 44.8rpx !important;
 }
 .free-icon-1 {
-  width: 36rpx !important;
-  height: 38.4rpx !important;
+  width: 42rpx !important;
+  height: 44rpx !important;
 }
 .free-icon-2 {
   width: 96rpx !important;
   height: 96rpx !important ;
 }
 .free-icon-3 {
-  width: 29rpx !important;
-  height: 36rpx !important;
+  width: 34rpx !important;
+  height: 42rpx !important;
 }
 .free-icon-4 {
-  width: 36rpx !important;
-  height: 36rpx !important;
+  width: 42rpx !important;
+  height: 42rpx !important;
 }
 .free-tabbar-tag{
   position: absolute;

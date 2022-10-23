@@ -33,7 +33,10 @@
 .bg-theme{
   background-color: #fff;
 }
-
+.bg-lineBlue {
+  background: #FEC144;
+  color: #fff;
+}
 .app_title{
   position: relative;
 }

@@ -1,21 +1,30 @@
 <free-navBar title='' background='#F8F8F8'     >
   <view slot="center" class="tab_card">
-    <view class="community_tab {{tabTab == 0 ?' community_tab_style':''}}" bindtap="changeTab" data-index="0" data-name="tabTab">Home</view>
-      <view class="community_tab {{tabTab == 1 ?' community_tab_style':''}}" bindtap="changeTab" data-index="1" data-name="tabTab">Chat</view>
-      <view class="community_tab {{tabTab == 2 ?' community_tab_style':''}}" bindtap="changeTab" data-index="2" data-name="tabTab">Teacher</view>
+    <view class="community_tab {{tabTab == 0 ?' community_tab_style':''}}" bindtap="changeTab" data-index="0" data-name="tabTab">推荐</view>
+      <view class="community_tab {{tabTab == 1 ?' community_tab_style':''}}" bindtap="changeTab" data-index="1" data-name="tabTab">论坛</view>
+      <view class="community_tab {{tabTab == 2 ?' community_tab_style':''}}" bindtap="changeTab" data-index="2" data-name="tabTab">老师</view>
   </view>
 </free-navBar>
-<view  class="search_box">
+<view  class="search_box" wx:if="{{tabTab == 0}}">
   <image src="/static/img/community/Search.png" class="header_image"></image>
+  <text>{{tabTab == 0?'Search your notes':tabTab == 1?'Search':'Search your Teacher'}}</text>
+</view>
+
+<view wx:if="{{tabTab == 2}}" class="flex align-center">
+  <view  class="search_boxs" >
+    <image src="/static/img/community/Search.png" class="header_image"></image>
     <text>{{tabTab == 0?'Search your notes':tabTab == 1?'Search':'Search your Teacher'}}</text>
+  </view>
+  <view class="teacher_button">Apply to become
+a teacher</view>
 </view>
 
 <view class="card_scrool" wx:if="{{tabTab == 0}}">  
   <scroll-view class="scroll-style" scroll-x="true">
     <view class="  mater_item flex flex-direction relative" wx:for="{{3}}" wx:key="index" bindtap="goUrl" data-url="/materialPages/bookAll/bookAll">
-    <view class="tags">
+    <!-- <view class="tags">
       Biochemistry
-    </view>
+    </view> -->
 
     <image src="/static/img/find/bg.png" class="mater_item_image"></image>
     <view class="tab_one_style bg-white ">
@@ -36,7 +45,7 @@
 </view>
 
 <view class="teacher" bindtap="goUrl" data-url="/homePages/teacher/teacher" wx:if="{{tabTab == 0}}">
-  <view class="teacher_title">Recommendation Teachers</view>
+  <view class="teacher_title">老师推荐</view>
   <view class="teacher_arrow" >展开</view>
 </view>
 <view class="teacher_scroll" bindtap="goUrl" data-url="/homePages/teacher/teacher" wx:if="{{tabTab == 0}}">
@@ -44,6 +53,9 @@
     <view class="teacher_scroll_item" wx:for="{{5}}" wx:key="index">
       <image src="/static/img/community/Rectangle34.png" class="teacher_scroll_item_image"></image>
       <view class="teacher_scroll_item_name">Steffany Chou</view>
+      <view class="tags">
+        Biochemistry
+      </view>
     </view>
   </scroll-view>
 </view>
@@ -70,7 +82,7 @@
 
 <view class="plus_box" wx:if="{{tabTab == 1}}">
   <image src="/static/img/home/Plus.png" class="plus"></image>
-  <text>New Post</text>
+  <text>发帖</text>
 </view>
 
 <view class="filter_box" wx:if="{{tabTab == 2}}">
@@ -83,7 +95,7 @@
 </view>
 
 <view class="teacher" wx:if="{{tabTab  == 0}}">
-  <view class="teacher_title">Top Discussion</view>
+  <view class="teacher_title">热门内容</view>
   <view class="teacher_arrow">展开</view>
 </view>
 <view class="item_card" wx:if="{{tabTab != 2}}">

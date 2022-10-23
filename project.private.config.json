@@ -46,7 +46,7 @@
         {
           "name": "",
           "pathName": "myPages/noticeDetail/noticeDetail",
-          "query": "type=seting",
+          "query": "",
           "launchMode": "default",
           "scene": null
         },

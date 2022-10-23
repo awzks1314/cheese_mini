@@ -6,7 +6,7 @@
   z-index: 99;
 }
 .header_box{
-  background-color: #436FC3;
+  background-color: #F8F8F8;
   height: 104rpx;
 }
 .header_content{
@@ -28,7 +28,7 @@
   margin-bottom: 12rpx;
 }
 .header_text{
-  font-weight: 400;
+  font-weight: 700;
 font-size: 24rpx;
 line-height: 28rpx;
 color: #000000;

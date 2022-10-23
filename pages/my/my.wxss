@@ -2,8 +2,9 @@
 
 .my_header_box{
   /* height: 224rpx; */
-  height: 80rpx;
-  background-color: #436FC4;
+  width: 100%;
+  height: 230rpx;
+  /* background-color: #436FC4; */
   /* padding: 112rpx 0 56rpx 24rpx; */
 }
 
@@ -105,8 +106,8 @@ color:#1B1B1B ;
 }
 .checc_name{
   font-weight: 400;
-font-size: 24rpx;
-line-height: 28rpx;
+font-size: 28rpx;
+line-height: 30rpx;
 letter-spacing: -0.33rpx;
 color: #868686;
 }
@@ -147,8 +148,8 @@ color: #868686;
   width: 175.5rpx;
   height: 80rpx;
   font-weight: 400;
-  font-size: 24rpx;
-  line-height: 28rpx;
+  font-size: 28rpx;
+  line-height: 30rpx;
   letter-spacing: -0.33rpx;
   color: #868686;
   display: flex;
@@ -189,7 +190,7 @@ color: #868686;
 .one_list_items{
   padding: 32rpx;
   font-weight: 400;
-  font-size: 26rpx;
+  font-size: 28rpx;
   line-height: 30rpx;
   letter-spacing: -0.33rpx;
 
@@ -203,14 +204,14 @@ color: #868686;
 }
 .one_list_name{
   font-weight: 400;
-  font-size: 26rpx;
+  font-size: 28rpx;
   line-height: 30rpx;
   letter-spacing: -0.33rpx;
   color: #868686;
 }
 .one_list_value{
   font-weight: 400;
-  font-size: 26rpx;
+  font-size: 28rpx;
   line-height: 30rpx;
   letter-spacing: -0.33rpx;
 color: #1B1B1B;
@@ -261,7 +262,7 @@ color: #1B1B1B;
 .product_name{
   padding: 24rpx 16rpx;
   font-weight: 700;
-font-size: 26rpx;
+font-size: 28rpx;
 line-height: 160%;
 color: #1B1B1B;
 /* background-color: #fff; */
@@ -362,7 +363,7 @@ position: relative;
   background-color: #fff;
   border-radius: 50rpx;
   color: #fff;
-  font-size: 24rpx;
+  font-size: 26rpx;
   padding: 12rpx 34rpx;
 }
 

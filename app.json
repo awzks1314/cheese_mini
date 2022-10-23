@@ -1,7 +1,8 @@
 {
   "pages": [
-    "pages/my/my",
     "pages/community/community",
+    "pages/my/my",
+    
     
     "pages/material/material",
     "pages/question/question",

@@ -20,7 +20,7 @@ Page({
     level:'HL',
     sessionIndex:0,
     seeionArray:['A','B','C'],
-    AllCategory:['All','Books','Notes','Paper','Thesis','Thesis','Thesis'],
+    AllCategory:['All','IA','Notes','EE','TOK','PS'],
     scrollTop:0,
     isCollect:false
   },

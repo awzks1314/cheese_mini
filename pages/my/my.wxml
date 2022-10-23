@@ -1,12 +1,14 @@
 
-<free-navBar title='' background='#436FC4'     >
+<view style="height:0;">
+  <free-navBar title='' background='transport'     >
   <view slot="left" class="my_header_now">
     <image src="/static/img/profile/Group.png" class="my_heaedr_now"></image>
     <text class="my_header_text">Subscribe Now</text>
   </view>
 </free-navBar>
+</view>
 <view class="my_header_box">
-
+<image src="/static/img/banner.png" mode='aspectFill' class="my_header_box"></image>
 </view> 
 <view class="my_header  flex flex-direction align-center">
   <view class="my_header_avatar" style="background: url('https://cheese-ninja.oss-cn-shenzhen.aliyuncs.com/avatar/Female/Avatarz_black0307.png?x-oss-process=style/img-sm') center no-repeat;background-size:320rpx;">
@@ -28,7 +30,7 @@
       <image src="/static/img/profile/sr-cheese.png" 
       class="my_header_box_image1"></image>
       <view>
-        <view class="checc_name">Cheese Value</view>
+        <view class="checc_name">芝士值</view>
         <view class="checc_value">131</view>
       </view>
     </view>
@@ -37,7 +39,7 @@
       <image src="/static/img/find/calendar-2.png" 
       class="my_header_box_image"></image>
       <view>
-        <view class="checc_name">Daily Check-in</view>
+        <view class="checc_name">每日签到</view>
         <view class="checc_value">131</view>
       </view>
     </view>
@@ -55,13 +57,13 @@
 <swiper style="height: {{swiperHeight}}" bindchange="changeSwiper" current="{{current}}">
   <swiper-item class="swiper_style">
     <view class="tab_style">
-      <view class="tab_item_in tab_active">Resource</view>
-      <view class="tab_item_in">Post</view>
+      <view class="tab_item_in tab_active">资料</view>
+      <view class="tab_item_in">帖子</view>
     </view>
     <view class="upload_box" wx:if="{{uploadList.length == 0}}">
       <view class="upload_style">
         <image src="/static/img/profile/upload.png" class="upload_image"></image>
-        <view class="upload_text">Upload File</view>
+        <view class="upload_text">上传文件</view>
         <view class="upload_desc">Supported formats PDF</view>
         <view class="upload_desc">The PDF format is less than 10 MB.</view>
       </view>

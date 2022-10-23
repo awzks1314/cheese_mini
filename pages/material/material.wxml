@@ -1,4 +1,4 @@
-<view class="{{scrollTop >0 ?'isFixed':''}}">
+<view class="isFixed">
   <view class="input_box ">
   <view class="w100 flex align-end justify-between">
     <view class="flex align-center" bindtap="swicthTab" data-url="/pages/my/my">
@@ -8,7 +8,7 @@
           <text class="big_text">Hello，Rasel</text>
           <view class="upload_button bg-blue " bindtap="toUrl" data-url="/myPages/upload/upload">
             <image src="/static/img/home/upload.png" class="upload_image"></image>
-              <text>Upload</text>
+              <text>上传</text>
             </view>
         </view>
         <text class="big_text_sub">let's start learning!</text>
@@ -49,15 +49,15 @@
     </view>
   </swiper-item>
 </swiper> -->
-<free-gap height="464" wx:if="{{scrollTop >0}}"></free-gap>
+<free-gap height="464"></free-gap>
 <view class="card_scrool">  
   <scroll-view class="scroll-style" scroll-x="true">
     <view class="  mater_item flex flex-direction relative" wx:for="{{3}}" wx:key="index" bindtap="toUrl" data-url="/materialPages/bookAll/bookAll">
     <view class="tags">
       Biochemistry
     </view>
-    <view class="collectNote {{isCollect?'bg-red':'bg-white'}}" catchtap="collect">
-      <image src="/static/img/find/collect.png" class="collect_image"></image>
+    <view class="collectNote bg-white" catchtap="collect">
+      <image src="/static/img/find/{{isCollect?'like_sm':'collect'}}.png" class="collect_image"></image>
     </view>
     <image src="/static/img/find/bg.png" class="mater_item_image"></image>
     <view class="tab_one_style bg-white ">
@@ -73,15 +73,18 @@
 
     <view class="">
       <view class="list_card  flex align-center relative" wx:for="{{5}}" wx:key="index" bindtap="close">
-      <view class="collectNote collectNotes {{isCollect?'bg-red':'bg-white'}}" catchtap="collect">
-        <image src="/static/img/find/collect.png" class="collect_image"></image>
+      <view class="collectNote collectNotes bg-white" catchtap="collect">
+        <image src="/static/img/find/{{isCollect?'like_sm':'collect'}}.png" class="collect_image"></image>
       </view>
       <view class="relative">
         <view src="/static/img/community/Rectangle34.png" class="boook_avatar bg-gray"></view>
       </view>
         <view class="right_content">
           <view class=" flex">
-            <text class="tag_xueke">Biochemistry</text>
+            <text class="tag_xueke bg-blue">IA</text>
+            <text class="tag_xueke bg-pink">Math</text>
+            <text class="tag_xueke bg-lineBlue">HL</text>
+            <text class="tag_xueke bg-tea">A</text>
           </view>
           <view class="tag_content text-cut-2">2022 New Energy Strategy Report (Photovoltaic, Energy Storage Wind Portddddds</view>
           <view class="flex align-center justify-between">
@@ -152,15 +155,9 @@
             </view>
           </view>
           <view class="filter_title">Session</view>
-          <view class="">
-            <view class="sel_item flex align-center " catchtap="changeName" data-type="May 2022" data-name="session">
-              <image src="/static/img/home/{{session== 'May 2022'?'sel':'unsel'}}.png" class="sel"></image>
-              <view class="sel_text">May 2022</view>
-            </view>
-            <view class="sel_item flex align-center " catchtap="changeName" data-type="May 2022" data-name="session">
-              <image src="/static/img/home/{{session== 'November 2021'?'sel':'unsel'}}.png" class="sel"></image>
-              <view class="sel_text">November 2021</view>
-            </view>
+          <view class="subject_input" >
+            <input type="text" placeholder="Type a subject"/>
+            <free-icon name="triangledownfill" size="28"></free-icon>
           </view>
         </view>
       </view>
@@ -185,6 +182,10 @@
           </view>
           <free-gap height="16"></free-gap>
           <view class="flex align-center">
+            <image src="/static/img/find/Group.png" class="icon_group"></image>
+            <view class="eye_text sss">8.5 MB</view>
+            <image src="/static/img/find/path.png" class="icon_path"></image>
+            <view class="eye_text sss">12 Pages</view>
             <image src="/static/img/icon/eye_gray.png" class="icon_eye"></image>
             <text class="icon_text">200</text>
             <image src="/static/img/icon/like_gray.png" class="icon_like"></image>
@@ -210,9 +211,10 @@
         </view>
       </view>
 
+      <view class="aggress text-gray">该文件属于《XXXX》和《XXXX》</view>
       <view class="read">
         <image src="/static/img/icon/read_white.png" class="icon_eye"></image>
-        <text>Read</text>
+        <text>阅读</text>
       </view>
       <!-- <free-gap height="150"></free-gap> -->
     </view>

@@ -9,11 +9,11 @@
   height: 24rpx;
 }
 .center_style{
-  font-weight: 400;
+  font-weight: 700;
   font-size: 32rpx;
   line-height: 36rpx;
   letter-spacing: -0.33rpx;
-  color: #FFFFFF;
+  color: #000;
 }
 .my_header_avatar{
   width: 72rpx;
