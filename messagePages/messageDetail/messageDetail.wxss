@@ -1,5 +1,5 @@
 page {
-  background-color: #E5E9F1;
+  background-color: #fff;
 }
 .message_box{
   padding: 32rpx 24rpx 0;
@@ -7,7 +7,7 @@ page {
 .message_time{
   width: 176rpx;
   height: 52rpx;
-  background: rgba(66, 112, 195, 0.1);
+  /* background: rgba(66, 112, 195, 0.1); */
   border-radius: 48rpx;
   font-weight: 500;
 font-size: 24rpx;

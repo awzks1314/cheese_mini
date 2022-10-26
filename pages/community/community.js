@@ -25,7 +25,7 @@ Page({
     tabCurrentTab:0,
     tabTab:0,//树洞、申请、补习
     commitShow:false,//评论
-    AllCategory:['全部','闲聊','帮助','其他'],
+    AllCategory:['全部','树洞','帮助','其他'],
   },
 
   /**

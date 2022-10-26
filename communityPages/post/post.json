@@ -2,7 +2,5 @@
   "usingComponents": {
     "free-drawer":"/components/free-drawer/free-drawer"
   },
-  "navigationBarBackgroundColor": "#436FC4",
-  "navigationBarTextStyle": "white",
   "navigationBarTitleText": "发帖"
 }

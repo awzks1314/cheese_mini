@@ -5,7 +5,8 @@
   </view>
 </free-navBar>
 </view>
-<view class="bookAll_header" style="background-image: url('/static/img/banner.png');">
+<view class="bookAll_header" >
+  <image src="/static/img/banner.png" class="bg_image"></image>
   <view class="bookItem">2022 New Energy Report</view>
   <image src="/static/img/find/avatar.png" class="mater_item_avatars"></image>
   <view class="type_name">Soochow International</view>

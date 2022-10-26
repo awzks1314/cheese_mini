@@ -14,13 +14,21 @@
   /* background-color: #436FC4; */
   position: relative;
 }
+.bg_image{
+  width: 100%;
+  height: 648rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
 .bookItem{
   font-weight: 700;
   font-size: 32rpx;
   line-height: 36rpx;
   letter-spacing: -0.33rpx;
   color: #F8F8F8;
-  margin-top: 32rpx;
+  /* margin-top: 32rpx; */
 }
 .mater_item_avatars{
   width: 104rpx;
@@ -57,21 +65,21 @@ color: #FFFFFF;
   margin-left: 30rpx;
 }
 .card_scrool{
-  padding: 0 24rpx; 
+  padding: 0 0 0 24rpx; 
 }
 .mater_item{
   display: inline-flex;
-  width: 376rpx;
-  height: 264rpx;
+  width: 328rpx;
+  height: 252rpx;
   margin-right: 16rpx;
   border-radius: 24rpx;
   overflow: hidden;
 }
-.mater_item:nth-last-child(1){
+/* .mater_item:nth-last-child(1){
   margin-right: 0;
-}
+} */
 .mater_item_image{
-  width: 376rpx;
+  width: 328rpx;
   height: 136rpx;
 }
 .tag_content{
@@ -96,8 +104,8 @@ color: #FFFFFF;
   display: flex;
 }
 .collectNote{
-  width: 40rpx;
-  height: 40rpx;
+  width: 48rpx;
+  height: 48rpx;
   position: absolute;
   top: 16rpx;
   left: 16rpx;
@@ -114,7 +122,7 @@ color: #FFFFFF;
 .tab_one_style{
   position: relative;
   /* padding: 24rpx 16rpx 40rpx; */
-  padding: 24rpx 16rpx 20rpx;
+  padding: 24rpx 16rpx;
 }
 .like_sm{
   width: 18rpx;

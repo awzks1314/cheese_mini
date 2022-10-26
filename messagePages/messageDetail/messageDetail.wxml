@@ -2,8 +2,8 @@
   <view class="message_time">2022-09-18 </view>
   <view class="message_item flex align-end">
     <image src="http://q1.qlogo.cn/g?b=qq&nk=664423077&s=640" class="user_avatar rig"></image>
-    <view class="message_item_content  border-radius-left bg-white">
-      <view>Hello，how can I help you?</view>
+    <view class="message_item_content  border-radius-left bg-gray">
+      <view>现在几点了?</view>
       <view class="message_time_left">13:18</view>
     </view>
   </view> 
@@ -12,7 +12,7 @@
   <view class="message_time">2022-09-18 </view>
   <view class="message_item flex justify-end align-end">
     <view class="message_item_contents  border-radius-right">
-      <text>Hello, i'm interesting in your credit products.</text>
+      <text>现在几点了现在几点了现在几点了</text>
       <view class="message_time_right">13:19</view>
     </view>
     <image src="http://q1.qlogo.cn/g?b=qq&nk=1401452384&s=640" class="user_avatar lef"></image>
@@ -20,7 +20,7 @@
 
   <view class="message_item flex justify-end align-end">
     <view class="message_item_contents  border-radius-right">
-      <text>Hello, i'm interesting in your cri'm interesting in your credit productsi'm interesting in your credit productsi'm interesting in your credit productsi'm interesting in your credit productsi'm interesting in your credit productsedit products.</text>
+      <text>现在几点了现在几点了现在几点了现在几点了现在几点了现在几点了现在几点了现在几点了现在几点了现在几点了现在几点了现在几点了现在几点了现在几点了现在几点了现在几点了现在几点了现在几点了现在几点了现在几点了现在几点了现在几点了现在几点了现在几点了现在几点了现在几点了现在几点了现在几点了现在几点了现在几点了.</text>
       <view class="message_time_right">13:19</view>
     </view>
     <image src="http://q1.qlogo.cn/g?b=qq&nk=1401452384&s=640" class="user_avatar lef"></image>

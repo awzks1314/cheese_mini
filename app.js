@@ -48,7 +48,7 @@ App({
       },
       {
         "pagePath": "/pages/my/my",
-        "text": "我",
+        "text": "我的",
         "iconPath": "/static/img/tabbarIcon/Profile.png",
         "selectedIconPath": "/static/img/tabbarIcon/Profile1.png"
       }

@@ -1,14 +1,17 @@
 <free-navBar title='' background='#F8F8F8'     >
+  <view class="left_icon" slot="left">
+    <image src="/static/img/community/Search.png" class="header_image"></image>
+  </view>
   <view slot="center" class="tab_card">
+    <view class="community_tab {{tabTab == 2 ?' community_tab_style':''}}" bindtap="changeTab" data-index="2" data-name="tabTab">老师</view>
     <view class="community_tab {{tabTab == 0 ?' community_tab_style':''}}" bindtap="changeTab" data-index="0" data-name="tabTab">推荐</view>
       <view class="community_tab {{tabTab == 1 ?' community_tab_style':''}}" bindtap="changeTab" data-index="1" data-name="tabTab">论坛</view>
-      <view class="community_tab {{tabTab == 2 ?' community_tab_style':''}}" bindtap="changeTab" data-index="2" data-name="tabTab">老师</view>
   </view>
 </free-navBar>
-<view  class="search_box" wx:if="{{tabTab == 0}}">
+<!-- <view  class="search_box" wx:if="{{tabTab == 0}}">
   <image src="/static/img/community/Search.png" class="header_image"></image>
   <text>{{tabTab == 0?'Search your notes':tabTab == 1?'Search':'Search your Teacher'}}</text>
-</view>
+</view> -->
 
 <view wx:if="{{tabTab == 2}}" class="flex align-center">
   <view  class="search_boxs" >
@@ -86,13 +89,13 @@ a teacher</view>
 </view>
 
 <view class="filter_box" wx:if="{{tabTab == 2}}">
-  <image src="/static/img/home/blue.png" class="filter"></image>
+  <image src="/static/img/community/filter.png" class="filter"></image>
   <text>Filter</text>
 </view>
 
-<view class="add_box" wx:if="{{tabTab == 2}}">
+<!-- <view class="add_box" wx:if="{{tabTab == 2}}">
   <image src="/static/img/home/add.png" class="add"></image>
-</view>
+</view> -->
 
 <view class="teacher" wx:if="{{tabTab  == 0}}">
   <view class="teacher_title">热门内容</view>
@@ -117,7 +120,7 @@ a teacher</view>
     </view>
 
     <view class="com_content_word" bindtap="goUrl" data-url="/myPages/forum/forum">
-      <text class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis</text>
+      <text class="">icon⼤⼩和设计稿好像不⼀致，尤其是消息和我，感觉要⼩⼀点。资料库的icon在有颜⾊和没颜⾊的时候，样式是不⼀样的，设计稿出来问题吗。把“我”改为“我的”</text>
     </view>
 
     <view class="com_tag_list flex align-center justify-between">

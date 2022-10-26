@@ -54,10 +54,15 @@
   <scroll-view class="scroll-style" scroll-x="true">
     <view class="  mater_item flex flex-direction relative" wx:for="{{3}}" wx:key="index" bindtap="toUrl" data-url="/materialPages/bookAll/bookAll">
     <view class="tags">
-      Biochemistry
+      <view class=" flex">
+        <text class="tag_xueke bg-blue">IA</text>
+        <text class="tag_xueke bg-pink">Math</text>
+        <text class="tag_xueke bg-lineBlue">HL</text>
+        <text class="tag_xueke bg-tea">A</text>
+      </view>
     </view>
     <view class="collectNote bg-white" catchtap="collect">
-      <image src="/static/img/find/{{isCollect?'like_sm':'collect'}}.png" class="collect_image"></image>
+      <image src="/static/img/find/{{isCollect?'like_sm':'collects'}}.png" class="collect_image"></image>
     </view>
     <image src="/static/img/find/bg.png" class="mater_item_image"></image>
     <view class="tab_one_style bg-white ">

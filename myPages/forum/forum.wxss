@@ -10,7 +10,6 @@
   font-size: 32rpx;
   line-height: 36rpx;
   letter-spacing: -0.33rpx;
-  color: #FFFFFF;
 }
 .commit_agin{
   margin-top: 28rpx;

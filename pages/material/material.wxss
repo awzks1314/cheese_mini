@@ -159,7 +159,6 @@
 box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.04);
 }
 .tag_xueke{
-  
   border-radius: 50rpx;
   padding: 8rpx 16rpx;
   font-size:20rpx;
@@ -188,6 +187,8 @@ margin-bottom: 8rpx;
 .eye{
   width: 24rpx;
   height: 24rpx;
+  margin-bottom: 7rpx;
+  margin-right: 7rpx;
 }
 .eye_text{
   font-weight: 400;
@@ -203,11 +204,13 @@ margin-bottom: 8rpx;
   width: 24rpx;
   height: 24rpx;
   margin-right: 7rpx;
+  margin-bottom: 7rpx;
 }
 .group{
   width: 24rpx;
   height: 24rpx;
   margin-right: 9rpx;
+  margin-bottom: 5rpx;
 }
 swiper {
   height: 120px;
@@ -346,11 +349,11 @@ swiper {
   position: absolute;
   top: 16rpx;
   left: 16rpx;
-  background-color: #367FF7;
-  color: #fff;
-  border-radius: 50rpx;
-  padding: 8rpx 16rpx;
-  font-size:20rpx;
+  /* background-color: #367FF7; */
+  /* color: #fff; */
+  /* border-radius: 50rpx; */
+  /* padding: 8rpx 16rpx; */
+  /* font-size:20rpx; */
 }
 .community_button{
   position: fixed;
@@ -477,14 +480,15 @@ color: #000000;
 }
 .filter_box{
   position: fixed;
-  bottom: 194rpx;
+  bottom: 210rpx;
   left: 268rpx;
-  width: 216rpx;
+  /* width: 216rpx; */
   height: 88rpx;
+  padding: 26rpx 48rpx 26rpx 53rpx;
   background: #436FC3;
   box-shadow: 0px 8rpx 56rpx rgba(0, 0, 0, 0.2);
   border-radius: 64rpx;
-  font-size: 32rpx;
+  font-size: 34rpx;
   line-height: 36rpx;
   color: #fff;
   display: flex;
@@ -493,8 +497,8 @@ color: #000000;
 }
 
 .filter{
-  width: 30rpx;
-  height: 30rpx;
+  width: 36rpx;
+  height: 36rpx;
   margin-right: 13rpx;
 }
 

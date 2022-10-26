@@ -22,7 +22,7 @@ Page({
       });
     } else {
       wx.navigateTo({
-        url: '/pages/home/home'
+        url: '/pages/community/community'
       });
     }
   },

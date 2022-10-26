@@ -47,10 +47,14 @@
   margin-left: 16rpx;
   padding: 8rpx 18rpx;
 }
+.left_icon{
+  display: flex;
+  align-items: flex-end;
+}
 .header_image{
   width: 36rpx;
   height: 36rpx;
-  margin-right: 22.5rpx;
+  /* margin-right: 22.5rpx; */
   margin-left: 29rpx;
 }
 .tab_box{
@@ -58,25 +62,32 @@
 }
 .tab_card{
   width: 100%;
-  height: 36rpx;
+  height: 40rpx;
   display: flex;
   justify-content: flex-end;
-  padding-left: 146rpx;
+  align-items: flex-end;
+  /* padding-left: 146rpx; */
 }
 .community_tab{
   /* width: 88rpx; */
-  height: 36rpx;
+  height: 40rpx;
   font-weight: 400;
-  font-size:32rpx;
-  line-height: 36rpx;
-  /* identical to box height */
-  letter-spacing: -0.33rpx;
-  color: #1B1B1B;
-  margin-right: 40rpx;
+  font-size:28rpx;
+  letter-spacing: 1rpx;
+  color: #333;
+  margin-right: 60rpx;
+  display: flex;
+  align-items: flex-end;
+}
+.community_tab:nth-last-child(1) {
+  margin-right: 20rpx;
 }
 .community_tab_style{
-  color: #436FC3;
+  color: #000;
+  font-weight: 800;
+  font-size: 32rpx;
   position: relative;
+  padding-bottom: 4rpx;
 }
 .community_tab_style::after{
   content: "";
@@ -85,25 +96,25 @@
   height: 4rpx;
   background-color: #436FC3;
   left: calc(50% - 16rpx);
-  bottom: -8rpx;
+  bottom: -4rpx;
   border-radius: 20rpx;
 }
 .card_scrool{
-  padding: 0 24rpx; 
+  padding: 0  0 0 24rpx; 
 }
 .mater_item{
   display: inline-flex;
-  width: 376rpx;
+  width: 328rpx;
   height: 248rpx;
   margin-right: 16rpx;
   border-radius: 24rpx;
   overflow: hidden;
 }
-.mater_item:nth-last-child(1){
+/* .mater_item:nth-last-child(1){
   margin-right: 0;
-}
+} */
 .mater_item_image{
-  width: 376rpx;
+  width: 328rpx;
   height: 136rpx;
 }
 .tag_content{
@@ -236,11 +247,10 @@ color: #868686;
 }
 .com_content_word{
   font-weight: 400;
-font-size: 26rpx;
-line-height: 30rpx;
-
-color: #000000;
-margin-top: 16rpx;
+  font-size: 26rpx;
+  line-height: 40rpx;
+  color: #333;
+  margin-top: 16rpx;
 }
 .com_tag_list{
   margin-top: 26rpx;
@@ -414,7 +424,7 @@ button{
 }
 .my_header_avatar{
   width: 136rpx;
-  height: 200rpx;
+  height: 210rpx;
   border-radius: 24rpx;
 }
 .list_content{
@@ -439,9 +449,10 @@ button{
   display: flex;
 }
 .list_item_tag{
-  padding: 9rpx 16rpx;
+  padding: 8rpx 16rpx;
   border-radius: 48rpx;
   font-weight: 700;
+  height: 40rpx;
   font-size: 20rpx;
   line-height: 22rpx;
   color: #F8F8F8 ;
@@ -458,14 +469,14 @@ button{
 .plus_box{
   position: fixed;
   bottom: 210rpx;
-  left: 268rpx;
-  /* width: 216rpx; */
-  height: 80rpx;
-  padding: 24rpx 24rpx 24rpx 34rpx;
+  left: 262rpx;
+  width: 222rpx;
+  height: 88rpx;
+  padding: 26rpx 48rpx 26rpx 53rpx;
   background: #436FC3;
   box-shadow: 0px 8rpx 56rpx rgba(0, 0, 0, 0.2);
   border-radius: 64rpx;
-  font-size: 32rpx;
+  font-size: 34rpx;
   line-height: 36rpx;
   color: #fff;
   display: flex;
@@ -482,24 +493,24 @@ button{
 .filter_box{
   position: fixed;
   bottom: 210rpx;
-  left: 268rpx;
-  /* width: 216rpx; */
+  left: 262rpx;
+  width: 222rpx;
   height: 88rpx;
   padding: 26rpx 48rpx 26rpx 53rpx;
-  background: #FFFFFF;
+  background: #436FC3;
   box-shadow: 0px 8rpx 56rpx rgba(0, 0, 0, 0.2);
   border-radius: 64rpx;
-  font-size: 32rpx;
+  font-size: 34rpx;
   line-height: 36rpx;
-  color: #436FC3;
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .filter{
-  width: 30rpx;
-  height: 30rpx;
+  width: 36rpx;
+  height: 36rpx;
   margin-right: 13rpx;
 }
 

@@ -1,7 +1,7 @@
-<free-navBar title='' background='#436FC3'>
-  <view class='left_back' slot="left" bindtap="handlerGobackClick" >
+<free-navBar title='' background='#fff' back="true" bindback="handlerGobackClick">
+  <!-- <view class='left_back' slot="left" bindtap="handlerGobackClick" >
     <image src="/static/img/icon/ArrowLeft.png" class="header_left_image"></image>
-  </view>
+  </view> -->
   <view slot="center" class="center_style">Forum</view>
 </free-navBar>
 <view class="liek_list">

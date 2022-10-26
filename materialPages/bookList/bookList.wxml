@@ -1,35 +1,36 @@
 <view class="">
-  <view class="list_card  flex align-center relative" wx:for="{{5}}" wx:key="index" bindtap="close">
-  <view class="collectNote collectNotes">
-    <image src="/static/img/find/collect.png" class="collect_image"></image>
-  </view>
-  <view class="relative">
-    <image src="" class="boook_avatar bg-gray"></image>
-    <view class="group_box">
-      <image src="/static/img/find/Path.png" class="group"></image>
-      <view>8.5 MB</view>
-    </view>
-    <view class="path_box">
-      <image src="/static/img/find/Group.png" class="group"></image>
-      <view>12 Pages</view>
-    </view>
-  </view>
-    <view class="right_content">
-      <view class=" flex">
-        <text class="tag_xueke">Biochemistry</text>
+      <view class="list_card  flex align-center relative" wx:for="{{5}}" wx:key="index" bindtap="close">
+      <view class="collectNote collectNotes bg-white" catchtap="collect">
+        <image src="/static/img/find/{{isCollect?'like_sm':'collect'}}.png" class="collect_image"></image>
       </view>
-      <view class="tag_content text-cut-2">2022 New Energy Strategy Report (Photovoltaic, Energy Storage Wind Portddddds</view>
-      <view class="flex align-center justify-between">
-        <image src="/static/img/find/avatar.png" mode="aspectFill" class="mater_item_avatars"></image>
-        <view class="flex align-center">
-            <image src="/static/img/find/Eye.png" class="eye"></image>
-            <view class="eye_text">7.2K Views</view>
+      <view class="relative">
+        <view src="/static/img/community/Rectangle34.png" class="boook_avatar bg-gray"></view>
+      </view>
+        <view class="right_content">
+          <view class=" flex">
+            <text class="tag_xueke bg-blue">IA</text>
+            <text class="tag_xueke bg-pink">Math</text>
+            <text class="tag_xueke bg-lineBlue">HL</text>
+            <text class="tag_xueke bg-tea">A</text>
+          </view>
+          <view class="tag_content text-cut-2">2022 New Energy Strategy Report (Photovoltaic, Energy Storage Wind Portddddds</view>
+          <view class="flex align-center justify-between">
+            <image src="/static/img/find/avatar.png" mode="aspectFill" class="mater_item_avatars"></image>
+            <view class="flex align-center">
+              <image src="/static/img/find/Group.png" class="group"></image>
+              <view class="eye_text sss">8.5 MB</view>
+              <image src="/static/img/find/path.png" class="path_box"></image>
+              <view class="eye_text sss">12 Pages</view>
+              <image src="/static/img/find/Eye.png" class="eye"></image>
+              <view class="eye_text">7.2K Views</view>
+            </view>
+          </view>
         </view>
       </view>
     </view>
-  </view>
-</view>
-<free-bottom-popup show="{{bottomShare}}" bgcolor="transport" bind:close="close">
+
+
+    <free-bottom-popup show="{{bottomShare}}" bgcolor="transport" bind:close="close">
     <!-- bind:close="close" -->
     <view class="share_content">
       <view class="flex">
@@ -42,6 +43,10 @@
           </view>
           <free-gap height="16"></free-gap>
           <view class="flex align-center">
+            <image src="/static/img/find/Group.png" class="icon_group"></image>
+            <view class="eye_text sss">8.5 MB</view>
+            <image src="/static/img/find/path.png" class="icon_path"></image>
+            <view class="eye_text sss">12 Pages</view>
             <image src="/static/img/icon/eye_gray.png" class="icon_eye"></image>
             <text class="icon_text">200</text>
             <image src="/static/img/icon/like_gray.png" class="icon_like"></image>
@@ -67,9 +72,10 @@
         </view>
       </view>
 
+      <view class="aggress text-gray">该文件属于《XXXX》和《XXXX》</view>
       <view class="read">
         <image src="/static/img/icon/read_white.png" class="icon_eye"></image>
-        <text>Read</text>
+        <text>阅读</text>
       </view>
       <!-- <free-gap height="150"></free-gap> -->
     </view>

@@ -13,11 +13,11 @@
     </scroll-view>
     <textarea maxlength="300" bindinput="textareaAInput" placeholder="Write your content..." value="{{info}}"></textarea>
     <view>
-      <view class="list_tag">List of Tags</view>
+      <view class="list_tag">标签</view>
       <view class="flex align-center">
-        <view class="tag">Add your tag</view>
-        <view class="tag">Add your tag</view>
-        <view class="tag">Add your tag</view>
+        <view class="tag">树洞</view>
+        <view class="tag">帮助</view>
+        <view class="tag">其他</view>
       </view>
     </view>
   </view>
@@ -31,8 +31,8 @@
   <view class="sanjiaos"></view>
 </view>
 <view class="bottom_box">
-  <view class="bottom_item bottom_active">Thought</view>
-  <view class="bottom_item" bindtap="toUrl" data-url="/pages/upload/upload">Upload Notes</view>
+  <view class="bottom_item bottom_active">帖子</view>
+  <view class="bottom_item" bindtap="toUrl" data-url="/pages/upload/upload">上传资料</view>
 </view>
 
 <view class="bottom_post">
@@ -43,12 +43,11 @@
   <view class="flex align-center justify-between">
     <view class="bottom_post_item bg-blue">
       <image src="/static/img/home/add.png" class="add"></image>
-      <view class="add_text">Apply to become
-a teacher</view>
+      <view class="add_text">当老师</view>
     </view>
     <view class="bottom_post_item bg-grr" bindtap="toUrl" data-url="/pages/upload/upload">
       <image src="/static/img/home/kefu.png" class="kefu"></image>
-      <text class="add_text">Ask for help</text>
+      <text class="add_text">寻求帮助</text>
     </view>
   </view>
 </view>
