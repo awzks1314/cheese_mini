@@ -50,6 +50,7 @@
 .left_icon{
   display: flex;
   align-items: flex-end;
+  padding-left: 10rpx;
 }
 .header_image{
   width: 36rpx;
@@ -85,7 +86,7 @@
 .community_tab_style{
   color: #000;
   font-weight: 800;
-  font-size: 32rpx;
+  /* font-size: 32rpx; */
   position: relative;
   padding-bottom: 4rpx;
 }
