@@ -1,6 +1,6 @@
 var configData = {
   url: "http://119.23.218.104/zhishi/", //正式
-  // url: "http://www.cheese-ninja.com/zhishi/", //正式
+  // url: "https://www.cheese-ninja.com/zhishi/", //正式
   //登陆失败后尝试重复登陆次数
   LOGIN_ERROR_TRY_COUNT: 5,
   //登陆失败后多长时间间隔重新发起登陆请求

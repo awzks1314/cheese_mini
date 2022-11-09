@@ -9,7 +9,7 @@
 			</view>
 			
       <view class="padding-lr flex align-center justify-center">
-        <button class="free-button loginWidth lg bg-green round block" bindgetuserinfo="getUseinfo">微信一键登录</button>
+        <button class="free-button loginWidth lg bg-green round block" bindtap="login">微信一键登录</button>
       </view>
       
 		</view>

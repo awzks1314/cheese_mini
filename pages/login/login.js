@@ -16,13 +16,19 @@ Page({
   },
   
   //点此登陆，直接获取手机号，并判断是否是会员
-  getUseinfo(info) {
-    console.log(info)
-    wx.getUserInfo({
-      lang: lang,
-      success(e) {
-      console.log(e)
-      }
+  login() {
+    wx.login({
+      success: (res) => {
+        app.axios({
+          url:'api/user/login',
+          data: {
+            loginCode:res.code
+          },
+          method: 'post'
+        }).then(result => {
+          console.log(result)
+        })
+      },
     })
   },
   
